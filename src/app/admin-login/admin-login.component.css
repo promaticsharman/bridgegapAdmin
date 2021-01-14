@@ -1,0 +1,61 @@
+.login-wrap{
+    background-color:#5faa00!important;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    z-index: 1;
+}
+.login-wrap .card{
+    width: 30%!important;
+    margin: 0 auto;
+    display: block;
+    margin-top:100px;
+    padding:2em 5em;
+    background-color: #fff;
+    box-shadow: 0px 40px 35px -15px rgba(0,0,0)!important;
+    -webkit-box-shadow: 0px 40px 35px -15px rgba(0,0,0)!important;
+   -moz-box-shadow: 0px 40px 35px -15px rgba(0,0,0)!important;
+    border-radius: 8px;}
+
+.card > h4{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2a3e7f;
+}
+.btn-theme,
+.btn-theme:focus,
+.btn-theme:hover,
+.btn-theme:active{
+    background-color: #5faa00;
+    margin-bottom: 0px;
+    width: 100%;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.form-group input{
+    background-color: #fff;
+    border-radius: 0px;
+    border: transparent;
+    border-bottom: solid grey;
+    box-shadow:none;
+    padding-left: 0px;
+    font-size: 14px;
+}
+.form-group input:focus{
+    border-bottom: solid #5faa00;
+    box-shadow:none;
+}
+
+.card label {
+    font-size: 0.8571em;
+    margin-bottom: 0px;
+    color: #000000;
+    font-size: 14px;
+}
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-color:#fff !important;
+    background-image: none !important;
+    color: -internal-light-dark(black, white) !important;
+}

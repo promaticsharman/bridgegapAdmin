@@ -1,0 +1,136 @@
+
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        
+        <div class="card-body">
+          <div class="text-right" style="padding-right: 65px;">
+            <button mat-button class="theme-btn" (click)="openDialog()" >Add Category</button>
+          </div>
+          <!-- routerLink="/addcategory" -->
+         
+          <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. Name">
+           </mat-form-field>
+          <div class="card-body">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource" class="mat-table table mat-elevation-z1">
+                    <!-- Position -->
+                    <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef>S.No.</th>
+                        <td mat-cell *matCellDef="let element; let i = index;">{{ i + 1 }}</td>
+                    </ng-container>
+
+                    <!-- Questions -->
+                    <ng-container matColumnDef="category">
+                        <th mat-header-cell *matHeaderCellDef>Category</th>
+                        <td mat-cell *matCellDef="let element">{{element.category_name}}</td>
+                    </ng-container>
+
+                    <!-- Description -->
+                    <!-- <ng-container matColumnDef="description">
+                        <th mat-header-cell *matHeaderCellDef>Description</th> -->
+                        <!-- <td mat-cell *matCellDef="let element">{{element.description}}</td> -->
+                    <!-- </ng-container> -->
+
+                    <!-- Action -->
+                    <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef  class="mat-header-cell">
+                        Action
+                    </th>
+                    <td class="mat-cell act_td" mat-cell *matCellDef="let element">
+                        <!-- <button mat-icon-button [matMenuTriggerFor]="menu"
+                            aria-label="Example icon-button with a menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button> -->
+                        <!-- <mat-menu #menu="matMenu"> -->
+                            <button mat-icon-button (click)="openEditDialog(element.id)">
+                                <mat-icon >edit</mat-icon>
+                                <!-- Edit -->
+                            </button>
+                            <button mat-icon-button (click)="deleteCategory(element.id)">
+                                <mat-icon >delete</mat-icon>
+                                <!-- Delete -->
+                            </button>
+                            <!-- <button mat-icon-button routerLink="/sub_category"> -->
+                              <!-- (click)="openSubCategoryDialog()" -->
+                              <!-- <mat-icon >view_list</mat-icon> -->
+                              <!-- Delete -->
+                           <!-- </button> -->
+                         <!-- </mat-menu> -->
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="subcategory">
+                  <th mat-header-cell *matHeaderCellDef>Sub Category List</th>
+                  <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button routerLink="/sub_category/{{element.id}}">
+                      <!-- (click)="openSubCategoryDialog()" -->
+                      <mat-icon >view_list</mat-icon>
+                      <!-- Delete -->
+                   </button>
+                  </td>
+                  <!-- {{element.category_name}} -->
+              </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <div>
+                    <mat-paginator [length]="length" [pageSize]="5" [pageSizeOptions]="getPageSizeOptions()"
+                        (page)="paginationOptionChange($event)">
+                    </mat-paginator>
+                </div>
+            </div>
+        </div> 
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="progress">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+  
+    <ng-container matColumnDef="color">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+      <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div> -->

@@ -1,0 +1,92 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="text-right" style="padding-right: 5px;">
+                <button mat-icon-button  (click)="closeDialog()">
+                    <!-- style="padding-left: 492px;padding-top: 9px;" -->
+                    <mat-icon >close</mat-icon>
+                </button>
+            </div>
+            <div class="col-md-12">
+                <!-- style="margin-top: 30px;" -->
+               
+                <form [formGroup]="viewDetailForm" >
+                    <!-- style="padding-top: 24px;" -->
+                    <!-- <div class="text-right" style="padding-right: 5px;"><button mat-icon-button  (click)="closeDialog()"><mat-icon >close</mat-icon></button></div> -->
+                    <div class="card">
+                        <div class="card-header card-header-danger" style="padding-bottom: 0.5px; background-color: #6AA524;">
+                            <!-- .card .card-header:not([data-background-color]) {
+                                background-color: #6AA524;
+                                padding-bottom: 0.5px; -->
+                            <h4 class="card-title">All Details</h4>
+                        </div>
+                        <div class="card-body block-card">
+                            <div class="row">
+                                 <div class="col-md-12" style="padding-top: 10px;" >
+                                    <!-- style="padding-top: 70px;" -->
+                                    <mat-form-field  class="example-full-width" style="width: 490px" >
+                                        <input matInput placeholder="Name" formControlName="name" [(ngModel)]="addCategory.name">
+                                    </mat-form-field>
+                                 </div>
+                                    <div class="col-md-12" style="padding-top: 10px;">
+                                        <mat-form-field  class="example-full-width" style="width: 490px" >
+                                            <input matInput placeholder="Email" formControlName="email" [(ngModel)]="addCategory.email">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12" style="padding-top: 10px;">
+                                        <mat-form-field  class="example-full-width" style="width: 490px" >
+                                            <input matInput placeholder="Phone" formControlName="phone" [(ngModel)]="addCategory.phone">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12" style="padding-top: 10px;">
+                                        <mat-form-field  class="example-full-width" style="width: 490px" >
+                                            <input matInput placeholder="Country" formControlName="country" [(ngModel)]="addCategory.country">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12" style="padding-top: 10px;">
+                                        <mat-form-field  class="example-full-width" style="width: 490px" >
+                                            <input matInput placeholder="State" formControlName="state" [(ngModel)]="addCategory.state">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12" style="padding-top: 10px;">
+                                        <mat-form-field  class="example-full-width" style="width: 490px" >
+                                            <input matInput placeholder="D.O.B" formControlName="dob" [(ngModel)]="addCategory.dob">
+                                        </mat-form-field>
+                                    </div>
+                           
+                               
+
+                                
+                                    <!-- <div *ngIf="bookCategoryForm.controls['bookCategory'].touched &&
+                                      bookCategoryForm.controls['bookCategory'].invalid"
+                                       class="text-danger">
+                                    <div *ngIf="bookCategoryForm.controls['bookCategory'].errors &&
+                                        bookCategoryForm.controls['bookCategory'].errors.required">
+                                        Category is required.</div>
+                                    </div> -->
+
+                                <!-- <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <textarea matInput placeholder="Description" formControlName="categoryDescription" rows="2" [(ngModel)]="addCategory.description" [ngModelOptions]="{standalone: true}"></textarea> -->
+                                        <!-- <input matInput placeholder="Description" [(ngModel)]="addCategory.description" [ngModelOptions]="{standalone: true}"> -->
+                                    <!-- </mat-form-field> -->
+                                    <!-- <div *ngIf="bookCategoryForm.controls['categoryDescription'].touched &&
+                                            bookCategoryForm.controls['categoryDescription'].invalid"
+                                            class="text-danger">
+                                    <div *ngIf="bookCategoryForm.controls['categoryDescription'].errors &&
+                                    bookCategoryForm.controls['categoryDescription'].errors.required">
+                                        Description is required.</div>
+                                    </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="text-center">
+                        <button mat-raised-button type="submit" class="btn btn-danger" [disabled]="!bookCategoryForm.valid" (click)="createCategory()">Submit</button> -->
+                        <!-- [disabled]="!bookCategoryForm.valid" -->
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

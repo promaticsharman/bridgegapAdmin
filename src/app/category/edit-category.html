@@ -1,0 +1,29 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="text-right" style="padding-right: 5px;"><button mat-icon-button  (click)="closeDialog()"><mat-icon >close</mat-icon></button></div>
+            <div class="col-md-12" style="margin-top: 30px;">
+               
+                <form>
+                    <div class="card">
+                        <div class="card-header card-header-danger" style="padding-bottom: 0.5px; background-color: #6AA524;">
+                            <h4 class="card-title">Edit Category</h4>
+                        </div>
+                        <div class="card-body block-card">
+                            <div class="row">
+                                <div class="col-md-12" style="padding-top: 10px;">
+                                    <mat-form-field class="example-full-width"  style="width: 490px">
+                                        <input matInput placeholder="Category" [(ngModel)]="addCategory.category" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button mat-raised-button type="submit" class="btn btn-danger" (click)="editCategory()">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
