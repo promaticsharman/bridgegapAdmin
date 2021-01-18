@@ -307,7 +307,7 @@ export class DashboardComponent implements OnInit {
 
     this.lineChartWithNumbersAndGridData = [
         {
-          label: "Email Stats",
+          label: "Stats",
            pointBorderWidth: 2,
            pointHoverRadius: 4,
            pointHoverBorderWidth: 1,
@@ -334,7 +334,7 @@ export class DashboardComponent implements OnInit {
 
 
     this.canvas = document.getElementById("barChartSimpleGradientsNumbers");
-    this.ctx = this.canvas.getContext("2d");
+    // this.ctx = this.canvas.getContext("2d");
 
     this.gradientFill = this.ctx.createLinearGradient(0, 170, 0, 50);
     this.gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");

@@ -65,13 +65,7 @@
     background: $color;
   }
 
-  .nav li.active > a{
-    color: $color;
-
-    i{
-      color: $color;
-    }
-  }
+  
 }
 
 @mixin bar-animation($type){

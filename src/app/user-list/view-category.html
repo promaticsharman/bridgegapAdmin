@@ -1,13 +1,31 @@
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="text-right" style="padding-right: 5px;">
-                <button mat-icon-button  (click)="closeDialog()">
+<style>
+    .card .card-header .card-title {
+        margin-top:0px!important;
+        color: #fff;
+    }
+    .btn-success {
+        background-color: #6aa524;
+        color: #FFFFFF;
+    }
+    </style>
+
+<div class="main-content" style="position: relative;">
+   
+       
+           
+                <button mat-icon-button  (click)="closeDialog()"
+                    style="position: absolute;
+                    right: -32px;
+                    top: -32px;
+                    transform: scale(0.75);
+                    outline: none;
+                    background-color: #ffffff!important;
+                    color: rgb(0, 0, 0);
+                    border-radius: 0px;"  >
                     <!-- style="padding-left: 492px;padding-top: 9px;" -->
                     <mat-icon >close</mat-icon>
                 </button>
-            </div>
-            <div class="col-md-12">
+          
                 <!-- style="margin-top: 30px;" -->
                
                 <form [formGroup]="viewDetailForm" >
@@ -86,7 +104,6 @@
                         <!-- [disabled]="!bookCategoryForm.valid" -->
                     <!-- </div> -->
                 </form>
-            </div>
-        </div>
-    </div>
+           
+        
 </div>

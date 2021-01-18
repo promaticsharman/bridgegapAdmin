@@ -48,7 +48,7 @@ export class CategoryComponent implements OnInit {
 
     this.reqData = {}
 		this.reqData.offset = 0
-		this.reqData.limit = 5
+		this.reqData.limit = 10
 		this.dataSource = new MatTableDataSource(this.responseData);
 		this.dataSource.paginator = this.paginator;
 		this.dataSource.sort = this.sort;
@@ -62,7 +62,7 @@ export class CategoryComponent implements OnInit {
 	}
 
 	  getPageSizeOptions() {
-	return [5,10, 20, 30];
+	return [10, 20, 30];
 	}
 	paginationOptionChange(evt) {
 			// console.log(evt)
@@ -125,7 +125,7 @@ export class CategoryComponent implements OnInit {
 	  }
     this.service.allCategory(obj).subscribe(res => {
       // console.log('getTableData******',res.data);
-      // let tableData
+      
       if(res){
         // this.length = res.data.count
        
@@ -212,7 +212,7 @@ export class CategoryComponent implements OnInit {
 
   openDialog(){
 		const dialogRef = this.dialog.open(AddCategoryDialog,{
-			height: '350px',
+			// height: '350px',
 			width: '600px',
 			id: this.route.snapshot.params.id,
 		});
@@ -232,7 +232,7 @@ export class CategoryComponent implements OnInit {
   }
   openEditDialog(id){
 		const dialogRefEdit = this.dialog.open(EditCategoryDialog,{
-			height: '350px',
+			// height: '350px',
 			width: '600px',
 			id: id
 		});

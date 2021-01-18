@@ -24,6 +24,16 @@ import { AddCategoryDialog ,EditCategoryDialog} from './category/category.compon
 import { AddSubCategoryDialog,EditSubCategoryDialog} from './sub-category/sub-category.component';
 import { SubCategoryComponent} from './sub-category/sub-category.component';
 import { UserListComponent,ViewCategoryDialog } from './user-list/user-list.component';
+import { SectionFirstComponent,EditDialog } from './section-first/section-first.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { AddTestimonialsComponent } from './add-testimonials/add-testimonials.component';
+import { SectionSecondComponent } from './section-second/section-second.component';
+import { SectionThreeComponent } from './section-three/section-three.component';
+import { GeneralFaqComponent } from './general-faq/general-faq.component';
+import { TeacherFaqComponent } from './teacher-faq/teacher-faq.component';
+import { ParentFaqComponent } from './parent-faq/parent-faq.component';
+
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
 
@@ -41,6 +51,7 @@ import { UserListComponent,ViewCategoryDialog } from './user-list/user-list.comp
     ToastrModule.forRoot(),
     MatInputModule,
     MatFormFieldModule,
+    MatExpansionModule
     //
     // MatDialogModule
   ],
@@ -57,7 +68,17 @@ import { UserListComponent,ViewCategoryDialog } from './user-list/user-list.comp
     EditSubCategoryDialog,
     
     UserListComponent,
-    ViewCategoryDialog
+    ViewCategoryDialog,
+    SectionFirstComponent,
+    EditDialog,
+    TestimonialsComponent,
+    AddTestimonialsComponent,
+    SectionSecondComponent,
+    SectionThreeComponent,
+    GeneralFaqComponent,
+    TeacherFaqComponent,
+    ParentFaqComponent,
+
 
     // SubCategoryComponent
     

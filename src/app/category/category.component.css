@@ -2,8 +2,8 @@ h5.title{
     font-size: 16px;
 }
 .mat-form-field{
-    width: 100%;
-    font-size: 18px;
+   
+    /* font-size: 18px; */
     border-bottom: 1px;
 }
 
@@ -45,4 +45,10 @@ table {
   .theme-btn{
     background-color: #142c69;
     color: #fff;
+  }
+  .hdng{
+    background-color: #6AA524!important;
+    color: #fff;
+    padding-left: 35px;
+    padding-bottom: 52px;
   }

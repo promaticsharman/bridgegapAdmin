@@ -54,3 +54,25 @@
  .sidebar[data-color=red]:after, .off-canvas-sidebar[data-color=red]:after {
     background: #142c69;
 }
+
+.table > thead > tr > th {
+    border-bottom-width: 1px;
+    font-size: 1.20em;
+}
+.mat-dialog-container {
+    overflow:hidden!important;
+}
+.sidebar .nav p, .off-canvas-sidebar .nav p {
+    color: #fff;
+    font-size: 13px;
+}
+.hdng{
+    background-color: #6AA524!important;
+    color: #fff;
+    padding-left: 35px;
+    padding-bottom: 52px;
+  }
+  .theme-btn{
+    background-color: #142c69;
+    color: #fff;
+  }

@@ -1,16 +1,38 @@
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="text-right" style="padding-right: 5px;"><button mat-icon-button  (click)="closeDialog()"><mat-icon >close</mat-icon></button></div>
-            <div class="col-md-12" >
+<style>
+    .card .card-header .card-title {
+        margin-top:0px!important;
+        color: #fff;
+    }
+    .btn-success {
+        background-color: #6aa524;
+        color: #FFFFFF;
+    }
+    .ft{
+        font-size: 16px;
+    }
+    </style>
+<div class="main-content"  style="position: relative;">
+    
+            <button mat-icon-button  (click)="closeDialog()"
+                    style="position: absolute;
+                    right: -32px;
+                    top: -32px;
+                    transform: scale(0.75);
+                    outline: none;
+                    background-color: #ffffff!important;
+                    color: rgb(0, 0, 0);
+                    border-radius: 0px;">
+                <mat-icon >close</mat-icon>
+            </button>
+          
                 <!-- <div class="text-right" style="padding-right: 5px;"><button mat-icon-button  (click)="closeDialog()"><mat-icon >close</mat-icon></button></div> -->
-                <form [formGroup]="bookCategoryForm" style="padding-top: 24px;">
+                <form [formGroup]="bookCategoryForm" >
                     <div class="card">
                         <div class="card-header card-header-danger" style="padding-bottom: 0.5px; background-color: #6AA524;">
                             <!-- .card .card-header:not([data-background-color]) {
                                 background-color: #6AA524;
                                 padding-bottom: 0.5px; -->
-                            <h4 class="card-title">Add Sub Category</h4>
+                            <h4 class="card-title ft">Add Sub Category</h4>
                         </div>
                         <div class="card-body block-card">
                             <div class="row">
@@ -19,14 +41,14 @@
                                     <mat-form-field  class="example-full-width" style="width: 490px" >
                                         <!-- style="width: 285px" -->
                                         <!-- class="example-full-width" -->
-                                        <input matInput placeholder="Category" formControlName="bookCategory" [(ngModel)]="addCategory.category">
+                                        <input matInput placeholder="Sub Category" formControlName="bookCategory" [(ngModel)]="addCategory.category">
                                     </mat-form-field>
                                     <div *ngIf="bookCategoryForm.controls['bookCategory'].touched &&
                                       bookCategoryForm.controls['bookCategory'].invalid"
                                        class="text-danger">
                                     <div *ngIf="bookCategoryForm.controls['bookCategory'].errors &&
                                         bookCategoryForm.controls['bookCategory'].errors.required">
-                                        Category is required.</div>
+                                       Sub Category is required.</div>
                                     </div>
                                 </div>
                                 <!-- <div class="col-md-12">
@@ -46,13 +68,13 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <button mat-raised-button type="submit" class="btn btn-danger" [disabled]="!bookCategoryForm.valid" (click)="createCategory()">Submit</button>
+                        <button mat-raised-button type="submit" class="btn btn-success ft" [disabled]="!bookCategoryForm.valid" (click)="createCategory()">Submit</button>
                         <!-- [disabled]="!bookCategoryForm.valid" -->
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
+            
+        
+    
 </div>
 
 

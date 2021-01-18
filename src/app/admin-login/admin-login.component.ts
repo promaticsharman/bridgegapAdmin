@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdminService } from '../shared/admin.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-login',
@@ -23,7 +24,8 @@ export class AdminLoginComponent implements OnInit {
       private formBuilder: FormBuilder,
       private route: ActivatedRoute,
       private router: Router,
-      private service: AdminService
+      private service: AdminService,
+      private toastr: ToastrService
       //private accountService: AccountService,
       //private alertService: AlertService
   ) {
@@ -67,11 +69,31 @@ export class AdminLoginComponent implements OnInit {
         this.service.setAuthToken();
         this.router.navigate(['/dashboard'])
         this.loading = true;
-      },error => {
-        this.service.showAuthError(error);
+      },err=> {
+        console.log('login err',err.error.errors.msg)
+        if(err.status >=400){
+          this.toastr.error(err.error.errors.msg, 'Error')
+        }else{
+          this.toastr.error('Internet Connection Error', 'Error')
+        }
+        // this.service.showAuthError(error);
       })
 
       
       
   }
+
+  // err => {
+  //   console.log(err)
+  //   if (err.status >= 400) {
+  //     this.toastr.error('Invalid Credential!!!', 'Error')
+  //     console.log('Invalid Credential!!!')
+  //   } else {
+  //     this.toastr.error('Internet Connection Error', 'Error')
+  //     console.log('Internet Connection Error')
+  //   }
+
+  // })
+// }
+
 }

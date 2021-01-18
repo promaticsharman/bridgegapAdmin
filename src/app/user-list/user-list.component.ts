@@ -40,7 +40,7 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
 		this.reqData.offset = 0
-		this.reqData.limit = 5
+		this.reqData.limit = 10
 		this.dataSource = new MatTableDataSource(this.responseData);
 		
 		this.datamodel = {}
@@ -107,7 +107,7 @@ export class UserListComponent implements OnInit {
 
   
   getPageSizeOptions() {
-    return [5,10, 20, 30];
+    return [10, 20, 30];
     }
     paginationOptionChange(evt) {
       this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
@@ -143,7 +143,7 @@ export class UserListComponent implements OnInit {
 
     viewDialog(id){
       const dialogRef = this.dialog.open(ViewCategoryDialog,{
-        height: '600px',
+        // height: '600px',
         width: '600px',
         id: id
       });

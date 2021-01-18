@@ -1,0 +1,89 @@
+ <style>
+    .card .card-header .card-title {
+        margin-top:0px!important;
+        color: #fff;
+    }
+    .btn-success {
+        background-color: #6aa524;
+        color: #FFFFFF;
+    }
+    .img-fluid {
+	max-height: 75px;
+	min-height: 75px;
+	min-width: 160px;
+	object-fit: cover;
+	max-width: 160px;
+	margin: 10px 0;
+    }	
+    .img_inpt input{
+	position: absolute;
+	bottom: 7px;
+	left: 31px;
+	opacity: 0;
+    }
+    .upload_img {
+	position: relative;
+    }
+ </style>
+
+  <div class="main-content" style="position: relative;">
+                <button mat-icon-button  (click)="closeDialog()"
+                    style="position: absolute;
+                    right: -32px;
+                    top: -32px;
+                    transform: scale(0.75);
+                    outline: none;
+                    background-color: #ffffff!important;
+                    color: rgb(0, 0, 0);
+                    border-radius: 0px;"  >
+                    <!-- style="padding-left: 492px;padding-top: 9px;" -->
+                    <mat-icon >close</mat-icon>
+                </button>
+                   <div class="card">
+                        <div class="card-header card-header-danger" style="padding-bottom: 0.5px; background-color: #6AA524;">
+
+                            <h4 class="card-title">Actions</h4>
+                        </div>
+                        <div class="card-body block-card">
+                          
+                                  <form [formGroup]="viewDetailForm">
+                                        <div clas="inpt_form"> 
+                                            <div class="row">
+                                                 <mat-label class="col-sm-4">First Content</mat-label>
+                                                 <div class="col-sm-8">
+                                                    <mat-form-field  class="example-full-width"  >
+                                                      <input matInput placeholder="First content" formControlName="content" [(ngModel)]="addCategory.name">
+                                                    </mat-form-field>
+                                                 </div>
+                                            </div>
+                                        </div>  
+                                        <div clas="inpt_form"> 
+                                            <div class="row">
+                                                 <mat-label class="col-sm-4">Second Content</mat-label>
+                                                 <div class="col-sm-8">
+                                                    <mat-form-field  class="example-full-width"  >
+                                                      <input matInput placeholder="Second content" formControlName="content1" [(ngModel)]="addCategory.name">
+                                                    </mat-form-field>
+                                                 </div>
+                                            </div>
+                                        </div>  
+                                        <div class="inpt_form">
+                                            <div class="row">
+                                                <mat-label clasS="col-sm-4">Image</mat-label>
+                                                <div class="col-sm-8">
+                                                    <!-- <mat-form-field class="example-form-field"> -->
+                                                        <img src="{{homeImageSrc || 'https://www.searchpng.com/wp-content/uploads/2019/02/Profile-PNG-Icon.png'}}" class="img-fluid prfile_img">
+                                                        
+                                                        <div class="mt-3">
+                                                            <button type="button" class="btn btn-info upload_img"  style="width: 115px">Upload Image</button>
+                                                        </div>
+                                                        <span class="img_inpt"><input type="file" (change)="readURL($event)" accept=".jpeg,.png,.jpg"></span>
+                                                    <!-- </mat-form-field> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button mat-raised-button class="btn btn-success" (click)="Save()">Save</button>
+                                  </form>             
+                        </div>  
+                    </div>
+   </div>

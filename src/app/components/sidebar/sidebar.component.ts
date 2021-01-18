@@ -1,23 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import {MatAccordion} from '@angular/material/expansion';
+import { Alert } from 'bootstrap';
+import $ from "jquery";
+import {Router} from '@angular/router'
 
 declare interface RouteInfo {
     path: string;
     title: string;
     icon: string;
     class: string;
+    subcat:{};
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
-    { path: '/category', title: 'Category',  icon: 'design_app', class: '' },
-    { path: '/user_list', title: 'Student List',  icon: 'design_bullet-list-67', class: '' },
+    { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' , subcat:[]},
+    { path: '/category', title: 'Category',  icon: 'location_map-big', class: '' ,subcat:[] },
+    // { path: '/user_list', title: 'User Management',  icon: 'design_bullet-list-67', class: '' ,subcat:[]},
+    // { path: '/section_1', title: 'Home Section 1',  icon: 'ui-1_bell-53', class: '' ,subcat:[]}
     // { path: '/sub_category', title: 'Sub Category',  icon: 'design_app', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },
+    // { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
+    // { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
+    // { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },
 
-    { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },
+    // { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
+    // { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },
+    // { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },
     // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }
 
 ];
@@ -29,11 +35,27 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
-
-  constructor() { }
+  subcat: any[];
+  @ViewChild(MatAccordion) accordion: MatAccordion;
+  constructor(private router:Router) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+
+    $( document ).ready(function() {
+      $(".nav-link").click(function(){
+        //$(".sub-ul").hide();
+       // alert($(this).children(":nth-child(3)").attr('style'));
+        if($(this).children(":nth-child(3)").is(":visible")){
+          $(this).children(":nth-child(3)").hide();
+        }else{
+          $(".sub-ul").hide();
+          $(this).children(":nth-child(3)").show();
+        }
+        // $(this).children(":nth-child(3)").toggle();
+        // $(this).find(".sub-ul").toggle();
+      });
+  });
   }
   isMobileMenu() {
       if ( window.innerWidth > 991) {

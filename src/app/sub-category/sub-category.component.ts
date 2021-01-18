@@ -30,7 +30,7 @@ export class SubCategoryComponent implements OnInit {
 	filterValue
 	responseData = [] 
     dataSource: any
-
+	CateID
   displayedColumns: string[] = ['position', 'category','action'];
   constructor(
     private dialog: MatDialog,
@@ -43,16 +43,16 @@ export class SubCategoryComponent implements OnInit {
 	
 	this.reqData = {}
 		this.reqData.offset = 0
-		this.reqData.limit = 5
+		this.reqData.limit = 10
 		this.dataSource = new MatTableDataSource(this.responseData);
-		
+		this.CateID=this.route.snapshot.params.id
 		this.datamodel = {}
-		this.getSubCatList(this.route.snapshot.params.id)
+		this.getSubCatList()
     	// this.getAllCategory()
   }
-  getSubCatList(id){
+  getSubCatList(){
 	var list={
-		category_id:id,
+		category_id:this.CateID,
 		offset:this.reqData.offset,
 		limit:this.reqData.limit
 	}
@@ -105,7 +105,7 @@ applyFilter(filterValue: string) {
 	}
 
 getPageSizeOptions() {
-	return [5,10, 20, 30];
+	return [10, 20, 30];
 	}
 	paginationOptionChange(evt) {
 		this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
@@ -141,16 +141,18 @@ getPageSizeOptions() {
   
 	openSubCategoryDialog(){
 		const dialogRef = this.dialog.open(AddSubCategoryDialog,{
-			height: '330px',
+			// height: '330px',
 			width: '600px',
 			id: this.route.snapshot.params.id
 		});
 		dialogRef.afterClosed().subscribe(result => {
 			console.log('The dialog was closed');
 			this.reqData = {}
+			this.reqData.offset = 0
+		    this.reqData.limit = 10
 		    this.dataSource = new MatTableDataSource(this.responseData);
 			this.datamodel = {}
-			this.getSubCatList(this.route.snapshot.params.id)
+			this.getSubCatList()
 
 		});
 	}
@@ -158,7 +160,7 @@ getPageSizeOptions() {
 	openEditDialog(id){
 		const dialogRefEdit = this.dialog.open(EditSubCategoryDialog,{
 			// catId:this.route.snapshot.params.id,
-			height: '350px',
+			// height: '350px',
 			width: '600px',
 			id :<any>{
 				id: id,
@@ -173,7 +175,7 @@ getPageSizeOptions() {
 		    this.reqData.limit = 10
 		    this.dataSource = new MatTableDataSource(this.responseData);		    
 		    this.datamodel = {}
-			this.getSubCatList(this.route.snapshot.params.id)
+			this.getSubCatList()
 		});
 	}
 	deleteCategory(id){
@@ -190,7 +192,7 @@ getPageSizeOptions() {
 			console.log('deleted data',data);
 			Swal.fire(
 			  'Deleted!',
-			  'This Category has been deleted.',
+			  'This Sub Category has been deleted.',
 			  'success'
 			)
 			this.ngOnInit();
@@ -198,7 +200,7 @@ getPageSizeOptions() {
 		  } else if (result.dismiss === Swal.DismissReason.cancel) {
 		  Swal.fire(
 			'Cancelled',
-			'This Category is safe :)',
+			'This Sub Category is safe :)',
 			'error'
 		  )
 		  }

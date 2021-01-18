@@ -11177,7 +11177,7 @@ a[data-toggle=collapse][aria-expanded=true] .caret,
   position: absolute;
   width: 100%;
   padding-top: 10px;
-  z-index: 1029;
+  z-index: 9;
 }
 .documentation .navbar.fixed-top {
   left: 0;
@@ -12518,61 +12518,21 @@ Created using IcoMoon - icomoon.io
 .off-canvas-sidebar[data-color=blue]:after {
   background: #2CA8FF;
 }
-.sidebar[data-color=blue] .nav li.active > a,
-.off-canvas-sidebar[data-color=blue] .nav li.active > a {
-  color: #2CA8FF;
-}
-.sidebar[data-color=blue] .nav li.active > a i,
-.off-canvas-sidebar[data-color=blue] .nav li.active > a i {
-  color: #2CA8FF;
-}
 .sidebar[data-color=green]:after,
 .off-canvas-sidebar[data-color=green]:after {
   background: #18ce0f;
-}
-.sidebar[data-color=green] .nav li.active > a,
-.off-canvas-sidebar[data-color=green] .nav li.active > a {
-  color: #18ce0f;
-}
-.sidebar[data-color=green] .nav li.active > a i,
-.off-canvas-sidebar[data-color=green] .nav li.active > a i {
-  color: #18ce0f;
 }
 .sidebar[data-color=orange]:after,
 .off-canvas-sidebar[data-color=orange]:after {
   background: #f96332;
 }
-.sidebar[data-color=orange] .nav li.active > a,
-.off-canvas-sidebar[data-color=orange] .nav li.active > a {
-  color: #f96332;
-}
-.sidebar[data-color=orange] .nav li.active > a i,
-.off-canvas-sidebar[data-color=orange] .nav li.active > a i {
-  color: #f96332;
-}
 .sidebar[data-color=red]:after,
 .off-canvas-sidebar[data-color=red]:after {
   background: #FF3636;
 }
-.sidebar[data-color=red] .nav li.active > a,
-.off-canvas-sidebar[data-color=red] .nav li.active > a {
-  color: #FF3636;
-}
-.sidebar[data-color=red] .nav li.active > a i,
-.off-canvas-sidebar[data-color=red] .nav li.active > a i {
-  color: #FF3636;
-}
 .sidebar[data-color=yellow]:after,
 .off-canvas-sidebar[data-color=yellow]:after {
   background: #FFB236;
-}
-.sidebar[data-color=yellow] .nav li.active > a,
-.off-canvas-sidebar[data-color=yellow] .nav li.active > a {
-  color: #FFB236;
-}
-.sidebar[data-color=yellow] .nav li.active > a i,
-.off-canvas-sidebar[data-color=yellow] .nav li.active > a i {
-  color: #FFB236;
 }
 .visible-on-sidebar-regular {
   display: inline-block !important;
@@ -12619,7 +12579,7 @@ Created using IcoMoon - icomoon.io
 }
 .panel-header {
   height: 260px;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 45px;
   background: #2c2c2c;
   /* fallback for old browsers */
@@ -13600,6 +13560,17 @@ Created using IcoMoon - icomoon.io
 }
 .sidebar[data-color=red]:after, .off-canvas-sidebar[data-color=red]:after {
   background: #142c69;
+}
+.table > thead > tr > th {
+  border-bottom-width: 1px;
+  font-size: 1.2em;
+}
+.mat-dialog-container {
+  overflow: hidden !important;
+}
+.sidebar .nav p, .off-canvas-sidebar .nav p {
+  color: #fff;
+  font-size: 13px;
 }
 /*!
 

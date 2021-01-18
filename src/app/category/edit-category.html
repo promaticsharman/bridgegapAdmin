@@ -1,13 +1,35 @@
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="text-right" style="padding-right: 5px;"><button mat-icon-button  (click)="closeDialog()"><mat-icon >close</mat-icon></button></div>
-            <div class="col-md-12" style="margin-top: 30px;">
+<style>
+    .card .card-header .card-title {
+        margin-top:0px!important;
+        color: #fff;
+    }
+    .btn-success {
+        background-color: #6aa524;
+        color: #FFFFFF;
+    }
+    .ft{
+        font-size: 16px;
+    }
+    </style>
+  <div class="main-content" style="position: relative;">   
+        
+            <button mat-icon-button  (click)="closeDialog()"
+                     style="position: absolute;
+                            right: -32px;
+                            top: -32px;
+                            transform: scale(0.75);
+                            outline: none;
+                            background-color: #ffffff!important;
+                            color: rgb(0, 0, 0);
+                            border-radius: 0px;">
+                <mat-icon >close</mat-icon>
+            </button>
+            
                
                 <form>
                     <div class="card">
                         <div class="card-header card-header-danger" style="padding-bottom: 0.5px; background-color: #6AA524;">
-                            <h4 class="card-title">Edit Category</h4>
+                            <h4 class="card-title ft">Edit Category</h4>
                         </div>
                         <div class="card-body block-card">
                             <div class="row">
@@ -20,10 +42,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <button mat-raised-button type="submit" class="btn btn-danger" (click)="editCategory()">Update</button>
+                        <button mat-raised-button type="submit" class="btn btn-success ft" (click)="editCategory()">Update</button>
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
+            
+        
+  
 </div>

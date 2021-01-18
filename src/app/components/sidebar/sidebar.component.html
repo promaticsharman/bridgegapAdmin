@@ -9,11 +9,115 @@
 </div>
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-            <a [routerLink]="[menuItem.path]">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems let i=index;" [ngClass]="{active: router.url.includes('/sub_category' ) && menuItem.path == '/category' }" class="{{menuItem.class}} nav-item">
+        <!-- <li routerLinkActive="active" *ngFor="let menuItem of menuItems let i=index;" class="{{menuItem.class}} nav-item"> -->
+            
+            <a class="nav-link collapsed" [routerLink]="[menuItem.path]" data-toggle="collapse" [attr.data-target]="'#dfsa' + i">
                 <i class="now-ui-icons {{menuItem.icon}}"></i>
                 <p>{{menuItem.title}}</p>
             </a>
+            <!-- <div class="collapse" [attr.id]="'dfsa' + i" data-parent="#accordionExample{{i}}">
+                <ul type="none" class="iner_ul">
+                    <li *ngFor="let sbcat of menuItem.subcat" class="nav-item">
+                        <a class="nav-link" [routerLink]="[sbcat.path]">
+                            <i class="material-icons">{{sbcat.icon}}</i>
+                            <p>{{sbcat.title}}</p>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
         </li>
+        <li  routerLinkActive="active"  class="nav-item">
+            <a href="javascript:void(0)" class="nav-link ">
+                <i class="material-icons">list</i>
+                <p>User Management</p>
+                <ul class="sub-ul">
+                    <li ><a  [routerLink]="['/user_list']">Student Management</a></li>
+                    <!-- href="javascript:void(0)" -->
+                    <!-- <li><a href="javascript:void(0)">Teacher Management</a></li> -->
+                    <!-- <li><a href="javascript:void(0)">Subcategory-1</a></li>
+                    <li><a href="javascript:void(0)">Subcategory-1</a></li>
+                    <li><a href="javascript:void(0)">Subcategory-1</a></li>
+                    <li><a href="javascript:void(0)">Subcategory-1</a></li> -->
+
+
+                </ul>
+            </a>
+        </li>
+        <li  routerLinkActive="active"  class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">
+                <i class="material-icons">home</i>
+                <p>Home Management</p>
+                <ul class="sub-ul">
+                    <li><a [routerLink]="['/section_1']">Section-1</a></li>
+                    <li><a [routerLink]="['/section_2']">Section-2</a></li>
+                    <li><a [routerLink]="['/section_3']">Section-3</a></li>
+                    <li><a [routerLink]="['/testimonials']">Testimonials</a></li>
+                </ul>
+            </a>
+        </li>
+        <li  routerLinkActive="active"  class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">
+                <i class="material-icons">info</i>
+                <p>Faq Management</p>
+                <ul class="sub-ul">
+                    <li><a [routerLink]="['/generalFaq']">GENERAL FAQ</a></li>
+                    <li><a [routerLink]="['/teacherFaq']">TEACHER FAQ</a></li>
+                    <li><a [routerLink]="['/parentFaq']">PARENT FAQ</a></li>
+                </ul>
+            </a>
+        </li>
+
+
+
+
+       <!-- <li>
+        <mat-accordion class="example-headers-align" multi>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your name 
+                  <mat-icon>account_circle</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <mat-form-field>
+                <mat-label>First name</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </mat-expansion-panel>       
+          </mat-accordion>
+       </li>
+        -->
+ 
+
+
+        <!-- <li class="nav-item">
+            <a href=""
+        </li> -->
     </ul>
 </div>
+
+<!-- 
+<ul class="nav">
+   <li routerLinkActive="active" *ngFor="let menuItem of menuItems; let i = index;" class="{{menuItem.class}} nav-item accordion" id="accordionExample{{i}}">
+       <a class="nav-link collapsed" [routerLink]="[menuItem.path]" data-toggle="collapse" [attr.data-target]="'#dfsa' + i">
+           <i class="material-icons">{{menuItem.icon}}</i>
+           <p>{{menuItem.title}}</p>`
+       </a>
+       <div class="collapse" [attr.id]="'dfsa' + i" data-parent="#accordionExample{{i}}">
+           <ul type="none" class="iner_ul">
+               <li *ngFor="let sbcat of menuItem.subcat" class="nav-item">
+                   <a class="nav-link" [routerLink]="[sbcat.path]">
+                       <i class="material-icons">{{sbcat.icon}}</i>
+                       <p>{{sbcat.title}}</p>
+                   </a>
+               </li>
+           </ul>
+       </div>
+   </li>
+</ul> -->
+
