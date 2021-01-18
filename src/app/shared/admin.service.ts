@@ -212,4 +212,23 @@ export class AdminService {
         }),
       )
   }
+
+  allTestimonial(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}allTestimonial`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  createTestimonial(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createTestimonial`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -7,12 +7,15 @@ import { ActivatedRoute } from '@angular/router';
 import { CanActivate, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  currentPage=10
   checked = false;
 	indeterminate = false;
 	labelPosition: 'before' | 'after' = 'after';
@@ -28,9 +31,12 @@ export class UserListComponent implements OnInit {
 	filterValue
 	responseData = [] 
     dataSource: any
-
+    currentIndex=0
   displayedColumns: string[] = ['position','name','email','phone','action'];
-  // 
+  // 'position',
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+
+	@ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(
     private dialog: MatDialog,
     private service: AdminService,
@@ -40,11 +46,16 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
 		this.reqData.offset = 0
-		this.reqData.limit = 10
+    this.reqData.limit = 10
+    // this.currentPage=10
 		this.dataSource = new MatTableDataSource(this.responseData);
-		
-		this.datamodel = {}
+		this.dataSource.paginator = this.paginator;
+    this.datamodel = {}
+    this.length
 		this.getStudentList()
+  }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator
   }
   getStudentList(){
     var list={
@@ -54,7 +65,9 @@ export class UserListComponent implements OnInit {
     this.service.getallStudent(list).subscribe(res => {
       // console.log('*****getStudentData******',res.data);
       if(res){
-        this.dataSource=res.data.rows
+        this.length = res.data.count;
+        this.dataSource=res.data.rows;
+        
         console.log('responseData ***',this.dataSource)
       }
     },
@@ -110,11 +123,29 @@ export class UserListComponent implements OnInit {
     return [10, 20, 30];
     }
     paginationOptionChange(evt) {
+
       this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
       this.reqData.limit = evt.pageSize
+
       // let Cate=this.route.snapshot.params.id;
       // console.log('cate id',Cate);
-      
+    
+      this.currentPage=evt.pageSize
+      this.currentIndex=evt.pageIndex
+      console.log('checking  page Index', this.currentPage)
+      console.log('checking current page',evt.pageSize)
+
+      // {{ (currentIndex) * currentPage + i +1 }}
+
+// (2-1) * (10 +1) = 1*11 = 11
+// jina v pageSIze ohde ch 1 add krna paina
+// for example page is 3 
+
+//  multiply -> add
+// (3-1) * (10+1) => 2 * 10 + 1 => 21
+
+
+
       var list={
        
         offset:this.reqData.offset,
@@ -123,13 +154,13 @@ export class UserListComponent implements OnInit {
       }
       // console.log(this.reqData)
       this.service.getallStudent(list).subscribe(res => {
-      console.log('paginator limit',res)
+      // console.log('paginator limit',res)
       if(res){
           
         this.length = res.data.count;
         this.dataSource = res.data.rows;
         // this.responseData=new MatTableDataSource(res.data);
-        console.log('dataSource',this.dataSource);
+        // console.log('dataSource',this.dataSource);
         }
       },err => {
         console.log(err);
@@ -150,14 +181,16 @@ export class UserListComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
         this.reqData = {}
-          this.reqData.offset = 0
-          this.reqData.limit = 10
-          this.dataSource = new MatTableDataSource(this.responseData);
+          // this.reqData.offset = 0
+          // this.reqData.limit = 60
+          // this.dataSource = new MatTableDataSource(this.responseData);
+          // this.getStudentList()
           // this.dataSource.paginator = this.paginator;
           // this.dataSource.sort = this.sort;
-          this.datamodel = {}
-            this.getStudentList()
-        
+          // this.datamodel = {}
+          // this.length
+         
+           
       });
     
     }

@@ -14,6 +14,7 @@ import { AddCategoryComponent } from '../../add-category/add-category.component'
 import { SubCategoryComponent } from '../../sub-category/sub-category.component';
 import { UserListComponent } from '../../user-list/user-list.component';
 import { SectionFirstComponent } from '../../section-first/section-first.component';
+import { SectionOneEditComponent } from '../../section-one-edit/section-one-edit.component';
 import { TestimonialsComponent } from '../../testimonials/testimonials.component';
 import { AddTestimonialsComponent } from '../../add-testimonials/add-testimonials.component';
 import { SectionSecondComponent } from '../../section-second/section-second.component';
@@ -21,12 +22,14 @@ import { SectionThreeComponent } from '../../section-three/section-three.compone
 import { GeneralFaqComponent } from '../../general-faq/general-faq.component';
 import { TeacherFaqComponent } from '../../teacher-faq/teacher-faq.component';
 import { ParentFaqComponent } from '../../parent-faq/parent-faq.component';
+import { ContactUsComponent } from '../../contact-us/contact-us.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'category',      component: CategoryComponent },
     { path: 'sub_category/:id',      component: SubCategoryComponent },
     { path: 'user_list',      component: UserListComponent },
     { path: 'section_1',      component: SectionFirstComponent },
+    { path: 'edit_section_one',      component: SectionOneEditComponent },
     { path: 'section_2',      component: SectionSecondComponent },
     { path: 'section_3',      component: SectionThreeComponent },
     { path: 'addcategory',      component: AddCategoryComponent },
@@ -35,6 +38,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'generalFaq',   component: GeneralFaqComponent },
     { path: 'teacherFaq',   component: TeacherFaqComponent },
     { path: 'parentFaq',   component: ParentFaqComponent },
+    { path: 'contact',   component: ContactUsComponent },
     // { path: 'user-profile',   component: UserProfileComponent },
     // { path: 'table-list',     component: TableListComponent },
     // { path: 'typography',     component: TypographyComponent },

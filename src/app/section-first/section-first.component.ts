@@ -31,7 +31,7 @@ export class SectionFirstComponent implements OnInit {
   responseData = []
   
 
-  displayedColumns: string[] = ['image', 'Action']
+  displayedColumns: string[] = ['title','subtitle','image', 'Action']
   animal: string;
   name: string;
 

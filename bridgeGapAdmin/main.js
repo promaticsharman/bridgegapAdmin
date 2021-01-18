@@ -1,5 +1,64 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "/A4d":
+/*!*******************************************************!*\
+  !*** ./src/app/teacher-faq/teacher-faq.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0ZWFjaGVyLWZhcS5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "/QHs":
+/*!**********************************************************!*\
+  !*** ./src/app/section-three/section-three.component.ts ***!
+  \**********************************************************/
+/*! exports provided: SectionThreeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionThreeComponent", function() { return SectionThreeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_section_three_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./section-three.component.html */ "f49U");
+/* harmony import */ var _section_three_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section-three.component.css */ "Yms5");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+
+
+
+
+
+var SectionThreeComponent = /** @class */ (function () {
+    function SectionThreeComponent() {
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__["environment"].home_image;
+        //  imagePath = environment.home_image;
+        this.responseData = [];
+        this.displayedColumns = ['image', 'step', 'Action',];
+    }
+    SectionThreeComponent.prototype.ngOnInit = function () {
+    };
+    SectionThreeComponent.ctorParameters = function () { return []; };
+    SectionThreeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-section-three',
+            template: _raw_loader_section_three_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_section_three_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], SectionThreeComponent);
+    return SectionThreeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ 0:
 /*!***************************!*\
   !*** multi ./src/main.ts ***!
@@ -8,6 +67,72 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! /home/promatics/harman/bridgeGapAdmin/src/main.ts */"zUnb");
+
+
+/***/ }),
+
+/***/ "0I2P":
+/*!************************************************************!*\
+  !*** ./src/app/section-second/section-second.component.ts ***!
+  \************************************************************/
+/*! exports provided: SectionSecondComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionSecondComponent", function() { return SectionSecondComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_section_second_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./section-second.component.html */ "xdhd");
+/* harmony import */ var _section_second_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section-second.component.css */ "FIAw");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+
+
+
+
+
+
+
+
+
+var SectionSecondComponent = /** @class */ (function () {
+    function SectionSecondComponent(dialog, service, route, toastr) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.toastr = toastr;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_7__["environment"].home_image;
+        //  imagePath = environment.home_image;
+        this.responseData = [];
+        this.displayedColumns = ['image', 'heading', 'description', 'Action',];
+    }
+    SectionSecondComponent.prototype.ngOnInit = function () {
+    };
+    SectionSecondComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_8__["ToastrService"] }
+    ]; };
+    SectionSecondComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-section-second',
+            template: _raw_loader_section_second_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_section_second_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_8__["ToastrService"]])
+    ], SectionSecondComponent);
+    return SectionSecondComponent;
+}());
+
 
 
 /***/ }),
@@ -261,6 +386,13 @@ var AdminService = /** @class */ (function () {
             return res;
         }));
     };
+    AdminService.prototype.allTestimonial = function (data) {
+        var API_URL = this.apiUrl1 + "allTestimonial";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
     AdminService.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
         { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"] },
@@ -279,6 +411,67 @@ var AdminService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "4mNI":
+/*!******************************************************!*\
+  !*** ./src/app/teacher-faq/teacher-faq.component.ts ***!
+  \******************************************************/
+/*! exports provided: TeacherFaqComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeacherFaqComponent", function() { return TeacherFaqComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_teacher_faq_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./teacher-faq.component.html */ "uyra");
+/* harmony import */ var _teacher_faq_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./teacher-faq.component.css */ "/A4d");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
+
+
+
+var TeacherFaqComponent = /** @class */ (function () {
+    function TeacherFaqComponent(dialog, service, route) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.checked = false;
+        this.indeterminate = false;
+        this.labelPosition = 'after';
+        this.disabled = false;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.responseData = [];
+        this.displayedColumns = ['position', 'question', 'answer', 'action'];
+    }
+    TeacherFaqComponent.prototype.ngOnInit = function () {
+    };
+    TeacherFaqComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] }
+    ]; };
+    TeacherFaqComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-teacher-faq',
+            template: _raw_loader_teacher_faq_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_teacher_faq_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]])
+    ], TeacherFaqComponent);
+    return TeacherFaqComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "6Cpu":
 /*!****************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category/category.component.html ***!
@@ -288,7 +481,20 @@ var AdminService = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >CATEGORY</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\">\n            <button mat-button class=\"theme-btn\" (click)=\"openDialog()\" >Add Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n            <mat-form-field>\n             <mat-label>Filter</mat-label>\n             <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th mat-header-cell *matHeaderCellDef class=\"text-center\">Category</th>\n                        <td mat-cell *matCellDef=\"let element\" class=\"text-center\">{{element.category_name}}</td>\n                    </ng-container>\n\n                    <!-- Description -->\n                    <!-- <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th> -->\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.description}}</td> -->\n                    <!-- </ng-container> -->\n\n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                        <!-- <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                            aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                        </button> -->\n                        <!-- <mat-menu #menu=\"matMenu\"> -->\n                            <button mat-icon-button (click)=\"openEditDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                                <!-- Edit -->\n                            </button>\n                            <button mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                                <!-- Delete -->\n                            </button>\n                            <!-- <button mat-icon-button routerLink=\"/sub_category\"> -->\n                              <!-- (click)=\"openSubCategoryDialog()\" -->\n                              <!-- <mat-icon >view_list</mat-icon> -->\n                              <!-- Delete -->\n                           <!-- </button> -->\n                         <!-- </mat-menu> -->\n                    </td>\n                </ng-container>\n                <ng-container matColumnDef=\"subcategory\">\n                  <th mat-header-cell *matHeaderCellDef class=\"text-center\">Sub Category List</th>\n                  <td mat-cell *matCellDef=\"let element\" class=\"text-center\">\n                    <button mat-icon-button routerLink=\"/sub_category/{{element.id}}\">\n                      <!-- (click)=\"openSubCategoryDialog()\" -->\n                      <mat-icon >view_list</mat-icon>\n                      <!-- Delete -->\n                   </button>\n                  </td>\n                  <!-- {{element.category_name}} -->\n              </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >CATEGORY</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\">\n            <button mat-button class=\"theme-btn\" (click)=\"openDialog()\" >Add Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n            <mat-form-field>\n             <mat-label>Filter</mat-label>\n             <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th mat-header-cell *matHeaderCellDef >Category</th>\n                        <!-- class=\"text-center\" -->\n                        <td mat-cell *matCellDef=\"let element\" >{{element.category_name}}</td>\n                        <!-- class=\"text-center\" -->\n                    </ng-container>\n\n                    <!-- Description -->\n                    <!-- <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th> -->\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.description}}</td> -->\n                    <!-- </ng-container> -->\n\n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                        <!-- <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                            aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                        </button> -->\n                        <!-- <mat-menu #menu=\"matMenu\"> -->\n                            <button mat-icon-button (click)=\"openEditDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                                <!-- Edit -->\n                            </button>\n                            <button mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                                <!-- Delete -->\n                            </button>\n                            <!-- <button mat-icon-button routerLink=\"/sub_category\"> -->\n                              <!-- (click)=\"openSubCategoryDialog()\" -->\n                              <!-- <mat-icon >view_list</mat-icon> -->\n                              <!-- Delete -->\n                           <!-- </button> -->\n                         <!-- </mat-menu> -->\n                    </td>\n                </ng-container>\n                <ng-container matColumnDef=\"subcategory\">\n                  <th mat-header-cell *matHeaderCellDef class=\"text-center\">Sub Category List</th>\n                  <td mat-cell *matCellDef=\"let element\" class=\"text-center\">\n                    <button mat-icon-button routerLink=\"/sub_category/{{element.id}}\">\n                      <!-- (click)=\"openSubCategoryDialog()\" -->\n                      <mat-icon >view_list</mat-icon>\n                      <!-- Delete -->\n                   </button>\n                  </td>\n                  <!-- {{element.category_name}} -->\n              </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
+
+/***/ }),
+
+/***/ "7JRj":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/add-testimonials/add-testimonials.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <p>add-testimonials works!</p> -->\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >ADD TESTIMONIALS</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 offset-sm-2\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Author Name\" [(ngModel)]=\"testimonialsData.authorName\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Designation\" [(ngModel)]=\"testimonialsData.designation\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>\n                                \n                                <!-- Description -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Description\" [(ngModel)]=\"testimonialsData.description\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Update</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -331,6 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SubCategoryComponent = /** @class */ (function () {
+    //   
     function SubCategoryComponent(dialog, service, route) {
         this.dialog = dialog;
         this.service = service;
@@ -740,7 +947,7 @@ var environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >STUDENT MANAGEMENT</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <!-- <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div> -->\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"name\">\n                        <th mat-header-cell *matHeaderCellDef>Name</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td>\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"email\">\n                        <th mat-header-cell *matHeaderCellDef>Email</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.email}}</td>\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"phone\">\n                        <th mat-header-cell *matHeaderCellDef>Phone</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td>\n                    </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       View More\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                            <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button> -->\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >STUDENT MANAGEMENT</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <!-- <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div> -->\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">\n                          {{ (currentIndex) * currentPage + i +1 }}\n                          <!-- {{ i + 1 }} -->\n                        </td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"name\">\n                        <th mat-header-cell *matHeaderCellDef>Name</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td>\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"email\">\n                        <th mat-header-cell *matHeaderCellDef>Email</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.email}}</td>\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"phone\">\n                        <th mat-header-cell *matHeaderCellDef>Phone</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td>\n                    </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       View More\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                            <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button> -->\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -791,6 +998,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+
 
 
 
@@ -804,21 +1013,22 @@ __webpack_require__.r(__webpack_exports__);
 var SectionFirstComponent = /** @class */ (function () {
     // @ViewChild(MatSort, { static: true }) sort: MatSort;
     // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-    function SectionFirstComponent(dialog, service, route) {
+    function SectionFirstComponent(dialog, service, route, toastr) {
         this.dialog = dialog;
         this.service = service;
         this.route = route;
+        this.toastr = toastr;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__["environment"].home_image;
         //  imagePath = environment.home_image;
         this.responseData = [];
-        this.displayedColumns = ['image', 'Action'];
+        this.displayedColumns = ['title', 'subtitle', 'image', 'Action'];
     }
     SectionFirstComponent.prototype.ngOnInit = function () {
     };
     SectionFirstComponent.prototype.openEditDialog = function () {
         var dialogRef = this.dialog.open(EditDialog, {
-            // height: '600px',
+            // height: '600px!important',
             width: '600px',
         });
         dialogRef.afterClosed().subscribe(function (result) {
@@ -836,7 +1046,8 @@ var SectionFirstComponent = /** @class */ (function () {
     SectionFirstComponent.ctorParameters = function () { return [
         { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
         { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"] }
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"] }
     ]; };
     SectionFirstComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
@@ -846,18 +1057,20 @@ var SectionFirstComponent = /** @class */ (function () {
         }),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
             _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"]])
     ], SectionFirstComponent);
     return SectionFirstComponent;
 }());
 
 /// Edit Home Dialog box
 var EditDialog = /** @class */ (function () {
-    function EditDialog(fb, dialogRef, service, route) {
+    function EditDialog(fb, dialogRef, service, route, toastr) {
         this.fb = fb;
         this.dialogRef = dialogRef;
         this.service = service;
         this.route = route;
+        this.toastr = toastr;
         this.addCategory = {
             name: "",
             email: "",
@@ -867,12 +1080,8 @@ var EditDialog = /** @class */ (function () {
             dob: "",
         };
         this.viewDetailForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormGroup"]({
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
-            phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
-            country: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
-            state: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
-            dob: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
+            content: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
+            content1: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
         });
     }
     EditDialog.prototype.onNoClick = function () {
@@ -884,7 +1093,36 @@ var EditDialog = /** @class */ (function () {
         this.reqData.limit = 30;
         this.getStudentList();
         this.StudentId = this.dialogRef.id;
-        console.log('idddddd', this.StudentId);
+        // console.log('idddddd', this.StudentId)
+    };
+    EditDialog.prototype.readURL = function (event) {
+        var _this = this;
+        if (event.target.files && event.target.files[0]) {
+            var file = event.target.files[0];
+            // this.homeImage = file
+            console.log('++++++++++++++++++++++++++++++', file);
+            console.log('file ', file.size);
+            if (file.size / 10027 / 10027 > 1) {
+                this.toastr.error('Image size should not be more than 10MB', 'Success');
+                // let snackBarRef = this._snackBar.open('Image size should not be more than 1MB', 'Ok', {
+                // 	duration: environment.snackDuration,
+                // });
+            }
+            else {
+                this.homeImage = file;
+                var reader_1 = new FileReader();
+                reader_1.onload = function (e) { return _this.homeImageSrc = reader_1.result; };
+                reader_1.onloadend = function (loadEvent) {
+                    console.log(reader_1);
+                    var mainImage = reader_1.result;
+                    // console.log(mainImage)
+                    // this.reqData.image.push(fr.result)
+                    _this.homeImage = file;
+                };
+                console.log('this.homeImage+++', this.homeImage);
+                reader_1.readAsDataURL(file);
+            }
+        }
     };
     EditDialog.prototype.getStudentList = function () {
         // var list={
@@ -916,7 +1154,8 @@ var EditDialog = /** @class */ (function () {
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormBuilder"] },
         { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"] },
         { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"] }
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"] }
     ]; };
     EditDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
@@ -924,12 +1163,41 @@ var EditDialog = /** @class */ (function () {
             template: _raw_loader_edit_category_html__WEBPACK_IMPORTED_MODULE_3__["default"],
         }),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormBuilder"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"], _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"]])
+            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"]])
     ], EditDialog);
     return EditDialog;
 }());
 
 
+
+/***/ }),
+
+/***/ "EO2G":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/parent-faq/parent-faq.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >PARENT FAQ</h2>\n </div>\n <div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"addTestimonial()\">Add</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <!-- <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td> -->\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"question\">\n                        <th mat-header-cell *matHeaderCellDef>Questions</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td> -->\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"answer\">\n                        <th mat-header-cell *matHeaderCellDef>Answers</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.email}}</td> -->\n                    </ng-container>\n                    \n                   \n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Action\n                    </th>\n                    <!-- <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                            \n                        \n                    </td> -->\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "FIAw":
+/*!*************************************************************!*\
+  !*** ./src/app/section-second/section-second.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzZWN0aW9uLXNlY29uZC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -959,6 +1227,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "I0SY":
+/*!*****************************************************!*\
+  !*** ./src/app/contact-us/contact-us.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjb250YWN0LXVzLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "K/lK":
+/*!*********************************************************!*\
+  !*** ./src/app/testimonials/testimonials.component.css ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0ZXN0aW1vbmlhbHMuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
 /***/ "KJiH":
 /*!****************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-first/edit-category.html ***!
@@ -968,7 +1262,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" <style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n </style>\n\n  <div class=\"main-content\" style=\"position: relative;\">\n                <button mat-icon-button  (click)=\"closeDialog()\"\n                    style=\"position: absolute;\n                    right: -32px;\n                    top: -32px;\n                    transform: scale(0.75);\n                    outline: none;\n                    background-color: #ffffff!important;\n                    color: rgb(0, 0, 0);\n                    border-radius: 0px;\"  >\n                    <!-- style=\"padding-left: 492px;padding-top: 9px;\" -->\n                    <mat-icon >close</mat-icon>\n                </button>\n                   <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n\n                            <h4 class=\"card-title\">Actions</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                          \n                                  <form [formgroup]=\"viewDetailForm\">\n                                        <div clas=\"inpt_form\"> \n                                            <div class=\"row\">\n                                                 <mat-label class=\"col-sm-4\">First Content</mat-label>\n                                                 <div class=\"col-sm-8\">\n                                                    <mat-form-field  class=\"example-full-width\"  >\n                                                      <input matInput placeholder=\"First content\" formControlName=\"content\" [(ngModel)]=\"addCategory.name\">\n                                                    </mat-form-field>\n                                                 </div>\n                                            </div>\n                                        </div>  \n                                  </form>             \n                        </div>  \n                    </div>\n   </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = (" <style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n    .img-fluid {\n\tmax-height: 75px;\n\tmin-height: 75px;\n\tmin-width: 160px;\n\tobject-fit: cover;\n\tmax-width: 160px;\n\tmargin: 10px 0;\n    }\t\n    .img_inpt input{\n\tposition: absolute;\n\tbottom: 7px;\n\tleft: 31px;\n\topacity: 0;\n    }\n    .upload_img {\n\tposition: relative;\n    }\n    .img-fluid {\n\tmax-height: 75px;\n\tmin-height: 75px;\n\tmin-width: 160px;\n\tobject-fit: cover;\n\tmax-width: 160px;\n\tmargin: 10px 0;\n}\n.upload_img {\n\tposition: relative;\n}\n </style>\n\n  <div class=\"main-content\" style=\"position: relative;\">\n                <button mat-icon-button  (click)=\"closeDialog()\"\n                    style=\"position: absolute;\n                    right: -32px;\n                    top: -32px;\n                    transform: scale(0.75);\n                    outline: none;\n                    background-color: #ffffff!important;\n                    color: rgb(0, 0, 0);\n                    border-radius: 0px;\"  >\n                    <!-- style=\"padding-left: 492px;padding-top: 9px;\" -->\n                    <mat-icon >close</mat-icon>\n                </button>\n                   <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n\n                            <h4 class=\"card-title\">Actions</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                          \n                                  <form [formGroup]=\"viewDetailForm\">\n                                        <div clas=\"inpt_form\"> \n                                            <div class=\"row\">\n                                                 <mat-label class=\"col-sm-4\">First Content</mat-label>\n                                                 <div class=\"col-sm-8\">\n                                                    <mat-form-field  class=\"example-full-width\"  >\n                                                      <input matInput placeholder=\"First content\" formControlName=\"content\" [(ngModel)]=\"addCategory.name\">\n                                                    </mat-form-field>\n                                                 </div>\n                                            </div>\n                                        </div>  \n                                        <div clas=\"inpt_form\"> \n                                            <div class=\"row\">\n                                                 <mat-label class=\"col-sm-4\">Second Content</mat-label>\n                                                 <div class=\"col-sm-8\">\n                                                    <mat-form-field  class=\"example-full-width\"  >\n                                                      <input matInput placeholder=\"Second content\" formControlName=\"content1\" [(ngModel)]=\"addCategory.name\">\n                                                    </mat-form-field>\n                                                 </div>\n                                            </div>\n                                        </div>  \n                                        <div class=\"inpt_form\">\n                                            <div class=\"row\">\n                                                <mat-label clasS=\"col-sm-4\">Image</mat-label>\n                                                <div class=\"col-sm-8\">\n                                                    <!-- <mat-form-field class=\"example-form-field\"> -->\n                                                        <img src=\"{{homeImageSrc || 'https://www.searchpng.com/wp-content/uploads/2019/02/Profile-PNG-Icon.png'}}\" class=\"img-fluid prfile_img\">\n                                                        \n                                                        <div class=\"mt-3\">\n                                                            <button type=\"button\" class=\"btn btn-info upload_img\"  style=\"width: 115px\">Upload Image</button>\n                                                        </div>\n                                                        <span class=\"img_inpt\"><input type=\"file\" (change)=\"readURL($event)\" accept=\".jpeg,.png,.jpg\"></span>\n                                                    <!-- </mat-form-field> -->\n                                                </div>\n                                            </div>\n                                        </div>\n                                        <button mat-raised-button class=\"btn btn-success\" (click)=\"Save()\">Save</button>\n                                  </form>             \n                        </div>  \n                    </div>\n   </div>\n");
 
 /***/ }),
 
@@ -981,7 +1275,108 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"logo\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"assets/img/logow.png\"/>\n      </div>\n    </a>\n    \n</div>\n<div class=\"sidebar-wrapper\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" [ngClass]=\"{active: router.url.includes('/sub_category' ) && menuItem.path == '/category' }\" class=\"{{menuItem.class}} nav-item\">\n        <!-- <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" class=\"{{menuItem.class}} nav-item\"> -->\n            \n            <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p>{{menuItem.title}}</p>\n            </a>\n            <!-- <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n                <ul type=\"none\" class=\"iner_ul\">\n                    <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                            <i class=\"material-icons\">{{sbcat.icon}}</i>\n                            <p>{{sbcat.title}}</p>\n                        </a>\n                    </li>\n                </ul>\n            </div> -->\n        </li>\n        <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link \">\n                <i class=\"material-icons\">list</i>\n                <p>User Management</p>\n                <ul class=\"sub-ul\">\n                    <li ><a  [routerLink]=\"['/user_list']\">Student Management</a></li>\n                    <!-- href=\"javascript:void(0)\" -->\n                    <!-- <li><a href=\"javascript:void(0)\">Teacher Management</a></li> -->\n                    <!-- <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li> -->\n\n\n                </ul>\n            </a>\n        </li>\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">home</i>\n                <p>Home Management</p>\n                <ul class=\"sub-ul\">\n                    <li><a [routerLink]=\"['/section_1']\">Section-1</a></li> -->\n                    <!-- <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li> -->\n\n<!-- \n                </ul>\n            </a>\n        </li> -->\n\n\n\n\n       <!-- <li>\n        <mat-accordion class=\"example-headers-align\" multi>\n            <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                <mat-panel-title>\n                  Personal data\n                </mat-panel-title>\n                <mat-panel-description>\n                  Type your name \n                  <mat-icon>account_circle</mat-icon>\n                </mat-panel-description>\n              </mat-expansion-panel-header>\n          \n              <mat-form-field>\n                <mat-label>First name</mat-label>\n                <input matInput>\n              </mat-form-field>\n            </mat-expansion-panel>       \n          </mat-accordion>\n       </li>\n        -->\n \n\n\n        <!-- <li class=\"nav-item\">\n            <a href=\"\"\n        </li> -->\n    </ul>\n</div>\n\n<!-- \n<ul class=\"nav\">\n   <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems; let i = index;\" class=\"{{menuItem.class}} nav-item accordion\" id=\"accordionExample{{i}}\">\n       <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n           <i class=\"material-icons\">{{menuItem.icon}}</i>\n           <p>{{menuItem.title}}</p>`\n       </a>\n       <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n           <ul type=\"none\" class=\"iner_ul\">\n               <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                   <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                       <i class=\"material-icons\">{{sbcat.icon}}</i>\n                       <p>{{sbcat.title}}</p>\n                   </a>\n               </li>\n           </ul>\n       </div>\n   </li>\n</ul> -->\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"logo\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"assets/img/logow.png\"/>\n      </div>\n    </a>\n    \n</div>\n<div class=\"sidebar-wrapper\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" [ngClass]=\"{active: router.url.includes('/sub_category' ) && menuItem.path == '/category' }\" class=\"{{menuItem.class}} nav-item\">\n        <!-- <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" class=\"{{menuItem.class}} nav-item\"> -->\n            \n            <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p>{{menuItem.title}}</p>\n            </a>\n            <!-- <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n                <ul type=\"none\" class=\"iner_ul\">\n                    <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                            <i class=\"material-icons\">{{sbcat.icon}}</i>\n                            <p>{{sbcat.title}}</p>\n                        </a>\n                    </li>\n                </ul>\n            </div> -->\n        </li>\n        <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link \">\n                <i class=\"material-icons\">list</i>\n                <p>User Management</p>\n                <ul class=\"sub-ul\">\n                    <li ><a  [routerLink]=\"['/user_list']\">Student Management</a></li>\n                    <!-- href=\"javascript:void(0)\" -->\n                    <!-- <li><a href=\"javascript:void(0)\">Teacher Management</a></li> -->\n                    <!-- <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li> -->\n\n\n                </ul>\n            </a>\n        </li>\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">home</i>\n                <p>Home Management</p>\n                <ul class=\"sub-ul\">\n                    <li><a [routerLink]=\"['/section_1']\">Section-1</a></li>\n                    <li><a [routerLink]=\"['/section_2']\">Section-2</a></li>\n                    <li><a [routerLink]=\"['/section_3']\">Section-3</a></li>\n                    <li><a [routerLink]=\"['/testimonials']\">Testimonials</a></li>\n                </ul>\n            </a>\n        </li> -->\n        <!-- <li routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">settings</i>\n                <p>General Management</p>\n                  <ul class=\"sub-ul\">\n\n                    <li><a [routerLink]=\"['/contact']\">CONTACT US</a></li>\n                  </ul>\n\n            </a>\n        </li> -->\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">info</i>\n                <p>Faq Management</p>\n                <ul class=\"sub-ul\">\n                    <li><a [routerLink]=\"['/generalFaq']\">GENERAL FAQ</a></li>\n                    <li><a [routerLink]=\"['/teacherFaq']\">TEACHER FAQ</a></li>\n                    <li><a [routerLink]=\"['/parentFaq']\">PARENT FAQ</a></li>\n                </ul>\n            </a>\n        </li> -->\n\n\n\n\n       <!-- <li>\n        <mat-accordion class=\"example-headers-align\" multi>\n            <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                <mat-panel-title>\n                  Personal data\n                </mat-panel-title>\n                <mat-panel-description>\n                  Type your name \n                  <mat-icon>account_circle</mat-icon>\n                </mat-panel-description>\n              </mat-expansion-panel-header>\n          \n              <mat-form-field>\n                <mat-label>First name</mat-label>\n                <input matInput>\n              </mat-form-field>\n            </mat-expansion-panel>       \n          </mat-accordion>\n       </li>\n        -->\n \n\n\n        <!-- <li class=\"nav-item\">\n            <a href=\"\"\n        </li> -->\n    </ul>\n</div>\n\n<!-- \n<ul class=\"nav\">\n   <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems; let i = index;\" class=\"{{menuItem.class}} nav-item accordion\" id=\"accordionExample{{i}}\">\n       <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n           <i class=\"material-icons\">{{menuItem.icon}}</i>\n           <p>{{menuItem.title}}</p>`\n       </a>\n       <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n           <ul type=\"none\" class=\"iner_ul\">\n               <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                   <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                       <i class=\"material-icons\">{{sbcat.icon}}</i>\n                       <p>{{sbcat.title}}</p>\n                   </a>\n               </li>\n           </ul>\n       </div>\n   </li>\n</ul> -->\n\n");
+
+/***/ }),
+
+/***/ "KL40":
+/*!****************************************************************!*\
+  !*** ./src/app/section-one-edit/section-one-edit.component.ts ***!
+  \****************************************************************/
+/*! exports provided: SectionOneEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionOneEditComponent", function() { return SectionOneEditComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_section_one_edit_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./section-one-edit.component.html */ "YAw6");
+/* harmony import */ var _section_one_edit_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section-one-edit.component.css */ "VJdo");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+
+
+
+
+
+
+
+var SectionOneEditComponent = /** @class */ (function () {
+    function SectionOneEditComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.testimonialsData = {
+            authorName: "",
+            designation: "",
+            image: "",
+            description: ""
+        };
+    }
+    SectionOneEditComponent.prototype.ngOnInit = function () {
+    };
+    SectionOneEditComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.testimonialsData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    SectionOneEditComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    SectionOneEditComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-section-one-edit',
+            template: _raw_loader_section_one_edit_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_section_one_edit_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], SectionOneEditComponent);
+    return SectionOneEditComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "L30g":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/testimonials/testimonials.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >TESTIMONIALS</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/createTestimonials\">Add Testimonials</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n           <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <!-- <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td> -->\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"author_name\">\n                        <th mat-header-cell *matHeaderCellDef>Author Name</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td> -->\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"designation\">\n                        <th mat-header-cell *matHeaderCellDef>Designation</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.email}}</td> -->\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td> -->\n                    </ng-container>\n\n\n                    <ng-container matColumnDef=\"image\">\n                      <th mat-header-cell *matHeaderCellDef>Image</th>\n                      <!-- <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td> -->\n                  </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Action\n                    </th>\n                    <!-- <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                       \n                        \n                    </td> -->\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -1019,6 +1414,67 @@ var FooterComponent = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
     ], FooterComponent);
     return FooterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "NqkC":
+/*!****************************************************!*\
+  !*** ./src/app/contact-us/contact-us.component.ts ***!
+  \****************************************************/
+/*! exports provided: ContactUsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactUsComponent", function() { return ContactUsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_contact_us_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./contact-us.component.html */ "wibN");
+/* harmony import */ var _contact_us_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact-us.component.css */ "I0SY");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
+
+
+
+var ContactUsComponent = /** @class */ (function () {
+    function ContactUsComponent(dialog, service, route) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.checked = false;
+        this.indeterminate = false;
+        this.labelPosition = 'after';
+        this.disabled = false;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.responseData = [];
+        this.displayedColumns = ['position', 'name', 'email', 'subject', 'message', 'action'];
+    }
+    ContactUsComponent.prototype.ngOnInit = function () {
+    };
+    ContactUsComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] }
+    ]; };
+    ContactUsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-contact-us',
+            template: _raw_loader_contact_us_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_contact_us_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]])
+    ], ContactUsComponent);
+    return ContactUsComponent;
 }());
 
 
@@ -1189,7 +1645,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openEditDialog()\">Edit</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n<!--          \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Ex. Mia\" #input>\n          </mat-form-field> -->\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                   \n                    <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Image\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>\n\n                    <!-- <ng-container matColumnDef=\"phone\">\n                        <th mat-header-cell *matHeaderCellDef>Phone</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td>\n                    </ng-container> -->\n\n                    \n                    <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef > Action </th>\n                        <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button> -->\n                        \n                      </td>\n                       \n                    </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator> -->\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!-- <div class=\"orgNL_page comon_page\"> -->\n    <!-- page class -->\n\n    <!-- <div class=\"card\">\n        <div class=\"card-body\">\n        \n\n            <h2 class=\"card_head\">Home Page First Section </h2>\n            <mat-divider></mat-divider>\n\n            <div class=\"table_db_indi\">\n                <mat-form-field>\n                    <mat-label>Filter</mat-label>\n                    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Ex. Name\">\n\n                </mat-form-field> -->\n                <!-- <a routerLink=\"/subscription-packages\"> -->\n                    <!-- <button style=\"float: right;margin-top: 10px;\" mat-raised-button color=\"primary\" (click)=\"add_faq()\">Add</button> -->\n                <!-- </a> -->\n                <!-- <div class=\"onl_tabl\">\n\n\n                    <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-table table mat-elevation-z1\"> -->\n\n                        <!--- Note that these columns can be defined in any order.\n                          The actual rendered columns are set as a property on the row definition\" -->\n\n\n\n                        <!-- Name Column -->\n                        <!-- <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\">Image\n                            </th>\n                            <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                        </ng-container> -->\n\n                        \n\n<!--                         \n                        <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\"> Action </th>\n                            <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                                <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                                    aria-label=\"Example icon-button with a menu\">\n                                    <mat-icon>more_vert</mat-icon>\n                                </button>\n                                <mat-menu #menu=\"matMenu\">\n                                    <button (click)=\"edit_content(element)\" mat-menu-item>\n                                        <mat-icon>edit</mat-icon>\n                                        <span >Edit</span>\n                                    </button> -->\n\n                                    <!-- <button mat-menu-item (click)=\"delete(element)\">\n                                        <mat-icon >delete</mat-icon>\n                                        <span>Delete</span>\n                                    </button> -->\n\n                                <!-- </mat-menu>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </div>\n            </div> -->\n\n            <!-- table start --> \n<!-- \n        </div>\n    </div>\n</div> -->\n\n<!-- <button (click)=\"tt()\">Click</button> -->\n<!-- \n<div class=\"modal fade edit_modal\" id=\"editForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">First Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"First Content\" [(ngModel)]=\"formData.content\" [formControl]=\"complexForm.controls['content']\" autocomplete=\"content\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Second Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Second Content\" [(ngModel)]=\"formData.content2\" [formControl]=\"complexForm.controls['content2']\" autocomplete=\"content2\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Third Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Third Content\" [(ngModel)]=\"formData.content3\" [formControl]=\"complexForm.controls['content3']\" autocomplete=\"content3\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Image</mat-label>\n                                        <div class=\"col-sm-8\">\n                                             <mat-form-field class=\"example-form-field\"> -->\n                                                <!-- <img src=\"{{homeImageSrc || 'https://www.searchpng.com/wp-content/uploads/2019/02/Profile-PNG-Icon.png'}}\" class=\"img-fluid prfile_img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-info upload_img\"  style=\"width: 115px\">Upload Image</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"img_inpt\"><input type=\"file\" (change)=\"readURL($event)\" accept=\".jpeg,.png,.jpg\"></span> -->\n                                            <!-- </mat-form-field> -->\n                                        <!-- </div> -->\n                                    <!-- </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Save()\">Save</button>\n                            </form>\n                        </div>\n                    </div> -->\n<!-- \n            </div>\n        </div>\n    </div>\n</div> --> \n\n\n<!-- <div class=\"modal fade\" id=\"addForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Question</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"Question\" [formControl]=\"complexForm.controls['question']\" autocomplete=\"question\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Answer</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Enter Answer\" [formControl]=\"complexForm.controls['answer']\" autocomplete=\"answer\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Add()\">Save</button>\n                            </form>\n                        </div>\n                    </div>\n\n            </div>\n        </div>\n    </div>\n</div> -->");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOME PAGE FIRST SECTION</h2>\n   </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/edit_section_one\">Edit</button>\n            <!-- (click)=\"openEditDialog()\" -->\n          </div>\n     \n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                   \n                    <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Image\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>   \n\n                    <ng-container matColumnDef=\"title\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Title\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>      \n                    \n                    <ng-container matColumnDef=\"subtitle\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Sub Title\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>      \n                    <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef > Action </th>\n                        <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button> -->\n                        \n                      </td>\n                       \n                    </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator> -->\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!-- <div class=\"orgNL_page comon_page\"> -->\n    <!-- page class -->\n\n    <!-- <div class=\"card\">\n        <div class=\"card-body\">\n        \n\n            <h2 class=\"card_head\">Home Page First Section </h2>\n            <mat-divider></mat-divider>\n\n            <div class=\"table_db_indi\">\n                <mat-form-field>\n                    <mat-label>Filter</mat-label>\n                    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Ex. Name\">\n\n                </mat-form-field> -->\n                <!-- <a routerLink=\"/subscription-packages\"> -->\n                    <!-- <button style=\"float: right;margin-top: 10px;\" mat-raised-button color=\"primary\" (click)=\"add_faq()\">Add</button> -->\n                <!-- </a> -->\n                <!-- <div class=\"onl_tabl\">\n\n\n                    <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-table table mat-elevation-z1\"> -->\n\n                        <!--- Note that these columns can be defined in any order.\n                          The actual rendered columns are set as a property on the row definition\" -->\n\n\n\n                        <!-- Name Column -->\n                        <!-- <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\">Image\n                            </th>\n                            <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                        </ng-container> -->\n\n                        \n\n<!--                         \n                        <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\"> Action </th>\n                            <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                                <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                                    aria-label=\"Example icon-button with a menu\">\n                                    <mat-icon>more_vert</mat-icon>\n                                </button>\n                                <mat-menu #menu=\"matMenu\">\n                                    <button (click)=\"edit_content(element)\" mat-menu-item>\n                                        <mat-icon>edit</mat-icon>\n                                        <span >Edit</span>\n                                    </button> -->\n\n                                    <!-- <button mat-menu-item (click)=\"delete(element)\">\n                                        <mat-icon >delete</mat-icon>\n                                        <span>Delete</span>\n                                    </button> -->\n\n                                <!-- </mat-menu>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </div>\n            </div> -->\n\n            <!-- table start --> \n<!-- \n        </div>\n    </div>\n</div> -->\n\n<!-- <button (click)=\"tt()\">Click</button> -->\n<!-- \n<div class=\"modal fade edit_modal\" id=\"editForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">First Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"First Content\" [(ngModel)]=\"formData.content\" [formControl]=\"complexForm.controls['content']\" autocomplete=\"content\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Second Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Second Content\" [(ngModel)]=\"formData.content2\" [formControl]=\"complexForm.controls['content2']\" autocomplete=\"content2\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Third Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Third Content\" [(ngModel)]=\"formData.content3\" [formControl]=\"complexForm.controls['content3']\" autocomplete=\"content3\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Image</mat-label>\n                                        <div class=\"col-sm-8\">\n                                             <mat-form-field class=\"example-form-field\"> -->\n                                                <!-- <img src=\"{{homeImageSrc || 'https://www.searchpng.com/wp-content/uploads/2019/02/Profile-PNG-Icon.png'}}\" class=\"img-fluid prfile_img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-info upload_img\"  style=\"width: 115px\">Upload Image</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"img_inpt\"><input type=\"file\" (change)=\"readURL($event)\" accept=\".jpeg,.png,.jpg\"></span> -->\n                                            <!-- </mat-form-field> -->\n                                        <!-- </div> -->\n                                    <!-- </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Save()\">Save</button>\n                            </form>\n                        </div>\n                    </div> -->\n<!-- \n            </div>\n        </div>\n    </div>\n</div> --> \n\n\n<!-- <div class=\"modal fade\" id=\"addForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Question</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"Question\" [formControl]=\"complexForm.controls['question']\" autocomplete=\"question\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Answer</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Enter Answer\" [formControl]=\"complexForm.controls['answer']\" autocomplete=\"answer\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Add()\">Save</button>\n                            </form>\n                        </div>\n                    </div>\n\n            </div>\n        </div>\n    </div>\n</div> -->");
 
 /***/ }),
 
@@ -1241,6 +1697,74 @@ var AppComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "U5tD":
+/*!******************************************************!*\
+  !*** ./src/app/general-faq/general-faq.component.ts ***!
+  \******************************************************/
+/*! exports provided: GeneralFaqComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeneralFaqComponent", function() { return GeneralFaqComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_general_faq_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./general-faq.component.html */ "s1iN");
+/* harmony import */ var _general_faq_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./general-faq.component.css */ "bG1T");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
+
+
+
+
+var GeneralFaqComponent = /** @class */ (function () {
+    function GeneralFaqComponent(dialog, service, route) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.checked = false;
+        this.indeterminate = false;
+        this.labelPosition = 'after';
+        this.disabled = false;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.responseData = [];
+        this.displayedColumns = ['position', 'question', 'answer', 'action'];
+    }
+    GeneralFaqComponent.prototype.ngOnInit = function () {
+        this.reqData = {};
+        this.reqData.offset = 0;
+        this.reqData.limit = 10;
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.responseData);
+        this.datamodel = {};
+    };
+    GeneralFaqComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] }
+    ]; };
+    GeneralFaqComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-general-faq',
+            template: _raw_loader_general_faq_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_general_faq_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"]])
+    ], GeneralFaqComponent);
+    return GeneralFaqComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "UA8p":
 /*!**************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category/add-sub-category.html ***!
@@ -1275,6 +1799,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
 /* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/paginator */ "M9IT");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/sort */ "Dh3D");
+
+
 
 
 
@@ -1286,26 +1814,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UserListComponent = /** @class */ (function () {
-    // 
     function UserListComponent(dialog, service, route) {
         this.dialog = dialog;
         this.service = service;
         this.route = route;
+        this.currentPage = 10;
         this.checked = false;
         this.indeterminate = false;
         this.labelPosition = 'after';
         this.disabled = false;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         this.responseData = [];
+        this.currentIndex = 0;
         this.displayedColumns = ['position', 'name', 'email', 'phone', 'action'];
     }
     UserListComponent.prototype.ngOnInit = function () {
         this.reqData = {};
         this.reqData.offset = 0;
         this.reqData.limit = 10;
+        // this.currentPage=10
         this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](this.responseData);
+        this.dataSource.paginator = this.paginator;
         this.datamodel = {};
+        this.length;
         this.getStudentList();
+    };
+    UserListComponent.prototype.ngAfterViewInit = function () {
+        this.dataSource.paginator = this.paginator;
     };
     UserListComponent.prototype.getStudentList = function () {
         var _this = this;
@@ -1316,6 +1851,7 @@ var UserListComponent = /** @class */ (function () {
         this.service.getallStudent(list).subscribe(function (res) {
             // console.log('*****getStudentData******',res.data);
             if (res) {
+                _this.length = res.data.count;
                 _this.dataSource = res.data.rows;
                 console.log('responseData ***', _this.dataSource);
             }
@@ -1373,18 +1909,28 @@ var UserListComponent = /** @class */ (function () {
         this.reqData.limit = evt.pageSize;
         // let Cate=this.route.snapshot.params.id;
         // console.log('cate id',Cate);
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
+        console.log('checking  page Index', this.currentPage);
+        console.log('checking current page', evt.pageSize);
+        // {{ (currentIndex) * currentPage + i +1 }}
+        // (2-1) * (10 +1) = 1*11 = 11
+        // jina v pageSIze ohde ch 1 add krna paina
+        // for example page is 3 
+        //  multiply -> add
+        // (3-1) * (10+1) => 2 * 10 + 1 => 21
         var list = {
             offset: this.reqData.offset,
             limit: this.reqData.limit
         };
         // console.log(this.reqData)
         this.service.getallStudent(list).subscribe(function (res) {
-            console.log('paginator limit', res);
+            // console.log('paginator limit',res)
             if (res) {
                 _this.length = res.data.count;
                 _this.dataSource = res.data.rows;
                 // this.responseData=new MatTableDataSource(res.data);
-                console.log('dataSource', _this.dataSource);
+                // console.log('dataSource',this.dataSource);
             }
         }, function (err) {
             console.log(err);
@@ -1406,13 +1952,14 @@ var UserListComponent = /** @class */ (function () {
         dialogRef.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed');
             _this.reqData = {};
-            _this.reqData.offset = 0;
-            _this.reqData.limit = 10;
-            _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.responseData);
+            // this.reqData.offset = 0
+            // this.reqData.limit = 60
+            // this.dataSource = new MatTableDataSource(this.responseData);
+            // this.getStudentList()
             // this.dataSource.paginator = this.paginator;
             // this.dataSource.sort = this.sort;
-            _this.datamodel = {};
-            _this.getStudentList();
+            // this.datamodel = {}
+            // this.length
         });
     };
     UserListComponent.ctorParameters = function () { return [
@@ -1420,6 +1967,10 @@ var UserListComponent = /** @class */ (function () {
         { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__["AdminService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_9__["ActivatedRoute"] }
     ]; };
+    UserListComponent.propDecorators = {
+        sort: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_11__["MatSort"], { static: true },] }],
+        paginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_10__["MatPaginator"], { static: true },] }]
+    };
     UserListComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
             selector: 'app-user-list',
@@ -1546,6 +2097,108 @@ var ViewCategoryDialog = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "UPXU":
+/*!****************************************************************!*\
+  !*** ./src/app/add-testimonials/add-testimonials.component.ts ***!
+  \****************************************************************/
+/*! exports provided: AddTestimonialsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddTestimonialsComponent", function() { return AddTestimonialsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_add_testimonials_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./add-testimonials.component.html */ "7JRj");
+/* harmony import */ var _add_testimonials_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add-testimonials.component.css */ "y7OV");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+
+
+
+
+
+
+
+var AddTestimonialsComponent = /** @class */ (function () {
+    function AddTestimonialsComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.testimonialsData = {
+            authorName: "",
+            designation: "",
+            image: "",
+            description: ""
+        };
+    }
+    AddTestimonialsComponent.prototype.ngOnInit = function () {
+        // this.imgUrl = environment.testimonials_img + 'testimonial/'
+    };
+    AddTestimonialsComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.testimonialsData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    AddTestimonialsComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    AddTestimonialsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-add-testimonials',
+            template: _raw_loader_add_testimonials_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_add_testimonials_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], AddTestimonialsComponent);
+    return AddTestimonialsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "VJdo":
+/*!*****************************************************************!*\
+  !*** ./src/app/section-one-edit/section-one-edit.component.css ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlY3Rpb24tb25lLWVkaXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHdCQUF3QjtJQUN4QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixjQUFjO0FBQ2xCO0FBQ0E7UUFDUSxlQUFlO0lBQ25CO0FBRUE7UUFDSSxXQUFXO0lBQ2Y7QUFDQTtRQUNJLFlBQVk7UUFDWixhQUFhO1FBQ2IsbUJBQW1CO1FBQ25CLHFCQUFxQjtJQUN6QjtBQUNBO1FBQ0ksa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixZQUFZO1FBQ1osV0FBVztRQUNYLFlBQVk7UUFDWixtQkFBbUI7UUFDbkIsZ0JBQWdCO1FBQ2hCLG1CQUFtQjtJQUN2QjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsV0FBVztRQUNYLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixVQUFVO1FBQ1YsZUFBZTtRQUNmLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osb0JBQW9CO1FBQ3BCLGlCQUFpQjtJQUNyQjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixTQUFTO1FBQ1QsVUFBVTtRQUNWLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtJQUNuQiIsImZpbGUiOiJzZWN0aW9uLW9uZS1lZGl0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAxNTBweDtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9Il19 */");
+
+/***/ }),
+
 /***/ "VcCe":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sub-category/sub-category.component.html ***!
@@ -1555,7 +2208,7 @@ var ViewCategoryDialog = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >SUB CATEGORY</h2>\n </div> \n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n         </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th class=\"text-center\" mat-header-cell *matHeaderCellDef>Sub Category</th>\n                        <td class=\"text-center\" mat-cell *matCellDef=\"let element\">{{element.sub_category_name}}</td>\n                    </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"openEditDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button>\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >SUB CATEGORY</h2>\n </div> \n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n         </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th  mat-header-cell *matHeaderCellDef>Sub Category</th>\n                        <!-- class=\"text-center\" -->\n                        <td  mat-cell *matCellDef=\"let element\">{{element.sub_category_name}}</td>\n                        <!-- class=\"text-center\" -->\n                    </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"openEditDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button>\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
 
 /***/ }),
 
@@ -1760,6 +2413,19 @@ var AdminLoginComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "YAw6":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-one-edit/section-one-edit.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >EDIT HOME BANNER</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 offset-sm-2\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Title\" [(ngModel)]=\"testimonialsData.authorName\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Sub Title\" [(ngModel)]=\"testimonialsData.designation\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>              \n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Update</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+/***/ }),
+
 /***/ "YPFg":
 /*!***********************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category/edit-category.html ***!
@@ -1770,6 +2436,19 @@ var AdminLoginComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n    .ft{\n        font-size: 16px;\n    }\n    </style>\n  <div class=\"main-content\" style=\"position: relative;\">   \n        \n            <button mat-icon-button  (click)=\"closeDialog()\"\n                     style=\"position: absolute;\n                            right: -32px;\n                            top: -32px;\n                            transform: scale(0.75);\n                            outline: none;\n                            background-color: #ffffff!important;\n                            color: rgb(0, 0, 0);\n                            border-radius: 0px;\">\n                <mat-icon >close</mat-icon>\n            </button>\n            \n               \n                <form>\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <h4 class=\"card-title ft\">Edit Category</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                    <mat-form-field class=\"example-full-width\"  style=\"width: 490px\">\n                                        <input matInput placeholder=\"Category\" [(ngModel)]=\"addCategory.category\" [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"editCategory()\">Update</button>\n                    </div>\n                </form>\n            \n        \n  \n</div>\n");
+
+/***/ }),
+
+/***/ "Yms5":
+/*!***********************************************************!*\
+  !*** ./src/app/section-three/section-three.component.css ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzZWN0aW9uLXRocmVlLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -1806,6 +2485,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./user-list/user-list.component */ "UMdc");
 /* harmony import */ var _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./section-first/section-first.component */ "DUgg");
 /* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/expansion */ "7EHt");
+/* harmony import */ var _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./testimonials/testimonials.component */ "czZ8");
+/* harmony import */ var _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./add-testimonials/add-testimonials.component */ "UPXU");
+/* harmony import */ var _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./section-second/section-second.component */ "0I2P");
+/* harmony import */ var _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./section-three/section-three.component */ "/QHs");
+/* harmony import */ var _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./general-faq/general-faq.component */ "U5tD");
+/* harmony import */ var _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./teacher-faq/teacher-faq.component */ "4mNI");
+/* harmony import */ var _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./parent-faq/parent-faq.component */ "sC5k");
+/* harmony import */ var _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./contact-us/contact-us.component */ "NqkC");
+/* harmony import */ var _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./section-one-edit/section-one-edit.component */ "KL40");
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1869,8 +2566,16 @@ var AppModule = /** @class */ (function () {
                 _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_20__["UserListComponent"],
                 _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_20__["ViewCategoryDialog"],
                 _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_21__["SectionFirstComponent"],
-                _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_21__["EditDialog"]
-                // SubCategoryComponent
+                _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_21__["EditDialog"],
+                _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_23__["TestimonialsComponent"],
+                _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_24__["AddTestimonialsComponent"],
+                _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_25__["SectionSecondComponent"],
+                _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_26__["SectionThreeComponent"],
+                _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_27__["GeneralFaqComponent"],
+                _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_28__["TeacherFaqComponent"],
+                _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_29__["ParentFaqComponent"],
+                _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_30__["ContactUsComponent"],
+                _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_31__["SectionOneEditComponent"],
             ],
             providers: [_adminAuth_admin_guard__WEBPACK_IMPORTED_MODULE_13__["AdminGuard"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
@@ -1880,6 +2585,19 @@ var AppModule = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "bG1T":
+/*!*******************************************************!*\
+  !*** ./src/app/general-faq/general-faq.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJnZW5lcmFsLWZhcS5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1965,6 +2683,19 @@ var AppRoutingModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n    </style>\n\n<div class=\"main-content\" style=\"position: relative;\">\n   \n       \n           \n                <button mat-icon-button  (click)=\"closeDialog()\"\n                    style=\"position: absolute;\n                    right: -32px;\n                    top: -32px;\n                    transform: scale(0.75);\n                    outline: none;\n                    background-color: #ffffff!important;\n                    color: rgb(0, 0, 0);\n                    border-radius: 0px;\"  >\n                    <!-- style=\"padding-left: 492px;padding-top: 9px;\" -->\n                    <mat-icon >close</mat-icon>\n                </button>\n          \n                <!-- style=\"margin-top: 30px;\" -->\n               \n                <form [formGroup]=\"viewDetailForm\" >\n                    <!-- style=\"padding-top: 24px;\" -->\n                    <!-- <div class=\"text-right\" style=\"padding-right: 5px;\"><button mat-icon-button  (click)=\"closeDialog()\"><mat-icon >close</mat-icon></button></div> -->\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <!-- .card .card-header:not([data-background-color]) {\n                                background-color: #6AA524;\n                                padding-bottom: 0.5px; -->\n                            <h4 class=\"card-title\">All Details</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                 <div class=\"col-md-12\" style=\"padding-top: 10px;\" >\n                                    <!-- style=\"padding-top: 70px;\" -->\n                                    <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                        <input matInput placeholder=\"Name\" formControlName=\"name\" [(ngModel)]=\"addCategory.name\">\n                                    </mat-form-field>\n                                 </div>\n                                    <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                        <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                            <input matInput placeholder=\"Email\" formControlName=\"email\" [(ngModel)]=\"addCategory.email\">\n                                        </mat-form-field>\n                                    </div>\n                                    <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                        <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                            <input matInput placeholder=\"Phone\" formControlName=\"phone\" [(ngModel)]=\"addCategory.phone\">\n                                        </mat-form-field>\n                                    </div>\n                                    <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                        <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                            <input matInput placeholder=\"Country\" formControlName=\"country\" [(ngModel)]=\"addCategory.country\">\n                                        </mat-form-field>\n                                    </div>\n                                    <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                        <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                            <input matInput placeholder=\"State\" formControlName=\"state\" [(ngModel)]=\"addCategory.state\">\n                                        </mat-form-field>\n                                    </div>\n                                    <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                        <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                            <input matInput placeholder=\"D.O.B\" formControlName=\"dob\" [(ngModel)]=\"addCategory.dob\">\n                                        </mat-form-field>\n                                    </div>\n                           \n                               \n\n                                \n                                    <!-- <div *ngIf=\"bookCategoryForm.controls['bookCategory'].touched &&\n                                      bookCategoryForm.controls['bookCategory'].invalid\"\n                                       class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].errors &&\n                                        bookCategoryForm.controls['bookCategory'].errors.required\">\n                                        Category is required.</div>\n                                    </div> -->\n\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <textarea matInput placeholder=\"Description\" formControlName=\"categoryDescription\" rows=\"2\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"></textarea> -->\n                                        <!-- <input matInput placeholder=\"Description\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"> -->\n                                    <!-- </mat-form-field> -->\n                                    <!-- <div *ngIf=\"bookCategoryForm.controls['categoryDescription'].touched &&\n                                            bookCategoryForm.controls['categoryDescription'].invalid\"\n                                            class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['categoryDescription'].errors &&\n                                    bookCategoryForm.controls['categoryDescription'].errors.required\">\n                                        Description is required.</div>\n                                    </div> -->\n                                <!-- </div> -->\n                            </div>\n                        </div>\n                    </div>\n                    <!-- <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"!bookCategoryForm.valid\" (click)=\"createCategory()\">Submit</button> -->\n                        <!-- [disabled]=\"!bookCategoryForm.valid\" -->\n                    <!-- </div> -->\n                </form>\n           \n        \n</div>\n");
+
+/***/ }),
+
+/***/ "cJgW":
+/*!*****************************************************!*\
+  !*** ./src/app/parent-faq/parent-faq.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwYXJlbnQtZmFxLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2546,6 +3277,97 @@ var environment = {
 
 /***/ }),
 
+/***/ "czZ8":
+/*!********************************************************!*\
+  !*** ./src/app/testimonials/testimonials.component.ts ***!
+  \********************************************************/
+/*! exports provided: TestimonialsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestimonialsComponent", function() { return TestimonialsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_testimonials_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./testimonials.component.html */ "L30g");
+/* harmony import */ var _testimonials_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./testimonials.component.css */ "K/lK");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
+
+
+
+
+var TestimonialsComponent = /** @class */ (function () {
+    function TestimonialsComponent(dialog, service, route) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.checked = false;
+        this.indeterminate = false;
+        this.labelPosition = 'after';
+        this.disabled = false;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.responseData = [];
+        this.displayedColumns = ['position', 'author_name', 'designation', 'description', 'image', 'action'];
+    }
+    TestimonialsComponent.prototype.ngOnInit = function () {
+        this.reqData = {};
+        this.reqData.offset = 0;
+        this.reqData.limit = 10;
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.responseData);
+        this.datamodel = {};
+        this.allTestimonial();
+    };
+    TestimonialsComponent.prototype.allTestimonial = function () {
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        this.service.getallStudent(list).subscribe(function (res) {
+            console.log('testimonial data', res);
+        });
+    };
+    TestimonialsComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] }
+    ]; };
+    TestimonialsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-testimonials',
+            template: _raw_loader_testimonials_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_testimonials_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"]])
+    ], TestimonialsComponent);
+    return TestimonialsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "f49U":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-three/section-three.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOME PAGE THIRD SECTION</h2>\n </div>\n <div class=\"main-content\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          \n          <div class=\"card-body\">\n            <div class=\"text-right\" style=\"padding-right: 65px;\" >\n              <button mat-button class=\"theme-btn\" (click)=\"openEditDialog()\">Edit</button>\n            </div>\n       \n            <div class=\"card-body\">\n              <div class=\"table-responsive\">\n                  <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                      <!-- Position -->\n                     \n                      <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Image\n                          </th>\n                          <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n  \n                      </ng-container>   \n  \n                      <ng-container matColumnDef=\"step\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Steps\n                          </th>\n                          <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n  \n                      </ng-container>      \n                      \n                        \n                      <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef > Action </th>\n                          <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                              <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                  <mat-icon >edit</mat-icon>\n                              </button>\n                              <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                  <mat-icon >delete</mat-icon>\n                              </button> -->\n                          \n                        </td>\n                         \n                      </ng-container>\n  \n                      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                  </table>\n                  <div>\n                      <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                          (page)=\"paginationOptionChange($event)\">\n                      </mat-paginator> -->\n                  </div>\n              </div>\n          </div> \n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>");
+
+/***/ }),
+
 /***/ "hPg0":
 /*!*********************************************************!*\
   !*** ./src/app/add-category/add-category.component.css ***!
@@ -2954,6 +3776,93 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "s1iN":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/general-faq/general-faq.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >GENERAL FAQ</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"addTestimonial()\">Add</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <!-- <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td> -->\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"question\">\n                        <th mat-header-cell *matHeaderCellDef>Questions</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td> -->\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"answer\">\n                        <th mat-header-cell *matHeaderCellDef>Answers</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.email}}</td> -->\n                    </ng-container>\n                    \n                   \n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Action\n                    </th>\n                    <!-- <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                            \n                        \n                    </td> -->\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "sC5k":
+/*!****************************************************!*\
+  !*** ./src/app/parent-faq/parent-faq.component.ts ***!
+  \****************************************************/
+/*! exports provided: ParentFaqComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParentFaqComponent", function() { return ParentFaqComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_parent_faq_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./parent-faq.component.html */ "EO2G");
+/* harmony import */ var _parent_faq_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parent-faq.component.css */ "cJgW");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
+
+
+
+var ParentFaqComponent = /** @class */ (function () {
+    function ParentFaqComponent(dialog, service, route) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.checked = false;
+        this.indeterminate = false;
+        this.labelPosition = 'after';
+        this.disabled = false;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.responseData = [];
+        this.displayedColumns = ['position', 'question', 'answer', 'action'];
+    }
+    ParentFaqComponent.prototype.ngOnInit = function () {
+    };
+    ParentFaqComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] }
+    ]; };
+    ParentFaqComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-parent-faq',
+            template: _raw_loader_parent_faq_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_parent_faq_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]])
+    ], ParentFaqComponent);
+    return ParentFaqComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "uyra":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/teacher-faq/teacher-faq.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >TEACHER FAQ</h2>\n </div>\n <div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"addTestimonial()\">Add</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <!-- <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td> -->\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"question\">\n                        <th mat-header-cell *matHeaderCellDef>Questions</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td> -->\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"answer\">\n                        <th mat-header-cell *matHeaderCellDef>Answers</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.email}}</td> -->\n                    </ng-container>\n                    \n                   \n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Action\n                    </th>\n                    <!-- <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                            \n                        \n                    </td> -->\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
 /***/ "vtrx":
 /*!******************************************************************!*\
   !*** ./src/app/layouts/admin-layout/admin-layout.component.scss ***!
@@ -2964,6 +3873,45 @@ var ComponentsModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1sYXlvdXQuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "wibN":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/contact-us/contact-us.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >CONTACT US</h2>\n </div>\n <div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <!-- <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div> -->\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <!-- <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td> -->\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"name\">\n                        <th mat-header-cell *matHeaderCellDef>Name</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td> -->\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"email\">\n                        <th mat-header-cell *matHeaderCellDef>Email</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.email}}</td> -->\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"subject\">\n                        <th mat-header-cell *matHeaderCellDef>Subject</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td> -->\n                    </ng-container>\n\n                    <ng-container matColumnDef=\"message\">\n                      <th mat-header-cell *matHeaderCellDef>Message</th>\n                      <!-- <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td> -->\n                  </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Reply\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >Reply</mat-icon>\n                            </button>\n                            <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button> -->\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "xdhd":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-second/section-second.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOME PAGE SECOND SECTION</h2>\n </div>\n <div class=\"main-content\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          \n          <div class=\"card-body\">\n            <div class=\"text-right\" style=\"padding-right: 65px;\" >\n              <button mat-button class=\"theme-btn\" (click)=\"openEditDialog()\">Edit</button>\n            </div>\n       \n            <div class=\"card-body\">\n              <div class=\"table-responsive\">\n                  <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                      <!-- Position -->\n                     \n                      <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Image\n                          </th>\n                          <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n  \n                      </ng-container>     \n                      \n                      <ng-container matColumnDef=\"heading\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Heading\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>   \n                    \n                    \n                    <ng-container matColumnDef=\"description\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Description\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>   \n                      <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef > Action </th>\n                          <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                              <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                  <mat-icon >edit</mat-icon>\n                              </button>\n                              <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                  <mat-icon >delete</mat-icon>\n                              </button> -->\n                          \n                        </td>\n                         \n                      </ng-container>\n  \n                      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                  </table>\n                  <div>\n                      <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                          (page)=\"paginationOptionChange($event)\">\n                      </mat-paginator> -->\n                  </div>\n              </div>\n          </div> \n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>");
+
+/***/ }),
+
+/***/ "y7OV":
+/*!*****************************************************************!*\
+  !*** ./src/app/add-testimonials/add-testimonials.component.css ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC10ZXN0aW1vbmlhbHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHdCQUF3QjtJQUN4QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixjQUFjO0FBQ2xCO0FBQ0E7UUFDUSxlQUFlO0lBQ25CO0FBRUE7UUFDSSxXQUFXO0lBQ2Y7QUFDQTtRQUNJLFlBQVk7UUFDWixhQUFhO1FBQ2IsbUJBQW1CO1FBQ25CLHFCQUFxQjtJQUN6QjtBQUNBO1FBQ0ksa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixZQUFZO1FBQ1osV0FBVztRQUNYLFlBQVk7UUFDWixtQkFBbUI7UUFDbkIsZ0JBQWdCO1FBQ2hCLG1CQUFtQjtJQUN2QjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsV0FBVztRQUNYLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixVQUFVO1FBQ1YsZUFBZTtRQUNmLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osb0JBQW9CO1FBQ3BCLGlCQUFpQjtJQUNyQjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixTQUFTO1FBQ1QsVUFBVTtRQUNWLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtJQUNuQiIsImZpbGUiOiJhZGQtdGVzdGltb25pYWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAxNTBweDtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9Il19 */");
 
 /***/ }),
 
@@ -3101,7 +4049,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<style>\n.card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\n</style>\n<div class=\"main-content\" style=\"position: relative;\">\n           <button mat-icon-button  (click)=\"closeDialog()\" style=\"position: absolute;\n           right: -32px;\n           top: -32px;\n           transform: scale(0.75);\n           outline: none;\n           background-color: #ffffff!important;\n           color: rgb(0, 0, 0);\n           border-radius: 0px;\">\n           <mat-icon >close</mat-icon>\n          </button>\n                <form [formGroup]=\"bookCategoryForm\">\n                    <!-- <div class=\"text-right\" style=\"padding-right: 5px;\"><button mat-icon-button  (click)=\"closeDialog()\"><mat-icon >close</mat-icon></button></div> -->\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <!-- .card .card-header:not([data-background-color]) {\n                                background-color: #6AA524;\n                                padding-bottom: 0.5px; -->\n                            <h4 class=\"card-title ft\">Add Category</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\" style=\"padding-top: 10px;\" >\n                                    <!-- style=\"padding-top: 70px;\" -->\n                                    <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                        <!-- style=\"width: 285px\" -->\n                                        <!-- class=\"example-full-width\" -->\n                                        <input matInput placeholder=\"Category\" formControlName=\"bookCategory\" [(ngModel)]=\"addCategory.category\">\n                                    </mat-form-field>\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].touched &&\n                                      bookCategoryForm.controls['bookCategory'].invalid\"\n                                       class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].errors &&\n                                        bookCategoryForm.controls['bookCategory'].errors.required\">\n                                        Category is required.</div>\n                                    </div>\n                                </div>\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <textarea matInput placeholder=\"Description\" formControlName=\"categoryDescription\" rows=\"2\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"></textarea> -->\n                                        <!-- <input matInput placeholder=\"Description\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"> -->\n                                    <!-- </mat-form-field> -->\n                                    <!-- <div *ngIf=\"bookCategoryForm.controls['categoryDescription'].touched &&\n                                            bookCategoryForm.controls['categoryDescription'].invalid\"\n                                            class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['categoryDescription'].errors &&\n                                    bookCategoryForm.controls['categoryDescription'].errors.required\">\n                                        Description is required.</div>\n                                    </div> -->\n                                <!-- </div> -->\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" [disabled]=\"!bookCategoryForm.valid\" (click)=\"createCategory()\">Submit</button>\n                        <!-- [disabled]=\"!bookCategoryForm.valid\" -->\n                    </div>\n                </form>\n           \n        \n    \n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<style>\n.card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\n</style>\n<div class=\"main-content\" style=\"position: relative;\">\n           <button mat-icon-button  (click)=\"closeDialog()\" style=\"position: absolute;\n           right: -32px;\n           top: -32px;\n           transform: scale(0.75);\n           outline: none;\n           background-color: #ffffff!important;\n           color: rgb(0, 0, 0);\n           border-radius: 0px;\">\n           <mat-icon >close</mat-icon>\n          </button>\n                <form [formGroup]=\"bookCategoryForm\">\n                    <!-- <div class=\"text-right\" style=\"padding-right: 5px;\"><button mat-icon-button  (click)=\"closeDialog()\"><mat-icon >close</mat-icon></button></div> -->\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <!-- .card .card-header:not([data-background-color]) {\n                                background-color: #6AA524;\n                                padding-bottom: 0.5px; -->\n                            <h4 class=\"card-title ft\">Add Category</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\" style=\"padding-top: 10px;\" >\n                                    <!-- style=\"padding-top: 70px;\" -->\n                                    <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                        <!-- style=\"width: 285px\" -->\n                                        <!-- class=\"example-full-width\" -->\n                                        <input matInput placeholder=\"Category\" formControlName=\"bookCategory\" [(ngModel)]=\"addCategory.category\">\n                                    </mat-form-field>\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].touched &&\n                                      bookCategoryForm.controls['bookCategory'].invalid\"\n                                       class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].errors &&\n                                        bookCategoryForm.controls['bookCategory'].errors.required\">\n                                        Category is required.</div>\n                                    </div>\n                                </div>\n                                \n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" [disabled]=\"!bookCategoryForm.valid\" (click)=\"createCategory()\">Submit</button>\n                        <!-- [disabled]=\"!bookCategoryForm.valid\" -->\n                    </div>\n                </form>\n           \n        \n    \n</div>\n");
 
 /***/ })
 

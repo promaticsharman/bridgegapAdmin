@@ -7,11 +7,12 @@ import { ActivatedRoute } from '@angular/router';
 import { CanActivate, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 @Component({
-  selector: 'app-testimonials',
-  templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.css']
+  selector: 'app-contact-us',
+  templateUrl: './contact-us.component.html',
+  styleUrls: ['./contact-us.component.css']
 })
-export class TestimonialsComponent implements OnInit {
+export class ContactUsComponent implements OnInit {
+  
   checked = false;
 	indeterminate = false;
 	labelPosition: 'before' | 'after' = 'after';
@@ -28,7 +29,7 @@ export class TestimonialsComponent implements OnInit {
 	responseData = [] 
     dataSource: any
 
-  displayedColumns: string[] = ['position','author_name','designation','description','image','action'];
+  displayedColumns: string[] = ['position','name','email','subject','message','action'];
   constructor(
     private dialog: MatDialog,
     private service: AdminService,
@@ -36,21 +37,6 @@ export class TestimonialsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    	this.reqData = {} 
-		this.reqData.offset = 0
-		this.reqData.limit = 10
-		this.dataSource = new MatTableDataSource(this.responseData);
-		
-		this.datamodel = {}
-		this.allTestimonial()
   }
-  allTestimonial(){
-	var list={
-		offset:this.reqData.offset,
-		limit:this.reqData.limit
-	  }
-	  this.service. allTestimonial(list).subscribe(res => {
-		  console.log('testimonial data',res)
-	  })
-  }
+
 }

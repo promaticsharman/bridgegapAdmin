@@ -60215,18 +60215,22 @@ function pullAll(array, values) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLayoutRoutes", function() { return AdminLayoutRoutes; });
 /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../dashboard/dashboard.component */ "QX6l");
-/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "/de2");
-/* harmony import */ var _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../table-list/table-list.component */ "smLI");
-/* harmony import */ var _typography_typography_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../typography/typography.component */ "un8i");
-/* harmony import */ var _icons_icons_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../icons/icons.component */ "8+yc");
-/* harmony import */ var _maps_maps_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../maps/maps.component */ "urC5");
-/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../notifications/notifications.component */ "4G6T");
-/* harmony import */ var _upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../upgrade/upgrade.component */ "Zfkz");
-/* harmony import */ var _category_category_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../category/category.component */ "clsX");
-/* harmony import */ var _add_category_add_category_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../add-category/add-category.component */ "1Y/h");
-/* harmony import */ var _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../sub-category/sub-category.component */ "7dfY");
-/* harmony import */ var _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../user-list/user-list.component */ "UMdc");
-/* harmony import */ var _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../section-first/section-first.component */ "DUgg");
+/* harmony import */ var _category_category_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../category/category.component */ "clsX");
+/* harmony import */ var _add_category_add_category_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../add-category/add-category.component */ "1Y/h");
+/* harmony import */ var _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../sub-category/sub-category.component */ "7dfY");
+/* harmony import */ var _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../user-list/user-list.component */ "UMdc");
+/* harmony import */ var _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../section-first/section-first.component */ "DUgg");
+/* harmony import */ var _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../section-one-edit/section-one-edit.component */ "KL40");
+/* harmony import */ var _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../testimonials/testimonials.component */ "czZ8");
+/* harmony import */ var _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../add-testimonials/add-testimonials.component */ "UPXU");
+/* harmony import */ var _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../section-second/section-second.component */ "0I2P");
+/* harmony import */ var _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../section-three/section-three.component */ "/QHs");
+/* harmony import */ var _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../general-faq/general-faq.component */ "U5tD");
+/* harmony import */ var _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../teacher-faq/teacher-faq.component */ "4mNI");
+/* harmony import */ var _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../parent-faq/parent-faq.component */ "sC5k");
+/* harmony import */ var _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../contact-us/contact-us.component */ "NqkC");
+
+
 
 
 
@@ -60242,18 +60246,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var AdminLayoutRoutes = [
     { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__["DashboardComponent"] },
-    { path: 'category', component: _category_category_component__WEBPACK_IMPORTED_MODULE_8__["CategoryComponent"] },
-    { path: 'sub_category/:id', component: _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_10__["SubCategoryComponent"] },
-    { path: 'user_list', component: _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_11__["UserListComponent"] },
-    { path: 'section_1', component: _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_12__["SectionFirstComponent"] },
-    { path: 'addcategory', component: _add_category_add_category_component__WEBPACK_IMPORTED_MODULE_9__["AddCategoryComponent"] },
-    { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_1__["UserProfileComponent"] },
-    { path: 'table-list', component: _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_2__["TableListComponent"] },
-    { path: 'typography', component: _typography_typography_component__WEBPACK_IMPORTED_MODULE_3__["TypographyComponent"] },
-    { path: 'icons', component: _icons_icons_component__WEBPACK_IMPORTED_MODULE_4__["IconsComponent"] },
-    { path: 'maps', component: _maps_maps_component__WEBPACK_IMPORTED_MODULE_5__["MapsComponent"] },
-    { path: 'notifications', component: _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_6__["NotificationsComponent"] },
-    { path: 'upgrade', component: _upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_7__["UpgradeComponent"] },
+    { path: 'category', component: _category_category_component__WEBPACK_IMPORTED_MODULE_1__["CategoryComponent"] },
+    { path: 'sub_category/:id', component: _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_3__["SubCategoryComponent"] },
+    { path: 'user_list', component: _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_4__["UserListComponent"] },
+    { path: 'section_1', component: _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_5__["SectionFirstComponent"] },
+    { path: 'edit_section_one', component: _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_6__["SectionOneEditComponent"] },
+    { path: 'section_2', component: _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_9__["SectionSecondComponent"] },
+    { path: 'section_3', component: _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_10__["SectionThreeComponent"] },
+    { path: 'addcategory', component: _add_category_add_category_component__WEBPACK_IMPORTED_MODULE_2__["AddCategoryComponent"] },
+    { path: 'testimonials', component: _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_7__["TestimonialsComponent"] },
+    { path: 'createTestimonials', component: _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_8__["AddTestimonialsComponent"] },
+    { path: 'generalFaq', component: _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_11__["GeneralFaqComponent"] },
+    { path: 'teacherFaq', component: _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_12__["TeacherFaqComponent"] },
+    { path: 'parentFaq', component: _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_13__["ParentFaqComponent"] },
+    { path: 'contact', component: _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_14__["ContactUsComponent"] },
 ];
 
 

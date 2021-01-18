@@ -33,6 +33,8 @@ import { SectionThreeComponent } from './section-three/section-three.component';
 import { GeneralFaqComponent } from './general-faq/general-faq.component';
 import { TeacherFaqComponent } from './teacher-faq/teacher-faq.component';
 import { ParentFaqComponent } from './parent-faq/parent-faq.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SectionOneEditComponent } from './section-one-edit/section-one-edit.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -78,6 +80,8 @@ import { ParentFaqComponent } from './parent-faq/parent-faq.component';
     GeneralFaqComponent,
     TeacherFaqComponent,
     ParentFaqComponent,
+    ContactUsComponent,
+    SectionOneEditComponent,
 
 
     // SubCategoryComponent

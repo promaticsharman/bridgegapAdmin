@@ -31,7 +31,8 @@ export class SubCategoryComponent implements OnInit {
 	responseData = [] 
     dataSource: any
 	CateID
-  displayedColumns: string[] = ['position', 'category','action'];
+  displayedColumns: string[] = ['position','category','action'];
+//   
   constructor(
     private dialog: MatDialog,
     private service: AdminService,

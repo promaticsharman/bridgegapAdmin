@@ -31,6 +31,7 @@ export class CategoryComponent implements OnInit {
 	responseData = []
 
   displayedColumns: string[] = ['position', 'category','subcategory','action'];
+//   'position',
   
   dataSource: any
 
