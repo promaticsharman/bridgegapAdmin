@@ -72,6 +72,10 @@ export class AddTestimonialsComponent implements OnInit {
   saveTestimonials(){
     var formData = new FormData();
     formData.append("author_name",this.testimonialsData.authorName);
+    console.log("author_name",this.testimonialsData.authorName);
+    console.log("designation", this.testimonialsData.designation)
+    console.log("image", this.testimonialsData.image)
+    console.log("description", this.testimonialsData.description)
     formData.append("designation", this.testimonialsData.designation);
     formData.append("image", this.testimonialsData.image);
     formData.append("description", this.testimonialsData.description);

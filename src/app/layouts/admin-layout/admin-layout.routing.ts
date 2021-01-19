@@ -23,18 +23,22 @@ import { GeneralFaqComponent } from '../../general-faq/general-faq.component';
 import { TeacherFaqComponent } from '../../teacher-faq/teacher-faq.component';
 import { ParentFaqComponent } from '../../parent-faq/parent-faq.component';
 import { ContactUsComponent } from '../../contact-us/contact-us.component';
+import { TestimonialsEditComponent } from '../../testimonials-edit/testimonials-edit.component';
+import { CreateBannerComponent } from '../../create-banner/create-banner.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'category',      component: CategoryComponent },
     { path: 'sub_category/:id',      component: SubCategoryComponent },
     { path: 'user_list',      component: UserListComponent },
     { path: 'section_1',      component: SectionFirstComponent },
-    { path: 'edit_section_one',      component: SectionOneEditComponent },
+    { path: 'create_banner',      component: CreateBannerComponent },
+    { path: 'edit_section_one/:id',      component: SectionOneEditComponent },
     { path: 'section_2',      component: SectionSecondComponent },
     { path: 'section_3',      component: SectionThreeComponent },
     { path: 'addcategory',      component: AddCategoryComponent },
     { path: 'testimonials',   component: TestimonialsComponent },
     { path: 'createTestimonials',   component: AddTestimonialsComponent },
+    { path: 'editTestimonials/:testimonial_id', component: TestimonialsEditComponent },
     { path: 'generalFaq',   component: GeneralFaqComponent },
     { path: 'teacherFaq',   component: TeacherFaqComponent },
     { path: 'parentFaq',   component: ParentFaqComponent },

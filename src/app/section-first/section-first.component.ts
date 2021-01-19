@@ -31,7 +31,8 @@ export class SectionFirstComponent implements OnInit {
   responseData = []
   
 
-  displayedColumns: string[] = ['title','subtitle','image', 'Action']
+  displayedColumns: string[] = ['position','title','subtitle','image', 'Action']
+  // 'status',
   animal: string;
   name: string;
 
@@ -47,9 +48,68 @@ export class SectionFirstComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.reqData = {} 
+		this.reqData.offset = 0
+		this.reqData.limit = 10
+		this.dataSource = new MatTableDataSource(this.responseData);
+		
+		this.datamodel = {}
+  this.getbannerData()
   }
-  
- 
+   
+  getbannerData(){
+     var list={
+      offset:this.reqData.offset,
+      limit:this.reqData.limit
+     }
+    this.service.getAllBanner(list).subscribe(res=>{
+      console.log("section one data",res)
+      if(res){
+        this.length = res.data.count;
+        this.dataSource=res.data.rows;
+        console.log("datasource", this.dataSource)
+    }
+  },
+  err => {
+   console.log(err);
+   if(err.status >= 400){
+   console.log('Invalid Credential!!!');
+   }else{
+   console.log('Internet Connection Error');
+   }
+  })
+    
+
+  }
+
+  deletebanner(id){
+    Swal.fire({
+      title: 'Are you sure want to remove?',
+      text: 'You will not be able to recover this Data!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.value) {
+      this.service.deleteBanner(id).subscribe(data => {
+        console.log(data);
+        Swal.fire(
+          'Deleted!',
+          'This Record has been deleted.',
+          'success'
+        )
+        this.ngOnInit();
+    });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+      Swal.fire(
+        'Cancelled',
+        'This Record is safe :)',
+        'error'
+      )
+      }
+    })
+  }
   openEditDialog(){
     const dialogRef = this.dialog.open(EditDialog,{
       // height: '600px!important',

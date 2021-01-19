@@ -10,7 +10,9 @@
         
         <div class="card-body">
           <div class="text-right" style="padding-right: 65px;" >
-            <button mat-button class="theme-btn" routerLink="/edit_section_one">Edit</button>
+            <button mat-button class="theme-btn" routerLink="/create_banner">Add</button>
+            <!-- /edit_section_one -->
+            <!-- create_banner -->
             <!-- (click)="openEditDialog()" -->
           </div>
      
@@ -19,35 +21,50 @@
                 <table mat-table [dataSource]="dataSource" class="mat-table table mat-elevation-z1">
                     <!-- Position -->
                    
-                    <ng-container matColumnDef="image" class="mat-row">
-                        <th mat-header-cell *matHeaderCellDef >Image
+                    <ng-container matColumnDef="position" class="mat-row">
+                        <th mat-header-cell *matHeaderCellDef >S.No
                         </th>
-                        <!-- <td mat-cell *matCellDef="let element"> <img src="{{imagePath}}{{element.image}}" class="img-fluid prfile_img"> </td> -->
+                        <td mat-cell *matCellDef="let element let i=index"> {{i+1}} </td>
 
                     </ng-container>   
 
                     <ng-container matColumnDef="title" class="mat-row">
                         <th mat-header-cell *matHeaderCellDef >Title
                         </th>
-                        <!-- <td mat-cell *matCellDef="let element"> <img src="{{imagePath}}{{element.image}}" class="img-fluid prfile_img"> </td> -->
+                        <td mat-cell *matCellDef="let element"> {{element.heading}} </td>
 
-                    </ng-container>      
+                    </ng-container>    
                     
                     <ng-container matColumnDef="subtitle" class="mat-row">
                         <th mat-header-cell *matHeaderCellDef >Sub Title
                         </th>
+                        <td mat-cell *matCellDef="let element"> {{element.sub_heading}} </td>
+
+                    </ng-container>   
+                    
+                    <ng-container matColumnDef="image" class="mat-row">
+                        <th mat-header-cell *matHeaderCellDef >Image
+                        </th>
+                        <td mat-cell *matCellDef="let element"> <img src="{{imagePath}}{{element.banner_image}}" class="img-fluid prfile_img"> </td>
+
+                    </ng-container>  
+                    
+<!--                       
+                    <ng-container matColumnDef="status" class="mat-row">
+                        <th mat-header-cell *matHeaderCellDef >Status
+                        </th> -->
                         <!-- <td mat-cell *matCellDef="let element"> <img src="{{imagePath}}{{element.image}}" class="img-fluid prfile_img"> </td> -->
 
-                    </ng-container>      
+                    <!-- </ng-container> -->
                     <ng-container matColumnDef="Action" class="mat-row">
                         <th mat-header-cell *matHeaderCellDef > Action </th>
                         <td class="mat-cell act_td" mat-cell *matCellDef="let element">
-                            <button  mat-icon-button (click)="viewDialog(element.id)">
+                            <button  mat-icon-button routerLink="/edit_section_one/{{element.id}}">
                                 <mat-icon >edit</mat-icon>
                             </button>
-                            <!-- <button  mat-icon-button (click)="deleteCategory(element.id)">
+                            <button  mat-icon-button (click)="deletebanner(element.id)">
                                 <mat-icon >delete</mat-icon>
-                            </button> -->
+                            </button>
                         
                       </td>
                        

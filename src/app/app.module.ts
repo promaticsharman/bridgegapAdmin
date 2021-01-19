@@ -35,6 +35,8 @@ import { TeacherFaqComponent } from './teacher-faq/teacher-faq.component';
 import { ParentFaqComponent } from './parent-faq/parent-faq.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SectionOneEditComponent } from './section-one-edit/section-one-edit.component';
+import { TestimonialsEditComponent } from './testimonials-edit/testimonials-edit.component';
+import { CreateBannerComponent } from './create-banner/create-banner.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -82,6 +84,8 @@ import { SectionOneEditComponent } from './section-one-edit/section-one-edit.com
     ParentFaqComponent,
     ContactUsComponent,
     SectionOneEditComponent,
+    TestimonialsEditComponent,
+    CreateBannerComponent,
 
 
     // SubCategoryComponent

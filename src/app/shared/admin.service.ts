@@ -231,4 +231,108 @@ export class AdminService {
         })
       )
   }
+
+  getTestimonialById(data): Observable<any> {
+   
+    let API_URL = `${this.apiUrl1}getAllTestimonialById`;
+    return this.httpClient.post(API_URL,data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  updateTestimonials(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateTestimonial`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  deleteTestimonials(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteTestimonial`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  createBanner(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createBanner`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  getAllBanner(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getAllBanner`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  getBannerById(data): Observable<any> {
+   
+    let API_URL = `${this.apiUrl1}getBannerById`;
+    return this.httpClient.post(API_URL,data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  deleteBanner(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteBanner`;
+    var obj = {
+      banner_id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  updateBanner(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateBanner`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  bannerActiveAndInactive(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}bannerActiveAndInactive`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
 }
