@@ -1,0 +1,152 @@
+<!-- <p>add-testimonials works!</p> -->
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+  <h2 >
+   APPLICATION DETAILS </h2>
+ </div>
+ <div class="main-content" style="position: relative;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <form [formGroup]="applicationForm">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title">Testimonials</h4>
+                        </div>
+                        <div class="card-body block-card">
+                            <div class="row">
+                                <div class="col-md-6 offset-sm-3">
+                                    <div class="vid_wrap">
+                                        <iframe class="embed-responsive-item" [src]='video'></iframe>
+                                    </div>
+                                    
+                                </div>
+                
+                               
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Name" formControlName="name" [(ngModel)]="applicationData.name"
+                                        >
+                                    </mat-form-field>
+                                </div>
+                
+                                <!-- Designation -->
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Email" formControlName="email" [(ngModel)]="applicationData.email"
+                                        >
+                                    </mat-form-field>
+                                </div>
+                                
+                               
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Phone" formControlName="phone" [(ngModel)]="applicationData.phone"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Country" formControlName="country" [(ngModel)]="applicationData.country"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="State" formControlName="state" [(ngModel)]="applicationData.state"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="City" formControlName="city" [(ngModel)]="applicationData.city"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Address" formControlName="address" [(ngModel)]="applicationData.address"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Experiance" formControlName="experiance" [(ngModel)]="applicationData.experiance"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="How will you teach" formControlName="teach" [(ngModel)]="applicationData.teach"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Benefits of class" formControlName="benefitsOfClass" [(ngModel)]="applicationData.benefitsOfClass"
+                                        >
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Website Link" formControlName="link" [(ngModel)]="applicationData.link"
+                                        >
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="What will you teach" formControlName="whatWillYouTeach" [(ngModel)]="applicationData.whatWillYouTeach"
+                                        >
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Status" formControlName="status" [(ngModel)]="applicationData.status"
+                                        >
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                           
+                            <div class="text-center">
+                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('Approved')">Accept</button>
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectApplication()" >Reject</button>
+                                <!-- (click)="onStatus('Decline')" -->
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/teacherApplication" class="btn theme-btn ft">Back</button>
+                            </div>
+                          </div>
+                         </div>
+               </form>
+            </div>
+        </div>
+    </div> 
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

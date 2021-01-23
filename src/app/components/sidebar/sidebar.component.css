@@ -1,16 +1,24 @@
 .sub-ul{
     list-style-type: disc;
-    padding-left: 45px;
+    padding-left: 65px;
     margin-top: 10px;
+    width: 94%;
 }
 .sub-ul li a{
     font-size:13px;
     padding: 5px;
     margin: 10px 0px;
 }
+.sub-ul li{
+    color:#fff;
+}
 .sub-ul{
     display: none;
 }
 .ds-block{
     display: block!important;
+}
+
+.sub-ul li.active-1 a{
+    background-color: rgba(255, 255, 255, 0.1);
 }

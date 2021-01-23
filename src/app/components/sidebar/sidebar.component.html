@@ -31,32 +31,45 @@
             <a href="javascript:void(0)" class="nav-link ">
                 <i class="material-icons">list</i>
                 <p>User Management</p>
-                <ul class="sub-ul">
-                    <li ><a  [routerLink]="['/user_list']">Student Management</a></li>
-                    <!-- href="javascript:void(0)" -->
-                    <!-- <li><a href="javascript:void(0)">Teacher Management</a></li> -->
-                    <!-- <li><a href="javascript:void(0)">Subcategory-1</a></li>
-                    <li><a href="javascript:void(0)">Subcategory-1</a></li>
-                    <li><a href="javascript:void(0)">Subcategory-1</a></li>
-                    <li><a href="javascript:void(0)">Subcategory-1</a></li> -->
-
-
-                </ul>
+                
             </a>
+            <ul class="sub-ul">
+                <li [ngClass]="router.url.includes('/student_list') ? 'active-1' : ''" ><a  [routerLink]="['/student_list']">Student Management</a></li>
+                <li [ngClass]="router.url.includes('/teacherApplication') ? 'active-1' : ''" ><a  [routerLink]="['/teacherApplication']">Teacher Management</a></li>
+                <!-- href="javascript:void(0)" -->
+                <!-- <li><a href="javascript:void(0)">Teacher Management</a></li> -->
+                <!-- <li><a href="javascript:void(0)">Subcategory-1</a></li>
+                <li><a href="javascript:void(0)">Subcategory-1</a></li>
+                <li><a href="javascript:void(0)">Subcategory-1</a></li>
+                <li><a href="javascript:void(0)">Subcategory-1</a></li> -->
+
+
+            </ul>
         </li>
         <li  routerLinkActive="active"  class="nav-item">
             <a href="javascript:void(0)" class="nav-link">
                 <i class="material-icons">home</i>
                 <p>Home Management</p>
-                <ul class="sub-ul">
-                    <li><a [routerLink]="['/section_1']">Section-1</a></li>
-                    <li><a [routerLink]="['/section_2']">Section-2</a></li>
-                    <li><a [routerLink]="['/section_3']">Section-3</a></li>
-                    <li><a [routerLink]="['/testimonials']">Testimonials</a></li>
-                </ul>
+                
             </a>
+            <ul class="sub-ul">
+                <!-- [ngClass]="{'font-green':  percent > 50, 'font-orange': percent>40 && percent<=50,'font-red': percent<=40}" -->
+                <li  [ngClass]="router.url.includes('/section_1') ? 'active-1' : ''"><a [routerLink]="['/section_1']">BANNER MANAGEMENT</a></li>
+                <!-- <li class="active-1"><a [routerLink]="['/section_1']">BANNER MANAGEMENT</a></li> -->
+                <li [ngClass]="router.url.includes('/section_2') ? 'active-1' : ''"><a [routerLink]="['/section_2']"> ENGAGING & EFFICIENT </a></li>
+                <li [ngClass]="router.url.includes('/section_3') ? 'active-1' : ''"><a [routerLink]="['/section_3']">HOW IT WORKS</a></li>
+                <li [ngClass]="router.url.includes('/testimonials') ? 'active-1' : ''"><a [routerLink]="['/testimonials']">Testimonials</a></li>
+            </ul>
         </li>
-        <li routerLinkActive="active"  class="nav-item">
+        <!-- <li  routerLinkActive="active"  class="nav-item">
+            <a [routerLink]="['/teacherApplication']">
+                <i class="material-icons">list</i>
+                <p>Teacher Application Management</p>
+                
+            </a>
+            
+        </li> -->
+        <!-- <li routerLinkActive="active"  class="nav-item">
             <a href="javascript:void(0)" class="nav-link">
                 <i class="material-icons">settings</i>
                 <p>General Management</p>
@@ -66,8 +79,8 @@
                   </ul>
 
             </a>
-        </li>
-        <li  routerLinkActive="active"  class="nav-item">
+        </li> -->
+        <!-- <li  routerLinkActive="active"  class="nav-item">
             <a href="javascript:void(0)" class="nav-link">
                 <i class="material-icons">info</i>
                 <p>Faq Management</p>
@@ -77,7 +90,7 @@
                     <li><a [routerLink]="['/parentFaq']">PARENT FAQ</a></li>
                 </ul>
             </a>
-        </li>
+        </li> -->
 
 
 

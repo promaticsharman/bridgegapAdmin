@@ -29,11 +29,13 @@ export class AddTestimonialsComponent implements OnInit {
     image:"",
     description:""
   }
+  loader
 
   testimonialForm = new FormGroup({
     authorName : new FormControl('', [Validators.required]),
     designation : new FormControl('', [Validators.required]),
-    description : new FormControl('', [Validators.required])
+    description : new FormControl('', [Validators.required]),
+    image : new FormControl('', [Validators.required])
   })
 
 
@@ -79,11 +81,12 @@ export class AddTestimonialsComponent implements OnInit {
     formData.append("designation", this.testimonialsData.designation);
     formData.append("image", this.testimonialsData.image);
     formData.append("description", this.testimonialsData.description);
-
+    this.loader=true;
     this.service.createTestimonial(formData).subscribe(data => {
       console.log("Testimonials Successfully Created!");
       Swal.fire('Success..!', 'Successfully Created!', 'success')
       this.router.navigate(['/testimonials']);
+      this.loader=false;
     },err => {
       if(err.status >= 400){
         console.log("Inavalid Credentials!");

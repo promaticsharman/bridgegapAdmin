@@ -17,7 +17,7 @@ export class CreateBannerComponent implements OnInit {
     image:"",
   }
   testi_image
-
+  loader
   bannerForm = new FormGroup({
     title: new FormControl('', [Validators.required]),
     subtitle : new FormControl('', [Validators.required]),
@@ -72,11 +72,13 @@ export class CreateBannerComponent implements OnInit {
     formData.append("heading", this.bannerData.title);
     formData.append("sub_heading", this.bannerData.subtitle);
     formData.append("banner_image", this.bannerData.image);
+    this.loader=true;
 
     this.service.createBanner(formData).subscribe(data => {
       console.log(" Successfully Created!");
       Swal.fire('Success..!', 'Successfully Created!', 'success')
       this.router.navigate(['/section_1']);
+      this.loader = false
     },err => {
       if(err.status >= 400){
         console.log("Inavalid Credentials!");

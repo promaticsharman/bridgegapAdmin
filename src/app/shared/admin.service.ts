@@ -254,6 +254,17 @@ export class AdminService {
        
       )
   }
+  testimonialFilter(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}testimonialFilter`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+      )
+  }
+
   deleteTestimonials(data): Observable<any> {
     let API_URL = `${this.apiUrl1}deleteTestimonial`;
     var obj = {
@@ -266,6 +277,16 @@ export class AdminService {
           return res
         })
        
+      )
+  }
+  bannerFilter(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}bannerFilter`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
       )
   }
   createBanner(data): Observable<any> {
@@ -333,6 +354,173 @@ export class AdminService {
           return res
         })
        
+      )
+  }
+  saveEngagingAndEfficients(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}saveEngagingAndEfficients`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+
+  getAllEngagingAndEfficients(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getAllEngagingAndEfficients`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  getEngagingAndEfficientsById(data): Observable<any> {
+   
+    let API_URL = `${this.apiUrl1}getEngagingAndEfficientsById`;
+    return this.httpClient.post(API_URL,data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updateEngagingAndEfficients(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateEngagingAndEfficients`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  deleteEngagingAndEfficients(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteEngagingAndEfficients`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  engagingFilter(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}engagingFilter`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+      )
+  }
+  createHowItsWorks(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createHowItsWorks`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  getAllHowItsWorks(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getAllHowItsWorks`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  deleteHowItsWorks(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteHowItsWorks`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  getHowItsWorksById(data): Observable<any> {
+   
+    let API_URL = `${this.apiUrl1}getHowItsWorksById`;
+    return this.httpClient.post(API_URL,data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updateHowItsWorks(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateHowItsWorks`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  howItsWorksFilter(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}howItsWorksFilter`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+      )
+  }
+  showTeacherApplication(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}showTeacherApplication`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  applicationApproved(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}applicationApproved`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  applicationRejected(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}send_reject_email`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  teacherApplicationFilter(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}teacherApplicationFilter`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
       )
   }
 }

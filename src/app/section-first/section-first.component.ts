@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -8,6 +8,7 @@ import { CanActivate, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import {environment} from '../../environments/environment.prod';
 import { ToastrService } from 'ngx-toastr';
+import { MatPaginator } from '@angular/material/paginator';
 @Component({
   selector: 'app-section-first',
   templateUrl: './section-first.component.html',
@@ -29,16 +30,22 @@ export class SectionFirstComponent implements OnInit {
    imagePath = environment.home_image;
   //  imagePath = environment.home_image;
   responseData = []
-  
+  // status :boolean
+  isEnabled
+  statusType
+  myFlagForSlideToggle : boolean = true;
+  currentIndex=0
+  currentPage=10
 
-  displayedColumns: string[] = ['position','title','subtitle','image', 'Action']
+  displayedColumns: string[] = ['position','title','subtitle','image', 'status','Action']
   // 'status',
   animal: string;
   name: string;
+  device:boolean ;
 
   // @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(
     private dialog: MatDialog,
@@ -49,15 +56,22 @@ export class SectionFirstComponent implements OnInit {
 
   ngOnInit(): void {
     this.reqData = {} 
+    
 		this.reqData.offset = 0
 		this.reqData.limit = 10
 		this.dataSource = new MatTableDataSource(this.responseData);
 		
 		this.datamodel = {}
-  this.getbannerData()
+    this.getbannerData()
+  
+  }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator
   }
    
   getbannerData(){
+    this.currentIndex=0
+    this.currentPage=10
      var list={
       offset:this.reqData.offset,
       limit:this.reqData.limit
@@ -66,8 +80,10 @@ export class SectionFirstComponent implements OnInit {
       console.log("section one data",res)
       if(res){
         this.length = res.data.count;
+        console.log("****length***",this.length);
         this.dataSource=res.data.rows;
-        console.log("datasource", this.dataSource)
+        this.dataSource.paginator = this.paginator;
+        // console.log("datasource", this.dataSource)
     }
   },
   err => {
@@ -80,6 +96,41 @@ export class SectionFirstComponent implements OnInit {
   })
     
 
+ }
+
+ applyFilter(filterValue: string) {
+  // this.dataSource.filter = filterValue.trim().toLowerCase();
+  // this.filterValue = filterValue.trim().toLowerCase();
+  var obj = {
+  search: filterValue
+  }
+  if(obj.search){
+    this.service.bannerFilter(obj).subscribe(res => {
+      console.log('filterResponse',res)
+      if (res) {
+      this.dataSource = res.data
+      // this.dataSource = new MatTableDataSource(data.data);
+      // this.length = res.data.count
+      // this.dataSource.sort = this.sort;
+      // this.dataSource.paginator = this.paginator;
+      // this.tableData = data.data;
+      // this.backUpTableData = data.data;
+      }
+      }, err => {
+      console.log(err)
+      if (err.status >= 400) {
+      // this.toastr.error('Internal Error', 'Error')
+      console.log('Invalid Credential!!!')
+      } else {
+      // this.toastr.error('Internet Connection Error', 'Error')
+      console.log('Internet Connection Error')
+      }
+      
+      })
+  }else{
+    this.ngOnInit();
+  }
+  
   }
 
   deletebanner(id){
@@ -99,6 +150,20 @@ export class SectionFirstComponent implements OnInit {
           'This Record has been deleted.',
           'success'
         )
+       
+         var list={
+          offset:this.reqData.offset,
+          limit:this.reqData.limit
+         }
+        this.service.getAllBanner(list).subscribe(res=>{
+         
+          if(res){
+             this.length = res.data.count;
+            console.log("****length***",this.length);
+            this.dataSource=res.data.rows;
+            this.dataSource.paginator = this.paginator;
+            
+        }})
         this.ngOnInit();
     });
       } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -130,6 +195,87 @@ export class SectionFirstComponent implements OnInit {
     });
   
   }
+  
+  statusID(id){
+   console.log("valueeeeeeeeee",this.myFlagForSlideToggle) 
+ this.statusID=id
+ console.log('iddddddddddddddddd',id)
+  }
+
+  // onStatus(change,id){
+  //   console.log("change",change)
+  //   console.log("id",id)
+
+    // this.statusType=change
+    // console.log("change",this.statusType)
+    // var obj={
+    //   banner_id:id,
+    //   status:change
+    // }
+    // this.service.bannerActiveAndInactive(obj).subscribe(res=>{
+    //   this.toastr.success("Status changed successfully");
+    //   console.log(res)
+    // })
+  // }
+  onChange(evt,id){
+    console.log("eeee",evt)
+    console.log("evt***",evt.checked)
+    console.log("id***",id)
+    let statusType
+    if (evt.checked == true) {
+      statusType = "active";
+    } else {
+      statusType = "inactive"
+    }
+    console.log("statusType***",statusType)
+     var obj={
+      banner_id:id,
+      status:statusType
+    }
+    this.service.bannerActiveAndInactive(obj).subscribe(res=>{
+      this.toastr.success("Status changed successfully",'Success');
+      console.log(res)
+    })
+  }
+   
+  getPageSizeOptions() {
+    return [10, 20, 30];
+    }
+
+    paginationOptionChange(evt) {
+
+      this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
+      this.reqData.limit = evt.pageSize    
+      this.currentPage=evt.pageSize
+      this.currentIndex=evt.pageIndex
+      console.log('checking  page Index', this.currentPage)
+      console.log('checking current page',evt.pageSize)
+
+      var list={
+       
+        offset:this.reqData.offset,
+        limit:this.reqData.limit
+        
+      }
+      // console.log(this.reqData)
+      this.service.getAllBanner(list).subscribe(res => {
+      // console.log('paginator limit',res)
+      if(res){
+          
+        this.length = res.data.count;
+        this.dataSource = res.data.rows;
+        // this.responseData=new MatTableDataSource(res.data);
+        // console.log('dataSource',this.dataSource);
+        }
+      },err => {
+        console.log(err);
+        if(err.status >= 400){
+          console.log('Invalid Credential!!!');
+        }else{
+          console.log('Internet Connection Error');
+        }
+    })
+    }  
    
 }
 

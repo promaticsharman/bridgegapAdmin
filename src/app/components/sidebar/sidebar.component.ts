@@ -9,11 +9,12 @@ declare interface RouteInfo {
     title: string;
     icon: string;
     class: string;
-    subcat:{};
+    // subcat:{};
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' , subcat:[]},
-    { path: '/category', title: 'Category',  icon: 'location_map-big', class: '' ,subcat:[] },
+    { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
+    { path: '/category', title: 'Category',  icon: 'location_map-big', class: ''  },
+    // { path: '/teacherApplication', title: 'Teacher Applications',  icon: 'location_map-big', class: ''  },
     // { path: '/user_list', title: 'User Management',  icon: 'design_bullet-list-67', class: '' ,subcat:[]},
     // { path: '/section_1', title: 'Home Section 1',  icon: 'ui-1_bell-53', class: '' ,subcat:[]}
     // { path: '/sub_category', title: 'Sub Category',  icon: 'design_app', class: '' },
@@ -46,11 +47,11 @@ export class SidebarComponent implements OnInit {
       $(".nav-link").click(function(){
         //$(".sub-ul").hide();
        // alert($(this).children(":nth-child(3)").attr('style'));
-        if($(this).children(":nth-child(3)").is(":visible")){
-          $(this).children(":nth-child(3)").hide();
+        if($(this).next().is(":visible")){
+          $(this).next().hide();
         }else{
           $(".sub-ul").hide();
-          $(this).children(":nth-child(3)").show();
+          $(this).next().show();
         }
         // $(this).children(":nth-child(3)").toggle();
         // $(this).find(".sub-ul").toggle();
@@ -63,4 +64,8 @@ export class SidebarComponent implements OnInit {
       }
       return true;
   };
+
+  // checkUrl(url){
+  //   return this.router.
+  // }
 }

@@ -19,9 +19,9 @@ import { CategoryComponent } from './category/category.component';
 import { MaterialModule } from "./material/material.module";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
 import { AddCategoryDialog ,EditCategoryDialog} from './category/category.component';
-import { AddSubCategoryDialog,EditSubCategoryDialog} from './sub-category/sub-category.component';
+// import { AddSubCategoryDialog,EditSubCategoryDialog} from './sub-category/sub-category.component';
 import { SubCategoryComponent} from './sub-category/sub-category.component';
 import { UserListComponent,ViewCategoryDialog } from './user-list/user-list.component';
 import { SectionFirstComponent,EditDialog } from './section-first/section-first.component';
@@ -37,6 +37,17 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SectionOneEditComponent } from './section-one-edit/section-one-edit.component';
 import { TestimonialsEditComponent } from './testimonials-edit/testimonials-edit.component';
 import { CreateBannerComponent } from './create-banner/create-banner.component';
+import { EditCategoryComponent } from './category/edit-category/edit-category.component';
+import { AddSubCategoryComponent } from './sub-category/add-sub-category/add-sub-category.component';
+import { EditSubCategoryComponent } from './sub-category/edit-sub-category/edit-sub-category.component';
+import { CreateEngagingComponent } from './section-second/create-engaging/create-engaging.component';
+import { EditEngagingComponent } from './section-second/edit-engaging/edit-engaging.component';
+import { CreateHowItWorksComponent } from './section-three/create-how-it-works/create-how-it-works.component';
+import { EditHowItWorksComponent } from './section-three/edit-how-it-works/edit-how-it-works.component';
+import { TeacherApplicationsComponent } from './teacher-applications/teacher-applications.component';
+import { ViewTeacherApplicationComponent,RejectApplicationDialog } from './teacher-applications/view-teacher-application/view-teacher-application.component';
+import { TeacherManagementComponent } from './teacher-management/teacher-management.component';
+import { ViewStudentDetailsComponent } from './user-list/view-student-details/view-student-details.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -67,9 +78,9 @@ import { CreateBannerComponent } from './create-banner/create-banner.component';
     AddCategoryComponent,
     AddCategoryDialog,
     EditCategoryDialog,
-    AddSubCategoryDialog,
+    // AddSubCategoryDialog,
     SubCategoryComponent,
-    EditSubCategoryDialog,
+    // EditSubCategoryDialog,
     
     UserListComponent,
     ViewCategoryDialog,
@@ -86,6 +97,18 @@ import { CreateBannerComponent } from './create-banner/create-banner.component';
     SectionOneEditComponent,
     TestimonialsEditComponent,
     CreateBannerComponent,
+    EditCategoryComponent,
+    AddSubCategoryComponent,
+    EditSubCategoryComponent,
+    CreateEngagingComponent,
+    EditEngagingComponent,
+    CreateHowItWorksComponent,
+    EditHowItWorksComponent,
+    TeacherApplicationsComponent,
+    ViewTeacherApplicationComponent,
+    RejectApplicationDialog,
+    TeacherManagementComponent,
+    ViewStudentDetailsComponent,
 
 
     // SubCategoryComponent

@@ -119,7 +119,7 @@ export class UserListComponent implements OnInit {
 
 
   
-  getPageSizeOptions() {
+    getPageSizeOptions() {
     return [10, 20, 30];
     }
     paginationOptionChange(evt) {
@@ -135,17 +135,7 @@ export class UserListComponent implements OnInit {
       console.log('checking  page Index', this.currentPage)
       console.log('checking current page',evt.pageSize)
 
-      // {{ (currentIndex) * currentPage + i +1 }}
-
-// (2-1) * (10 +1) = 1*11 = 11
-// jina v pageSIze ohde ch 1 add krna paina
-// for example page is 3 
-
-//  multiply -> add
-// (3-1) * (10+1) => 2 * 10 + 1 => 21
-
-
-
+     
       var list={
        
         offset:this.reqData.offset,

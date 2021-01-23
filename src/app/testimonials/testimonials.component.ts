@@ -68,6 +68,43 @@ export class TestimonialsComponent implements OnInit {
 	   }
 	  })
   }
+
+  applyFilter(filterValue: string) {
+	// this.dataSource.filter = filterValue.trim().toLowerCase();
+	// this.filterValue = filterValue.trim().toLowerCase();
+	var obj = {
+	search: filterValue
+	}
+	if(obj.search){
+	  this.service.testimonialFilter(obj).subscribe(res => {
+		console.log('filterResponse',res)
+		if (res) {
+		this.dataSource = res.data
+		// this.dataSource = new MatTableDataSource(data.data);
+		// this.length = res.data.count
+		// this.dataSource.sort = this.sort;
+		// this.dataSource.paginator = this.paginator;
+		// this.tableData = data.data;
+		// this.backUpTableData = data.data;
+		}
+		}, err => {
+		console.log(err)
+		if (err.status >= 400) {
+		// this.toastr.error('Internal Error', 'Error')
+		console.log('Invalid Credential!!!')
+		} else {
+		// this.toastr.error('Internet Connection Error', 'Error')
+		console.log('Internet Connection Error')
+		}
+		
+		})
+	}else{
+	  this.ngOnInit();
+	}
+	
+	}
+   
+
   deleteTestimonials(id){
 	Swal.fire({
 	  title: 'Are you sure want to remove?',

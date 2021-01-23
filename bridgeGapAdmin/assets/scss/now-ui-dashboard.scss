@@ -76,3 +76,42 @@
     background-color: #142c69;
     color: #fff;
   }
+
+
+  .cal-back i{
+    background: #142c69;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 100%;
+    position: relative;
+    transform: translate(0px, -2px);
+    margin-right: 15px;
+}
+  //form css
+
+  .a-u .mat-form-field-underline{
+    background-color: none!important;
+    height: 0px!important;
+}
+.load_er{
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  }
+
+
+  .ellipsis {
+    max-width: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+// .toast-container {
+//  width: unset!important;
+// }

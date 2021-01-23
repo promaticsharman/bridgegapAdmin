@@ -8,6 +8,7 @@ import { AdminService } from '../shared/admin.service';
 import { ActivatedRoute } from '@angular/router';
 import { CanActivate, Router } from '@angular/router';
 import Swal from 'sweetalert2'; 
+import {environment} from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-sub-category',
@@ -31,7 +32,11 @@ export class SubCategoryComponent implements OnInit {
 	responseData = [] 
     dataSource: any
 	CateID
-  displayedColumns: string[] = ['position','category','action'];
+	currentPage=10
+	currentIndex=0
+  displayedColumns: string[] = ['position','category','image','action'];
+  imagePath = environment.subCatImg;
+  
 //   
   constructor(
     private dialog: MatDialog,
@@ -40,13 +45,16 @@ export class SubCategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-	
+	this.currentPage=10
+	// console.log("pagesizeee",this.pageSize)
+	this.currentIndex=0
 	
 	this.reqData = {}
 		this.reqData.offset = 0
 		this.reqData.limit = 10
 		this.dataSource = new MatTableDataSource(this.responseData);
 		this.CateID=this.route.snapshot.params.id
+		console.log("*****iddddddddd*****",this.CateID)
 		this.datamodel = {}
 		this.getSubCatList()
     	// this.getAllCategory()
@@ -60,6 +68,7 @@ export class SubCategoryComponent implements OnInit {
 	this.service.getSubList(list).subscribe(res => {
 		// console.log('*****getSubCategoryData******',res.data);
 		if(res){
+		  this.length=res.data.count
 		  this.dataSource=res.data.rows
 		  console.log('responseData ***',this.dataSource)
 		}
@@ -111,9 +120,12 @@ getPageSizeOptions() {
 	paginationOptionChange(evt) {
 		this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
 		this.reqData.limit = evt.pageSize
+		this.currentPage=evt.pageSize
+        this.currentIndex=evt.pageIndex
 		let Cate=this.route.snapshot.params.id;
 		console.log('cate id',Cate);
-		
+		this.currentPage=evt.pageSize
+		this.currentIndex=evt.pageIndex
 		var list={
 			category_id:Cate,
 			offset:this.reqData.offset,
@@ -140,45 +152,45 @@ getPageSizeOptions() {
 	})
 	}
   
-	openSubCategoryDialog(){
-		const dialogRef = this.dialog.open(AddSubCategoryDialog,{
-			// height: '330px',
-			width: '600px',
-			id: this.route.snapshot.params.id
-		});
-		dialogRef.afterClosed().subscribe(result => {
-			console.log('The dialog was closed');
-			this.reqData = {}
-			this.reqData.offset = 0
-		    this.reqData.limit = 10
-		    this.dataSource = new MatTableDataSource(this.responseData);
-			this.datamodel = {}
-			this.getSubCatList()
+	// openSubCategoryDialog(){
+	// 	const dialogRef = this.dialog.open(AddSubCategoryDialog,{
+	// 		// height: '330px',
+	// 		width: '600px',
+	// 		id: this.route.snapshot.params.id
+	// 	});
+	// 	dialogRef.afterClosed().subscribe(result => {
+	// 		console.log('The dialog was closed');
+	// 		this.reqData = {}
+	// 		this.reqData.offset = 0
+	// 	    this.reqData.limit = 10
+	// 	    this.dataSource = new MatTableDataSource(this.responseData);
+	// 		this.datamodel = {}
+	// 		this.getSubCatList()
 
-		});
-	}
+	// 	});
+	// }
 
-	openEditDialog(id){
-		const dialogRefEdit = this.dialog.open(EditSubCategoryDialog,{
-			// catId:this.route.snapshot.params.id,
-			// height: '350px',
-			width: '600px',
-			id :<any>{
-				id: id,
-				cate : this.route.snapshot.params.id
-			}
-			// catId: this.route.snapshot.params.id
-		});
-		dialogRefEdit.afterClosed().subscribe(result => {
-			console.log('The dialog was closed');	
-			this.reqData = {}
-		    this.reqData.offset = 0
-		    this.reqData.limit = 10
-		    this.dataSource = new MatTableDataSource(this.responseData);		    
-		    this.datamodel = {}
-			this.getSubCatList()
-		});
-	}
+	// openEditDialog(id){
+	// 	const dialogRefEdit = this.dialog.open(EditSubCategoryDialog,{
+	// 		// catId:this.route.snapshot.params.id,
+	// 		// height: '350px',
+	// 		width: '600px',
+	// 		id :<any>{
+	// 			id: id,
+	// 			cate : this.route.snapshot.params.id
+	// 		}
+	// 		// catId: this.route.snapshot.params.id
+	// 	});
+	// 	dialogRefEdit.afterClosed().subscribe(result => {
+	// 		console.log('The dialog was closed');	
+	// 		this.reqData = {}
+	// 	    this.reqData.offset = 0
+	// 	    this.reqData.limit = 10
+	// 	    this.dataSource = new MatTableDataSource(this.responseData);		    
+	// 	    this.datamodel = {}
+	// 		this.getSubCatList()
+	// 	});
+	// }
 	deleteCategory(id){
 		Swal.fire({
 		  title: 'Are you sure want to remove?',
@@ -212,53 +224,53 @@ getPageSizeOptions() {
 }
 
 // Add sub-category
-@Component({
-	selector: 'add-sub-category-dialog',
-	templateUrl: 'add-sub-category.html',
-  })
-  export class AddSubCategoryDialog {
-	categoryId;
-    addCategory: any = {
-		category : "",
+// @Component({
+// 	selector: 'add-sub-category-dialog',
+// 	templateUrl: 'add-sub-category.html',
+//   })
+//   export class AddSubCategoryDialog {
+// 	categoryId;
+//     addCategory: any = {
+// 		category : "",
 		// description : ""
-	}
+	// }
     // SubCategoryList:any = [];
-	constructor(private fb: FormBuilder,
-	  public dialogRef: MatDialogRef<AddSubCategoryDialog>, private service: AdminService, private route: ActivatedRoute,
-	  ) {}
+	// constructor(private fb: FormBuilder,
+	//   public dialogRef: MatDialogRef<AddSubCategoryDialog>, private service: AdminService, private route: ActivatedRoute,
+	//   ) {}
 
-	  bookCategoryForm = new FormGroup({
-		bookCategory : new FormControl('', [Validators.required]),
+	//   bookCategoryForm = new FormGroup({
+	// 	bookCategory : new FormControl('', [Validators.required]),
 		// categoryDescription: new FormControl('', [Validators.required])
-	  })
+	//   })
 
-	onNoClick(): void {
-	  this.dialogRef.close();
-	}
+	// onNoClick(): void {
+	//   this.dialogRef.close();
+	// }
 	
-	ngOnInit(): void {
-		this.categoryId=this.dialogRef.id	
+	// ngOnInit(): void {
+	// 	this.categoryId=this.dialogRef.id	
 		
 	
-	}
-	createCategory(){
-		var obj={
-			category_id: this.categoryId,
-            sub_category_name : this.addCategory.category
-		}
+	// }
+	// createCategory(){
+	// 	var obj={
+	// 		category_id: this.categoryId,
+    //         sub_category_name : this.addCategory.category
+		// }
 		// console.log('id&category',obj)
-		this.service.addSubCategory(obj).subscribe(res => {
-		  console.log("Data Successfully Inserted!",res);
-         Swal.fire('Success..!', 'Successfully Created!', 'success')
-         this.dialogRef.close();
+		// this.service.addSubCategory(obj).subscribe(res => {
+		//   console.log("Data Successfully Inserted!",res);
+        //  Swal.fire('Success..!', 'Successfully Created!', 'success')
+        //  this.dialogRef.close();
 
-		},err => {
-		  if(err.status >= 400){
-			console.log('Invalid Credential!!!');
-		  }else{
-			console.log('Internet Connection Error');
-		  }
-		})
+		// },err => {
+		//   if(err.status >= 400){
+		// 	console.log('Invalid Credential!!!');
+		//   }else{
+		// 	console.log('Internet Connection Error');
+		//   }
+		// })
 
 		//alert(this.dialogRef.id);
 		// console.log("Book : ", this.addBook.bookCategory, " " , this.addBook.frame);
@@ -277,81 +289,81 @@ getPageSizeOptions() {
 		// 	console.log('Internet Connection Error');
 		//   }
 		// })
-	}
-	closeDialog(){
-		this.dialogRef.close();
-	}
-}
+// 	}
+// 	closeDialog(){
+// 		this.dialogRef.close();
+// 	}
+// }
 
  // Edit sub category
 
- @Component({
-	selector: 'edit-sub-category-dialog',
-	templateUrl: 'edit-sub-category.html',
-  })
-  export class EditSubCategoryDialog {
+//  @Component({
+// 	selector: 'edit-sub-category-dialog',
+// 	templateUrl: 'edit-sub-category.html',
+//   })
+//   export class EditSubCategoryDialog {
 	
-	subData
-    addCategory: any = {
-		  category : ""
-	  }
-	constructor(
-    public dialogRef: MatDialogRef<EditSubCategoryDialog>,
-    private service: AdminService,
-    private route: ActivatedRoute,
-    private router: Router
-	  ) {}
+// 	subData
+//     addCategory: any = {
+// 		  category : ""
+// 	  }
+// 	constructor(
+//     public dialogRef: MatDialogRef<EditSubCategoryDialog>,
+//     private service: AdminService,
+//     private route: ActivatedRoute,
+//     private router: Router
+// 	  ) {}
 
-	onNoClick(): void {
-	  this.dialogRef.close();
-	}
+// 	onNoClick(): void {
+// 	  this.dialogRef.close();
+// 	}
 	
-	ngOnInit(): void {
-		this.subData = this.dialogRef.id;
-    var obj = {
-      sub_category_id: this.subData.id
-	}
-		this.service.getSubCategoryById(obj).subscribe(res =>{
-			console.log("Data : ",res);
-			this.addCategory.category = res.data.sub_category_name
+// 	ngOnInit(): void {
+// 		this.subData = this.dialogRef.id;
+//     var obj = {
+//       sub_category_id: this.subData.id
+// 	}
+// 		this.service.getSubCategoryById(obj).subscribe(res =>{
+// 			console.log("Data : ",res);
+// 			this.addCategory.category = res.data.sub_category_name
 		
-		 })
+// 		 })
 		
 		// console.log("SubDtaa: ",this.subData.id);
 		
 		//  console.log('iddddddddd*****',this.dialogRef.id);
-	}
+	// }
 
-	editCategory(){
-		let categoryId=parseInt(this.subData.cate)
-		console.log('checkingcatID:',categoryId);
+	// editCategory(){
+	// 	let categoryId=parseInt(this.subData.cate)
+	// 	console.log('checkingcatID:',categoryId);
 		
-		var obj={
-			sub_category_id:this.subData.id,
-			sub_category_name:this.addCategory.category,
-			category_id: categoryId
-		}
-		console.log('dataaa:',obj);
+	// 	var obj={
+	// 		sub_category_id:this.subData.id,
+	// 		sub_category_name:this.addCategory.category,
+	// 		category_id: categoryId
+	// 	}
+	// 	console.log('dataaa:',obj);
 
-		this.service.updateSubCategory(obj).subscribe(data => {
-		  console.log("Data Successfully Updated!",data);
-      Swal.fire('Success..!', 'Successfully Updated!', 'success')
+	// 	this.service.updateSubCategory(obj).subscribe(data => {
+	// 	  console.log("Data Successfully Updated!",data);
+    //   Swal.fire('Success..!', 'Successfully Updated!', 'success')
     //   this.router.navigate(['/category']);
-      this.dialogRef.close();
-		},err => {
-		  if(err.status >= 400){
-			console.log('Invalid Credential!!!');
-		  }else{
-			console.log('Internet Connection Error');
-		  }
-		})
+//       this.dialogRef.close();
+// 		},err => {
+// 		  if(err.status >= 400){
+// 			console.log('Invalid Credential!!!');
+// 		  }else{
+// 			console.log('Internet Connection Error');
+// 		  }
+// 		})
 
 	
-	}
-		closeDialog(){
-		this.dialogRef.close();
-	}
-}
+// 	}
+// 		closeDialog(){
+// 		this.dialogRef.close();
+// 	}
+// }
 
 
 

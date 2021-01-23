@@ -8,7 +8,7 @@ import { AdminService } from '../shared/admin.service';
 import { ActivatedRoute } from '@angular/router';
 import { CanActivate, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
+import {environment} from '../../environments/environment.prod';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -29,12 +29,14 @@ export class CategoryComponent implements OnInit {
 	timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 	filterValue
 	responseData = []
-
-  displayedColumns: string[] = ['position', 'category','subcategory','action'];
+	pageSize
+	imagePath = environment.cateImg;
+  displayedColumns: string[] = ['position', 'category','image','subcategory','action'];
 //   'position',
   
   dataSource: any
-
+  currentPage=10
+  currentIndex=0
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -46,8 +48,10 @@ export class CategoryComponent implements OnInit {
   
   }
   ngOnInit(): void {
-
-    this.reqData = {}
+		this.currentPage=10
+		// console.log("pagesizeee",this.pageSize)
+		this.currentIndex=0
+	    this.reqData = {}
 		this.reqData.offset = 0
 		this.reqData.limit = 10
 		this.dataSource = new MatTableDataSource(this.responseData);
@@ -66,15 +70,18 @@ export class CategoryComponent implements OnInit {
 	return [10, 20, 30];
 	}
 	paginationOptionChange(evt) {
-			// console.log(evt)
+			console.log('*******',evt)
 			
 		this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
 		this.reqData.limit = evt.pageSize
+		this.currentPage=evt.pageSize
+        this.currentIndex=evt.pageIndex
 		var obj={
 			offset:this.reqData.offset,
             limit:this.reqData.limit
 			
 		}
+
 		console.log(this.reqData)
 		this.service.allCategory(obj).subscribe(res => {
 		console.log('paginator limit',res)
@@ -96,27 +103,6 @@ export class CategoryComponent implements OnInit {
 			}
 	})
       
-	// 	if (res) {
-	// 		this.responseData = data.data.rows
-	// 		this.length = data.data.count
-	// 		this.dataSource = new MatTableDataSource(data.data);
-	// 		this.dataSource.sort = this.sort;
-	// 		console.log(this.dataSource)
-	// 		if (this.filterValue) {
-	// 			this.dataSource.filter = this.filterValue
-	// 		}
-	// 	}
-	// }, err => {
-// 		console.log(err)
-// 		if (err.status >= 400) {
-// 			// this.toastr.error('Internal Error', 'Error')
-// 		} else {
-// 			// this.toastr.error('Internet Connection Error', 'Error')
-// 			console.log('Internet Connection Error')
-// 		}
-// 	})
-// }
-
 }
 
   getAllCategory(){
@@ -196,7 +182,8 @@ export class CategoryComponent implements OnInit {
           'Deleted!',
           'This Category has been deleted.',
           'success'
-        )
+		)
+		// this.getAllCategory()
         this.ngOnInit();
     });
       } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -219,13 +206,13 @@ export class CategoryComponent implements OnInit {
 		});
 		dialogRef.afterClosed().subscribe(result => {
 			console.log('The dialog was closed');
-			this.reqData = {}
-		    this.reqData.offset = 0
-		    this.reqData.limit = 10
-		    this.dataSource = new MatTableDataSource(this.responseData);
-		    this.dataSource.paginator = this.paginator;
-		    this.dataSource.sort = this.sort;
-		    this.datamodel = {}
+			// this.reqData = {}
+		    // this.reqData.offset = 0
+		    // this.reqData.limit = 10
+		    // this.dataSource = new MatTableDataSource(this.responseData);
+		    // this.dataSource.paginator = this.paginator;
+		    // this.dataSource.sort = this.sort;
+		    // this.datamodel = {}
     	    this.getAllCategory()
 			
 		});
@@ -239,54 +226,19 @@ export class CategoryComponent implements OnInit {
 		});
 		dialogRefEdit.afterClosed().subscribe(result => {
 			console.log('The dialog was closed');	
-			this.reqData = {}
-		    this.reqData.offset = 0
-		    this.reqData.limit = 10
-		    this.dataSource = new MatTableDataSource(this.responseData);
-		    this.dataSource.paginator = this.paginator;
-		    this.dataSource.sort = this.sort;
-		    this.datamodel = {}
+			// this.reqData = {}
+		    // this.reqData.offset = 0
+		    // this.reqData.limit = 10
+		    // this.dataSource = new MatTableDataSource(this.responseData);
+		    // this.dataSource.paginator = this.paginator;
+		    // this.dataSource.sort = this.sort;
+		    // this.datamodel = {}
 			this.getAllCategory()
 		});
 	}
 
-	openSubCategoryDialog(){
-		const dialogRef = this.dialog.open(AddSubCategoryDialog,{
-			height: '500px',
-			width: '800px',
-			// id: this.route.snapshot.params.exam_id,
-		});
-		dialogRef.afterClosed().subscribe(result => {
-			console.log('The dialog was closed');
-			this.reqData = {}
-		    this.reqData.offset = 0
-		    this.reqData.limit = 10
-		    this.dataSource = new MatTableDataSource(this.responseData);
-		    this.dataSource.paginator = this.paginator;
-		    this.dataSource.sort = this.sort;
-			this.datamodel = {}
-			
-			// this.service.getBookByCategoryId(this.addCategory.category).subscribe(data => {
-			// 	console.log(data);
-			// 	if(data){
-			// 		  this.length = data.data.count;
-			// 		  this.dataSource = data.data;
-			// 		console.log(this.dataSource);
-			// 		//this.dataSource = new MatTableDataSource(this.responseData);
-			// 	  }
-			//   },err => {
-			// 		console.log(err);
-			// 		if(err.status >= 400){
-			// 			  console.log('Invalid Credential!!!');
-			// 		}else{
-			// 			  console.log('Internet Connection Error');
-			// 		}
-			// 	});
-
-        //this.getAllCategory(this.reqData.limit, this.reqData.offset)
-		});
-	}
-
+	
+ 
 }
 
 //add category dialog box
@@ -403,79 +355,3 @@ export class CategoryComponent implements OnInit {
 }
 
 //Add Sub-category
-
-@Component({
-	selector: 'add-sub-category-dialog',
-	templateUrl: 'add-sub-category.html',
-  })
-  export class AddSubCategoryDialog {
-  
-    addBook: any = {
-		  bookCategory : "",
-		  frame : ""
-    }
-  bookCategoryList:any = [];
-	constructor(private fb: FormBuilder,
-	  public dialogRef: MatDialogRef<AddSubCategoryDialog>, private service: AdminService, private route: ActivatedRoute,
-	  ) {}
-
-	bookForm = new FormGroup({
-		category: new FormControl('', [Validators.required]),
-		description: new FormControl('', [Validators.required])
-	})
-
-	onNoClick(): void {
-	  this.dialogRef.close();
-	}
-	
-	ngOnInit(): void {
-		// this.service.allCategory(limit).subscribe(res => {
-		// 	console.log('*****getSubCategoryData******',res.data);
-			// let tableData
-		// 	if(res){
-			  
-		// 	  // this.length = res.data.count;
-		// 	  this.dataSource = res.data;
-		// 	  // this.responseData=new MatTableDataSource(res.data);
-		// 	  console.log('dataSource',this.dataSource);
-		// 	}
-		//   },err => {
-		// 	console.log(err);
-		// 	if(err.status >= 400){
-		// 		console.log('Invalid Credential!!!');
-		// 	}else{
-		// 		console.log('Internet Connection Error');
-		// 	}
-		//   })
-		// }
-
-    // this.service.getAllBookCategory().subscribe(data => {
-    //   console.log(data);
-    //   this.bookCategoryList = data.data
-    //   console.log("Data Array : ", this.bookCategoryList);
-	
-    // })
-	}
-
-	createBook(){
-		//alert(this.dialogRef.id);
-		console.log("Book : ", this.addBook.bookCategory, " " , this.addBook.frame);
-		var formData = new FormData();
-		
-		formData.append('book_category_id', this.addBook.bookCategory);
-		formData.append('book_link', this.addBook.frame);
-		
-		// this.service.addBook(formData).subscribe(data => {
-		//   console.log("Data Successfully Inserted!",data);
-		//   Swal.fire('Success..!', 'Successfully Created!', 'success')
-		// },err => {
-		//   if(err.status >= 400){
-		// 	console.log('Invalid Credential!!!');
-		//   }else{
-		// 	console.log('Internet Connection Error');
-		//   }
-		// })
-	}
-}
-
-

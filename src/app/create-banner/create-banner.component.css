@@ -1,0 +1,72 @@
+.card .card-header .card-title {
+    margin-top:0px!important;
+    color: #fff;
+}
+.btn-success {
+    background-color: #6aa524;
+    color: #FFFFFF;
+}
+.ft{
+        font-size: 16px;
+    }
+
+    mat-form-field{
+        width: 100%;
+    }
+    span.mat_imag {
+        width: 150px;
+        height: 150px;
+        background: #fafafa;
+        display: inline-block;
+    }
+    .inpt_icon {
+        position: absolute;
+        top: -12px;
+        right: -13px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        overflow: hidden;
+        background: #6aa524;
+    }
+    .inpt_icon .fa {
+        color: #fff;
+        position: absolute;
+        top: 9px;
+        right: 12px;
+        font-size: 17px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .inpt_icon input {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+    .mat_imag img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .inpt_icon .fa-edit{
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 9px;
+        font-size: 17px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .ft{
+        font-size: 16px;
+    }
+    .load_er{
+        position: fixed;
+        z-index: 99;
+        left: 50%;
+        top: 50%;
+        }

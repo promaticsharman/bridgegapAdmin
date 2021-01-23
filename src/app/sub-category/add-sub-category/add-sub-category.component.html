@@ -1,0 +1,96 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+  <h2  >
+    ADD SUB CATEGORY</h2>
+ </div>
+ <div class="main-content" style="position: relative;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <form [formGroup]="addSubCategoryForm">
+                    <div class="card">
+                        <!-- <div class="card-header card-header-danger">
+                            <h4 class="card-title">Testimonials</h4>
+                        </div> -->
+                        <div class="card-body block-card">
+                            <div class="row">
+                                <!-- Author Name -->
+
+                                <div class="col-md-6 offset-sm-3 text-center a-u">
+                                    <mat-form-field class="example-full-width text-center">
+                                        <label>Upload Image</label>
+                                        <input matInput readonly />
+                                        <span class="mat_imag position-relative">
+                                            <img *ngIf="!image && !testi_image" class="img-responsive"
+                                                src="assets/img/img-place.jpg" />
+                                            
+                                            <img *ngIf="image" class="img-responsive"
+                                                [src]="image" />
+                                            <img *ngIf="!image && testi_image" class="img-responsive" src="{{imgUrl}}{{testi_image}}" />
+                                            <span class="inpt_icon">
+                                                <input type="file" #uploadFile formControlName="image"  value="bannerData.image"
+                                                    (change)="onFileChange($event)" accept="image/*">
+                                                <i class="fa fa-upload" *ngIf="!image"></i>
+                                                <i class="fa fa-edit" *ngIf="image"></i>
+                                            </span>
+                                        </span>
+                                    </mat-form-field>
+                                   
+                                </div> 
+
+
+
+
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input  formControlName="category" matInput placeholder="Sub Category" [(ngModel)]="categoryData.category" >
+                                    </mat-form-field>
+                                    <div *ngIf="addSubCategoryForm.controls['category'].touched &&
+                                     addSubCategoryForm.controls['category'].invalid"
+                                             class="text-danger">
+                                     <div *ngIf="addSubCategoryForm.controls['category'].errors &&
+                                      addSubCategoryForm.controls['category'].errors.required">
+                                        Sub Category  is required.</div>
+                                 </div>
+                                </div>
+            
+                                <!-- Designation -->
+                              
+                                
+                                <!-- Image -->
+                                <!-- <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <label>Image</label>
+                                        <input matInput readonly />
+                                        <span class="mat_imag position-relative">
+                                            <img *ngIf="!image && !testi_image" class="img-responsive"
+                                                src="assets/img/img-place.jpg" />
+                                            
+                                            <img *ngIf="image" class="img-responsive"
+                                                [src]="image" />
+                                            <img *ngIf="!image && testi_image" class="img-responsive" src="{{imgUrl}}{{testi_image}}" />
+                                            <span class="inpt_icon">
+                                                <input type="file" #uploadFile formControlName="image" value="bannerData.image"
+                                                    (change)="onFileChange($event)" accept="image/*">
+                                                <i class="fa fa-upload" *ngIf="!image"></i>
+                                                <i class="fa fa-edit" *ngIf="image"></i>
+                                            </span>
+                                        </span>
+                                    </mat-form-field>
+                                   
+                                </div>               -->
+                            </div>
+                            
+                            <div class="text-center">
+                                <button mat-raised-button type="submit" class="btn btn-success ft"  [disabled]="!addSubCategoryForm.valid" (click)="SubCategory()">Add</button>
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/sub_category/{{categoryId}}" class="btn theme-btn ft">Back</button>
+                                 <!-- [disabled]="!addSubCategoryForm.valid"  -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+ </div>

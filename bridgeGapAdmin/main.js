@@ -1,5 +1,166 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "+I2t":
+/*!*********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sub-category/add-sub-category/add-sub-category.component.html ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >\n    ADD SUB CATEGORY</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"addSubCategoryForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n\n\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"category\" matInput placeholder=\"Sub Category\" [(ngModel)]=\"categoryData.category\" >\n                                    </mat-form-field>\n                                    <div *ngIf=\"addSubCategoryForm.controls['category'].touched &&\n                                     addSubCategoryForm.controls['category'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"addSubCategoryForm.controls['category'].errors &&\n                                      addSubCategoryForm.controls['category'].errors.required\">\n                                        Sub Category  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                              \n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\" value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            </div>\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!addSubCategoryForm.valid\" (click)=\"SubCategory()\">Add</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/sub_category/{{categoryId}}\" class=\"btn theme-btn ft\">Back</button>\n                                 <!-- [disabled]=\"!addSubCategoryForm.valid\"  -->\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
+
+/***/ }),
+
+/***/ "+zzn":
+/*!******************************************************************!*\
+  !*** ./src/app/testimonials-edit/testimonials-edit.component.ts ***!
+  \******************************************************************/
+/*! exports provided: TestimonialsEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestimonialsEditComponent", function() { return TestimonialsEditComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_testimonials_edit_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./testimonials-edit.component.html */ "oazE");
+/* harmony import */ var _testimonials_edit_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./testimonials-edit.component.css */ "OU7v");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+
+
+
+
+
+
+
+
+
+var TestimonialsEditComponent = /** @class */ (function () {
+    function TestimonialsEditComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.testimonialsData = {
+            authorName: "",
+            designation: "",
+            image: "",
+            description: ""
+        };
+    }
+    TestimonialsEditComponent.prototype.ngOnInit = function () {
+        this.imgUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].testimonials_img + 'testimonial_images/';
+        // 'testimonial/'
+        console.log("id", this.route.snapshot.params.testimonial_id);
+        this.getTestimonial(this.route.snapshot.params.testimonial_id);
+    };
+    TestimonialsEditComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.testimonialsData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    TestimonialsEditComponent.prototype.getTestimonial = function (id) {
+        var _this = this;
+        // console.log("ssdsadsfasdfafsdasf",id)
+        console.log(this.testimonialsData);
+        var obj = {
+            id: id
+        };
+        this.service.getTestimonialById(obj).subscribe(function (data) {
+            console.log("testimonial edit data**", data);
+            _this.testimonialsData.authorName = data.data.author_name;
+            _this.testimonialsData.designation = data.data.designation;
+            _this.testimonialsData.image = data.data.image;
+            _this.testi_image = data.data.image;
+            _this.testimonialsData.description = data.data.description;
+        })
+            , function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    console.log('Internet Connection Error');
+                }
+            };
+    };
+    TestimonialsEditComponent.prototype.updateTestimonials = function () {
+        var _this = this;
+        console.log(this.route.snapshot.params.testimonial_id);
+        console.log(this.testimonialsData.authorName);
+        console.log(this.testimonialsData.designation);
+        console.log(this.testimonialsData.image);
+        console.log(this.testimonialsData.description);
+        var formData = new FormData();
+        formData.append('id', this.route.snapshot.params.testimonial_id);
+        formData.append("author_name", this.testimonialsData.authorName);
+        formData.append("designation", this.testimonialsData.designation);
+        formData.append("image", this.testimonialsData.image);
+        formData.append("description", this.testimonialsData.description);
+        this.service.updateTestimonials(formData).subscribe(function (data) {
+            console.log(data, "Testimonials Successfully Updated!");
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            _this.router.navigate(['/testimonials']);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
+    TestimonialsEditComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    TestimonialsEditComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-testimonials-edit',
+            template: _raw_loader_testimonials_edit_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_testimonials_edit_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], TestimonialsEditComponent);
+    return TestimonialsEditComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "/A4d":
 /*!*******************************************************!*\
   !*** ./src/app/teacher-faq/teacher-faq.component.css ***!
@@ -27,30 +188,183 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_section_three_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./section-three.component.html */ "f49U");
 /* harmony import */ var _section_three_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section-three.component.css */ "Yms5");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+
+
+
+
+
+
 
 
 
 
 
 var SectionThreeComponent = /** @class */ (function () {
-    function SectionThreeComponent() {
+    function SectionThreeComponent(dialog, service, route, toastr) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.toastr = toastr;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__["environment"].home_image;
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__["environment"].how_it_works_img;
         //  imagePath = environment.home_image;
         this.responseData = [];
-        this.displayedColumns = ['image', 'step', 'Action',];
+        this.displayedColumns = ['position', 'image', 'heading', 'description', 'Action'];
     }
     SectionThreeComponent.prototype.ngOnInit = function () {
+        this.currentPage = 10;
+        // console.log("pagesizeee",this.pageSize)
+        this.currentIndex = 0;
+        this.reqData = {};
+        this.reqData.offset = 0;
+        this.reqData.limit = 10;
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.responseData);
+        this.datamodel = {};
+        this.workData();
     };
-    SectionThreeComponent.ctorParameters = function () { return []; };
+    SectionThreeComponent.prototype.workData = function () {
+        var _this = this;
+        // this.currentIndex=0
+        // this.currentPage=10
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        this.service.getAllHowItsWorks(list).subscribe(function (res) {
+            console.log("section two data", res);
+            if (res) {
+                _this.length = res.data.count;
+                console.log("****length***", _this.length);
+                _this.dataSource = res.data.rows;
+                // this.dataSource.paginator = this.paginator;
+                // console.log("datasource", this.dataSource)
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    SectionThreeComponent.prototype.getPageSizeOptions = function () {
+        return [10, 20, 30];
+    };
+    SectionThreeComponent.prototype.paginationOptionChange = function (evt) {
+        var _this = this;
+        console.log('*******', evt);
+        this.reqData.offset = (evt.pageIndex * evt.pageSize).toString();
+        this.reqData.limit = evt.pageSize;
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        console.log(this.reqData);
+        this.service.getAllHowItsWorks(list).subscribe(function (res) {
+            console.log('paginator limit', res);
+            if (res) {
+                _this.length = res.data.count;
+                _this.dataSource = res.data.rows;
+                if (_this.filterValue) {
+                    _this.dataSource.filter = _this.filterValue;
+                }
+                console.log('dataSource', _this.dataSource);
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    SectionThreeComponent.prototype.applyFilter = function (filterValue) {
+        var _this = this;
+        // this.dataSource.filter = filterValue.trim().toLowerCase();
+        // this.filterValue = filterValue.trim().toLowerCase();
+        var obj = {
+            search: filterValue
+        };
+        if (obj.search) {
+            this.service.howItsWorksFilter(obj).subscribe(function (res) {
+                console.log('filterResponse', res);
+                if (res) {
+                    _this.dataSource = res.data;
+                    // this.dataSource = new MatTableDataSource(data.data);
+                    // this.length = res.data.count
+                    // this.dataSource.sort = this.sort;
+                    // this.dataSource.paginator = this.paginator;
+                    // this.tableData = data.data;
+                    // this.backUpTableData = data.data;
+                }
+            }, function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    // this.toastr.error('Internal Error', 'Error')
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    // this.toastr.error('Internet Connection Error', 'Error')
+                    console.log('Internet Connection Error');
+                }
+            });
+        }
+        else {
+            this.ngOnInit();
+        }
+    };
+    SectionThreeComponent.prototype.delete = function (id) {
+        var _this = this;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
+            title: 'Are you sure want to remove?',
+            text: 'You will not be able to recover this Data!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, keep it'
+        }).then(function (result) {
+            if (result.value) {
+                _this.service.deleteHowItsWorks(id).subscribe(function (data) {
+                    console.log(data);
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Deleted!', 'This Record has been deleted.', 'success');
+                    _this.ngOnInit();
+                });
+            }
+            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.DismissReason.cancel) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Cancelled', 'This Record is safe :)', 'error');
+            }
+        });
+    };
+    SectionThreeComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"] }
+    ]; };
     SectionThreeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
             selector: 'app-section-three',
             template: _raw_loader_section_three_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_section_three_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"]])
     ], SectionThreeComponent);
     return SectionThreeComponent;
 }());
@@ -85,11 +399,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_section_second_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./section-second.component.html */ "xdhd");
 /* harmony import */ var _section_second_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section-second.component.css */ "FIAw");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
-/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+
+
 
 
 
@@ -106,18 +425,149 @@ var SectionSecondComponent = /** @class */ (function () {
         this.route = route;
         this.toastr = toastr;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_7__["environment"].home_image;
+        this.currentPage = 10;
+        // console.log("pagesizeee",this.pageSize)
+        this.currentIndex = 0;
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__["environment"].engaging_image;
         //  imagePath = environment.home_image;
         this.responseData = [];
-        this.displayedColumns = ['image', 'heading', 'description', 'Action',];
+        this.displayedColumns = ['position', 'image', 'heading', 'description', 'Action'];
     }
     SectionSecondComponent.prototype.ngOnInit = function () {
+        this.reqData = {};
+        this.currentPage = 10;
+        // console.log("pagesizeee",this.pageSize)
+        this.currentIndex = 0;
+        this.reqData.offset = 0;
+        this.reqData.limit = 10;
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.responseData);
+        this.datamodel = {};
+        this.engagingData();
+    };
+    SectionSecondComponent.prototype.getPageSizeOptions = function () {
+        return [10, 20, 30];
+    };
+    SectionSecondComponent.prototype.paginationOptionChange = function (evt) {
+        var _this = this;
+        console.log('*******', evt);
+        this.reqData.offset = (evt.pageIndex * evt.pageSize).toString();
+        this.reqData.limit = evt.pageSize;
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        console.log(this.reqData);
+        this.service.getAllEngagingAndEfficients(list).subscribe(function (res) {
+            console.log('engaging and efficient data*****', res);
+            if (res) {
+                _this.length = res.data.count;
+                _this.dataSource = res.data.rows;
+                if (_this.filterValue) {
+                    _this.dataSource.filter = _this.filterValue;
+                }
+                console.log('dataSource', _this.dataSource);
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    SectionSecondComponent.prototype.engagingData = function () {
+        var _this = this;
+        // this.currentIndex=0
+        // this.currentPage=10
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        this.service.getAllEngagingAndEfficients(list).subscribe(function (res) {
+            console.log("section engagaing//////////// data", res);
+            if (res) {
+                _this.length = res.data.count;
+                console.log("****length***", _this.length);
+                _this.dataSource = res.data.rows;
+                // this.dataSource.paginator = this.paginator;
+                // console.log("datasource", this.dataSource)
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    SectionSecondComponent.prototype.applyFilter = function (filterValue) {
+        var _this = this;
+        // this.dataSource.filter = filterValue.trim().toLowerCase();
+        // this.filterValue = filterValue.trim().toLowerCase();
+        var obj = {
+            search: filterValue
+        };
+        if (obj.search) {
+            this.service.engagingFilter(obj).subscribe(function (res) {
+                console.log('filterResponse', res);
+                if (res) {
+                    _this.dataSource = res.data;
+                    // this.dataSource = new MatTableDataSource(data.data);
+                    // this.length = res.data.count
+                    // this.dataSource.sort = this.sort;
+                    // this.dataSource.paginator = this.paginator;
+                    // this.tableData = data.data;
+                    // this.backUpTableData = data.data;
+                }
+            }, function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    // this.toastr.error('Internal Error', 'Error')
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    // this.toastr.error('Internet Connection Error', 'Error')
+                    console.log('Internet Connection Error');
+                }
+            });
+        }
+        else {
+            this.ngOnInit();
+        }
+    };
+    SectionSecondComponent.prototype.delete = function (id) {
+        var _this = this;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
+            title: 'Are you sure want to remove?',
+            text: 'You will not be able to recover this Data!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, keep it'
+        }).then(function (result) {
+            if (result.value) {
+                _this.service.deleteEngagingAndEfficients(id).subscribe(function (data) {
+                    console.log(data);
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Deleted!', 'This Record has been deleted.', 'success');
+                    _this.ngOnInit();
+                });
+            }
+            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.DismissReason.cancel) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Cancelled', 'This Record is safe :)', 'error');
+            }
+        });
     };
     SectionSecondComponent.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
-        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_8__["ToastrService"] }
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"] }
     ]; };
     SectionSecondComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
@@ -125,10 +575,10 @@ var SectionSecondComponent = /** @class */ (function () {
             template: _raw_loader_section_second_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_section_second_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_5__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_8__["ToastrService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"]])
     ], SectionSecondComponent);
     return SectionSecondComponent;
 }());
@@ -137,42 +587,16 @@ var SectionSecondComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "1Y/h":
-/*!********************************************************!*\
-  !*** ./src/app/add-category/add-category.component.ts ***!
-  \********************************************************/
-/*! exports provided: AddCategoryComponent */
+/***/ "1sIi":
+/*!*********************************************************************************!*\
+  !*** ./src/app/section-three/edit-how-it-works/edit-how-it-works.component.css ***!
+  \*********************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddCategoryComponent", function() { return AddCategoryComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_add_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./add-category.component.html */ "O467");
-/* harmony import */ var _add_category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add-category.component.css */ "hPg0");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-var AddCategoryComponent = /** @class */ (function () {
-    function AddCategoryComponent() {
-    }
-    AddCategoryComponent.prototype.ngOnInit = function () {
-    };
-    AddCategoryComponent.ctorParameters = function () { return []; };
-    AddCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-            selector: 'app-add-category',
-            template: _raw_loader_add_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_add_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-    ], AddCategoryComponent);
-    return AddCategoryComponent;
-}());
-
-
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXQtaG93LWl0LXdvcmtzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsV0FBVztBQUNmO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsY0FBYztBQUNsQjtBQUNBO1FBQ1EsZUFBZTtJQUNuQjtBQUVBO1FBQ0ksV0FBVztJQUNmO0FBQ0E7UUFDSSxZQUFZO1FBQ1osYUFBYTtRQUNiLG1CQUFtQjtRQUNuQixxQkFBcUI7SUFDekI7QUFDQTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO1FBQ1YsWUFBWTtRQUNaLFdBQVc7UUFDWCxZQUFZO1FBQ1osbUJBQW1CO1FBQ25CLGdCQUFnQjtRQUNoQixtQkFBbUI7SUFDdkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsUUFBUTtRQUNSLFdBQVc7UUFDWCxlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osVUFBVTtRQUNWLGVBQWU7UUFDZixrQkFBa0I7UUFDbEIsVUFBVTtJQUNkO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLG9CQUFvQjtRQUNwQixpQkFBaUI7SUFDckI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsU0FBUztRQUNULFVBQVU7UUFDVixlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLGVBQWU7SUFDbkIiLCJmaWxlIjoiZWRpdC1ob3ctaXQtd29ya3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIC5jYXJkLWhlYWRlciAuY2FyZC10aXRsZSB7XG4gICAgbWFyZ2luLXRvcDowcHghaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufVxuLmJ0bi1zdWNjZXNzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xufVxuLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgbWF0LWZvcm0tZmllbGR7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgICBzcGFuLm1hdF9pbWFnIHtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuICAgIC5pbnB0X2ljb24ge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLTEycHg7XG4gICAgICAgIHJpZ2h0OiAtMTNweDtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgYmFja2dyb3VuZDogIzZhYTUyNDtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgcmlnaHQ6IDEycHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IDI7XG4gICAgfVxuICAgIC5tYXRfaW1hZyBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAtby1vYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhLWVkaXR7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH0iXX0= */");
 
 /***/ }),
 
@@ -185,7 +609,7 @@ var AddCategoryComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".sub-ul{\n    list-style-type: disc;\n    padding-left: 45px;\n    margin-top: 10px;\n}\n.sub-ul li a{\n    font-size:13px;\n    padding: 5px;\n    margin: 10px 0px;\n}\n.sub-ul{\n    display: none;\n}\n.ds-block{\n    display: block!important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNpZGViYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHFCQUFxQjtJQUNyQixrQkFBa0I7SUFDbEIsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxjQUFjO0lBQ2QsWUFBWTtJQUNaLGdCQUFnQjtBQUNwQjtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksd0JBQXdCO0FBQzVCIiwiZmlsZSI6InNpZGViYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zdWItdWx7XG4gICAgbGlzdC1zdHlsZS10eXBlOiBkaXNjO1xuICAgIHBhZGRpbmctbGVmdDogNDVweDtcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xufVxuLnN1Yi11bCBsaSBhe1xuICAgIGZvbnQtc2l6ZToxM3B4O1xuICAgIHBhZGRpbmc6IDVweDtcbiAgICBtYXJnaW46IDEwcHggMHB4O1xufVxuLnN1Yi11bHtcbiAgICBkaXNwbGF5OiBub25lO1xufVxuLmRzLWJsb2Nre1xuICAgIGRpc3BsYXk6IGJsb2NrIWltcG9ydGFudDtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".sub-ul{\n    list-style-type: disc;\n    padding-left: 65px;\n    margin-top: 10px;\n    width: 94%;\n}\n.sub-ul li a{\n    font-size:13px;\n    padding: 5px;\n    margin: 10px 0px;\n}\n.sub-ul li{\n    color:#fff;\n}\n.sub-ul{\n    display: none;\n}\n.ds-block{\n    display: block!important;\n}\n.sub-ul li.active-1 a{\n    background-color: rgba(255, 255, 255, 0.1);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNpZGViYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHFCQUFxQjtJQUNyQixrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLFVBQVU7QUFDZDtBQUNBO0lBQ0ksY0FBYztJQUNkLFlBQVk7SUFDWixnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLFVBQVU7QUFDZDtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksd0JBQXdCO0FBQzVCO0FBRUE7SUFDSSwwQ0FBMEM7QUFDOUMiLCJmaWxlIjoic2lkZWJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnN1Yi11bHtcbiAgICBsaXN0LXN0eWxlLXR5cGU6IGRpc2M7XG4gICAgcGFkZGluZy1sZWZ0OiA2NXB4O1xuICAgIG1hcmdpbi10b3A6IDEwcHg7XG4gICAgd2lkdGg6IDk0JTtcbn1cbi5zdWItdWwgbGkgYXtcbiAgICBmb250LXNpemU6MTNweDtcbiAgICBwYWRkaW5nOiA1cHg7XG4gICAgbWFyZ2luOiAxMHB4IDBweDtcbn1cbi5zdWItdWwgbGl7XG4gICAgY29sb3I6I2ZmZjtcbn1cbi5zdWItdWx7XG4gICAgZGlzcGxheTogbm9uZTtcbn1cbi5kcy1ibG9ja3tcbiAgICBkaXNwbGF5OiBibG9jayFpbXBvcnRhbnQ7XG59XG5cbi5zdWItdWwgbGkuYWN0aXZlLTEgYXtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSk7XG59Il19 */");
 
 /***/ }),
 
@@ -198,7 +622,126 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".theme-btn{\n    background-color: #142c69;\n    color: #fff;\n  }\n  .hdng{\n    background-color: #6AA524!important;\n    color: #fff;\n    padding-left: 35px;\n    padding-bottom: 52px;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN1Yi1jYXRlZ29yeS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseUJBQXlCO0lBQ3pCLFdBQVc7RUFDYjtFQUNBO0lBQ0UsbUNBQW1DO0lBQ25DLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0JBQW9CO0VBQ3RCIiwiZmlsZSI6InN1Yi1jYXRlZ29yeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRoZW1lLWJ0bntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTQyYzY5O1xuICAgIGNvbG9yOiAjZmZmO1xuICB9XG4gIC5oZG5ne1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM2QUE1MjQhaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIHBhZGRpbmctbGVmdDogMzVweDtcbiAgICBwYWRkaW5nLWJvdHRvbTogNTJweDtcbiAgfSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".theme-btn{\n    background-color: #142c69;\n    color: #fff;\n  }\n  .hdng{\n    background-color: #6AA524!important;\n    color: #fff;\n    padding-left: 35px;\n    padding-bottom: 52px;\n  }\n  .img-fluid{\n    width: 120px;\n    height: 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN1Yi1jYXRlZ29yeS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseUJBQXlCO0lBQ3pCLFdBQVc7RUFDYjtFQUNBO0lBQ0UsbUNBQW1DO0lBQ25DLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0JBQW9CO0VBQ3RCO0VBQ0E7SUFDRSxZQUFZO0lBQ1osWUFBWTtBQUNoQiIsImZpbGUiOiJzdWItY2F0ZWdvcnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aGVtZS1idG57XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzE0MmM2OTtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuICAuaGRuZ3tcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNkFBNTI0IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBwYWRkaW5nLWxlZnQ6IDM1cHg7XG4gICAgcGFkZGluZy1ib3R0b206IDUycHg7XG4gIH1cbiAgLmltZy1mbHVpZHtcbiAgICB3aWR0aDogMTIwcHg7XG4gICAgaGVpZ2h0OiA4MHB4O1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "2Uv9":
+/*!*****************************************************************************!*\
+  !*** ./src/app/section-second/create-engaging/create-engaging.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: CreateEngagingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateEngagingComponent", function() { return CreateEngagingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_create_engaging_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./create-engaging.component.html */ "Rll3");
+/* harmony import */ var _create_engaging_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create-engaging.component.css */ "jCzT");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var CreateEngagingComponent = /** @class */ (function () {
+    function CreateEngagingComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.engagingData = {
+            heading: "",
+            description: "",
+        };
+        this.createForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            heading: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    }
+    CreateEngagingComponent.prototype.ngOnInit = function () {
+    };
+    CreateEngagingComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.engagingData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    CreateEngagingComponent.prototype.add = function () {
+        var _this = this;
+        var formData = new FormData();
+        // formData.append("author_name",this.bannerData.title);
+        // console.log("subtitle",this.bannerData.subtitle);
+        // console.log("image", this.bannerData.image)
+        // console.log("title", this.bannerData.title)
+        formData.append("heading", this.engagingData.heading);
+        formData.append("description", this.engagingData.description);
+        formData.append("image", this.engagingData.image);
+        this.loader = true;
+        this.service.saveEngagingAndEfficients(formData).subscribe(function (data) {
+            console.log(" Successfully Created!");
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            _this.router.navigate(['/section_2']);
+            _this.loader = false;
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
+    CreateEngagingComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    CreateEngagingComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-create-engaging',
+            template: _raw_loader_create_engaging_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_create_engaging_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], CreateEngagingComponent);
+    return CreateEngagingComponent;
+}());
+
+
 
 /***/ }),
 
@@ -393,6 +936,228 @@ var AdminService = /** @class */ (function () {
             return res;
         }));
     };
+    AdminService.prototype.createTestimonial = function (data) {
+        var API_URL = this.apiUrl1 + "createTestimonial";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getTestimonialById = function (data) {
+        var API_URL = this.apiUrl1 + "getAllTestimonialById";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.updateTestimonials = function (data) {
+        var API_URL = this.apiUrl1 + "updateTestimonial";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.testimonialFilter = function (data) {
+        var API_URL = this.apiUrl1 + "testimonialFilter";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.deleteTestimonials = function (data) {
+        var API_URL = this.apiUrl1 + "deleteTestimonial";
+        var obj = {
+            id: data
+        };
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, obj, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.bannerFilter = function (data) {
+        var API_URL = this.apiUrl1 + "bannerFilter";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.createBanner = function (data) {
+        var API_URL = this.apiUrl1 + "createBanner";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getAllBanner = function (data) {
+        var API_URL = this.apiUrl1 + "getAllBanner";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getBannerById = function (data) {
+        var API_URL = this.apiUrl1 + "getBannerById";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.deleteBanner = function (data) {
+        var API_URL = this.apiUrl1 + "deleteBanner";
+        var obj = {
+            banner_id: data
+        };
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, obj, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.updateBanner = function (data) {
+        var API_URL = this.apiUrl1 + "updateBanner";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.bannerActiveAndInactive = function (data) {
+        var API_URL = this.apiUrl1 + "bannerActiveAndInactive";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.saveEngagingAndEfficients = function (data) {
+        var API_URL = this.apiUrl1 + "saveEngagingAndEfficients";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getAllEngagingAndEfficients = function (data) {
+        var API_URL = this.apiUrl1 + "getAllEngagingAndEfficients";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getEngagingAndEfficientsById = function (data) {
+        var API_URL = this.apiUrl1 + "getEngagingAndEfficientsById";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.updateEngagingAndEfficients = function (data) {
+        var API_URL = this.apiUrl1 + "updateEngagingAndEfficients";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.deleteEngagingAndEfficients = function (data) {
+        var API_URL = this.apiUrl1 + "deleteEngagingAndEfficients";
+        var obj = {
+            id: data
+        };
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, obj, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.engagingFilter = function (data) {
+        var API_URL = this.apiUrl1 + "engagingFilter";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.createHowItsWorks = function (data) {
+        var API_URL = this.apiUrl1 + "createHowItsWorks";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getAllHowItsWorks = function (data) {
+        var API_URL = this.apiUrl1 + "getAllHowItsWorks";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.deleteHowItsWorks = function (data) {
+        var API_URL = this.apiUrl1 + "deleteHowItsWorks";
+        var obj = {
+            id: data
+        };
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, obj, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.getHowItsWorksById = function (data) {
+        var API_URL = this.apiUrl1 + "getHowItsWorksById";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.updateHowItsWorks = function (data) {
+        var API_URL = this.apiUrl1 + "updateHowItsWorks";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.howItsWorksFilter = function (data) {
+        var API_URL = this.apiUrl1 + "howItsWorksFilter";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.showTeacherApplication = function (data) {
+        var API_URL = this.apiUrl1 + "showTeacherApplication";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.applicationApproved = function (data) {
+        var API_URL = this.apiUrl1 + "applicationApproved";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.applicationRejected = function (data) {
+        var API_URL = this.apiUrl1 + "send_reject_email";
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
+    AdminService.prototype.teacherApplicationFilter = function (data) {
+        var API_URL = this.apiUrl1 + "teacherApplicationFilter";
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return res;
+        }));
+    };
     AdminService.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
         { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"] },
@@ -405,6 +1170,151 @@ var AdminService = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], AdminService);
     return AdminService;
+}());
+
+
+
+/***/ }),
+
+/***/ "3y3T":
+/*!******************************************************************!*\
+  !*** ./src/app/category/add-category/add-category.component.css ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 200px;\n        height: 200px;\n        background: #fafafa;\n        display: block;\n        margin: 0 auto;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n    \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1jYXRlZ29yeS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLFdBQVc7QUFDZjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGNBQWM7QUFDbEI7QUFDQTtRQUNRLGVBQWU7SUFDbkI7QUFFQTtRQUNJLFdBQVc7SUFDZjtBQUNBO1FBQ0ksWUFBWTtRQUNaLGFBQWE7UUFDYixtQkFBbUI7UUFDbkIsY0FBYztRQUNkLGNBQWM7SUFDbEI7QUFDQTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO1FBQ1YsWUFBWTtRQUNaLFdBQVc7UUFDWCxZQUFZO1FBQ1osbUJBQW1CO1FBQ25CLGdCQUFnQjtRQUNoQixtQkFBbUI7SUFDdkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsUUFBUTtRQUNSLFdBQVc7UUFDWCxlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osVUFBVTtRQUNWLGVBQWU7UUFDZixrQkFBa0I7UUFDbEIsVUFBVTtJQUNkO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLG9CQUFvQjtRQUNwQixpQkFBaUI7SUFDckI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsU0FBUztRQUNULFVBQVU7UUFDVixlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLGVBQWU7SUFDbkIiLCJmaWxlIjoiYWRkLWNhdGVnb3J5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAyMDBweDtcbiAgICAgICAgaGVpZ2h0OiAyMDBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9XG4gICAgIl19 */");
+
+/***/ }),
+
+/***/ "4Y5O":
+/*!*******************************************************************************!*\
+  !*** ./src/app/sub-category/edit-sub-category/edit-sub-category.component.ts ***!
+  \*******************************************************************************/
+/*! exports provided: EditSubCategoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditSubCategoryComponent", function() { return EditSubCategoryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_edit_sub_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./edit-sub-category.component.html */ "JrXK");
+/* harmony import */ var _edit_sub_category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-sub-category.component.css */ "JreF");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../environments/environment.prod */ "cxbk");
+
+
+
+
+
+
+
+
+
+var EditSubCategoryComponent = /** @class */ (function () {
+    function EditSubCategoryComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.categoryData = {
+            category: "",
+            image: "",
+        };
+        this.editCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            category: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+        });
+    }
+    EditSubCategoryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log('iddddddd***', this.route.snapshot.params.subCatId);
+        this.imgUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].subCategory_images + 'sub_category_images/';
+        this.catId = this.route.snapshot.params.catId;
+        var id = this.route.snapshot.params.subCatId;
+        var obj = {
+            sub_category_id: id
+        };
+        // console.log("Edit Id: ",)
+        this.service.getSubCategoryById(obj).subscribe(function (res) {
+            console.log("Data *************************: ", res);
+            _this.categoryData.category = res.data.sub_category_name;
+            _this.categoryData.image = res.data.image;
+            _this.testi_image = res.data.image;
+        });
+    };
+    EditSubCategoryComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.categoryData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    EditSubCategoryComponent.prototype.editCategory = function () {
+        var _this = this;
+        console.log("this", this.route.snapshot.params);
+        var formData = new FormData();
+        this.catId = this.route.snapshot.params.catId;
+        formData.append('sub_category_name', this.categoryData.category);
+        formData.append('image', this.categoryData.image);
+        formData.append('category_id', this.route.snapshot.params.catId);
+        formData.append('sub_category_id', this.route.snapshot.params.subCatId);
+        this.service.updateSubCategory(formData).subscribe(function (data) {
+            console.log("Data Successfully Updated!", data);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            // this.router.navigate(['/category']);
+            _this.router.navigate(["/sub_category/" + _this.catId]);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    EditSubCategoryComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    EditSubCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-edit-sub-category',
+            template: _raw_loader_edit_sub_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_edit_sub_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], EditSubCategoryComponent);
+    return EditSubCategoryComponent;
 }());
 
 
@@ -481,7 +1391,20 @@ var TeacherFaqComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >CATEGORY</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\">\n            <button mat-button class=\"theme-btn\" (click)=\"openDialog()\" >Add Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n            <mat-form-field>\n             <mat-label>Filter</mat-label>\n             <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th mat-header-cell *matHeaderCellDef >Category</th>\n                        <!-- class=\"text-center\" -->\n                        <td mat-cell *matCellDef=\"let element\" >{{element.category_name}}</td>\n                        <!-- class=\"text-center\" -->\n                    </ng-container>\n\n                    <!-- Description -->\n                    <!-- <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th> -->\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.description}}</td> -->\n                    <!-- </ng-container> -->\n\n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                        <!-- <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                            aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                        </button> -->\n                        <!-- <mat-menu #menu=\"matMenu\"> -->\n                            <button mat-icon-button (click)=\"openEditDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                                <!-- Edit -->\n                            </button>\n                            <button mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                                <!-- Delete -->\n                            </button>\n                            <!-- <button mat-icon-button routerLink=\"/sub_category\"> -->\n                              <!-- (click)=\"openSubCategoryDialog()\" -->\n                              <!-- <mat-icon >view_list</mat-icon> -->\n                              <!-- Delete -->\n                           <!-- </button> -->\n                         <!-- </mat-menu> -->\n                    </td>\n                </ng-container>\n                <ng-container matColumnDef=\"subcategory\">\n                  <th mat-header-cell *matHeaderCellDef class=\"text-center\">Sub Category List</th>\n                  <td mat-cell *matCellDef=\"let element\" class=\"text-center\">\n                    <button mat-icon-button routerLink=\"/sub_category/{{element.id}}\">\n                      <!-- (click)=\"openSubCategoryDialog()\" -->\n                      <mat-icon >view_list</mat-icon>\n                      <!-- Delete -->\n                   </button>\n                  </td>\n                  <!-- {{element.category_name}} -->\n              </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >CATEGORY</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\">\n            <button mat-button class=\"theme-btn\" routerLink=\"/addCategory\" >Add Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n            <mat-form-field>\n             <mat-label>Filter</mat-label>\n             <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{(currentIndex) * currentPage + i +1 }} </td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th mat-header-cell *matHeaderCellDef >Category</th>\n                        <!-- class=\"text-center\" -->\n                        <td mat-cell *matCellDef=\"let element\" >{{element.category_name}}</td>\n                        <!-- class=\"text-center\" -->\n                    </ng-container>\n                     \n                    \n                    <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                      <th mat-header-cell *matHeaderCellDef >Image\n                      </th>\n                      <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                    </ng-container>  \n                    <!-- Description -->\n                    <!-- <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th> -->\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.description}}</td> -->\n                    <!-- </ng-container> -->\n\n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                        <!-- <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                            aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                        </button> -->\n                        <!-- <mat-menu #menu=\"matMenu\"> -->\n                            <button mat-icon-button routerLink=\"/editCategory/{{element.id}}\" >\n                                <mat-icon >edit</mat-icon>\n                                <!-- Edit -->\n                            </button>\n                            <button mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                                <!-- Delete -->\n                            </button>\n                            <!-- <button mat-icon-button routerLink=\"/sub_category\"> -->\n                              <!-- (click)=\"openSubCategoryDialog()\" -->\n                              <!-- <mat-icon >view_list</mat-icon> -->\n                              <!-- Delete -->\n                           <!-- </button> -->\n                         <!-- </mat-menu> -->\n                    </td>\n                </ng-container>\n                <ng-container matColumnDef=\"subcategory\">\n                  <th mat-header-cell *matHeaderCellDef class=\"text-center\">Sub Category List</th>\n                  <td mat-cell *matCellDef=\"let element\" class=\"text-center\">\n                    <button mat-icon-button routerLink=\"/sub_category/{{element.id}}\">\n                      <!-- (click)=\"openSubCategoryDialog()\" -->\n                      <mat-icon >view_list</mat-icon>\n                      <!-- Delete -->\n                   </button>\n                  </td>\n                  <!-- {{element.category_name}} -->\n              </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
+
+/***/ }),
+
+/***/ "754x":
+/*!******************************************************************************!*\
+  !*** ./src/app/sub-category/add-sub-category/add-sub-category.component.css ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1zdWItY2F0ZWdvcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHdCQUF3QjtJQUN4QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixjQUFjO0FBQ2xCO0FBQ0E7UUFDUSxlQUFlO0lBQ25CO0FBRUE7UUFDSSxXQUFXO0lBQ2Y7QUFDQTtRQUNJLFlBQVk7UUFDWixhQUFhO1FBQ2IsbUJBQW1CO1FBQ25CLHFCQUFxQjtJQUN6QjtBQUNBO1FBQ0ksa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixZQUFZO1FBQ1osV0FBVztRQUNYLFlBQVk7UUFDWixtQkFBbUI7UUFDbkIsZ0JBQWdCO1FBQ2hCLG1CQUFtQjtJQUN2QjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsV0FBVztRQUNYLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixVQUFVO1FBQ1YsZUFBZTtRQUNmLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osb0JBQW9CO1FBQ3BCLGlCQUFpQjtJQUNyQjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixTQUFTO1FBQ1QsVUFBVTtRQUNWLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtJQUNuQiIsImZpbGUiOiJhZGQtc3ViLWNhdGVnb3J5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAxNTBweDtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9Il19 */");
 
 /***/ }),
 
@@ -494,7 +1417,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- <p>add-testimonials works!</p> -->\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >ADD TESTIMONIALS</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 offset-sm-2\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Author Name\" [(ngModel)]=\"testimonialsData.authorName\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Designation\" [(ngModel)]=\"testimonialsData.designation\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>\n                                \n                                <!-- Description -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Description\" [(ngModel)]=\"testimonialsData.description\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Update</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <p>add-testimonials works!</p> -->\n<div *ngIf=\"loader\" class=\"load_er\">\n\t<mat-progress-spinner\n\tcolor=\"primary\"\n\tmode=\"indeterminate\">\n\t</mat-progress-spinner></div>\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n   ADD TESTIMONIALS</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form  [formGroup]=\"testimonialForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n\n                                 \n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Author Name\" maxlength=\"60\"\n                                        formControlName=\"authorName\" [(ngModel)]=\"testimonialsData.authorName\"\n                                       >\n                                    </mat-form-field>\n                                    <div *ngIf=\"testimonialForm.controls['authorName'].touched &&\n                                    testimonialForm.controls['authorName'].invalid\"\n                                                class=\"text-danger\">\n                                        <div *ngIf=\"testimonialForm.controls['authorName'].errors &&\n                                        testimonialForm.controls['authorName'].errors.required\">\n                                            Author Name is required.</div>\n                                    </div>\n                                </div>\n\n                             \n\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Designation\" maxlength=\"60\" formControlName=\"designation\" [(ngModel)]=\"testimonialsData.designation\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"testimonialForm.controls['designation'].touched &&\n                                    testimonialForm.controls['designation'].invalid\"\n                                                class=\"text-danger\">\n                                        <div *ngIf=\"testimonialForm.controls['designation'].errors &&\n                                        testimonialForm.controls['designation'].errors.required\">\n                                            Designation is required.</div>\n                                    </div>\n                                </div>\n\n                             \n\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Description\" formControlName=\"description\" [(ngModel)]=\"testimonialsData.description\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"testimonialForm.controls['description'].touched &&\n                                    testimonialForm.controls['description'].invalid\"\n                                                class=\"text-danger\">\n                                        <div *ngIf=\"testimonialForm.controls['description'].errors &&\n                                        testimonialForm.controls['description'].errors.required\">\n                                            Description is required.</div>\n                                    </div>\n                                </div>\n\n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" [disabled]=\"!testimonialForm.valid\" (click)=\"saveTestimonials()\">Submit</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/testimonials\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                            <!-- <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Submit</button>\n                            </div> -->\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -502,30 +1425,23 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************************!*\
   !*** ./src/app/sub-category/sub-category.component.ts ***!
   \********************************************************/
-/*! exports provided: SubCategoryComponent, AddSubCategoryDialog, EditSubCategoryDialog */
+/*! exports provided: SubCategoryComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubCategoryComponent", function() { return SubCategoryComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddSubCategoryDialog", function() { return AddSubCategoryDialog; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditSubCategoryDialog", function() { return EditSubCategoryDialog; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _raw_loader_sub_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./sub-category.component.html */ "VcCe");
 /* harmony import */ var _sub_category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sub-category.component.css */ "2U6z");
-/* harmony import */ var _raw_loader_add_sub_category_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! raw-loader!./add-sub-category.html */ "9O8t");
-/* harmony import */ var _raw_loader_edit_sub_category_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!./edit-sub-category.html */ "Wqbc");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_11__);
-
-
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
 
 
 
@@ -548,14 +1464,21 @@ var SubCategoryComponent = /** @class */ (function () {
         this.disabled = false;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         this.responseData = [];
-        this.displayedColumns = ['position', 'category', 'action'];
+        this.currentPage = 10;
+        this.currentIndex = 0;
+        this.displayedColumns = ['position', 'category', 'image', 'action'];
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__["environment"].subCatImg;
     }
     SubCategoryComponent.prototype.ngOnInit = function () {
+        this.currentPage = 10;
+        // console.log("pagesizeee",this.pageSize)
+        this.currentIndex = 0;
         this.reqData = {};
         this.reqData.offset = 0;
         this.reqData.limit = 10;
-        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](this.responseData);
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.responseData);
         this.CateID = this.route.snapshot.params.id;
+        console.log("*****iddddddddd*****", this.CateID);
         this.datamodel = {};
         this.getSubCatList();
         // this.getAllCategory()
@@ -570,6 +1493,7 @@ var SubCategoryComponent = /** @class */ (function () {
         this.service.getSubList(list).subscribe(function (res) {
             // console.log('*****getSubCategoryData******',res.data);
             if (res) {
+                _this.length = res.data.count;
                 _this.dataSource = res.data.rows;
                 console.log('responseData ***', _this.dataSource);
             }
@@ -620,8 +1544,12 @@ var SubCategoryComponent = /** @class */ (function () {
         var _this = this;
         this.reqData.offset = (evt.pageIndex * evt.pageSize).toString();
         this.reqData.limit = evt.pageSize;
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
         var Cate = this.route.snapshot.params.id;
         console.log('cate id', Cate);
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
         var list = {
             category_id: Cate,
             offset: this.reqData.offset,
@@ -646,48 +1574,46 @@ var SubCategoryComponent = /** @class */ (function () {
             }
         });
     };
-    SubCategoryComponent.prototype.openSubCategoryDialog = function () {
-        var _this = this;
-        var dialogRef = this.dialog.open(AddSubCategoryDialog, {
-            // height: '330px',
-            width: '600px',
-            id: this.route.snapshot.params.id
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('The dialog was closed');
-            _this.reqData = {};
-            _this.reqData.offset = 0;
-            _this.reqData.limit = 10;
-            _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this.responseData);
-            _this.datamodel = {};
-            _this.getSubCatList();
-        });
-    };
-    SubCategoryComponent.prototype.openEditDialog = function (id) {
-        var _this = this;
-        var dialogRefEdit = this.dialog.open(EditSubCategoryDialog, {
-            // catId:this.route.snapshot.params.id,
-            // height: '350px',
-            width: '600px',
-            id: {
-                id: id,
-                cate: this.route.snapshot.params.id
-            }
-            // catId: this.route.snapshot.params.id
-        });
-        dialogRefEdit.afterClosed().subscribe(function (result) {
-            console.log('The dialog was closed');
-            _this.reqData = {};
-            _this.reqData.offset = 0;
-            _this.reqData.limit = 10;
-            _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this.responseData);
-            _this.datamodel = {};
-            _this.getSubCatList();
-        });
-    };
+    // openSubCategoryDialog(){
+    // 	const dialogRef = this.dialog.open(AddSubCategoryDialog,{
+    // 		// height: '330px',
+    // 		width: '600px',
+    // 		id: this.route.snapshot.params.id
+    // 	});
+    // 	dialogRef.afterClosed().subscribe(result => {
+    // 		console.log('The dialog was closed');
+    // 		this.reqData = {}
+    // 		this.reqData.offset = 0
+    // 	    this.reqData.limit = 10
+    // 	    this.dataSource = new MatTableDataSource(this.responseData);
+    // 		this.datamodel = {}
+    // 		this.getSubCatList()
+    // 	});
+    // }
+    // openEditDialog(id){
+    // 	const dialogRefEdit = this.dialog.open(EditSubCategoryDialog,{
+    // 		// catId:this.route.snapshot.params.id,
+    // 		// height: '350px',
+    // 		width: '600px',
+    // 		id :<any>{
+    // 			id: id,
+    // 			cate : this.route.snapshot.params.id
+    // 		}
+    // 		// catId: this.route.snapshot.params.id
+    // 	});
+    // 	dialogRefEdit.afterClosed().subscribe(result => {
+    // 		console.log('The dialog was closed');	
+    // 		this.reqData = {}
+    // 	    this.reqData.offset = 0
+    // 	    this.reqData.limit = 10
+    // 	    this.dataSource = new MatTableDataSource(this.responseData);		    
+    // 	    this.datamodel = {}
+    // 		this.getSubCatList()
+    // 	});
+    // }
     SubCategoryComponent.prototype.deleteCategory = function (id) {
         var _this = this;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_11___default.a.fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
             title: 'Are you sure want to remove?',
             text: 'You will not be able to recover this Sub Category!',
             icon: 'warning',
@@ -698,196 +1624,153 @@ var SubCategoryComponent = /** @class */ (function () {
             if (result.value) {
                 _this.service.deleteSubCategory(id).subscribe(function (data) {
                     console.log('deleted data', data);
-                    sweetalert2__WEBPACK_IMPORTED_MODULE_11___default.a.fire('Deleted!', 'This Sub Category has been deleted.', 'success');
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Deleted!', 'This Sub Category has been deleted.', 'success');
                     _this.ngOnInit();
                 });
             }
-            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_11___default.a.DismissReason.cancel) {
-                sweetalert2__WEBPACK_IMPORTED_MODULE_11___default.a.fire('Cancelled', 'This Sub Category is safe :)', 'error');
+            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.DismissReason.cancel) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Cancelled', 'This Sub Category is safe :)', 'error');
             }
         });
     };
     SubCategoryComponent.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"] }
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] }
     ]; };
     SubCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
             selector: 'app-sub-category',
             template: _raw_loader_sub_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_sub_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"]])
     ], SubCategoryComponent);
     return SubCategoryComponent;
 }());
 
 // Add sub-category
-var AddSubCategoryDialog = /** @class */ (function () {
-    // SubCategoryList:any = [];
-    function AddSubCategoryDialog(fb, dialogRef, service, route) {
-        this.fb = fb;
-        this.dialogRef = dialogRef;
-        this.service = service;
-        this.route = route;
-        this.addCategory = {
-            category: "",
-        };
-        this.bookCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormGroup"]({
-            bookCategory: new _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_8__["Validators"].required]),
-        });
-    }
-    AddSubCategoryDialog.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    AddSubCategoryDialog.prototype.ngOnInit = function () {
-        this.categoryId = this.dialogRef.id;
-    };
-    AddSubCategoryDialog.prototype.createCategory = function () {
-        var _this = this;
-        var obj = {
-            category_id: this.categoryId,
-            sub_category_name: this.addCategory.category
-        };
-        // console.log('id&category',obj)
-        this.service.addSubCategory(obj).subscribe(function (res) {
-            console.log("Data Successfully Inserted!", res);
-            sweetalert2__WEBPACK_IMPORTED_MODULE_11___default.a.fire('Success..!', 'Successfully Created!', 'success');
-            _this.dialogRef.close();
-        }, function (err) {
-            if (err.status >= 400) {
-                console.log('Invalid Credential!!!');
-            }
-            else {
-                console.log('Internet Connection Error');
-            }
-        });
-        //alert(this.dialogRef.id);
-        // console.log("Book : ", this.addBook.bookCategory, " " , this.addBook.frame);
-        // var formData = new FormData();
-        // formData.append('book_category_id', this.addBook.bookCategory);
-        // formData.append('book_link', this.addBook.frame);
-        // this.service.addBook(formData).subscribe(data => {
-        //   console.log("Data Successfully Inserted!",data);
-        //   Swal.fire('Success..!', 'Successfully Created!', 'success')
-        // },err => {
-        //   if(err.status >= 400){
-        // 	console.log('Invalid Credential!!!');
-        //   }else{
-        // 	console.log('Internet Connection Error');
-        //   }
-        // })
-    };
-    AddSubCategoryDialog.prototype.closeDialog = function () {
-        this.dialogRef.close();
-    };
-    AddSubCategoryDialog.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormBuilder"] },
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"] }
-    ]; };
-    AddSubCategoryDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
-            selector: 'add-sub-category-dialog',
-            template: _raw_loader_add_sub_category_html__WEBPACK_IMPORTED_MODULE_3__["default"],
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormBuilder"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__["AdminService"], _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"]])
-    ], AddSubCategoryDialog);
-    return AddSubCategoryDialog;
-}());
-
+// @Component({
+// 	selector: 'add-sub-category-dialog',
+// 	templateUrl: 'add-sub-category.html',
+//   })
+//   export class AddSubCategoryDialog {
+// 	categoryId;
+//     addCategory: any = {
+// 		category : "",
+// description : ""
+// }
+// SubCategoryList:any = [];
+// constructor(private fb: FormBuilder,
+//   public dialogRef: MatDialogRef<AddSubCategoryDialog>, private service: AdminService, private route: ActivatedRoute,
+//   ) {}
+//   bookCategoryForm = new FormGroup({
+// 	bookCategory : new FormControl('', [Validators.required]),
+// categoryDescription: new FormControl('', [Validators.required])
+//   })
+// onNoClick(): void {
+//   this.dialogRef.close();
+// }
+// ngOnInit(): void {
+// 	this.categoryId=this.dialogRef.id	
+// }
+// createCategory(){
+// 	var obj={
+// 		category_id: this.categoryId,
+//         sub_category_name : this.addCategory.category
+// }
+// console.log('id&category',obj)
+// this.service.addSubCategory(obj).subscribe(res => {
+//   console.log("Data Successfully Inserted!",res);
+//  Swal.fire('Success..!', 'Successfully Created!', 'success')
+//  this.dialogRef.close();
+// },err => {
+//   if(err.status >= 400){
+// 	console.log('Invalid Credential!!!');
+//   }else{
+// 	console.log('Internet Connection Error');
+//   }
+// })
+//alert(this.dialogRef.id);
+// console.log("Book : ", this.addBook.bookCategory, " " , this.addBook.frame);
+// var formData = new FormData();
+// formData.append('book_category_id', this.addBook.bookCategory);
+// formData.append('book_link', this.addBook.frame);
+// this.service.addBook(formData).subscribe(data => {
+//   console.log("Data Successfully Inserted!",data);
+//   Swal.fire('Success..!', 'Successfully Created!', 'success')
+// },err => {
+//   if(err.status >= 400){
+// 	console.log('Invalid Credential!!!');
+//   }else{
+// 	console.log('Internet Connection Error');
+//   }
+// })
+// 	}
+// 	closeDialog(){
+// 		this.dialogRef.close();
+// 	}
+// }
 // Edit sub category
-var EditSubCategoryDialog = /** @class */ (function () {
-    function EditSubCategoryDialog(dialogRef, service, route, router) {
-        this.dialogRef = dialogRef;
-        this.service = service;
-        this.route = route;
-        this.router = router;
-        this.addCategory = {
-            category: ""
-        };
-    }
-    EditSubCategoryDialog.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    EditSubCategoryDialog.prototype.ngOnInit = function () {
-        var _this = this;
-        this.subData = this.dialogRef.id;
-        var obj = {
-            sub_category_id: this.subData.id
-        };
-        this.service.getSubCategoryById(obj).subscribe(function (res) {
-            console.log("Data : ", res);
-            _this.addCategory.category = res.data.sub_category_name;
-        });
-        // console.log("SubDtaa: ",this.subData.id);
-        //  console.log('iddddddddd*****',this.dialogRef.id);
-    };
-    EditSubCategoryDialog.prototype.editCategory = function () {
-        var _this = this;
-        var categoryId = parseInt(this.subData.cate);
-        console.log('checkingcatID:', categoryId);
-        var obj = {
-            sub_category_id: this.subData.id,
-            sub_category_name: this.addCategory.category,
-            category_id: categoryId
-        };
-        console.log('dataaa:', obj);
-        this.service.updateSubCategory(obj).subscribe(function (data) {
-            console.log("Data Successfully Updated!", data);
-            sweetalert2__WEBPACK_IMPORTED_MODULE_11___default.a.fire('Success..!', 'Successfully Updated!', 'success');
-            //   this.router.navigate(['/category']);
-            _this.dialogRef.close();
-        }, function (err) {
-            if (err.status >= 400) {
-                console.log('Invalid Credential!!!');
-            }
-            else {
-                console.log('Internet Connection Error');
-            }
-        });
-    };
-    EditSubCategoryDialog.prototype.closeDialog = function () {
-        this.dialogRef.close();
-    };
-    EditSubCategoryDialog.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_10__["Router"] }
-    ]; };
-    EditSubCategoryDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
-            selector: 'edit-sub-category-dialog',
-            template: _raw_loader_edit_sub_category_html__WEBPACK_IMPORTED_MODULE_4__["default"],
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_9__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_10__["Router"]])
-    ], EditSubCategoryDialog);
-    return EditSubCategoryDialog;
-}());
+//  @Component({
+// 	selector: 'edit-sub-category-dialog',
+// 	templateUrl: 'edit-sub-category.html',
+//   })
+//   export class EditSubCategoryDialog {
+// 	subData
+//     addCategory: any = {
+// 		  category : ""
+// 	  }
+// 	constructor(
+//     public dialogRef: MatDialogRef<EditSubCategoryDialog>,
+//     private service: AdminService,
+//     private route: ActivatedRoute,
+//     private router: Router
+// 	  ) {}
+// 	onNoClick(): void {
+// 	  this.dialogRef.close();
+// 	}
+// 	ngOnInit(): void {
+// 		this.subData = this.dialogRef.id;
+//     var obj = {
+//       sub_category_id: this.subData.id
+// 	}
+// 		this.service.getSubCategoryById(obj).subscribe(res =>{
+// 			console.log("Data : ",res);
+// 			this.addCategory.category = res.data.sub_category_name
+// 		 })
+// console.log("SubDtaa: ",this.subData.id);
+//  console.log('iddddddddd*****',this.dialogRef.id);
+// }
+// editCategory(){
+// 	let categoryId=parseInt(this.subData.cate)
+// 	console.log('checkingcatID:',categoryId);
+// 	var obj={
+// 		sub_category_id:this.subData.id,
+// 		sub_category_name:this.addCategory.category,
+// 		category_id: categoryId
+// 	}
+// 	console.log('dataaa:',obj);
+// 	this.service.updateSubCategory(obj).subscribe(data => {
+// 	  console.log("Data Successfully Updated!",data);
+//   Swal.fire('Success..!', 'Successfully Updated!', 'success')
+//   this.router.navigate(['/category']);
+//       this.dialogRef.close();
+// 		},err => {
+// 		  if(err.status >= 400){
+// 			console.log('Invalid Credential!!!');
+// 		  }else{
+// 			console.log('Internet Connection Error');
+// 		  }
+// 		})
+// 	}
+// 		closeDialog(){
+// 		this.dialogRef.close();
+// 	}
+// }
 
-
-
-/***/ }),
-
-/***/ "9O8t":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sub-category/add-sub-category.html ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n    .ft{\n        font-size: 16px;\n    }\n    </style>\n<div class=\"main-content\"  style=\"position: relative;\">\n    \n            <button mat-icon-button  (click)=\"closeDialog()\"\n                    style=\"position: absolute;\n                    right: -32px;\n                    top: -32px;\n                    transform: scale(0.75);\n                    outline: none;\n                    background-color: #ffffff!important;\n                    color: rgb(0, 0, 0);\n                    border-radius: 0px;\">\n                <mat-icon >close</mat-icon>\n            </button>\n          \n                <!-- <div class=\"text-right\" style=\"padding-right: 5px;\"><button mat-icon-button  (click)=\"closeDialog()\"><mat-icon >close</mat-icon></button></div> -->\n                <form [formGroup]=\"bookCategoryForm\" >\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <!-- .card .card-header:not([data-background-color]) {\n                                background-color: #6AA524;\n                                padding-bottom: 0.5px; -->\n                            <h4 class=\"card-title ft\">Add Sub Category</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\"  >\n                                    <!-- style=\"padding-top: 70px;\" -->\n                                    <mat-form-field  class=\"example-full-width\" style=\"width: 490px\" >\n                                        <!-- style=\"width: 285px\" -->\n                                        <!-- class=\"example-full-width\" -->\n                                        <input matInput placeholder=\"Sub Category\" formControlName=\"bookCategory\" [(ngModel)]=\"addCategory.category\">\n                                    </mat-form-field>\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].touched &&\n                                      bookCategoryForm.controls['bookCategory'].invalid\"\n                                       class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['bookCategory'].errors &&\n                                        bookCategoryForm.controls['bookCategory'].errors.required\">\n                                       Sub Category is required.</div>\n                                    </div>\n                                </div>\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <textarea matInput placeholder=\"Description\" formControlName=\"categoryDescription\" rows=\"2\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"></textarea> -->\n                                        <!-- <input matInput placeholder=\"Description\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"> -->\n                                    <!-- </mat-form-field> -->\n                                    <!-- <div *ngIf=\"bookCategoryForm.controls['categoryDescription'].touched &&\n                                            bookCategoryForm.controls['categoryDescription'].invalid\"\n                                            class=\"text-danger\">\n                                    <div *ngIf=\"bookCategoryForm.controls['categoryDescription'].errors &&\n                                    bookCategoryForm.controls['categoryDescription'].errors.required\">\n                                        Description is required.</div>\n                                    </div> -->\n                                <!-- </div> -->\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" [disabled]=\"!bookCategoryForm.valid\" (click)=\"createCategory()\">Submit</button>\n                        <!-- [disabled]=\"!bookCategoryForm.valid\" -->\n                    </div>\n                </form>\n            \n        \n    \n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n<!-- <div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\" style=\"margin-top: 30px;\">\n                <form [formGroup]=\"bookForm\">\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Add Sub Categories</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                      <mat-form-field appearance=\"fill\">\n                                        <mat-label>Select Sub Category</mat-label>\n                                        <mat-select formControlName=\"category\" [(ngModel)]=\"addBook.bookCategory\" >\n                                            [ngModelOptions]=\"{standalone: true}\"\n                                          <mat-option *ngFor=\"let book of bookCategoryList\" [value]=\"book._id\">\n                                            {{ book.category }}\n                                          </mat-option>\n                                        </mat-select>\n                                      </mat-form-field> -->\n                                      <!-- <div *ngIf=\"bookForm.controls['category'].touched &&\n                                      bookForm.controls['category'].invalid\"\n                                      class=\"text-danger\">\n                                         <div *ngIf=\"bookForm.controls['category'].errors &&\n                                              bookForm.controls['category'].errors.required\">\n                                             Book Category is required.\n                                         </div> -->\n                                <!-- </div>\n                          </div> -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <textarea matInput placeholder=\"Description\" rows=\"5\" formControlName=\"description\" [(ngModel)]=\"addBook.frame\" ></textarea>\n                                      \n                                    </mat-form-field>\n                                    <div *ngIf=\"bookForm.controls['description'].touched &&\n                                                  bookForm.controls['description'].invalid\"\n                                                  class=\"text-danger\">\n                                            <div *ngIf=\"bookForm.controls['description'].errors &&\n                                                    bookForm.controls['description'].errors.required\">\n                                                    Description is required.\n                                            </div>\n                                      </div>\n                                </div> -->\n                            <!-- </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"!bookForm.valid\" (click)=\"createBook()\">Submit</button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div> -->\n");
 
 /***/ }),
 
@@ -901,6 +1784,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "AAYs":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-second/edit-engaging/edit-engaging.component.html ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n   EDIT ENGAGING AND EFFICIENT</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n\n\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Heading\" [(ngModel)]=\"engagingData.heading\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Description\" [(ngModel)]=\"engagingData.description\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>                   -->\n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"update()\">Update</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/section_2\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -935,6 +1831,32 @@ var environment = {
     production: false
 };
 
+
+/***/ }),
+
+/***/ "CItg":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/teacher-applications/view-teacher-application/reject-application.html ***!
+  \*****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n    .ft{\n        font-size: 16px;\n    }\n    </style>\n  <div class=\"main-content\" style=\"position: relative;\">   \n        \n            <button mat-icon-button  (click)=\"closeDialog()\"\n                     style=\"position: absolute;\n                            right: -32px;\n                            top: -32px;\n                            transform: scale(0.75);\n                            outline: none;\n                            background-color: #ffffff!important;\n                            color: rgb(0, 0, 0);\n                            border-radius: 0px;\">\n                <mat-icon >close</mat-icon>\n            </button>\n \n            <form [formGroup]=\"rejectForm\">\n                <!-- <div class=\"text-right\" style=\"padding-right: 5px;\"><button mat-icon-button  (click)=\"closeDialog()\"><mat-icon >close</mat-icon></button></div> -->\n                <div class=\"card\">\n                    <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                        <!-- .card .card-header:not([data-background-color]) {\n                            background-color: #6AA524;\n                            padding-bottom: 0.5px; -->\n                        <h4 class=\"card-title ft\">Reason For Rejection</h4>\n                    </div>\n                    <div class=\"card-body block-card\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\" style=\"padding-top: 10px;\" >\n                                \n                                <mat-form-field class=\"example-full-width\"  style=\"width: 490px\">\n                                    <mat-label>Message</mat-label>\n                                    <textarea matInput placeholder=\"Message\" formControlName=\"message\" [(ngModel)]=\"message\" ></textarea>\n                                </mat-form-field>\n                                <div *ngIf=\"rejectForm.controls['message'].touched &&\n                                rejectForm.controls['message'].invalid\"\n                                 class=\"text-danger\">\n                              <div *ngIf=\"rejectForm.controls['message'].errors &&\n                                  rejectForm.controls['message'].errors.required\">\n                                  Message is required.</div>\n                              </div>\n                                \n                            </div>\n                            \n                        </div>\n                    </div>\n                </div>\n                <div class=\"text-center\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" [disabled]=\"!rejectForm.valid\" (click)=\"reject('Decline')\">Reject</button>\n                   \n                </div>\n            </form>\n\n\n\n\n\n\n\n\n\n               \n                <!-- <form [formGroup]=\"rejectForm\">\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <h4 class=\"card-title ft\">Reason For Rejection</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                               \n                                    <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                        <mat-form-field class=\"example-full-width\"  style=\"width: 490px\">\n                                            <textarea matInput placeholder=\"Message\" formControlName=\"message\" [(ngModel)]=\"message\" ></textarea>\n                                        </mat-form-field>\n                                        <div *ngIf=\"rejectForm.controls['message'].touched &&\n                                        rejectForm.controls['message'].invalid\"\n                                         class=\"text-danger\">\n                                      <div *ngIf=\"rejectForm.controls['message'].errors &&\n                                          rejectForm.controls['message'].errors.required\">\n                                          Message is required.</div>\n                                      </div>\n                                        \n                                            \n                                    </div>\n                               \n                         \n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"reject('Decline')\">Reject</button>\n                    </div>\n                </form> -->\n            \n        \n  \n</div>\n");
+
+/***/ }),
+
+/***/ "Crkc":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-three/create-how-it-works/create-how-it-works.component.html ***!
+  \****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"loader\" class=\"load_er\">\n\t<mat-progress-spinner\n\tcolor=\"primary\"\n\tmode=\"indeterminate\">\n\t</mat-progress-spinner></div>\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n    CREATE HOW IT WORKS</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"createForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n\n\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"heading\" matInput placeholder=\"Heading\" [(ngModel)]=\"engagingData.heading\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"createForm.controls['heading'].touched &&\n                                     createForm.controls['heading'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"createForm.controls['heading'].errors &&\n                                      createForm.controls['heading'].errors.required\">\n                                         Heading  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"description\" matInput placeholder=\"Description\" [(ngModel)]=\"engagingData.description\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"createForm.controls['description'].touched &&\n                                    createForm.controls['description'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"createForm.controls['description'].errors &&\n                                     createForm.controls['description'].errors.required\">\n                                         Description is required.</div>\n                                 </div>\n                                </div>\n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input formControlName=\"image\" type=\"file\" #uploadFile value=\"engagingData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            </div>\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!createForm.valid\" (click)=\"add()\">Add</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/section_3\" class=\"btn theme-btn ft\">Back</button>\n                                <!-- [disabled]=\"!createForm.valid\"  -->\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
 
 /***/ }),
 
@@ -993,12 +1915,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section_first_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section-first.component.css */ "R+wO");
 /* harmony import */ var _raw_loader_edit_category_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! raw-loader!./edit-category.html */ "KJiH");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/paginator */ "M9IT");
+
+
+
 
 
 
@@ -1011,20 +1940,126 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SectionFirstComponent = /** @class */ (function () {
-    // @ViewChild(MatSort, { static: true }) sort: MatSort;
-    // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
     function SectionFirstComponent(dialog, service, route, toastr) {
         this.dialog = dialog;
         this.service = service;
         this.route = route;
         this.toastr = toastr;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__["environment"].home_image;
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_11__["environment"].home_image;
         //  imagePath = environment.home_image;
         this.responseData = [];
-        this.displayedColumns = ['title', 'subtitle', 'image', 'Action'];
+        this.myFlagForSlideToggle = true;
+        this.currentIndex = 0;
+        this.currentPage = 10;
+        this.displayedColumns = ['position', 'title', 'subtitle', 'image', 'status', 'Action'];
     }
     SectionFirstComponent.prototype.ngOnInit = function () {
+        this.reqData = {};
+        this.reqData.offset = 0;
+        this.reqData.limit = 10;
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](this.responseData);
+        this.datamodel = {};
+        this.getbannerData();
+    };
+    SectionFirstComponent.prototype.ngAfterViewInit = function () {
+        this.dataSource.paginator = this.paginator;
+    };
+    SectionFirstComponent.prototype.getbannerData = function () {
+        var _this = this;
+        this.currentIndex = 0;
+        this.currentPage = 10;
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        this.service.getAllBanner(list).subscribe(function (res) {
+            console.log("section one data", res);
+            if (res) {
+                _this.length = res.data.count;
+                console.log("****length***", _this.length);
+                _this.dataSource = res.data.rows;
+                _this.dataSource.paginator = _this.paginator;
+                // console.log("datasource", this.dataSource)
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    SectionFirstComponent.prototype.applyFilter = function (filterValue) {
+        var _this = this;
+        // this.dataSource.filter = filterValue.trim().toLowerCase();
+        // this.filterValue = filterValue.trim().toLowerCase();
+        var obj = {
+            search: filterValue
+        };
+        if (obj.search) {
+            this.service.bannerFilter(obj).subscribe(function (res) {
+                console.log('filterResponse', res);
+                if (res) {
+                    _this.dataSource = res.data;
+                    // this.dataSource = new MatTableDataSource(data.data);
+                    // this.length = res.data.count
+                    // this.dataSource.sort = this.sort;
+                    // this.dataSource.paginator = this.paginator;
+                    // this.tableData = data.data;
+                    // this.backUpTableData = data.data;
+                }
+            }, function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    // this.toastr.error('Internal Error', 'Error')
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    // this.toastr.error('Internet Connection Error', 'Error')
+                    console.log('Internet Connection Error');
+                }
+            });
+        }
+        else {
+            this.ngOnInit();
+        }
+    };
+    SectionFirstComponent.prototype.deletebanner = function (id) {
+        var _this = this;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_10___default.a.fire({
+            title: 'Are you sure want to remove?',
+            text: 'You will not be able to recover this Data!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, keep it'
+        }).then(function (result) {
+            if (result.value) {
+                _this.service.deleteBanner(id).subscribe(function (data) {
+                    console.log(data);
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_10___default.a.fire('Deleted!', 'This Record has been deleted.', 'success');
+                    var list = {
+                        offset: _this.reqData.offset,
+                        limit: _this.reqData.limit
+                    };
+                    _this.service.getAllBanner(list).subscribe(function (res) {
+                        if (res) {
+                            _this.length = res.data.count;
+                            console.log("****length***", _this.length);
+                            _this.dataSource = res.data.rows;
+                            _this.dataSource.paginator = _this.paginator;
+                        }
+                    });
+                    _this.ngOnInit();
+                });
+            }
+            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_10___default.a.DismissReason.cancel) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_10___default.a.fire('Cancelled', 'This Record is safe :)', 'error');
+            }
+        });
     };
     SectionFirstComponent.prototype.openEditDialog = function () {
         var dialogRef = this.dialog.open(EditDialog, {
@@ -1043,22 +2078,100 @@ var SectionFirstComponent = /** @class */ (function () {
             // this.getStudentList()
         });
     };
+    SectionFirstComponent.prototype.statusID = function (id) {
+        console.log("valueeeeeeeeee", this.myFlagForSlideToggle);
+        this.statusID = id;
+        console.log('iddddddddddddddddd', id);
+    };
+    // onStatus(change,id){
+    //   console.log("change",change)
+    //   console.log("id",id)
+    // this.statusType=change
+    // console.log("change",this.statusType)
+    // var obj={
+    //   banner_id:id,
+    //   status:change
+    // }
+    // this.service.bannerActiveAndInactive(obj).subscribe(res=>{
+    //   this.toastr.success("Status changed successfully");
+    //   console.log(res)
+    // })
+    // }
+    SectionFirstComponent.prototype.onChange = function (evt, id) {
+        var _this = this;
+        console.log("eeee", evt);
+        console.log("evt***", evt.checked);
+        console.log("id***", id);
+        var statusType;
+        if (evt.checked == true) {
+            statusType = "active";
+        }
+        else {
+            statusType = "inactive";
+        }
+        console.log("statusType***", statusType);
+        var obj = {
+            banner_id: id,
+            status: statusType
+        };
+        this.service.bannerActiveAndInactive(obj).subscribe(function (res) {
+            _this.toastr.success("Status changed successfully", 'Success');
+            console.log(res);
+        });
+    };
+    SectionFirstComponent.prototype.getPageSizeOptions = function () {
+        return [10, 20, 30];
+    };
+    SectionFirstComponent.prototype.paginationOptionChange = function (evt) {
+        var _this = this;
+        this.reqData.offset = (evt.pageIndex * evt.pageSize).toString();
+        this.reqData.limit = evt.pageSize;
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
+        console.log('checking  page Index', this.currentPage);
+        console.log('checking current page', evt.pageSize);
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        // console.log(this.reqData)
+        this.service.getAllBanner(list).subscribe(function (res) {
+            // console.log('paginator limit',res)
+            if (res) {
+                _this.length = res.data.count;
+                _this.dataSource = res.data.rows;
+                // this.responseData=new MatTableDataSource(res.data);
+                // console.log('dataSource',this.dataSource);
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
     SectionFirstComponent.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"] },
-        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"] }
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_9__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrService"] }
     ]; };
+    SectionFirstComponent.propDecorators = {
+        paginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginator"], { static: true },] }]
+    };
     SectionFirstComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
             selector: 'app-section-first',
             template: _raw_loader_section_first_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_section_first_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_9__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrService"]])
     ], SectionFirstComponent);
     return SectionFirstComponent;
 }());
@@ -1079,9 +2192,9 @@ var EditDialog = /** @class */ (function () {
             state: "",
             dob: "",
         };
-        this.viewDetailForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormGroup"]({
-            content: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
-            content1: new _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].required]),
+        this.viewDetailForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormGroup"]({
+            content: new _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_7__["Validators"].required]),
+            content1: new _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_7__["Validators"].required]),
         });
     }
     EditDialog.prototype.onNoClick = function () {
@@ -1151,24 +2264,182 @@ var EditDialog = /** @class */ (function () {
         this.dialogRef.close();
     };
     EditDialog.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormBuilder"] },
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"] },
-        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"] }
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormBuilder"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialogRef"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_9__["ActivatedRoute"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrService"] }
     ]; };
     EditDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
             selector: 'edit-category-dialog',
             template: _raw_loader_edit_category_html__WEBPACK_IMPORTED_MODULE_3__["default"],
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormBuilder"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormBuilder"],
+            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialogRef"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_8__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_9__["ActivatedRoute"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrService"]])
     ], EditDialog);
     return EditDialog;
+}());
+
+
+
+/***/ }),
+
+/***/ "E9OQ":
+/*!************************************************************************************!*\
+  !*** ./src/app/section-three/create-how-it-works/create-how-it-works.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: CreateHowItWorksComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateHowItWorksComponent", function() { return CreateHowItWorksComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_create_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./create-how-it-works.component.html */ "Crkc");
+/* harmony import */ var _create_how_it_works_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create-how-it-works.component.css */ "c4Oj");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var CreateHowItWorksComponent = /** @class */ (function () {
+    function CreateHowItWorksComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.engagingData = {
+            heading: "",
+            description: "",
+        };
+        this.createForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            heading: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    }
+    CreateHowItWorksComponent.prototype.ngOnInit = function () {
+    };
+    CreateHowItWorksComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.engagingData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    CreateHowItWorksComponent.prototype.add = function () {
+        var _this = this;
+        var formData = new FormData();
+        // formData.append("author_name",this.bannerData.title);
+        // console.log("subtitle",this.bannerData.subtitle);
+        // console.log("image", this.bannerData.image)
+        // console.log("title", this.bannerData.title)
+        formData.append("heading", this.engagingData.heading);
+        formData.append("description", this.engagingData.description);
+        formData.append("image", this.engagingData.image);
+        this.loader = true;
+        this.service.createHowItsWorks(formData).subscribe(function (data) {
+            console.log(" Successfully Created!");
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            _this.router.navigate(['/section_3']);
+            _this.loader = false;
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
+    CreateHowItWorksComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    CreateHowItWorksComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-create-how-it-works',
+            template: _raw_loader_create_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_create_how_it_works_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], CreateHowItWorksComponent);
+    return CreateHowItWorksComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "EMSy":
+/*!**********************************************************************************!*\
+  !*** ./src/app/user-list/view-student-details/view-student-details.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: ViewStudentDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewStudentDetailsComponent", function() { return ViewStudentDetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_view_student_details_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./view-student-details.component.html */ "w6ZX");
+/* harmony import */ var _view_student_details_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-student-details.component.css */ "EpiV");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+var ViewStudentDetailsComponent = /** @class */ (function () {
+    function ViewStudentDetailsComponent() {
+    }
+    ViewStudentDetailsComponent.prototype.ngOnInit = function () {
+    };
+    ViewStudentDetailsComponent.ctorParameters = function () { return []; };
+    ViewStudentDetailsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-view-student-details',
+            template: _raw_loader_view_student_details_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_view_student_details_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], ViewStudentDetailsComponent);
+    return ViewStudentDetailsComponent;
 }());
 
 
@@ -1188,6 +2459,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "EpiV":
+/*!***********************************************************************************!*\
+  !*** ./src/app/user-list/view-student-details/view-student-details.component.css ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LXN0dWRlbnQtZGV0YWlscy5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
 /***/ "FIAw":
 /*!*************************************************************!*\
   !*** ./src/app/section-second/section-second.component.css ***!
@@ -1197,7 +2481,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzZWN0aW9uLXNlY29uZC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".img-fluid{\n    width: 120px;\n    height: 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlY3Rpb24tc2Vjb25kLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osWUFBWTtBQUNoQiIsImZpbGUiOiJzZWN0aW9uLXNlY29uZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltZy1mbHVpZHtcbiAgICB3aWR0aDogMTIwcHg7XG4gICAgaGVpZ2h0OiA4MHB4O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -1240,6 +2524,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "IWlm":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/create-banner/create-banner.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"loader\" class=\"load_er\">\n\t<mat-progress-spinner\n\tcolor=\"primary\"\n\tmode=\"indeterminate\">\n\t</mat-progress-spinner></div>\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n  ADD HOME BANNER\n    </h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"bannerForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n\n\n\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"title\" matInput placeholder=\"Title\" [(ngModel)]=\"bannerData.title\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"bannerForm.controls['title'].touched &&\n                                     bannerForm.controls['title'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"bannerForm.controls['title'].errors &&\n                                      bannerForm.controls['title'].errors.required\">\n                                         Title  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"subtitle\" matInput placeholder=\"Sub Title\" [(ngModel)]=\"bannerData.subtitle\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"bannerForm.controls['subtitle'].touched &&\n                                    bannerForm.controls['subtitle'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"bannerForm.controls['subtitle'].errors &&\n                                     bannerForm.controls['subtitle'].errors.required\">\n                                         Sub title is required.</div>\n                                 </div>\n                                </div>\n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" formControlName=\"image\" #uploadFile value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            </div>\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!bannerForm.valid\" (click)=\"addBanner()\">Add</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/section_1\" class=\"btn theme-btn ft\">Back</button>\n                                <!-- [disabled]=\"!bannerForm.valid\"  -->\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
+
+/***/ }),
+
+/***/ "JrXK":
+/*!***********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sub-category/edit-sub-category/edit-sub-category.component.html ***!
+  \***********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2  >\n    <a routerLink=\"/sub_category/{{catId}}\" class=\"cal-back\">\n        <i class=\"fa fa-chevron-left\"></i>\n    </a>EDIT SUB CATEGORY</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"editCategoryForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n\n\n\n\n\n\n\n\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"category\" matInput placeholder=\"Category\" [(ngModel)]=\"categoryData.category\" >\n                                    </mat-form-field>\n                                    <div *ngIf=\"editCategoryForm.controls['category'].touched &&\n                                     editCategoryForm.controls['category'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"editCategoryForm.controls['category'].errors &&\n                                      editCategoryForm.controls['category'].errors.required\">\n                                        Sub Category  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                              \n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            </div>\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!editCategoryForm.valid\" (click)=\"editCategory()\">Update</button>\n                                <!-- [disabled]=\"!editCategoryForm.valid\"  -->\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/sub_category/{{catId}}\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
+
+/***/ }),
+
+/***/ "JreF":
+/*!********************************************************************************!*\
+  !*** ./src/app/sub-category/edit-sub-category/edit-sub-category.component.css ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXQtc3ViLWNhdGVnb3J5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsV0FBVztBQUNmO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsY0FBYztBQUNsQjtBQUNBO1FBQ1EsZUFBZTtJQUNuQjtBQUVBO1FBQ0ksV0FBVztJQUNmO0FBQ0E7UUFDSSxZQUFZO1FBQ1osYUFBYTtRQUNiLG1CQUFtQjtRQUNuQixxQkFBcUI7SUFDekI7QUFDQTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO1FBQ1YsWUFBWTtRQUNaLFdBQVc7UUFDWCxZQUFZO1FBQ1osbUJBQW1CO1FBQ25CLGdCQUFnQjtRQUNoQixtQkFBbUI7SUFDdkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsUUFBUTtRQUNSLFdBQVc7UUFDWCxlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osVUFBVTtRQUNWLGVBQWU7UUFDZixrQkFBa0I7UUFDbEIsVUFBVTtJQUNkO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLG9CQUFvQjtRQUNwQixpQkFBaUI7SUFDckI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsU0FBUztRQUNULFVBQVU7UUFDVixlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLGVBQWU7SUFDbkIiLCJmaWxlIjoiZWRpdC1zdWItY2F0ZWdvcnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIC5jYXJkLWhlYWRlciAuY2FyZC10aXRsZSB7XG4gICAgbWFyZ2luLXRvcDowcHghaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufVxuLmJ0bi1zdWNjZXNzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xufVxuLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgbWF0LWZvcm0tZmllbGR7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgICBzcGFuLm1hdF9pbWFnIHtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuICAgIC5pbnB0X2ljb24ge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLTEycHg7XG4gICAgICAgIHJpZ2h0OiAtMTNweDtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgYmFja2dyb3VuZDogIzZhYTUyNDtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgcmlnaHQ6IDEycHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IDI7XG4gICAgfVxuICAgIC5tYXRfaW1hZyBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAtby1vYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhLWVkaXR7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH0iXX0= */");
+
+/***/ }),
+
 /***/ "K/lK":
 /*!*********************************************************!*\
   !*** ./src/app/testimonials/testimonials.component.css ***!
@@ -1249,7 +2572,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0ZXN0aW1vbmlhbHMuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".ellipsis {\n    max-width: 40px;\n    text-overflow: ellipsis;\n    overflow: hidden;\n    white-space: nowrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3RpbW9uaWFscy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLHVCQUF1QjtJQUN2QixnQkFBZ0I7SUFDaEIsbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InRlc3RpbW9uaWFscy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmVsbGlwc2lzIHtcbiAgICBtYXgtd2lkdGg6IDQwcHg7XG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "KBt+":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/teacher-applications/teacher-applications.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"loader\" class=\"load_er\">\n\t<mat-progress-spinner\n\tcolor=\"primary\"\n\tmode=\"indeterminate\">\n\t</mat-progress-spinner></div>\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >TEACHER MANAGEMENT</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <!-- <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div> -->\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">\n                          {{ (currentIndex) * currentPage + i +1 }}\n                          <!-- {{ i + 1 }} -->\n                        </td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"teacher_name\">\n                        <th mat-header-cell *matHeaderCellDef>Name</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.teacher_name}}</td>\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"email_id\">\n                        <th mat-header-cell *matHeaderCellDef>Email</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.email_id}}</td>\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"mobile_number\">\n                        <th mat-header-cell *matHeaderCellDef>Phone</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.mobile_number}}</td>\n                    </ng-container>\n\n                    <ng-container matColumnDef=\"country\">\n                        <th mat-header-cell *matHeaderCellDef>Country</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.country_data.name}}</td>\n                    </ng-container>\n\n\n                    <ng-container matColumnDef=\"application_status\">\n                        <th mat-header-cell *matHeaderCellDef>Status</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.application_status}}</td>\n                    </ng-container>\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th width=\"150px\" class=\"text-center\" mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       View Application\n                    </th>\n                    <td  width=\"150px\" class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                      <button  mat-icon-button routerLink=\"/viewApplication/{{element.id}}\" >\n                         <mat-icon >visibility</mat-icon>\n                     </button>\n<!--                         \n                             \n                              <mat-form-field >\n                               \n                                <select (change)=\"onStatus($event.target.value, element.id)\" matNativeControl required>\n                                  <option>Choose an option</option>\n                                  <option value=\"Pending\">Pending</option>\n                                  <option value=\"Approved\" >Approved</option>\n                                  <option value=\"Decline\" >Declined</option>\n                                 \n                                 \n                                </select>\n                              </mat-form-field> -->\n                            <!-- </button> -->\n                       \n                    </td>\n\n\n                    <!-- </td> -->\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -1275,7 +2611,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"logo\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"assets/img/logow.png\"/>\n      </div>\n    </a>\n    \n</div>\n<div class=\"sidebar-wrapper\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" [ngClass]=\"{active: router.url.includes('/sub_category' ) && menuItem.path == '/category' }\" class=\"{{menuItem.class}} nav-item\">\n        <!-- <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" class=\"{{menuItem.class}} nav-item\"> -->\n            \n            <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p>{{menuItem.title}}</p>\n            </a>\n            <!-- <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n                <ul type=\"none\" class=\"iner_ul\">\n                    <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                            <i class=\"material-icons\">{{sbcat.icon}}</i>\n                            <p>{{sbcat.title}}</p>\n                        </a>\n                    </li>\n                </ul>\n            </div> -->\n        </li>\n        <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link \">\n                <i class=\"material-icons\">list</i>\n                <p>User Management</p>\n                <ul class=\"sub-ul\">\n                    <li ><a  [routerLink]=\"['/user_list']\">Student Management</a></li>\n                    <!-- href=\"javascript:void(0)\" -->\n                    <!-- <li><a href=\"javascript:void(0)\">Teacher Management</a></li> -->\n                    <!-- <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                    <li><a href=\"javascript:void(0)\">Subcategory-1</a></li> -->\n\n\n                </ul>\n            </a>\n        </li>\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">home</i>\n                <p>Home Management</p>\n                <ul class=\"sub-ul\">\n                    <li><a [routerLink]=\"['/section_1']\">Section-1</a></li>\n                    <li><a [routerLink]=\"['/section_2']\">Section-2</a></li>\n                    <li><a [routerLink]=\"['/section_3']\">Section-3</a></li>\n                    <li><a [routerLink]=\"['/testimonials']\">Testimonials</a></li>\n                </ul>\n            </a>\n        </li> -->\n        <!-- <li routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">settings</i>\n                <p>General Management</p>\n                  <ul class=\"sub-ul\">\n\n                    <li><a [routerLink]=\"['/contact']\">CONTACT US</a></li>\n                  </ul>\n\n            </a>\n        </li> -->\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">info</i>\n                <p>Faq Management</p>\n                <ul class=\"sub-ul\">\n                    <li><a [routerLink]=\"['/generalFaq']\">GENERAL FAQ</a></li>\n                    <li><a [routerLink]=\"['/teacherFaq']\">TEACHER FAQ</a></li>\n                    <li><a [routerLink]=\"['/parentFaq']\">PARENT FAQ</a></li>\n                </ul>\n            </a>\n        </li> -->\n\n\n\n\n       <!-- <li>\n        <mat-accordion class=\"example-headers-align\" multi>\n            <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                <mat-panel-title>\n                  Personal data\n                </mat-panel-title>\n                <mat-panel-description>\n                  Type your name \n                  <mat-icon>account_circle</mat-icon>\n                </mat-panel-description>\n              </mat-expansion-panel-header>\n          \n              <mat-form-field>\n                <mat-label>First name</mat-label>\n                <input matInput>\n              </mat-form-field>\n            </mat-expansion-panel>       \n          </mat-accordion>\n       </li>\n        -->\n \n\n\n        <!-- <li class=\"nav-item\">\n            <a href=\"\"\n        </li> -->\n    </ul>\n</div>\n\n<!-- \n<ul class=\"nav\">\n   <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems; let i = index;\" class=\"{{menuItem.class}} nav-item accordion\" id=\"accordionExample{{i}}\">\n       <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n           <i class=\"material-icons\">{{menuItem.icon}}</i>\n           <p>{{menuItem.title}}</p>`\n       </a>\n       <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n           <ul type=\"none\" class=\"iner_ul\">\n               <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                   <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                       <i class=\"material-icons\">{{sbcat.icon}}</i>\n                       <p>{{sbcat.title}}</p>\n                   </a>\n               </li>\n           </ul>\n       </div>\n   </li>\n</ul> -->\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"logo\">\n    <a href=\"https://www.creative-tim.com\" class=\"simple-text logo-mini\">\n      <div class=\"logo-img\">\n          <img src=\"assets/img/logow.png\"/>\n      </div>\n    </a>\n    \n</div>\n<div class=\"sidebar-wrapper\">\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" [ngClass]=\"{active: router.url.includes('/sub_category' ) && menuItem.path == '/category' }\" class=\"{{menuItem.class}} nav-item\">\n        <!-- <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems let i=index;\" class=\"{{menuItem.class}} nav-item\"> -->\n            \n            <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n                <i class=\"now-ui-icons {{menuItem.icon}}\"></i>\n                <p>{{menuItem.title}}</p>\n            </a>\n            <!-- <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n                <ul type=\"none\" class=\"iner_ul\">\n                    <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                            <i class=\"material-icons\">{{sbcat.icon}}</i>\n                            <p>{{sbcat.title}}</p>\n                        </a>\n                    </li>\n                </ul>\n            </div> -->\n        </li>\n        <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link \">\n                <i class=\"material-icons\">list</i>\n                <p>User Management</p>\n                \n            </a>\n            <ul class=\"sub-ul\">\n                <li [ngClass]=\"router.url.includes('/student_list') ? 'active-1' : ''\" ><a  [routerLink]=\"['/student_list']\">Student Management</a></li>\n                <li [ngClass]=\"router.url.includes('/teacherApplication') ? 'active-1' : ''\" ><a  [routerLink]=\"['/teacherApplication']\">Teacher Management</a></li>\n                <!-- href=\"javascript:void(0)\" -->\n                <!-- <li><a href=\"javascript:void(0)\">Teacher Management</a></li> -->\n                <!-- <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                <li><a href=\"javascript:void(0)\">Subcategory-1</a></li>\n                <li><a href=\"javascript:void(0)\">Subcategory-1</a></li> -->\n\n\n            </ul>\n        </li>\n        <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">home</i>\n                <p>Home Management</p>\n                \n            </a>\n            <ul class=\"sub-ul\">\n                <!-- [ngClass]=\"{'font-green':  percent > 50, 'font-orange': percent>40 && percent<=50,'font-red': percent<=40}\" -->\n                <li  [ngClass]=\"router.url.includes('/section_1') ? 'active-1' : ''\"><a [routerLink]=\"['/section_1']\">BANNER MANAGEMENT</a></li>\n                <!-- <li class=\"active-1\"><a [routerLink]=\"['/section_1']\">BANNER MANAGEMENT</a></li> -->\n                <li [ngClass]=\"router.url.includes('/section_2') ? 'active-1' : ''\"><a [routerLink]=\"['/section_2']\"> ENGAGING & EFFICIENT </a></li>\n                <li [ngClass]=\"router.url.includes('/section_3') ? 'active-1' : ''\"><a [routerLink]=\"['/section_3']\">HOW IT WORKS</a></li>\n                <li [ngClass]=\"router.url.includes('/testimonials') ? 'active-1' : ''\"><a [routerLink]=\"['/testimonials']\">Testimonials</a></li>\n            </ul>\n        </li>\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a [routerLink]=\"['/teacherApplication']\">\n                <i class=\"material-icons\">list</i>\n                <p>Teacher Application Management</p>\n                \n            </a>\n            \n        </li> -->\n        <!-- <li routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">settings</i>\n                <p>General Management</p>\n                  <ul class=\"sub-ul\">\n\n                    <li><a [routerLink]=\"['/contact']\">CONTACT US</a></li>\n                  </ul>\n\n            </a>\n        </li> -->\n        <!-- <li  routerLinkActive=\"active\"  class=\"nav-item\">\n            <a href=\"javascript:void(0)\" class=\"nav-link\">\n                <i class=\"material-icons\">info</i>\n                <p>Faq Management</p>\n                <ul class=\"sub-ul\">\n                    <li><a [routerLink]=\"['/generalFaq']\">GENERAL FAQ</a></li>\n                    <li><a [routerLink]=\"['/teacherFaq']\">TEACHER FAQ</a></li>\n                    <li><a [routerLink]=\"['/parentFaq']\">PARENT FAQ</a></li>\n                </ul>\n            </a>\n        </li> -->\n\n\n\n\n       <!-- <li>\n        <mat-accordion class=\"example-headers-align\" multi>\n            <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                <mat-panel-title>\n                  Personal data\n                </mat-panel-title>\n                <mat-panel-description>\n                  Type your name \n                  <mat-icon>account_circle</mat-icon>\n                </mat-panel-description>\n              </mat-expansion-panel-header>\n          \n              <mat-form-field>\n                <mat-label>First name</mat-label>\n                <input matInput>\n              </mat-form-field>\n            </mat-expansion-panel>       \n          </mat-accordion>\n       </li>\n        -->\n \n\n\n        <!-- <li class=\"nav-item\">\n            <a href=\"\"\n        </li> -->\n    </ul>\n</div>\n\n<!-- \n<ul class=\"nav\">\n   <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems; let i = index;\" class=\"{{menuItem.class}} nav-item accordion\" id=\"accordionExample{{i}}\">\n       <a class=\"nav-link collapsed\" [routerLink]=\"[menuItem.path]\" data-toggle=\"collapse\" [attr.data-target]=\"'#dfsa' + i\">\n           <i class=\"material-icons\">{{menuItem.icon}}</i>\n           <p>{{menuItem.title}}</p>`\n       </a>\n       <div class=\"collapse\" [attr.id]=\"'dfsa' + i\" data-parent=\"#accordionExample{{i}}\">\n           <ul type=\"none\" class=\"iner_ul\">\n               <li *ngFor=\"let sbcat of menuItem.subcat\" class=\"nav-item\">\n                   <a class=\"nav-link\" [routerLink]=\"[sbcat.path]\">\n                       <i class=\"material-icons\">{{sbcat.icon}}</i>\n                       <p>{{sbcat.title}}</p>\n                   </a>\n               </li>\n           </ul>\n       </div>\n   </li>\n</ul> -->\n\n");
 
 /***/ }),
 
@@ -1296,6 +2632,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
+
+
 
 
 
@@ -1309,14 +2650,16 @@ var SectionOneEditComponent = /** @class */ (function () {
         this.service = service;
         this.route = route;
         this.router = router;
-        this.testimonialsData = {
-            authorName: "",
-            designation: "",
+        this.bannerData = {
+            title: "",
+            subtitle: "",
             image: "",
-            description: ""
         };
     }
     SectionOneEditComponent.prototype.ngOnInit = function () {
+        this.imgUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].banner_img + 'home_banner_images/';
+        console.log('iddddd', this.route.snapshot.params.id);
+        this.getBannerById(this.route.snapshot.params.id);
     };
     SectionOneEditComponent.prototype.onFileChange = function (event) {
         var _this = this;
@@ -1335,13 +2678,62 @@ var SectionOneEditComponent = /** @class */ (function () {
             return;
         }
         console.log(event.target.files[0]);
-        this.testimonialsData.image = event.target.files[0];
+        this.bannerData.image = event.target.files[0];
         var fr = new FileReader();
         fr.onloadend = function (loadEvent) {
             var mainImage = fr.result;
             _this.image = mainImage;
         };
         fr.readAsDataURL(file);
+    };
+    SectionOneEditComponent.prototype.getBannerById = function (id) {
+        var _this = this;
+        // console.log(this.bannerData);
+        var obj = {
+            banner_id: id
+        };
+        this.service.getBannerById(obj).subscribe(function (data) {
+            console.log(" edit data**", data);
+            _this.bannerData.title = data.data.heading;
+            _this.bannerData.subtitle = data.data.sub_heading;
+            _this.bannerData.image = data.data.banner_image;
+            _this.testi_image = data.data.banner_image;
+            // this.bannerData.description = data.data.description;
+        })
+            , function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    console.log('Internet Connection Error');
+                }
+            };
+    };
+    SectionOneEditComponent.prototype.updateTestimonials = function () {
+        var _this = this;
+        console.log('id***', this.route.snapshot.params.id);
+        console.log('title/', this.bannerData.title);
+        console.log('subtitle', this.bannerData.subtitle);
+        console.log('image', this.bannerData.image);
+        // console.log(this.bannerData.description);
+        var formData = new FormData();
+        formData.append('banner_id', this.route.snapshot.params.id);
+        formData.append("heading", this.bannerData.title);
+        formData.append("sub_heading", this.bannerData.subtitle);
+        formData.append("banner_image", this.bannerData.image);
+        this.service.updateBanner(formData).subscribe(function (data) {
+            console.log(data, " Successfully Updated!");
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            _this.router.navigate(['/section_1']);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
     };
     SectionOneEditComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
@@ -1376,7 +2768,20 @@ var SectionOneEditComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >TESTIMONIALS</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/createTestimonials\">Add Testimonials</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n           <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <!-- <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td> -->\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"author_name\">\n                        <th mat-header-cell *matHeaderCellDef>Author Name</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.fullname}}</td> -->\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"designation\">\n                        <th mat-header-cell *matHeaderCellDef>Designation</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.email}}</td> -->\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th>\n                        <!-- <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td> -->\n                    </ng-container>\n\n\n                    <ng-container matColumnDef=\"image\">\n                      <th mat-header-cell *matHeaderCellDef>Image</th>\n                      <!-- <td mat-cell *matCellDef=\"let element\">{{element.phone}}</td> -->\n                  </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Action\n                    </th>\n                    <!-- <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >view_list</mat-icon>\n                            </button>\n                       \n                        \n                    </td> -->\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >TESTIMONIALS</h2>\n </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/createTestimonials\">Add Testimonials</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n           <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"author_name\">\n                        <th width=\"120px\" mat-header-cell *matHeaderCellDef>Name</th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.author_name}}</td>\n                    </ng-container>\n\n                    \n                    <ng-container matColumnDef=\"designation\">\n                        <th  width=\"150px\" class=\"text-center\" mat-header-cell *matHeaderCellDef>Designation</th>\n                        <td  width=\"150px\" class=\"text-center\" mat-cell *matCellDef=\"let element\">{{element.designation}}</td>\n                    </ng-container>\n                    \n                    <ng-container matColumnDef=\"description\">\n                        <th mat-header-cell *matHeaderCellDef>Description</th>\n                        <td class=\"ellipsis\" mat-cell *matCellDef=\"let element\">\n                          {{element.description}}\n                        </td>\n                    </ng-container>\n\n<!-- \n                    <ng-container matColumnDef=\"image\">\n                      <th mat-header-cell *matHeaderCellDef>Image</th>\n                      <td mat-cell *matCellDef=\"let element\">{{element.image}}</td>\n                   </ng-container> -->\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th  width=\"150px\" mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                       Action\n                    </th>\n                    <td width=\"150px\" class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button routerLink=\"/editTestimonials/{{element.id}}\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <button  mat-icon-button (click)=\"deleteTestimonials(element.id)\">\n                              <mat-icon >delete</mat-icon>\n                            </button>\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <!-- <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div> -->\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "LkDY":
+/*!*************************************************************************!*\
+  !*** ./src/app/teacher-applications/teacher-applications.component.css ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".load_er{\n\tposition: fixed;\n\tz-index: 99;\n\tleft: 50%;\n\ttop: 50%;\n\t}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlYWNoZXItYXBwbGljYXRpb25zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxlQUFlO0NBQ2YsV0FBVztDQUNYLFNBQVM7Q0FDVCxRQUFRO0NBQ1IiLCJmaWxlIjoidGVhY2hlci1hcHBsaWNhdGlvbnMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2FkX2Vye1xuXHRwb3NpdGlvbjogZml4ZWQ7XG5cdHotaW5kZXg6IDk5O1xuXHRsZWZ0OiA1MCU7XG5cdHRvcDogNTAlO1xuXHR9Il19 */");
 
 /***/ }),
 
@@ -1414,6 +2819,117 @@ var FooterComponent = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
     ], FooterComponent);
     return FooterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "NaMH":
+/*!*****************************************************************!*\
+  !*** ./src/app/category/add-category/add-category.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: AddCategoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddCategoryComponent", function() { return AddCategoryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_add_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./add-category.component.html */ "w966");
+/* harmony import */ var _add_category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add-category.component.css */ "3y3T");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var AddCategoryComponent = /** @class */ (function () {
+    function AddCategoryComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.categoryData = {
+            category: "",
+            image: "",
+        };
+        this.addCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            category: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    }
+    AddCategoryComponent.prototype.ngOnInit = function () {
+    };
+    AddCategoryComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.categoryData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    AddCategoryComponent.prototype.addCategory = function () {
+        var _this = this;
+        var formData = new FormData();
+        formData.append("category_name", this.categoryData.category);
+        formData.append("image", this.categoryData.image);
+        this.service.addCategory(formData).subscribe(function (res) {
+            console.log("*****Data Successfully Inserted!****", res);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            _this.router.navigate(['/category']);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    AddCategoryComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    AddCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-add-category',
+            template: _raw_loader_add_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_add_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], AddCategoryComponent);
+    return AddCategoryComponent;
 }());
 
 
@@ -1481,16 +2997,138 @@ var ContactUsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "O467":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/add-category/add-category.component.html ***!
-  \************************************************************************************************/
+/***/ "OCGH":
+/*!*****************************************************************************!*\
+  !*** ./src/app/sub-category/add-sub-category/add-sub-category.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: AddSubCategoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddSubCategoryComponent", function() { return AddSubCategoryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_add_sub_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./add-sub-category.component.html */ "+I2t");
+/* harmony import */ var _add_sub_category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add-sub-category.component.css */ "754x");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var AddSubCategoryComponent = /** @class */ (function () {
+    function AddSubCategoryComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.categoryData = {
+            category: "",
+            image: "",
+        };
+        this.addSubCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            category: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    }
+    AddSubCategoryComponent.prototype.ngOnInit = function () {
+        this.categoryId = this.route.snapshot.params.id;
+        console.log("new iddddds", this.categoryId);
+        // SubCategory
+        // this.SubCategory()
+    };
+    AddSubCategoryComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.categoryData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    AddSubCategoryComponent.prototype.SubCategory = function () {
+        var _this = this;
+        // var obj={
+        //  category_id:this.route.snapshot.params.id,
+        //  category_name:this.categoryData.category
+        // }
+        var formData = new FormData();
+        formData.append("sub_category_name", this.categoryData.category);
+        formData.append("category_id", this.categoryId);
+        formData.append("image", this.categoryData.image);
+        // var formData
+        this.service.addSubCategory(formData).subscribe(function (res) {
+            console.log("Data Successfully Inserted!", res);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            var route = "/sub_category/" + _this.categoryId;
+            _this.router.navigate([route]);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    AddSubCategoryComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    AddSubCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-add-sub-category',
+            template: _raw_loader_add_sub_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_add_sub_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], AddSubCategoryComponent);
+    return AddSubCategoryComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "OU7v":
+/*!*******************************************************************!*\
+  !*** ./src/app/testimonials-edit/testimonials-edit.component.css ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" #input>\n          </mat-form-field>\n          <div class=\"text-right\"><button mat-button class=\"theme-btn\" routerLink=\"/addcategory\">Save</button></div>\n         \n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3RpbW9uaWFscy1lZGl0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsV0FBVztBQUNmO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsY0FBYztBQUNsQjtBQUNBO1FBQ1EsZUFBZTtJQUNuQjtBQUVBO1FBQ0ksV0FBVztJQUNmO0FBQ0E7UUFDSSxZQUFZO1FBQ1osYUFBYTtRQUNiLG1CQUFtQjtRQUNuQixxQkFBcUI7SUFDekI7QUFDQTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO1FBQ1YsWUFBWTtRQUNaLFdBQVc7UUFDWCxZQUFZO1FBQ1osbUJBQW1CO1FBQ25CLGdCQUFnQjtRQUNoQixtQkFBbUI7SUFDdkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsUUFBUTtRQUNSLFdBQVc7UUFDWCxlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osVUFBVTtRQUNWLGVBQWU7UUFDZixrQkFBa0I7UUFDbEIsVUFBVTtJQUNkO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLG9CQUFvQjtRQUNwQixpQkFBaUI7SUFDckI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsU0FBUztRQUNULFVBQVU7UUFDVixlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLGVBQWU7SUFDbkIiLCJmaWxlIjoidGVzdGltb25pYWxzLWVkaXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIC5jYXJkLWhlYWRlciAuY2FyZC10aXRsZSB7XG4gICAgbWFyZ2luLXRvcDowcHghaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufVxuLmJ0bi1zdWNjZXNzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xufVxuLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgbWF0LWZvcm0tZmllbGR7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgICBzcGFuLm1hdF9pbWFnIHtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuICAgIC5pbnB0X2ljb24ge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLTEycHg7XG4gICAgICAgIHJpZ2h0OiAtMTNweDtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgYmFja2dyb3VuZDogIzZhYTUyNDtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgcmlnaHQ6IDEycHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IDI7XG4gICAgfVxuICAgIC5tYXRfaW1hZyBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAtby1vYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhLWVkaXR7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH0iXX0= */");
 
 /***/ }),
 
@@ -1623,6 +3261,179 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "QqmM":
+/*!************************************************************************!*\
+  !*** ./src/app/teacher-applications/teacher-applications.component.ts ***!
+  \************************************************************************/
+/*! exports provided: TeacherApplicationsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeacherApplicationsComponent", function() { return TeacherApplicationsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_teacher_applications_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./teacher-applications.component.html */ "KBt+");
+/* harmony import */ var _teacher_applications_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./teacher-applications.component.css */ "LkDY");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
+
+
+
+
+var TeacherApplicationsComponent = /** @class */ (function () {
+    function TeacherApplicationsComponent(dialog, service, route) {
+        this.dialog = dialog;
+        this.service = service;
+        this.route = route;
+        this.currentPage = 10;
+        this.checked = false;
+        this.indeterminate = false;
+        this.labelPosition = 'after';
+        this.disabled = false;
+        this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        this.responseData = [];
+        this.currentIndex = 0;
+        this.displayedColumns = ['position', 'teacher_name', 'email_id', 'mobile_number', 'country', 'application_status', 'action'];
+    }
+    TeacherApplicationsComponent.prototype.ngOnInit = function () {
+        this.reqData = {};
+        this.reqData.offset = 0;
+        this.reqData.limit = 10;
+        // this.currentPage=10
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.responseData);
+        // this.dataSource.paginator = this.paginator;
+        this.datamodel = {};
+        this.length;
+        this.getTeacherList();
+    };
+    TeacherApplicationsComponent.prototype.getTeacherList = function () {
+        var _this = this;
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        this.service.showTeacherApplication(list).subscribe(function (res) {
+            console.log('*****getTeacherData******', res.data);
+            if (res) {
+                _this.length = res.data.count;
+                _this.dataSource = res.data.rows;
+                console.log('responseData ***', _this.dataSource);
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    TeacherApplicationsComponent.prototype.onStatus = function (evt, id) {
+        var _this = this;
+        console.log("status", evt);
+        console.log("id****", id);
+        var obj = {
+            id: id,
+            status: evt
+        };
+        this.loader = true;
+        this.service.applicationApproved(obj).subscribe(function (res) {
+            console.log("res*****", res);
+            _this.ngOnInit();
+            _this.loader = false;
+        });
+    };
+    TeacherApplicationsComponent.prototype.applyFilter = function (filterValue) {
+        var _this = this;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+        this.filterValue = filterValue.trim().toLowerCase();
+        var obj = {
+            search: filterValue
+        };
+        if (obj.search) {
+            this.service.teacherApplicationFilter(obj).subscribe(function (res) {
+                console.log('filterResponse', res);
+                if (res) {
+                    _this.dataSource = res.data;
+                }
+            }, function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    console.log('Internet Connection Error');
+                }
+            });
+        }
+        else {
+            this.ngOnInit();
+        }
+    };
+    TeacherApplicationsComponent.prototype.getPageSizeOptions = function () {
+        return [10, 20, 30];
+    };
+    TeacherApplicationsComponent.prototype.paginationOptionChange = function (evt) {
+        //   this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
+        //   this.reqData.limit = evt.pageSize
+        //   // let Cate=this.route.snapshot.params.id;
+        //   // console.log('cate id',Cate);
+        //   this.currentPage=evt.pageSize
+        //   this.currentIndex=evt.pageIndex
+        //   console.log('checking  page Index', this.currentPage)
+        //   console.log('checking current page',evt.pageSize)
+        //   var list={
+        //     offset:this.reqData.offset,
+        //     limit:this.reqData.limit
+        //   }
+        //   // console.log(this.reqData)
+        //   this.service.getallStudent(list).subscribe(res => {
+        //   // console.log('paginator limit',res)
+        //   if(res){
+        //     this.length = res.data.count;
+        //     this.dataSource = res.data.rows;
+        //     // this.responseData=new MatTableDataSource(res.data);
+        //     // console.log('dataSource',this.dataSource);
+        //     }
+        //   },err => {
+        //     console.log(err);
+        //     if(err.status >= 400){
+        //       console.log('Invalid Credential!!!');
+        //     }else{
+        //       console.log('Internet Connection Error');
+        //     }
+        // })
+    };
+    TeacherApplicationsComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] }
+    ]; };
+    TeacherApplicationsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-teacher-applications',
+            template: _raw_loader_teacher_applications_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_teacher_applications_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"]])
+    ], TeacherApplicationsComponent);
+    return TeacherApplicationsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "R+wO":
 /*!***********************************************************!*\
   !*** ./src/app/section-first/section-first.component.css ***!
@@ -1632,7 +3443,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzZWN0aW9uLWZpcnN0LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".img-fluid{\n    width: 120px;\n    height: 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlY3Rpb24tZmlyc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixZQUFZO0FBQ2hCIiwiZmlsZSI6InNlY3Rpb24tZmlyc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWctZmx1aWR7XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogODBweDtcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "R6xh":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/teacher-management/teacher-management.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>teacher-management works!</p>\n");
 
 /***/ }),
 
@@ -1645,7 +3469,147 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOME PAGE FIRST SECTION</h2>\n   </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/edit_section_one\">Edit</button>\n            <!-- (click)=\"openEditDialog()\" -->\n          </div>\n     \n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                   \n                    <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Image\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>   \n\n                    <ng-container matColumnDef=\"title\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Title\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>      \n                    \n                    <ng-container matColumnDef=\"subtitle\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Sub Title\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>      \n                    <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef > Action </th>\n                        <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button> -->\n                        \n                      </td>\n                       \n                    </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator> -->\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!-- <div class=\"orgNL_page comon_page\"> -->\n    <!-- page class -->\n\n    <!-- <div class=\"card\">\n        <div class=\"card-body\">\n        \n\n            <h2 class=\"card_head\">Home Page First Section </h2>\n            <mat-divider></mat-divider>\n\n            <div class=\"table_db_indi\">\n                <mat-form-field>\n                    <mat-label>Filter</mat-label>\n                    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Ex. Name\">\n\n                </mat-form-field> -->\n                <!-- <a routerLink=\"/subscription-packages\"> -->\n                    <!-- <button style=\"float: right;margin-top: 10px;\" mat-raised-button color=\"primary\" (click)=\"add_faq()\">Add</button> -->\n                <!-- </a> -->\n                <!-- <div class=\"onl_tabl\">\n\n\n                    <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-table table mat-elevation-z1\"> -->\n\n                        <!--- Note that these columns can be defined in any order.\n                          The actual rendered columns are set as a property on the row definition\" -->\n\n\n\n                        <!-- Name Column -->\n                        <!-- <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\">Image\n                            </th>\n                            <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                        </ng-container> -->\n\n                        \n\n<!--                         \n                        <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\"> Action </th>\n                            <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                                <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                                    aria-label=\"Example icon-button with a menu\">\n                                    <mat-icon>more_vert</mat-icon>\n                                </button>\n                                <mat-menu #menu=\"matMenu\">\n                                    <button (click)=\"edit_content(element)\" mat-menu-item>\n                                        <mat-icon>edit</mat-icon>\n                                        <span >Edit</span>\n                                    </button> -->\n\n                                    <!-- <button mat-menu-item (click)=\"delete(element)\">\n                                        <mat-icon >delete</mat-icon>\n                                        <span>Delete</span>\n                                    </button> -->\n\n                                <!-- </mat-menu>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </div>\n            </div> -->\n\n            <!-- table start --> \n<!-- \n        </div>\n    </div>\n</div> -->\n\n<!-- <button (click)=\"tt()\">Click</button> -->\n<!-- \n<div class=\"modal fade edit_modal\" id=\"editForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">First Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"First Content\" [(ngModel)]=\"formData.content\" [formControl]=\"complexForm.controls['content']\" autocomplete=\"content\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Second Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Second Content\" [(ngModel)]=\"formData.content2\" [formControl]=\"complexForm.controls['content2']\" autocomplete=\"content2\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Third Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Third Content\" [(ngModel)]=\"formData.content3\" [formControl]=\"complexForm.controls['content3']\" autocomplete=\"content3\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Image</mat-label>\n                                        <div class=\"col-sm-8\">\n                                             <mat-form-field class=\"example-form-field\"> -->\n                                                <!-- <img src=\"{{homeImageSrc || 'https://www.searchpng.com/wp-content/uploads/2019/02/Profile-PNG-Icon.png'}}\" class=\"img-fluid prfile_img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-info upload_img\"  style=\"width: 115px\">Upload Image</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"img_inpt\"><input type=\"file\" (change)=\"readURL($event)\" accept=\".jpeg,.png,.jpg\"></span> -->\n                                            <!-- </mat-form-field> -->\n                                        <!-- </div> -->\n                                    <!-- </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Save()\">Save</button>\n                            </form>\n                        </div>\n                    </div> -->\n<!-- \n            </div>\n        </div>\n    </div>\n</div> --> \n\n\n<!-- <div class=\"modal fade\" id=\"addForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Question</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"Question\" [formControl]=\"complexForm.controls['question']\" autocomplete=\"question\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Answer</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Enter Answer\" [formControl]=\"complexForm.controls['answer']\" autocomplete=\"answer\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Add()\">Save</button>\n                            </form>\n                        </div>\n                    </div>\n\n            </div>\n        </div>\n    </div>\n</div> -->");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >BANNER MANAGEMENT</h2>\n   </div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/create_banner\">Add</button>       \n          <!-- /edit_section_one -->\n            <!-- create_banner -->\n            <!-- (click)=\"openEditDialog()\" -->\n          </div>\n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n          </mat-form-field>\n        \n     \n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                   \n                    <ng-container matColumnDef=\"position\" class=\"mat-row\">\n                        <th  mat-header-cell *matHeaderCellDef >S.No\n                        </th>\n                        <td  mat-cell *matCellDef=\"let element let i=index\"> {{ (currentIndex) * currentPage + i +1 }} </td>\n\n                    </ng-container>   \n\n                    <ng-container matColumnDef=\"title\" class=\"mat-row\">\n                        <th  class=\"text-center\"  mat-header-cell *matHeaderCellDef >Title\n                        </th>\n                        <td mat-cell *matCellDef=\"let element\"> {{element.heading}} </td>\n\n                    </ng-container>    \n                    \n                    <ng-container matColumnDef=\"subtitle\" class=\"mat-row\">\n                        <th  width=\"150px\" class=\"text-center\" mat-header-cell *matHeaderCellDef >Sub Title\n                        </th>\n                        <td  width=\"150px\" class=\"text-center\" mat-cell *matCellDef=\"let element\"> {{element.sub_heading}} </td>\n\n                    </ng-container>   \n                    \n                    <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                        <th width=\"150px\" class=\"text-center\"  mat-header-cell *matHeaderCellDef >Image\n                        </th>\n                        <td width=\"150px\" class=\"text-center\"  mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.banner_image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                    </ng-container>  \n                    \n                      \n                    <ng-container matColumnDef=\"status\" class=\"mat-row\">\n                        <th  width=\"150px\" class=\"text-center\" mat-header-cell *matHeaderCellDef >Status\n                        </th> \n                        <td  width=\"150px\" class=\"text-center\" mat-cell *matCellDef=\"let element\">\n                            <mat-slide-toggle (change)=\"onChange($event,element.id)\" [checked]=\"element.status == 'active' ?  true : false\">\n\n                            </mat-slide-toggle>\n                            <!-- *ngIf=\"element.status == 'active\" -->\n                            <!-- <mat-form-field >\n                               \n                                <select (change)=\"onStatus($event.target.value, element.id)\" matNativeControl required>\n                                  <option >{{element.status}}</option>\n                                  <option value=\"active\" >active</option>\n                                  <option value=\"inactive\" >inactive</option>\n                                 \n                                 \n                                </select>\n                              </mat-form-field> -->\n                            \n                        </td>\n\n                    </ng-container>\n                    <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                        <th  width=\"150px\" class=\"text-center\" mat-header-cell *matHeaderCellDef > Action </th>\n                        <td  width=\"150px\" class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button routerLink=\"/edit_section_one/{{element.id}}\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <button  mat-icon-button (click)=\"deletebanner(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button>\n                        \n                      </td>\n                       \n                    </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n                \n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!-- <div class=\"orgNL_page comon_page\"> -->\n    <!-- page class -->\n\n    <!-- <div class=\"card\">\n        <div class=\"card-body\">\n        \n\n            <h2 class=\"card_head\">Home Page First Section </h2>\n            <mat-divider></mat-divider>\n\n            <div class=\"table_db_indi\">\n                <mat-form-field>\n                    <mat-label>Filter</mat-label>\n                    <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Ex. Name\">\n\n                </mat-form-field> -->\n                <!-- <a routerLink=\"/subscription-packages\"> -->\n                    <!-- <button style=\"float: right;margin-top: 10px;\" mat-raised-button color=\"primary\" (click)=\"add_faq()\">Add</button> -->\n                <!-- </a> -->\n                <!-- <div class=\"onl_tabl\">\n\n\n                    <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-table table mat-elevation-z1\"> -->\n\n                        <!--- Note that these columns can be defined in any order.\n                          The actual rendered columns are set as a property on the row definition\" -->\n\n\n\n                        <!-- Name Column -->\n                        <!-- <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\">Image\n                            </th>\n                            <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                        </ng-container> -->\n\n                        \n\n<!--                         \n                        <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                            <th mat-header-cell *matHeaderCellDef mat-sort-header class=\"mat-header-cell\"> Action </th>\n                            <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                                <button mat-icon-button [matMenuTriggerFor]=\"menu\"\n                                    aria-label=\"Example icon-button with a menu\">\n                                    <mat-icon>more_vert</mat-icon>\n                                </button>\n                                <mat-menu #menu=\"matMenu\">\n                                    <button (click)=\"edit_content(element)\" mat-menu-item>\n                                        <mat-icon>edit</mat-icon>\n                                        <span >Edit</span>\n                                    </button> -->\n\n                                    <!-- <button mat-menu-item (click)=\"delete(element)\">\n                                        <mat-icon >delete</mat-icon>\n                                        <span>Delete</span>\n                                    </button> -->\n\n                                <!-- </mat-menu>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </div>\n            </div> -->\n\n            <!-- table start --> \n<!-- \n        </div>\n    </div>\n</div> -->\n\n<!-- <button (click)=\"tt()\">Click</button> -->\n<!-- \n<div class=\"modal fade edit_modal\" id=\"editForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">First Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"First Content\" [(ngModel)]=\"formData.content\" [formControl]=\"complexForm.controls['content']\" autocomplete=\"content\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Second Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Second Content\" [(ngModel)]=\"formData.content2\" [formControl]=\"complexForm.controls['content2']\" autocomplete=\"content2\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Third Content</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Third Content\" [(ngModel)]=\"formData.content3\" [formControl]=\"complexForm.controls['content3']\" autocomplete=\"content3\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Image</mat-label>\n                                        <div class=\"col-sm-8\">\n                                             <mat-form-field class=\"example-form-field\"> -->\n                                                <!-- <img src=\"{{homeImageSrc || 'https://www.searchpng.com/wp-content/uploads/2019/02/Profile-PNG-Icon.png'}}\" class=\"img-fluid prfile_img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-info upload_img\"  style=\"width: 115px\">Upload Image</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"img_inpt\"><input type=\"file\" (change)=\"readURL($event)\" accept=\".jpeg,.png,.jpg\"></span> -->\n                                            <!-- </mat-form-field> -->\n                                        <!-- </div> -->\n                                    <!-- </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Save()\">Save</button>\n                            </form>\n                        </div>\n                    </div> -->\n<!-- \n            </div>\n        </div>\n    </div>\n</div> --> \n\n\n<!-- <div class=\"modal fade\" id=\"addForm\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title\">Actions</h4>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                    <div class=\"col-sm-12\">\n                        <div class=\"add_pckg_div\">\n                            <form class=\"\">\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Question</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <input matInput placeholder=\"Question\" [formControl]=\"complexForm.controls['question']\" autocomplete=\"question\" required>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"inpt_form\">\n                                    <div class=\"row\">\n                                        <mat-label clasS=\"col-sm-4\">Answer</mat-label>\n                                        <div class=\"col-sm-8\">\n                                            <mat-form-field class=\"example-form-field\">\n                                                <textarea matInput placeholder=\"Enter Answer\" [formControl]=\"complexForm.controls['answer']\" autocomplete=\"answer\" required></textarea>\n                                            </mat-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                                \n                                <button mat-raised-button color=\"primary\" (click)=\"Add()\">Save</button>\n                            </form>\n                        </div>\n                    </div>\n\n            </div>\n        </div>\n    </div>\n</div> -->");
+
+/***/ }),
+
+/***/ "Rll3":
+/*!*********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-second/create-engaging/create-engaging.component.html ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"loader\" class=\"load_er\">\n\t<mat-progress-spinner\n\tcolor=\"primary\"\n\tmode=\"indeterminate\">\n\t</mat-progress-spinner></div>\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n    <!-- <a routerLink=\"/section_2\" class=\"cal-back\">\n        <i class=\"fa fa-chevron-left\"></i>\n    </a> -->\n    CREATE ENGAGING</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"createForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n\n\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"heading\" matInput placeholder=\"Heading\" [(ngModel)]=\"engagingData.heading\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"createForm.controls['heading'].touched &&\n                                     createForm.controls['heading'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"createForm.controls['heading'].errors &&\n                                      createForm.controls['heading'].errors.required\">\n                                         Heading  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"description\" matInput placeholder=\"Description\" [(ngModel)]=\"engagingData.description\"\n                                        >\n                                    </mat-form-field>\n                                    <div *ngIf=\"createForm.controls['description'].touched &&\n                                    createForm.controls['description'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"createForm.controls['description'].errors &&\n                                     createForm.controls['description'].errors.required\">\n                                         Description is required.</div>\n                                 </div>\n                                </div>\n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" formControlName=\"image\" #uploadFile value=\"engagingData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            </div>\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!createForm.valid\" (click)=\"add()\">Add</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/section_2\" class=\"btn theme-btn ft\">Back</button>\n                                <!-- [disabled]=\"!createForm.valid\"  -->\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
+
+/***/ }),
+
+/***/ "S51R":
+/*!*******************************************************************!*\
+  !*** ./src/app/category/edit-category/edit-category.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: EditCategoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditCategoryComponent", function() { return EditCategoryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_edit_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./edit-category.component.html */ "Su7g");
+/* harmony import */ var _edit_category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-category.component.css */ "f931");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../environments/environment.prod */ "cxbk");
+
+
+
+
+
+
+
+
+
+var EditCategoryComponent = /** @class */ (function () {
+    function EditCategoryComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.categoryData = {
+            category: "",
+            image: "",
+        };
+        this.editCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            category: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+        });
+    }
+    EditCategoryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.imgUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].category_images + 'category_images/';
+        this.Id = this.route.snapshot.params.id;
+        var obj = {
+            category_id: this.Id
+        };
+        // console.log("Edit Id: ",)
+        this.service.getCategoryById(obj).subscribe(function (res) {
+            console.log("Data *************************: ", res);
+            _this.categoryData.category = res.data.category_name;
+            _this.categoryData.image = res.data.image;
+            _this.testi_image = res.data.image;
+        });
+    };
+    EditCategoryComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.categoryData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    EditCategoryComponent.prototype.editCategory = function () {
+        var _this = this;
+        var formData = new FormData();
+        formData.append('category_name', this.categoryData.category);
+        formData.append('image', this.categoryData.image);
+        formData.append('category_id', this.Id);
+        this.service.updateCategory(formData).subscribe(function (data) {
+            console.log("Data Successfully Updated!", data);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            // this.router.navigate(['/category']);
+            _this.router.navigate(['/category']);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    EditCategoryComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    EditCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-edit-category',
+            template: _raw_loader_edit_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_edit_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], EditCategoryComponent);
+    return EditCategoryComponent;
+}());
+
+
 
 /***/ }),
 
@@ -1659,6 +3623,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n            <div class=\"navbar-toggle\">\n                <button type=\"button\" class=\"navbar-toggler\" (click)=\"sidebarToggle()\">\n                    <span class=\"navbar-toggler-bar bar1\"></span>\n                    <span class=\"navbar-toggler-bar bar2\"></span>\n                    <span class=\"navbar-toggler-bar bar3\"></span>\n                </button>\n            </div>\n            <!-- <a class=\"navbar-brand\" *ngIf=\"getTitle\">{{getTitle()}}</a> -->\n            <!-- href=\"#pablo\" -->\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" (click)=\"collapse()\"\n          [attr.aria-expanded]=\"!isCollapsed\" aria-controls=\"collapseExample\">\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n          <span class=\"navbar-toggler-bar navbar-kebab\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n          <!-- <form>\n            <div class=\"input-group no-border\">\n              <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n              <div class=\"input-group-append\">\n                <div class=\"input-group-text\">\n                  <i class=\"now-ui-icons ui-1_zoom-bold\"></i>\n                </div>\n              </div>\n            </div>\n          </form> -->\n          <ul class=\"navbar-nav\">\n            <!-- <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#pablo\">\n                <i class=\"now-ui-icons media-2_sound-wave\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Stats</span>\n                </p>\n              </a>\n            </li> -->\n            <li class=\"nav-item\" ngbDropdown>\n              <a class=\"nav-link\" id=\"dropdownBasic1\" ngbDropdownToggle>\n                <i class=\"now-ui-icons users_single-02\"></i>\n                <!-- <p>\n                  <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                </p> -->\n              </a>\n              <div class=\"dropdown-menu dropdown-menu-right\" ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n                <a class=\"dropdown-item\" >My Profile</a>\n                <a class=\"dropdown-item\" (click)=\"logOut()\" >Log Out</a>\n                \n                <!-- <a class=\"dropdown-item\" href=\"#\">Something else here</a> -->\n              </div>\n            </li>\n            <!-- <li class=\"nav-item\">\n              <a class=\"nav-link\" >\n                <i class=\"now-ui-icons users_single-02\"></i>\n                <p>\n                  <span class=\"d-lg-none d-md-block\">Logout</span>\n                </p>\n              </a>\n            </li> -->\n          </ul>\n        </div>\n    </div>\n</nav>\n");
+
+/***/ }),
+
+/***/ "Su7g":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category/edit-category/edit-category.component.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    \n  <h2 >\n    EDIT CATEGORY\n  </h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"editCategoryForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <!-- <div class=\"card-body block-card\"> -->\n                            <!-- <div class=\"row\"> -->\n                                <!-- Author Name -->\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n\n\n\n\n\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input  formControlName=\"category\" matInput placeholder=\"Category\" [(ngModel)]=\"categoryData.category\" >\n                                    </mat-form-field>\n                                    <div *ngIf=\"editCategoryForm.controls['category'].touched &&\n                                     editCategoryForm.controls['category'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"editCategoryForm.controls['category'].errors &&\n                                      editCategoryForm.controls['category'].errors.required\">\n                                         Category  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                              \n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            <!-- </div> -->\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!editCategoryForm.valid\" (click)=\"editCategory()\">Update</button>\n                                <!-- [disabled]=\"!editCategoryForm.valid\"  -->\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/category\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                        <!-- </div> -->\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
 
 /***/ }),
 
@@ -1762,19 +3739,6 @@ var GeneralFaqComponent = /** @class */ (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ "UA8p":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category/add-sub-category.html ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h2>hello</h2>\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\" style=\"margin-top: 30px;\">\n                <form [formGroup]=\"bookForm\">\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Add Book</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <mat-form-field appearance=\"fill\">\n                                        <mat-label>Select Book Category</mat-label>\n                                        <mat-select formControlName=\"category\" [(ngModel)]=\"addBook.bookCategory\" [ngModelOptions]=\"{standalone: true}\">\n                                          <mat-option *ngFor=\"let book of bookCategoryList\" [value]=\"book._id\">\n                                            {{ book.category }}\n                                          </mat-option>\n                                        </mat-select>\n                                      </mat-form-field>\n                                      <div *ngIf=\"bookForm.controls['category'].touched &&\n                                      bookForm.controls['category'].invalid\"\n                                      class=\"text-danger\">\n                                <div *ngIf=\"bookForm.controls['category'].errors &&\n                                        bookForm.controls['category'].errors.required\">\n                                        Book Category is required.\n                                </div>\n                          </div>\n                                </div>\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <textarea matInput placeholder=\"Description\" rows=\"5\" formControlName=\"description\" [(ngModel)]=\"addBook.frame\" [ngModelOptions]=\"{standalone: true}\"></textarea>\n                                        <!-- <input matInput placeholder=\"Description\" [(ngModel)]=\"addCategory.description\" [ngModelOptions]=\"{standalone: true}\"> -->\n                                    </mat-form-field>\n                                    <div *ngIf=\"bookForm.controls['description'].touched &&\n                                                  bookForm.controls['description'].invalid\"\n                                                  class=\"text-danger\">\n                                            <div *ngIf=\"bookForm.controls['description'].errors &&\n                                                    bookForm.controls['description'].errors.required\">\n                                                    Description is required.\n                                            </div>\n                                      </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"!bookForm.valid\" (click)=\"createBook()\">Submit</button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -1913,12 +3877,6 @@ var UserListComponent = /** @class */ (function () {
         this.currentIndex = evt.pageIndex;
         console.log('checking  page Index', this.currentPage);
         console.log('checking current page', evt.pageSize);
-        // {{ (currentIndex) * currentPage + i +1 }}
-        // (2-1) * (10 +1) = 1*11 = 11
-        // jina v pageSIze ohde ch 1 add krna paina
-        // for example page is 3 
-        //  multiply -> add
-        // (3-1) * (10+1) => 2 * 10 + 1 => 21
         var list = {
             offset: this.reqData.offset,
             limit: this.reqData.limit
@@ -2114,6 +4072,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -2122,10 +4083,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AddTestimonialsComponent = /** @class */ (function () {
-    function AddTestimonialsComponent(fb, service, route, router) {
+    // image
+    // imgUrl
+    // testimonialsData: any = {
+    //   authorName:"",
+    //   designation:"",
+    //   image:"",
+    //   description:""
+    // }
+    // testi_image
+    function AddTestimonialsComponent(fb, service, router) {
         this.fb = fb;
         this.service = service;
-        this.route = route;
         this.router = router;
         this.testimonialsData = {
             authorName: "",
@@ -2133,6 +4102,12 @@ var AddTestimonialsComponent = /** @class */ (function () {
             image: "",
             description: ""
         };
+        this.testimonialForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            authorName: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            designation: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
     }
     AddTestimonialsComponent.prototype.ngOnInit = function () {
         // this.imgUrl = environment.testimonials_img + 'testimonial/'
@@ -2162,10 +4137,35 @@ var AddTestimonialsComponent = /** @class */ (function () {
         };
         fr.readAsDataURL(file);
     };
+    AddTestimonialsComponent.prototype.saveTestimonials = function () {
+        var _this = this;
+        var formData = new FormData();
+        formData.append("author_name", this.testimonialsData.authorName);
+        console.log("author_name", this.testimonialsData.authorName);
+        console.log("designation", this.testimonialsData.designation);
+        console.log("image", this.testimonialsData.image);
+        console.log("description", this.testimonialsData.description);
+        formData.append("designation", this.testimonialsData.designation);
+        formData.append("image", this.testimonialsData.image);
+        formData.append("description", this.testimonialsData.description);
+        this.loader = true;
+        this.service.createTestimonial(formData).subscribe(function (data) {
+            console.log("Testimonials Successfully Created!");
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            _this.router.navigate(['/testimonials']);
+            _this.loader = false;
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
     AddTestimonialsComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
         { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
     ]; };
     AddTestimonialsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
@@ -2174,10 +4174,7 @@ var AddTestimonialsComponent = /** @class */ (function () {
             template: _raw_loader_add_testimonials_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_add_testimonials_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"], _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], AddTestimonialsComponent);
     return AddTestimonialsComponent;
 }());
@@ -2208,7 +4205,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >SUB CATEGORY</h2>\n </div> \n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" (click)=\"openSubCategoryDialog()\">Add Sub Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n         </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{ i + 1 }}</td>\n                    </ng-container>\n\n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th  mat-header-cell *matHeaderCellDef>Sub Category</th>\n                        <!-- class=\"text-center\" -->\n                        <td  mat-cell *matCellDef=\"let element\">{{element.sub_category_name}}</td>\n                        <!-- class=\"text-center\" -->\n                    </ng-container>\n\n                  \n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button (click)=\"openEditDialog(element.id)\">\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button>\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >SUB CATEGORY</h2>\n </div> \n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        \n        <div class=\"card-body\">\n          <div class=\"text-right\" style=\"padding-right: 65px;\" >\n            <button mat-button class=\"theme-btn\" routerLink=\"/add_sub_category/{{CateID}}\">Add Sub Category</button>\n          </div>\n          <!-- routerLink=\"/addcategory\" -->\n         \n          <mat-form-field>\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\">\n         </mat-form-field>\n          <div class=\"card-body\">\n            <div class=\"table-responsive\">\n                <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                    <!-- Position -->\n                    <ng-container matColumnDef=\"position\">\n                        <th mat-header-cell *matHeaderCellDef>S.No.</th>\n                        <td mat-cell *matCellDef=\"let element; let i = index;\">{{(currentIndex) * currentPage + i +1 }}</td>\n                    </ng-container>\n                             \n                    <!-- Questions -->\n                    <ng-container matColumnDef=\"category\">\n                        <th  mat-header-cell *matHeaderCellDef>Sub Category</th>\n                        <!-- class=\"text-center\" -->\n                        <td  mat-cell *matCellDef=\"let element\">{{element.sub_category_name}}</td>\n                        <!-- class=\"text-center\" -->\n                    </ng-container>\n\n                    <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                      <th mat-header-cell *matHeaderCellDef >Image\n                      </th>\n                      <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n\n                    </ng-container>  \n\n                    <!-- Action -->\n                    <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef  class=\"mat-header-cell text-center\">\n                        Action\n                    </th>\n                    <td class=\"mat-cell act_td text-center\" mat-cell *matCellDef=\"let element\">\n                            <button  mat-icon-button routerLink=\"/sub_category/{{CateID}}/{{element.id}}\" >\n                                <mat-icon >edit</mat-icon>\n                            </button>\n                            <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                <mat-icon >delete</mat-icon>\n                            </button>\n                        \n                    </td>\n                </ng-container>\n\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <div>\n                    <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                        (page)=\"paginationOptionChange($event)\">\n                    </mat-paginator>\n                </div>\n            </div>\n        </div> \n          \n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- \n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    \n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    \n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n  \n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  \n    <tr class=\"mat-row\" *matNoDataRow>\n      <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div> -->");
 
 /***/ }),
 
@@ -2225,19 +4222,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "Wqbc":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sub-category/edit-sub-category.html ***!
-  \*******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<style>\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n    .ft{\n        font-size: 16px;\n    }\n    </style>\n\n<div class=\"main-content\" style=\"position: relative;\">\n   \n       \n           <button mat-icon-button  (click)=\"closeDialog()\"\n           style=\"position: absolute;\n                    right: -32px;\n                    top: -32px;\n                    transform: scale(0.75);\n                    outline: none;\n                    background-color: #ffffff!important;\n                    color: rgb(0, 0, 0);\n                    border-radius: 0px;\">\n               <mat-icon >close</mat-icon>\n            </button>\n           \n                <!-- <div class=\"text-right\" style=\"padding-right: 5px;\"><button mat-icon-button  (click)=\"closeDialog()\"><mat-icon >close</mat-icon></button></div> -->\n                <form>\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\" style=\"padding-bottom: 0.5px; background-color: #6AA524;\">\n                            <h4 class=\"card-title ft\">Edit Sub Category</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\" style=\"padding-top: 10px;\">\n                                    <mat-form-field class=\"example-full-width\"  style=\"width: 490px\">\n                                        <input matInput placeholder=\"Category\" [(ngModel)]=\"addCategory.category\" [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"text-center\">\n                        <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"editCategory()\">Update</button>\n                    </div>\n                </form>\n</div>\n");
-
-/***/ }),
-
 /***/ "WwN9":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/footer/footer.component.html ***!
@@ -2247,7 +4231,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<footer class=\"footer\">\n  <div class=\"container-fluid\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"https://www.creative-tim.com\">\n            Creative Tim\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"http://blog.creative-tim.com\">\n            Blog\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{test | date: 'yyyy'}}, Designed by\n      <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n    </div>\n  </div>\n</footer>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<footer class=\"footer\">\n  <div class=\"container-fluid\">\n    <nav>\n      <!-- <ul>\n        <li>\n          <a href=\"https://www.creative-tim.com\">\n            Creative Tim\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"http://blog.creative-tim.com\">\n            Blog\n          </a>\n        </li>\n      </ul> -->\n    </nav>\n    <div class=\"copyright \">\n      &copy;\n      {{test | date: 'yyyy'}},BRIDGEGAP\n      <!-- <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>. -->\n    </div>\n  </div>\n</footer>\n");
 
 /***/ }),
 
@@ -2422,7 +4406,7 @@ var AdminLoginComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >EDIT HOME BANNER</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 offset-sm-2\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Title\" [(ngModel)]=\"testimonialsData.authorName\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Sub Title\" [(ngModel)]=\"testimonialsData.designation\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>              \n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Update</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 > \n      EDIT HOME BANNER\n    </h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n\n\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Title\" [(ngModel)]=\"bannerData.title\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Sub Title\" [(ngModel)]=\"bannerData.subtitle\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>               -->\n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Update</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/section_1\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -2448,7 +4432,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzZWN0aW9uLXRocmVlLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".img-fluid{\n    width: 120px;\n    height: 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlY3Rpb24tdGhyZWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixZQUFZO0FBQ2hCIiwiZmlsZSI6InNlY3Rpb24tdGhyZWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWctZmx1aWR7XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogODBweDtcbn0iXX0= */");
 
 /***/ }),
 
@@ -2480,7 +4464,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./material/material.module */ "hctd");
 /* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
-/* harmony import */ var _add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./add-category/add-category.component */ "1Y/h");
+/* harmony import */ var _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./category/add-category/add-category.component */ "NaMH");
 /* harmony import */ var _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./sub-category/sub-category.component */ "7dfY");
 /* harmony import */ var _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./user-list/user-list.component */ "UMdc");
 /* harmony import */ var _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./section-first/section-first.component */ "DUgg");
@@ -2494,6 +4478,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./parent-faq/parent-faq.component */ "sC5k");
 /* harmony import */ var _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./contact-us/contact-us.component */ "NqkC");
 /* harmony import */ var _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./section-one-edit/section-one-edit.component */ "KL40");
+/* harmony import */ var _testimonials_edit_testimonials_edit_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./testimonials-edit/testimonials-edit.component */ "+zzn");
+/* harmony import */ var _create_banner_create_banner_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./create-banner/create-banner.component */ "suf6");
+/* harmony import */ var _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./category/edit-category/edit-category.component */ "S51R");
+/* harmony import */ var _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./sub-category/add-sub-category/add-sub-category.component */ "OCGH");
+/* harmony import */ var _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./sub-category/edit-sub-category/edit-sub-category.component */ "4Y5O");
+/* harmony import */ var _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./section-second/create-engaging/create-engaging.component */ "2Uv9");
+/* harmony import */ var _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./section-second/edit-engaging/edit-engaging.component */ "hERL");
+/* harmony import */ var _section_three_create_how_it_works_create_how_it_works_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./section-three/create-how-it-works/create-how-it-works.component */ "E9OQ");
+/* harmony import */ var _section_three_edit_how_it_works_edit_how_it_works_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./section-three/edit-how-it-works/edit-how-it-works.component */ "awQQ");
+/* harmony import */ var _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./teacher-applications/teacher-applications.component */ "QqmM");
+/* harmony import */ var _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./teacher-applications/view-teacher-application/view-teacher-application.component */ "hr2U");
+/* harmony import */ var _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./teacher-management/teacher-management.component */ "ZD+H");
+/* harmony import */ var _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./user-list/view-student-details/view-student-details.component */ "EMSy");
 
 
 
@@ -2503,6 +4500,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// import { AddSubCategoryDialog,EditSubCategoryDialog} from './sub-category/sub-category.component';
 
 
 
@@ -2557,12 +4567,12 @@ var AppModule = /** @class */ (function () {
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_11__["AdminLayoutComponent"],
                 _admin_login_admin_login_component__WEBPACK_IMPORTED_MODULE_12__["AdminLoginComponent"],
                 _category_category_component__WEBPACK_IMPORTED_MODULE_14__["CategoryComponent"],
-                _add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__["AddCategoryComponent"],
+                _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__["AddCategoryComponent"],
                 _category_category_component__WEBPACK_IMPORTED_MODULE_14__["AddCategoryDialog"],
                 _category_category_component__WEBPACK_IMPORTED_MODULE_14__["EditCategoryDialog"],
-                _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_19__["AddSubCategoryDialog"],
+                // AddSubCategoryDialog,
                 _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_19__["SubCategoryComponent"],
-                _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_19__["EditSubCategoryDialog"],
+                // EditSubCategoryDialog,
                 _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_20__["UserListComponent"],
                 _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_20__["ViewCategoryDialog"],
                 _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_21__["SectionFirstComponent"],
@@ -2576,12 +4586,235 @@ var AppModule = /** @class */ (function () {
                 _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_29__["ParentFaqComponent"],
                 _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_30__["ContactUsComponent"],
                 _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_31__["SectionOneEditComponent"],
+                _testimonials_edit_testimonials_edit_component__WEBPACK_IMPORTED_MODULE_32__["TestimonialsEditComponent"],
+                _create_banner_create_banner_component__WEBPACK_IMPORTED_MODULE_33__["CreateBannerComponent"],
+                _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_34__["EditCategoryComponent"],
+                _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_35__["AddSubCategoryComponent"],
+                _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_36__["EditSubCategoryComponent"],
+                _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_37__["CreateEngagingComponent"],
+                _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_38__["EditEngagingComponent"],
+                _section_three_create_how_it_works_create_how_it_works_component__WEBPACK_IMPORTED_MODULE_39__["CreateHowItWorksComponent"],
+                _section_three_edit_how_it_works_edit_how_it_works_component__WEBPACK_IMPORTED_MODULE_40__["EditHowItWorksComponent"],
+                _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_41__["TeacherApplicationsComponent"],
+                _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_42__["ViewTeacherApplicationComponent"],
+                _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_42__["RejectApplicationDialog"],
+                _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_43__["TeacherManagementComponent"],
+                _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_44__["ViewStudentDetailsComponent"],
             ],
             providers: [_adminAuth_admin_guard__WEBPACK_IMPORTED_MODULE_13__["AdminGuard"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "ZD+H":
+/*!********************************************************************!*\
+  !*** ./src/app/teacher-management/teacher-management.component.ts ***!
+  \********************************************************************/
+/*! exports provided: TeacherManagementComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeacherManagementComponent", function() { return TeacherManagementComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_teacher_management_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./teacher-management.component.html */ "R6xh");
+/* harmony import */ var _teacher_management_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./teacher-management.component.css */ "uN5D");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+var TeacherManagementComponent = /** @class */ (function () {
+    function TeacherManagementComponent() {
+    }
+    TeacherManagementComponent.prototype.ngOnInit = function () {
+    };
+    TeacherManagementComponent.ctorParameters = function () { return []; };
+    TeacherManagementComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-teacher-management',
+            template: _raw_loader_teacher_management_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_teacher_management_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], TeacherManagementComponent);
+    return TeacherManagementComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "ZMr7":
+/*!******************************************************************************************************!*\
+  !*** ./src/app/teacher-applications/view-teacher-application/view-teacher-application.component.css ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n.vid_wrap iframe{\n        width: 100%;\n        height: 270px;\n        margin-bottom: 30px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZpZXctdGVhY2hlci1hcHBsaWNhdGlvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLFdBQVc7QUFDZjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGNBQWM7QUFDbEI7QUFDQTtRQUNRLGVBQWU7SUFDbkI7QUFFQTtRQUNJLFdBQVc7SUFDZjtBQUNBO1FBQ0ksWUFBWTtRQUNaLGFBQWE7UUFDYixtQkFBbUI7UUFDbkIscUJBQXFCO0lBQ3pCO0FBQ0E7UUFDSSxrQkFBa0I7UUFDbEIsVUFBVTtRQUNWLFlBQVk7UUFDWixXQUFXO1FBQ1gsWUFBWTtRQUNaLG1CQUFtQjtRQUNuQixnQkFBZ0I7UUFDaEIsbUJBQW1CO0lBQ3ZCO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsa0JBQWtCO1FBQ2xCLFFBQVE7UUFDUixXQUFXO1FBQ1gsZUFBZTtRQUNmLFVBQVU7UUFDVixlQUFlO0lBQ25CO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLFVBQVU7UUFDVixlQUFlO1FBQ2Ysa0JBQWtCO1FBQ2xCLFVBQVU7SUFDZDtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixvQkFBb0I7UUFDcEIsaUJBQWlCO0lBQ3JCO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsa0JBQWtCO1FBQ2xCLFNBQVM7UUFDVCxVQUFVO1FBQ1YsZUFBZTtRQUNmLFVBQVU7UUFDVixlQUFlO0lBQ25CO0FBQ0E7UUFDSSxlQUFlO0lBQ25CO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsYUFBYTtRQUNiLG1CQUFtQjtJQUN2QiIsImZpbGUiOiJ2aWV3LXRlYWNoZXItYXBwbGljYXRpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIC5jYXJkLWhlYWRlciAuY2FyZC10aXRsZSB7XG4gICAgbWFyZ2luLXRvcDowcHghaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufVxuLmJ0bi1zdWNjZXNzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xufVxuLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgbWF0LWZvcm0tZmllbGR7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgICBzcGFuLm1hdF9pbWFnIHtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuICAgIC5pbnB0X2ljb24ge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLTEycHg7XG4gICAgICAgIHJpZ2h0OiAtMTNweDtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgYmFja2dyb3VuZDogIzZhYTUyNDtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgcmlnaHQ6IDEycHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IDI7XG4gICAgfVxuICAgIC5tYXRfaW1hZyBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAtby1vYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhLWVkaXR7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cbiAgICAudmlkX3dyYXAgaWZyYW1le1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAyNzBweDtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMzBweDtcbiAgICB9Il19 */");
+
+/***/ }),
+
+/***/ "aHhy":
+/*!**************************************************************************!*\
+  !*** ./src/app/section-second/edit-engaging/edit-engaging.component.css ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXQtZW5nYWdpbmcuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHdCQUF3QjtJQUN4QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixjQUFjO0FBQ2xCO0FBQ0E7UUFDUSxlQUFlO0lBQ25CO0FBRUE7UUFDSSxXQUFXO0lBQ2Y7QUFDQTtRQUNJLFlBQVk7UUFDWixhQUFhO1FBQ2IsbUJBQW1CO1FBQ25CLHFCQUFxQjtJQUN6QjtBQUNBO1FBQ0ksa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixZQUFZO1FBQ1osV0FBVztRQUNYLFlBQVk7UUFDWixtQkFBbUI7UUFDbkIsZ0JBQWdCO1FBQ2hCLG1CQUFtQjtJQUN2QjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsV0FBVztRQUNYLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixVQUFVO1FBQ1YsZUFBZTtRQUNmLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osb0JBQW9CO1FBQ3BCLGlCQUFpQjtJQUNyQjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixTQUFTO1FBQ1QsVUFBVTtRQUNWLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtJQUNuQiIsImZpbGUiOiJlZGl0LWVuZ2FnaW5nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAxNTBweDtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9Il19 */");
+
+/***/ }),
+
+/***/ "awQQ":
+/*!********************************************************************************!*\
+  !*** ./src/app/section-three/edit-how-it-works/edit-how-it-works.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: EditHowItWorksComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditHowItWorksComponent", function() { return EditHowItWorksComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_edit_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./edit-how-it-works.component.html */ "fl6C");
+/* harmony import */ var _edit_how_it_works_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-how-it-works.component.css */ "1sIi");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../environments/environment.prod */ "cxbk");
+
+
+
+
+
+
+
+
+
+var EditHowItWorksComponent = /** @class */ (function () {
+    function EditHowItWorksComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.workData = {
+            heading: "",
+            description: "",
+            image: "",
+        };
+    }
+    EditHowItWorksComponent.prototype.ngOnInit = function () {
+        this.imgUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].how_it_img + 'how_its_works_images/';
+        // this.imgUrl = environment.engag_img + 'engaging_and_efficient_images/'
+        console.log('iddddd', this.route.snapshot.params.id);
+        this.getHowById(this.route.snapshot.params.id);
+    };
+    EditHowItWorksComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.workData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    EditHowItWorksComponent.prototype.getHowById = function (id) {
+        var _this = this;
+        var obj = {
+            id: id
+        };
+        this.service.getHowItsWorksById(obj).subscribe(function (data) {
+            console.log(" edit data**", data);
+            _this.workData.heading = data.data.heading;
+            _this.workData.description = data.data.description;
+            _this.workData.image = data.data.image;
+            _this.testi_image = data.data.image;
+            // this.bannerData.description = data.data.description;
+        })
+            , function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    console.log('Internet Connection Error');
+                }
+            };
+    };
+    EditHowItWorksComponent.prototype.update = function () {
+        var _this = this;
+        console.log('id***', this.route.snapshot.params.id);
+        console.log('heading/', this.workData.heading);
+        console.log('description', this.workData.description);
+        console.log('image', this.workData.image);
+        // console.log(this.bannerData.description);
+        var formData = new FormData();
+        formData.append('id', this.route.snapshot.params.id);
+        formData.append("image", this.workData.image);
+        formData.append("heading", this.workData.heading);
+        formData.append("description", this.workData.description);
+        this.service.updateHowItsWorks(formData).subscribe(function (data) {
+            console.log(" Successfully Updated!//////", data);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            _this.router.navigate(['/section_3']);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
+    EditHowItWorksComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    EditHowItWorksComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-edit-how-it-works',
+            template: _raw_loader_edit_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_edit_how_it_works_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], EditHowItWorksComponent);
+    return EditHowItWorksComponent;
 }());
 
 
@@ -2686,6 +4919,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "c4Oj":
+/*!*************************************************************************************!*\
+  !*** ./src/app/section-three/create-how-it-works/create-how-it-works.component.css ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNyZWF0ZS1ob3ctaXQtd29ya3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHdCQUF3QjtJQUN4QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixjQUFjO0FBQ2xCO0FBQ0E7UUFDUSxlQUFlO0lBQ25CO0FBRUE7UUFDSSxXQUFXO0lBQ2Y7QUFDQTtRQUNJLFlBQVk7UUFDWixhQUFhO1FBQ2IsbUJBQW1CO1FBQ25CLHFCQUFxQjtJQUN6QjtBQUNBO1FBQ0ksa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixZQUFZO1FBQ1osV0FBVztRQUNYLFlBQVk7UUFDWixtQkFBbUI7UUFDbkIsZ0JBQWdCO1FBQ2hCLG1CQUFtQjtJQUN2QjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsV0FBVztRQUNYLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixVQUFVO1FBQ1YsZUFBZTtRQUNmLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osb0JBQW9CO1FBQ3BCLGlCQUFpQjtJQUNyQjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixTQUFTO1FBQ1QsVUFBVTtRQUNWLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtJQUNuQiIsImZpbGUiOiJjcmVhdGUtaG93LWl0LXdvcmtzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAxNTBweDtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9Il19 */");
+
+/***/ }),
+
 /***/ "cJgW":
 /*!*****************************************************!*\
   !*** ./src/app/parent-faq/parent-faq.component.css ***!
@@ -2708,7 +4954,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("h5.title{\n    font-size: 16px;\n}\n.mat-form-field{\n   \n    /* font-size: 18px; */\n    border-bottom: 1px;\n}\ntable {\n    width: 100%;\n  }\nsection {\n    display: table;\n  }\n.example-label {\n    display: table-cell;\n    font-size: 14px;\n    margin-left: 8px;\n    min-width: 120px;\n  }\n.example-button-row {\n    display: table-cell;\n    width: 490px;\n  }\n.example-button-row .mat-button-base {\n    margin: 8px 8px 8px 0;\n  }\n.example-flex-container {\n    display: flex;\n    justify-content: space-between;\n    flex-wrap: wrap;\n  }\n.example-button-container {\n    display: flex;\n    justify-content: center;\n    width: 120px;\n  }\n.theme-btn{\n    background-color: #142c69;\n    color: #fff;\n  }\n.hdng{\n    background-color: #6AA524!important;\n    color: #fff;\n    padding-left: 35px;\n    padding-bottom: 52px;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhdGVnb3J5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxlQUFlO0FBQ25CO0FBQ0E7O0lBRUkscUJBQXFCO0lBQ3JCLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksV0FBVztFQUNiO0FBRUE7SUFDRSxjQUFjO0VBQ2hCO0FBRUE7SUFDRSxtQkFBbUI7SUFDbkIsZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixnQkFBZ0I7RUFDbEI7QUFFQTtJQUNFLG1CQUFtQjtJQUNuQixZQUFZO0VBQ2Q7QUFFQTtJQUNFLHFCQUFxQjtFQUN2QjtBQUVBO0lBQ0UsYUFBYTtJQUNiLDhCQUE4QjtJQUM5QixlQUFlO0VBQ2pCO0FBRUE7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLFlBQVk7RUFDZDtBQUNBO0lBQ0UseUJBQXlCO0lBQ3pCLFdBQVc7RUFDYjtBQUNBO0lBQ0UsbUNBQW1DO0lBQ25DLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0JBQW9CO0VBQ3RCIiwiZmlsZSI6ImNhdGVnb3J5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoNS50aXRsZXtcbiAgICBmb250LXNpemU6IDE2cHg7XG59XG4ubWF0LWZvcm0tZmllbGR7XG4gICBcbiAgICAvKiBmb250LXNpemU6IDE4cHg7ICovXG4gICAgYm9yZGVyLWJvdHRvbTogMXB4O1xufVxuXG50YWJsZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gIH1cblxuICBzZWN0aW9uIHtcbiAgICBkaXNwbGF5OiB0YWJsZTtcbiAgfVxuICBcbiAgLmV4YW1wbGUtbGFiZWwge1xuICAgIGRpc3BsYXk6IHRhYmxlLWNlbGw7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIG1hcmdpbi1sZWZ0OiA4cHg7XG4gICAgbWluLXdpZHRoOiAxMjBweDtcbiAgfVxuICBcbiAgLmV4YW1wbGUtYnV0dG9uLXJvdyB7XG4gICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICB3aWR0aDogNDkwcHg7XG4gIH1cbiAgXG4gIC5leGFtcGxlLWJ1dHRvbi1yb3cgLm1hdC1idXR0b24tYmFzZSB7XG4gICAgbWFyZ2luOiA4cHggOHB4IDhweCAwO1xuICB9XG4gIFxuICAuZXhhbXBsZS1mbGV4LWNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICB9XG4gIFxuICAuZXhhbXBsZS1idXR0b24tY29udGFpbmVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHdpZHRoOiAxMjBweDtcbiAgfVxuICAudGhlbWUtYnRue1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMxNDJjNjk7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbiAgLmhkbmd7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZBQTUyNCFpbXBvcnRhbnQ7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgcGFkZGluZy1sZWZ0OiAzNXB4O1xuICAgIHBhZGRpbmctYm90dG9tOiA1MnB4O1xuICB9Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("h5.title{\n    font-size: 16px;\n}\n.mat-form-field{\n   \n    /* font-size: 18px; */\n    border-bottom: 1px;\n}\ntable {\n    width: 100%;\n  }\nsection {\n    display: table;\n  }\n.example-label {\n    display: table-cell;\n    font-size: 14px;\n    margin-left: 8px;\n    min-width: 120px;\n  }\n.example-button-row {\n    display: table-cell;\n    width: 490px;\n  }\n.example-button-row .mat-button-base {\n    margin: 8px 8px 8px 0;\n  }\n.example-flex-container {\n    display: flex;\n    justify-content: space-between;\n    flex-wrap: wrap;\n  }\n.example-button-container {\n    display: flex;\n    justify-content: center;\n    width: 120px;\n  }\n.theme-btn{\n    background-color: #142c69;\n    color: #fff;\n  }\n.hdng{\n    background-color: #6AA524!important;\n    color: #fff;\n    padding-left: 35px;\n    padding-bottom: 52px;\n  }\n.img-fluid{\n    width: 120px;\n    height: 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhdGVnb3J5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxlQUFlO0FBQ25CO0FBQ0E7O0lBRUkscUJBQXFCO0lBQ3JCLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksV0FBVztFQUNiO0FBRUE7SUFDRSxjQUFjO0VBQ2hCO0FBRUE7SUFDRSxtQkFBbUI7SUFDbkIsZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixnQkFBZ0I7RUFDbEI7QUFFQTtJQUNFLG1CQUFtQjtJQUNuQixZQUFZO0VBQ2Q7QUFFQTtJQUNFLHFCQUFxQjtFQUN2QjtBQUVBO0lBQ0UsYUFBYTtJQUNiLDhCQUE4QjtJQUM5QixlQUFlO0VBQ2pCO0FBRUE7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLFlBQVk7RUFDZDtBQUNBO0lBQ0UseUJBQXlCO0lBQ3pCLFdBQVc7RUFDYjtBQUNBO0lBQ0UsbUNBQW1DO0lBQ25DLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0JBQW9CO0VBQ3RCO0FBQUM7SUFDQyxZQUFZO0lBQ1osWUFBWTtBQUNoQiIsImZpbGUiOiJjYXRlZ29yeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDUudGl0bGV7XG4gICAgZm9udC1zaXplOiAxNnB4O1xufVxuLm1hdC1mb3JtLWZpZWxke1xuICAgXG4gICAgLyogZm9udC1zaXplOiAxOHB4OyAqL1xuICAgIGJvcmRlci1ib3R0b206IDFweDtcbn1cblxudGFibGUge1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG5cbiAgc2VjdGlvbiB7XG4gICAgZGlzcGxheTogdGFibGU7XG4gIH1cbiAgXG4gIC5leGFtcGxlLWxhYmVsIHtcbiAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICBtYXJnaW4tbGVmdDogOHB4O1xuICAgIG1pbi13aWR0aDogMTIwcHg7XG4gIH1cbiAgXG4gIC5leGFtcGxlLWJ1dHRvbi1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLWNlbGw7XG4gICAgd2lkdGg6IDQ5MHB4O1xuICB9XG4gIFxuICAuZXhhbXBsZS1idXR0b24tcm93IC5tYXQtYnV0dG9uLWJhc2Uge1xuICAgIG1hcmdpbjogOHB4IDhweCA4cHggMDtcbiAgfVxuICBcbiAgLmV4YW1wbGUtZmxleC1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgfVxuICBcbiAgLmV4YW1wbGUtYnV0dG9uLWNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICB3aWR0aDogMTIwcHg7XG4gIH1cbiAgLnRoZW1lLWJ0bntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTQyYzY5O1xuICAgIGNvbG9yOiAjZmZmO1xuICB9XG4gIC5oZG5ne1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM2QUE1MjQhaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIHBhZGRpbmctbGVmdDogMzVweDtcbiAgICBwYWRkaW5nLWJvdHRvbTogNTJweDtcbiAgfS5pbWctZmx1aWR7XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogODBweDtcbn0iXX0= */");
 
 /***/ }),
 
@@ -2716,7 +4962,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************!*\
   !*** ./src/app/category/category.component.ts ***!
   \************************************************/
-/*! exports provided: CategoryComponent, AddCategoryDialog, EditCategoryDialog, AddSubCategoryDialog */
+/*! exports provided: CategoryComponent, AddCategoryDialog, EditCategoryDialog */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2724,23 +4970,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryComponent", function() { return CategoryComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddCategoryDialog", function() { return AddCategoryDialog; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditCategoryDialog", function() { return EditCategoryDialog; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddSubCategoryDialog", function() { return AddSubCategoryDialog; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _raw_loader_category_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./category.component.html */ "6Cpu");
 /* harmony import */ var _category_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./category.component.css */ "cUD1");
 /* harmony import */ var _raw_loader_add_category_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! raw-loader!./add-category.html */ "zz07");
 /* harmony import */ var _raw_loader_edit_category_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!./edit-category.html */ "YPFg");
-/* harmony import */ var _raw_loader_add_sub_category_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! raw-loader!./add-sub-category.html */ "UA8p");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/paginator */ "M9IT");
-/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/sort */ "Dh3D");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/paginator */ "M9IT");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/sort */ "Dh3D");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../environments/environment.prod */ "cxbk");
 
 
 
@@ -2768,13 +5013,19 @@ var CategoryComponent = /** @class */ (function () {
         this.disabled = false;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         this.responseData = [];
-        this.displayedColumns = ['position', 'category', 'subcategory', 'action'];
+        this.imagePath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_14__["environment"].cateImg;
+        this.displayedColumns = ['position', 'category', 'image', 'subcategory', 'action'];
+        this.currentPage = 10;
+        this.currentIndex = 0;
     }
     CategoryComponent.prototype.ngOnInit = function () {
+        this.currentPage = 10;
+        // console.log("pagesizeee",this.pageSize)
+        this.currentIndex = 0;
         this.reqData = {};
         this.reqData.offset = 0;
         this.reqData.limit = 10;
-        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__["MatTableDataSource"](this.responseData);
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_8__["MatTableDataSource"](this.responseData);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
         this.datamodel = {};
@@ -2787,10 +5038,12 @@ var CategoryComponent = /** @class */ (function () {
         return [10, 20, 30];
     };
     CategoryComponent.prototype.paginationOptionChange = function (evt) {
-        // console.log(evt)
         var _this = this;
+        console.log('*******', evt);
         this.reqData.offset = (evt.pageIndex * evt.pageSize).toString();
         this.reqData.limit = evt.pageSize;
+        this.currentPage = evt.pageSize;
+        this.currentIndex = evt.pageIndex;
         var obj = {
             offset: this.reqData.offset,
             limit: this.reqData.limit
@@ -2815,26 +5068,6 @@ var CategoryComponent = /** @class */ (function () {
                 console.log('Internet Connection Error');
             }
         });
-        // 	if (res) {
-        // 		this.responseData = data.data.rows
-        // 		this.length = data.data.count
-        // 		this.dataSource = new MatTableDataSource(data.data);
-        // 		this.dataSource.sort = this.sort;
-        // 		console.log(this.dataSource)
-        // 		if (this.filterValue) {
-        // 			this.dataSource.filter = this.filterValue
-        // 		}
-        // 	}
-        // }, err => {
-        // 		console.log(err)
-        // 		if (err.status >= 400) {
-        // 			// this.toastr.error('Internal Error', 'Error')
-        // 		} else {
-        // 			// this.toastr.error('Internet Connection Error', 'Error')
-        // 			console.log('Internet Connection Error')
-        // 		}
-        // 	})
-        // }
     };
     CategoryComponent.prototype.getAllCategory = function () {
         var _this = this;
@@ -2898,7 +5131,7 @@ var CategoryComponent = /** @class */ (function () {
     };
     CategoryComponent.prototype.deleteCategory = function (id) {
         var _this = this;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_14___default.a.fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_13___default.a.fire({
             title: 'Are you sure want to remove?',
             text: 'You will not be able to recover this Category!',
             icon: 'warning',
@@ -2909,12 +5142,13 @@ var CategoryComponent = /** @class */ (function () {
             if (result.value) {
                 _this.service.deleteCategory(id).subscribe(function (data) {
                     console.log('deleted data', data);
-                    sweetalert2__WEBPACK_IMPORTED_MODULE_14___default.a.fire('Deleted!', 'This Category has been deleted.', 'success');
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_13___default.a.fire('Deleted!', 'This Category has been deleted.', 'success');
+                    // this.getAllCategory()
                     _this.ngOnInit();
                 });
             }
-            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_14___default.a.DismissReason.cancel) {
-                sweetalert2__WEBPACK_IMPORTED_MODULE_14___default.a.fire('Cancelled', 'This Category is safe :)', 'error');
+            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_13___default.a.DismissReason.cancel) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_13___default.a.fire('Cancelled', 'This Category is safe :)', 'error');
             }
         });
     };
@@ -2927,13 +5161,13 @@ var CategoryComponent = /** @class */ (function () {
         });
         dialogRef.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed');
-            _this.reqData = {};
-            _this.reqData.offset = 0;
-            _this.reqData.limit = 10;
-            _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__["MatTableDataSource"](_this.responseData);
-            _this.dataSource.paginator = _this.paginator;
-            _this.dataSource.sort = _this.sort;
-            _this.datamodel = {};
+            // this.reqData = {}
+            // this.reqData.offset = 0
+            // this.reqData.limit = 10
+            // this.dataSource = new MatTableDataSource(this.responseData);
+            // this.dataSource.paginator = this.paginator;
+            // this.dataSource.sort = this.sort;
+            // this.datamodel = {}
             _this.getAllCategory();
         });
     };
@@ -2946,68 +5180,34 @@ var CategoryComponent = /** @class */ (function () {
         });
         dialogRefEdit.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed');
-            _this.reqData = {};
-            _this.reqData.offset = 0;
-            _this.reqData.limit = 10;
-            _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__["MatTableDataSource"](_this.responseData);
-            _this.dataSource.paginator = _this.paginator;
-            _this.dataSource.sort = _this.sort;
-            _this.datamodel = {};
+            // this.reqData = {}
+            // this.reqData.offset = 0
+            // this.reqData.limit = 10
+            // this.dataSource = new MatTableDataSource(this.responseData);
+            // this.dataSource.paginator = this.paginator;
+            // this.dataSource.sort = this.sort;
+            // this.datamodel = {}
             _this.getAllCategory();
         });
     };
-    CategoryComponent.prototype.openSubCategoryDialog = function () {
-        var _this = this;
-        var dialogRef = this.dialog.open(AddSubCategoryDialog, {
-            height: '500px',
-            width: '800px',
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('The dialog was closed');
-            _this.reqData = {};
-            _this.reqData.offset = 0;
-            _this.reqData.limit = 10;
-            _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_9__["MatTableDataSource"](_this.responseData);
-            _this.dataSource.paginator = _this.paginator;
-            _this.dataSource.sort = _this.sort;
-            _this.datamodel = {};
-            // this.service.getBookByCategoryId(this.addCategory.category).subscribe(data => {
-            // 	console.log(data);
-            // 	if(data){
-            // 		  this.length = data.data.count;
-            // 		  this.dataSource = data.data;
-            // 		console.log(this.dataSource);
-            // 		//this.dataSource = new MatTableDataSource(this.responseData);
-            // 	  }
-            //   },err => {
-            // 		console.log(err);
-            // 		if(err.status >= 400){
-            // 			  console.log('Invalid Credential!!!');
-            // 		}else{
-            // 			  console.log('Internet Connection Error');
-            // 		}
-            // 	});
-            //this.getAllCategory(this.reqData.limit, this.reqData.offset)
-        });
-    };
     CategoryComponent.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"] }
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialog"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"] }
     ]; };
     CategoryComponent.propDecorators = {
-        paginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["ViewChild"], args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_7__["MatPaginator"],] }],
-        sort: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["ViewChild"], args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_8__["MatSort"],] }]
+        paginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_5__["ViewChild"], args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_6__["MatPaginator"],] }],
+        sort: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_5__["ViewChild"], args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_7__["MatSort"],] }]
     };
     CategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
             selector: 'app-category',
             template: _raw_loader_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_category_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialog"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]])
     ], CategoryComponent);
     return CategoryComponent;
 }());
@@ -3022,8 +5222,8 @@ var AddCategoryDialog = /** @class */ (function () {
         this.addCategory = {
             category: "",
         };
-        this.bookCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormGroup"]({
-            bookCategory: new _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required]),
+        this.bookCategoryForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormGroup"]({
+            bookCategory: new _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["Validators"].required]),
         });
     }
     AddCategoryDialog.prototype.onNoClick = function () {
@@ -3040,7 +5240,7 @@ var AddCategoryDialog = /** @class */ (function () {
         // formData.append('description', this.addCategory.description);
         this.service.addCategory(formData).subscribe(function (res) {
             console.log("Data Successfully Inserted!", res);
-            sweetalert2__WEBPACK_IMPORTED_MODULE_14___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            sweetalert2__WEBPACK_IMPORTED_MODULE_13___default.a.fire('Success..!', 'Successfully Created!', 'success');
             _this.dialogRef.close();
         }, function (err) {
             if (err.status >= 400) {
@@ -3055,18 +5255,18 @@ var AddCategoryDialog = /** @class */ (function () {
         this.dialogRef.close();
     };
     AddCategoryDialog.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"] },
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogRef"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"] }
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormBuilder"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialogRef"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"] }
     ]; };
     AddCategoryDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
             selector: 'add-category-dialog',
             template: _raw_loader_add_category_html__WEBPACK_IMPORTED_MODULE_3__["default"],
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogRef"], _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"], _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormBuilder"],
+            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialogRef"], _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__["AdminService"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]])
     ], AddCategoryDialog);
     return AddCategoryDialog;
 }());
@@ -3104,7 +5304,7 @@ var EditCategoryDialog = /** @class */ (function () {
         formData.append('category_id', this.dialogRef.id);
         this.service.updateCategory(formData).subscribe(function (data) {
             console.log("Data Successfully Updated!", data);
-            sweetalert2__WEBPACK_IMPORTED_MODULE_14___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            sweetalert2__WEBPACK_IMPORTED_MODULE_13___default.a.fire('Success..!', 'Successfully Updated!', 'success');
             // this.router.navigate(['/category']);
             _this.dialogRef.close();
         }, function (err) {
@@ -3120,103 +5320,25 @@ var EditCategoryDialog = /** @class */ (function () {
         this.dialogRef.close();
     };
     EditCategoryDialog.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogRef"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_13__["Router"] }
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialogRef"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["Router"] }
     ]; };
     EditCategoryDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
             selector: 'edit-category-dialog',
             template: _raw_loader_edit_category_html__WEBPACK_IMPORTED_MODULE_4__["default"],
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogRef"],
-            _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_13__["Router"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialogRef"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_11__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_12__["Router"]])
     ], EditCategoryDialog);
     return EditCategoryDialog;
 }());
 
 //Add Sub-category
-var AddSubCategoryDialog = /** @class */ (function () {
-    function AddSubCategoryDialog(fb, dialogRef, service, route) {
-        this.fb = fb;
-        this.dialogRef = dialogRef;
-        this.service = service;
-        this.route = route;
-        this.addBook = {
-            bookCategory: "",
-            frame: ""
-        };
-        this.bookCategoryList = [];
-        this.bookForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormGroup"]({
-            category: new _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required]),
-            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required])
-        });
-    }
-    AddSubCategoryDialog.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    AddSubCategoryDialog.prototype.ngOnInit = function () {
-        // this.service.allCategory(limit).subscribe(res => {
-        // 	console.log('*****getSubCategoryData******',res.data);
-        // let tableData
-        // 	if(res){
-        // 	  // this.length = res.data.count;
-        // 	  this.dataSource = res.data;
-        // 	  // this.responseData=new MatTableDataSource(res.data);
-        // 	  console.log('dataSource',this.dataSource);
-        // 	}
-        //   },err => {
-        // 	console.log(err);
-        // 	if(err.status >= 400){
-        // 		console.log('Invalid Credential!!!');
-        // 	}else{
-        // 		console.log('Internet Connection Error');
-        // 	}
-        //   })
-        // }
-        // this.service.getAllBookCategory().subscribe(data => {
-        //   console.log(data);
-        //   this.bookCategoryList = data.data
-        //   console.log("Data Array : ", this.bookCategoryList);
-        // })
-    };
-    AddSubCategoryDialog.prototype.createBook = function () {
-        //alert(this.dialogRef.id);
-        console.log("Book : ", this.addBook.bookCategory, " ", this.addBook.frame);
-        var formData = new FormData();
-        formData.append('book_category_id', this.addBook.bookCategory);
-        formData.append('book_link', this.addBook.frame);
-        // this.service.addBook(formData).subscribe(data => {
-        //   console.log("Data Successfully Inserted!",data);
-        //   Swal.fire('Success..!', 'Successfully Created!', 'success')
-        // },err => {
-        //   if(err.status >= 400){
-        // 	console.log('Invalid Credential!!!');
-        //   }else{
-        // 	console.log('Internet Connection Error');
-        //   }
-        // })
-    };
-    AddSubCategoryDialog.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"] },
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogRef"] },
-        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"] }
-    ]; };
-    AddSubCategoryDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["Component"])({
-            selector: 'add-sub-category-dialog',
-            template: _raw_loader_add_sub_category_html__WEBPACK_IMPORTED_MODULE_5__["default"],
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogRef"], _shared_admin_service__WEBPACK_IMPORTED_MODULE_12__["AdminService"], _angular_router__WEBPACK_IMPORTED_MODULE_13__["ActivatedRoute"]])
-    ], AddSubCategoryDialog);
-    return AddSubCategoryDialog;
-}());
-
 
 
 /***/ }),
@@ -3271,7 +5393,18 @@ var environment = {
     // endPoint: "https://developers.promaticstechnologies.com:3003/",
     // endPoint_localhost: "http://localhost:3002/",
     endPoint: "https://production.promaticstechnologies.com:3009/",
-    home_image: ""
+    home_image: "https://production.promaticstechnologies.com/bridgegap_apis/public/home_banner_images/",
+    testimonials_img: "https://production.promaticstechnologies.com/bridgegap_apis/public/",
+    banner_img: "https://production.promaticstechnologies.com/bridgegap_apis/public/",
+    category_images: "https://production.promaticstechnologies.com/bridgegap_apis/public/",
+    cateImg: "https://production.promaticstechnologies.com/bridgegap_apis/public/category_images/",
+    subCatImg: "https://production.promaticstechnologies.com/bridgegap_apis/public/sub_category_images/",
+    subCategory_images: "https://production.promaticstechnologies.com/bridgegap_apis/public/",
+    engaging_image: "https://production.promaticstechnologies.com/bridgegap_apis/public/engaging_and_efficient_images/",
+    engag_img: "https://production.promaticstechnologies.com/bridgegap_apis/public/",
+    how_it_works_img: "https://production.promaticstechnologies.com/bridgegap_apis/public/how_its_works_images/",
+    how_it_img: "https://production.promaticstechnologies.com/bridgegap_apis/public/",
+    application_image: "https://production.promaticstechnologies.com/bridgegap_apis/public/teacher_videos/"
 };
 
 
@@ -3295,6 +5428,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
 /* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -3303,7 +5438,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+// import { log } from 'console';
 var TestimonialsComponent = /** @class */ (function () {
+    //   ,'image'
     function TestimonialsComponent(dialog, service, route) {
         this.dialog = dialog;
         this.service = service;
@@ -3314,7 +5452,7 @@ var TestimonialsComponent = /** @class */ (function () {
         this.disabled = false;
         this.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         this.responseData = [];
-        this.displayedColumns = ['position', 'author_name', 'designation', 'description', 'image', 'action'];
+        this.displayedColumns = ['position', 'author_name', 'designation', 'description', 'action'];
     }
     TestimonialsComponent.prototype.ngOnInit = function () {
         this.reqData = {};
@@ -3325,12 +5463,83 @@ var TestimonialsComponent = /** @class */ (function () {
         this.allTestimonial();
     };
     TestimonialsComponent.prototype.allTestimonial = function () {
+        var _this = this;
         var list = {
             offset: this.reqData.offset,
             limit: this.reqData.limit
         };
-        this.service.getallStudent(list).subscribe(function (res) {
+        this.service.allTestimonial(list).subscribe(function (res) {
             console.log('testimonial data', res);
+            if (res) {
+                _this.length = res.data.count;
+                _this.dataSource = res.data.rows;
+                console.log("datasource", _this.dataSource);
+            }
+        }, function (err) {
+            console.log(err);
+            if (err.status >= 400) {
+                console.log('Invalid Credential!!!');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+    };
+    TestimonialsComponent.prototype.applyFilter = function (filterValue) {
+        var _this = this;
+        // this.dataSource.filter = filterValue.trim().toLowerCase();
+        // this.filterValue = filterValue.trim().toLowerCase();
+        var obj = {
+            search: filterValue
+        };
+        if (obj.search) {
+            this.service.testimonialFilter(obj).subscribe(function (res) {
+                console.log('filterResponse', res);
+                if (res) {
+                    _this.dataSource = res.data;
+                    // this.dataSource = new MatTableDataSource(data.data);
+                    // this.length = res.data.count
+                    // this.dataSource.sort = this.sort;
+                    // this.dataSource.paginator = this.paginator;
+                    // this.tableData = data.data;
+                    // this.backUpTableData = data.data;
+                }
+            }, function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    // this.toastr.error('Internal Error', 'Error')
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    // this.toastr.error('Internet Connection Error', 'Error')
+                    console.log('Internet Connection Error');
+                }
+            });
+        }
+        else {
+            this.ngOnInit();
+        }
+    };
+    TestimonialsComponent.prototype.deleteTestimonials = function (id) {
+        var _this = this;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
+            title: 'Are you sure want to remove?',
+            text: 'You will not be able to recover this Testimonial!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, keep it'
+        }).then(function (result) {
+            if (result.value) {
+                _this.service.deleteTestimonials(id).subscribe(function (data) {
+                    console.log(data);
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Deleted!', 'This Testimonial has been deleted.', 'success');
+                    _this.ngOnInit();
+                });
+            }
+            else if (result.dismiss === sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.DismissReason.cancel) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Cancelled', 'This Testimonial is safe :)', 'error');
+            }
         });
     };
     TestimonialsComponent.ctorParameters = function () { return [
@@ -3364,20 +5573,177 @@ var TestimonialsComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOME PAGE THIRD SECTION</h2>\n </div>\n <div class=\"main-content\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          \n          <div class=\"card-body\">\n            <div class=\"text-right\" style=\"padding-right: 65px;\" >\n              <button mat-button class=\"theme-btn\" (click)=\"openEditDialog()\">Edit</button>\n            </div>\n       \n            <div class=\"card-body\">\n              <div class=\"table-responsive\">\n                  <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                      <!-- Position -->\n                     \n                      <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Image\n                          </th>\n                          <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n  \n                      </ng-container>   \n  \n                      <ng-container matColumnDef=\"step\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Steps\n                          </th>\n                          <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n  \n                      </ng-container>      \n                      \n                        \n                      <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef > Action </th>\n                          <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                              <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                  <mat-icon >edit</mat-icon>\n                              </button>\n                              <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                  <mat-icon >delete</mat-icon>\n                              </button> -->\n                          \n                        </td>\n                         \n                      </ng-container>\n  \n                      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                  </table>\n                  <div>\n                      <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                          (page)=\"paginationOptionChange($event)\">\n                      </mat-paginator> -->\n                  </div>\n              </div>\n          </div> \n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOW IT WORKS MANAGEMENT</h2>\n </div>\n <div class=\"main-content\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          \n          <div class=\"card-body\">\n            <!-- <div class=\"text-right\" style=\"padding-right: 65px;\" >\n              <button mat-button class=\"theme-btn\" routerLink=\"/create_\">Add</button>\n            </div> -->\n            <mat-form-field>\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n            </mat-form-field>\n       \n            <div class=\"card-body\">\n              <div class=\"table-responsive\">\n                  <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                      <!-- Position -->\n                        \n                      <ng-container matColumnDef=\"position\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >S.No\n                        </th>\n                        <td mat-cell *matCellDef=\"let element let i=index\"> {{i+1}} </td>\n\n                    </ng-container>   \n\n                      <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Image\n                          </th>\n                          <td mat-cell *matCellDef=\"let element \"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n  \n                      </ng-container>   \n  \n                      <ng-container matColumnDef=\"heading\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Heading\n                          </th>\n                          <td mat-cell *matCellDef=\"let element\"> {{element.heading}} </td>\n  \n                      </ng-container>      \n                      \n                      <ng-container matColumnDef=\"description\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Description\n                        </th>\n                        <td class=\"ellipsis\" mat-cell *matCellDef=\"let element\"> {{element.description}} </td>\n\n                    </ng-container>  \n                        \n                      <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef > Action </th>\n                          <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                              <button  mat-icon-button routerLink=\"/edit_/{{element.id}}\">\n                                  <mat-icon >edit</mat-icon>\n                              </button>\n                              <button  mat-icon-button (click)=\"delete(element.id)\">\n                                  <mat-icon >delete</mat-icon>\n                              </button>\n                          \n                        </td>\n                         \n                      </ng-container>\n  \n                      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                  </table>\n                  <div>\n                      <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                          (page)=\"paginationOptionChange($event)\">\n                      </mat-paginator>\n                  </div>\n              </div>\n          </div> \n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>");
 
 /***/ }),
 
-/***/ "hPg0":
-/*!*********************************************************!*\
-  !*** ./src/app/add-category/add-category.component.css ***!
-  \*********************************************************/
+/***/ "f931":
+/*!********************************************************************!*\
+  !*** ./src/app/category/edit-category/edit-category.component.css ***!
+  \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("h5.title{\r\n    font-size: 16px;\r\n}\r\n.mat-form-field{\r\n    width: 100%;\r\n    font-size: 18px;\r\n    border-bottom: 1px;\r\n}\r\ntable {\r\n    width: 100%;\r\n  }\r\nsection {\r\n    display: table;\r\n  }\r\n.example-label {\r\n    display: table-cell;\r\n    font-size: 14px;\r\n    margin-left: 8px;\r\n    min-width: 120px;\r\n  }\r\n.example-button-row {\r\n    display: table-cell;\r\n    width: 490px;\r\n  }\r\n.example-button-row .mat-button-base {\r\n    margin: 8px 8px 8px 0;\r\n  }\r\n.example-flex-container {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex-wrap: wrap;\r\n  }\r\n.example-button-container {\r\n    display: flex;\r\n    justify-content: center;\r\n    width: 120px;\r\n  }\r\n.theme-btn{\r\n    background-color: #142c69;\r\n    color: #fff;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC1jYXRlZ29yeS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjtBQUNBO0lBQ0ksV0FBVztJQUNYLGVBQWU7SUFDZixrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLFdBQVc7RUFDYjtBQUVBO0lBQ0UsY0FBYztFQUNoQjtBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0VBQ2xCO0FBRUE7SUFDRSxtQkFBbUI7SUFDbkIsWUFBWTtFQUNkO0FBRUE7SUFDRSxxQkFBcUI7RUFDdkI7QUFFQTtJQUNFLGFBQWE7SUFDYiw4QkFBOEI7SUFDOUIsZUFBZTtFQUNqQjtBQUVBO0lBQ0UsYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixZQUFZO0VBQ2Q7QUFDQTtJQUNFLHlCQUF5QjtJQUN6QixXQUFXO0VBQ2IiLCJmaWxlIjoiYWRkLWNhdGVnb3J5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoNS50aXRsZXtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxufVxyXG4ubWF0LWZvcm0tZmllbGR7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGZvbnQtc2l6ZTogMThweDtcclxuICAgIGJvcmRlci1ib3R0b206IDFweDtcclxufVxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcblxyXG4gIHNlY3Rpb24ge1xyXG4gICAgZGlzcGxheTogdGFibGU7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWxhYmVsIHtcclxuICAgIGRpc3BsYXk6IHRhYmxlLWNlbGw7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICBtYXJnaW4tbGVmdDogOHB4O1xyXG4gICAgbWluLXdpZHRoOiAxMjBweDtcclxuICB9XHJcbiAgXHJcbiAgLmV4YW1wbGUtYnV0dG9uLXJvdyB7XHJcbiAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xyXG4gICAgd2lkdGg6IDQ5MHB4O1xyXG4gIH1cclxuICBcclxuICAuZXhhbXBsZS1idXR0b24tcm93IC5tYXQtYnV0dG9uLWJhc2Uge1xyXG4gICAgbWFyZ2luOiA4cHggOHB4IDhweCAwO1xyXG4gIH1cclxuICBcclxuICAuZXhhbXBsZS1mbGV4LWNvbnRhaW5lciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG4gIH1cclxuICBcclxuICAuZXhhbXBsZS1idXR0b24tY29udGFpbmVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIHdpZHRoOiAxMjBweDtcclxuICB9XHJcbiAgLnRoZW1lLWJ0bntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxNDJjNjk7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxuICB9Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("/* .card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\n\n    mat-form-field{\n        width: 100%;\n    }\n    span.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n    .inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n    .inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n    .inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n    .mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n    .inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n    .ft{\n        font-size: 16px;\n    } */\n\n\n\n    .card .card-header .card-title {\n        margin-top:0px!important;\n        color: #fff;\n    }\n\n\n\n    .btn-success {\n        background-color: #6aa524;\n        color: #FFFFFF;\n    }\n\n\n\n    .ft{\n            font-size: 16px;\n        }\n\n\n\n    mat-form-field{\n            width: 100%;\n        }\n\n\n\n    span.mat_imag {\n            width: 200px;\n            height: 200px;\n            background: #fafafa;\n            display: block;\n            margin: 0 auto;\n        }\n\n\n\n    .inpt_icon {\n            position: absolute;\n            top: -12px;\n            right: -13px;\n            width: 40px;\n            height: 40px;\n            border-radius: 100%;\n            overflow: hidden;\n            background: #6aa524;\n        }\n\n\n\n    .inpt_icon .fa {\n            color: #fff;\n            position: absolute;\n            top: 9px;\n            right: 12px;\n            font-size: 17px;\n            z-index: 0;\n            cursor: pointer;\n        }\n\n\n\n    .inpt_icon input {\n            width: 100%;\n            height: 100%;\n            opacity: 0;\n            cursor: pointer;\n            position: relative;\n            z-index: 2;\n        }\n\n\n\n    .mat_imag img {\n            width: 100%;\n            height: 100%;\n            -o-object-fit: cover;\n            object-fit: cover;\n        }\n\n\n\n    .inpt_icon .fa-edit{\n            color: #fff;\n            position: absolute;\n            top: 10px;\n            right: 9px;\n            font-size: 17px;\n            z-index: 0;\n            cursor: pointer;\n        }\n\n\n\n    .ft{\n            font-size: 16px;\n        }\n        \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXQtY2F0ZWdvcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7T0FpRU87Ozs7SUFJSDtRQUNJLHdCQUF3QjtRQUN4QixXQUFXO0lBQ2Y7Ozs7SUFDQTtRQUNJLHlCQUF5QjtRQUN6QixjQUFjO0lBQ2xCOzs7O0lBQ0E7WUFDUSxlQUFlO1FBQ25COzs7O0lBRUE7WUFDSSxXQUFXO1FBQ2Y7Ozs7SUFDQTtZQUNJLFlBQVk7WUFDWixhQUFhO1lBQ2IsbUJBQW1CO1lBQ25CLGNBQWM7WUFDZCxjQUFjO1FBQ2xCOzs7O0lBQ0E7WUFDSSxrQkFBa0I7WUFDbEIsVUFBVTtZQUNWLFlBQVk7WUFDWixXQUFXO1lBQ1gsWUFBWTtZQUNaLG1CQUFtQjtZQUNuQixnQkFBZ0I7WUFDaEIsbUJBQW1CO1FBQ3ZCOzs7O0lBQ0E7WUFDSSxXQUFXO1lBQ1gsa0JBQWtCO1lBQ2xCLFFBQVE7WUFDUixXQUFXO1lBQ1gsZUFBZTtZQUNmLFVBQVU7WUFDVixlQUFlO1FBQ25COzs7O0lBQ0E7WUFDSSxXQUFXO1lBQ1gsWUFBWTtZQUNaLFVBQVU7WUFDVixlQUFlO1lBQ2Ysa0JBQWtCO1lBQ2xCLFVBQVU7UUFDZDs7OztJQUNBO1lBQ0ksV0FBVztZQUNYLFlBQVk7WUFDWixvQkFBb0I7WUFDcEIsaUJBQWlCO1FBQ3JCOzs7O0lBQ0E7WUFDSSxXQUFXO1lBQ1gsa0JBQWtCO1lBQ2xCLFNBQVM7WUFDVCxVQUFVO1lBQ1YsZUFBZTtZQUNmLFVBQVU7WUFDVixlQUFlO1FBQ25COzs7O0lBQ0E7WUFDSSxlQUFlO1FBQ25CIiwiZmlsZSI6ImVkaXQtY2F0ZWdvcnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIC5jYXJkIC5jYXJkLWhlYWRlciAuY2FyZC10aXRsZSB7XG4gICAgbWFyZ2luLXRvcDowcHghaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufVxuLmJ0bi1zdWNjZXNzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xufVxuLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgbWF0LWZvcm0tZmllbGR7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgICBzcGFuLm1hdF9pbWFnIHtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuICAgIC5pbnB0X2ljb24ge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLTEycHg7XG4gICAgICAgIHJpZ2h0OiAtMTNweDtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgYmFja2dyb3VuZDogIzZhYTUyNDtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgcmlnaHQ6IDEycHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IDI7XG4gICAgfVxuICAgIC5tYXRfaW1hZyBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAtby1vYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhLWVkaXR7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH0gKi9cblxuXG5cbiAgICAuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgICAgICBtYXJnaW4tdG9wOjBweCFpbXBvcnRhbnQ7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cbiAgICAuYnRuLXN1Y2Nlc3Mge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgICAgICBjb2xvcjogI0ZGRkZGRjtcbiAgICB9XG4gICAgLmZ0e1xuICAgICAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICB9XG4gICAgXG4gICAgICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIH1cbiAgICAgICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgICAgICB3aWR0aDogMjAwcHg7XG4gICAgICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgICAgIH1cbiAgICAgICAgLmlucHRfaWNvbiB7XG4gICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICAgICAgcmlnaHQ6IC0xM3B4O1xuICAgICAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgICAgIH1cbiAgICAgICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgfVxuICAgICAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICAgIHotaW5kZXg6IDI7XG4gICAgICAgIH1cbiAgICAgICAgLm1hdF9pbWFnIGltZyB7XG4gICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgICAgIC1vLW9iamVjdC1maXQ6IGNvdmVyO1xuICAgICAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIH1cbiAgICAgICAgLmlucHRfaWNvbiAuZmEtZWRpdHtcbiAgICAgICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgdG9wOiAxMHB4O1xuICAgICAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIH1cbiAgICAgICAgLmZ0e1xuICAgICAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICB9XG4gICAgICAgICJdfQ== */");
+
+/***/ }),
+
+/***/ "fl6C":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/section-three/edit-how-it-works/edit-how-it-works.component.html ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n    EDIT HOW IT WORKS</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form>\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n\n                        <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                            <mat-form-field class=\"example-full-width text-center\">\n                                <label>Upload Image</label>\n                                <input matInput readonly />\n                                <span class=\"mat_imag position-relative\">\n                                    <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                        src=\"assets/img/img-place.jpg\" />\n                                    \n                                    <img *ngIf=\"image\" class=\"img-responsive\"\n                                        [src]=\"image\" />\n                                    <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                    <span class=\"inpt_icon\">\n                                        <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                            (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                        <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                        <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                    </span>\n                                </span>\n                            </mat-form-field>\n                           \n                        </div> \n\n\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Heading\" [(ngModel)]=\"workData.heading\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n            \n                                <!-- Designation -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Description\" [(ngModel)]=\"workData.description\"\n                                        [ngModelOptions]=\"{standalone: true}\">\n                                    </mat-form-field>\n                                </div>\n                                \n                                <!-- Image -->\n                                <!-- <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <label>Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div>                   -->\n                            </div>\n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"update()\">Update</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/section_3\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+/***/ }),
+
+/***/ "hERL":
+/*!*************************************************************************!*\
+  !*** ./src/app/section-second/edit-engaging/edit-engaging.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: EditEngagingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditEngagingComponent", function() { return EditEngagingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_edit_engaging_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./edit-engaging.component.html */ "AAYs");
+/* harmony import */ var _edit_engaging_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-engaging.component.css */ "aHhy");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../environments/environment.prod */ "cxbk");
+
+
+
+
+
+
+
+
+
+var EditEngagingComponent = /** @class */ (function () {
+    function EditEngagingComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.engagingData = {
+            heading: "",
+            description: "",
+            image: "",
+        };
+    }
+    EditEngagingComponent.prototype.ngOnInit = function () {
+        this.imgUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].engag_img + 'engaging_and_efficient_images/';
+        console.log('iddddd', this.route.snapshot.params.id);
+        this.getEngagingById(this.route.snapshot.params.id);
+    };
+    EditEngagingComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.engagingData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    EditEngagingComponent.prototype.getEngagingById = function (id) {
+        var _this = this;
+        // console.log(this.bannerData);
+        var obj = {
+            id: id
+        };
+        this.service.getEngagingAndEfficientsById(obj).subscribe(function (data) {
+            console.log(" edit data**", data);
+            _this.engagingData.heading = data.data.heading;
+            _this.engagingData.description = data.data.description;
+            _this.engagingData.image = data.data.image;
+            _this.testi_image = data.data.image;
+            // this.bannerData.description = data.data.description;
+        })
+            , function (err) {
+                console.log(err);
+                if (err.status >= 400) {
+                    console.log('Invalid Credential!!!');
+                }
+                else {
+                    console.log('Internet Connection Error');
+                }
+            };
+    };
+    EditEngagingComponent.prototype.update = function () {
+        var _this = this;
+        console.log('id***', this.route.snapshot.params.id);
+        console.log('heading/', this.engagingData.heading);
+        console.log('description', this.engagingData.description);
+        console.log('image', this.engagingData.image);
+        // console.log(this.bannerData.description);
+        var formData = new FormData();
+        formData.append('id', this.route.snapshot.params.id);
+        formData.append("image", this.engagingData.image);
+        formData.append("heading", this.engagingData.heading);
+        formData.append("description", this.engagingData.description);
+        this.service.updateEngagingAndEfficients(formData).subscribe(function (data) {
+            console.log(" Successfully Updated!//////", data);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            _this.router.navigate(['/section_2']);
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
+    EditEngagingComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    EditEngagingComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-edit-engaging',
+            template: _raw_loader_edit_engaging_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_edit_engaging_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], EditEngagingComponent);
+    return EditEngagingComponent;
+}());
+
+
 
 /***/ }),
 
@@ -3536,6 +5902,255 @@ var MaterialModule = /** @class */ (function () {
         })
     ], MaterialModule);
     return MaterialModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "hr2U":
+/*!*****************************************************************************************************!*\
+  !*** ./src/app/teacher-applications/view-teacher-application/view-teacher-application.component.ts ***!
+  \*****************************************************************************************************/
+/*! exports provided: ViewTeacherApplicationComponent, RejectApplicationDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewTeacherApplicationComponent", function() { return ViewTeacherApplicationComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RejectApplicationDialog", function() { return RejectApplicationDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_view_teacher_application_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./view-teacher-application.component.html */ "zwek");
+/* harmony import */ var _view_teacher_application_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-teacher-application.component.css */ "ZMr7");
+/* harmony import */ var _raw_loader_reject_application_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! raw-loader!./reject-application.html */ "CItg");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../environments/environment.prod */ "cxbk");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+
+
+
+
+
+
+
+
+
+
+
+
+var ViewTeacherApplicationComponent = /** @class */ (function () {
+    function ViewTeacherApplicationComponent(dialog, fb, service, route, router, sanitizer) {
+        this.dialog = dialog;
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.sanitizer = sanitizer;
+        this.videoPath = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_9__["environment"].application_image;
+        this.applicationData = {
+            name: "",
+            email: "",
+            phone: "",
+            country: "",
+            state: "",
+            city: "",
+            nationality: "",
+            address: "",
+            experiance: "",
+            benefits: "",
+            teach: "",
+            benefitsOfClass: "",
+            whatWillYouTeach: "",
+            link: "",
+            status: ""
+        };
+        this.createForm();
+    }
+    ViewTeacherApplicationComponent.prototype.createForm = function () {
+        this.applicationForm = this.fb.group({
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: 'dsfddf', disabled: true }),
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            country: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            state: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            city: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            experiance: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            teach: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            benefitsOfClass: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            link: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            whatWillYouTeach: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+            status: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]({ value: '', disabled: true }),
+        });
+    };
+    ViewTeacherApplicationComponent.prototype.ngOnInit = function () {
+        this.reqData = {};
+        this.reqData.offset = 0;
+        this.reqData.limit = 30;
+        this.getTeacherList();
+        this.StudentId = this.route.snapshot.params.id;
+    };
+    ViewTeacherApplicationComponent.prototype.getTeacherList = function () {
+        var _this = this;
+        var list = {
+            offset: this.reqData.offset,
+            limit: this.reqData.limit
+        };
+        this.service.showTeacherApplication(list).subscribe(function (res) {
+            console.log('*****getStudentData******', res.data);
+            var response = res.data.rows;
+            if (response) {
+                response.forEach(function (element) {
+                    var matchId = element.id;
+                    if (matchId == _this.StudentId) {
+                        _this.applicationData.name = element.teacher_name;
+                        _this.applicationData.email = element.email_id;
+                        _this.applicationData.phone = element.mobile_number;
+                        _this.applicationData.country = element.country_data.name;
+                        _this.applicationData.state = element.state_data.name;
+                        _this.applicationData.city = element.city_data.name;
+                        _this.applicationData.nationality = element.nationality;
+                        _this.applicationData.address = element.address;
+                        _this.applicationData.experiance = element.teacher_experience;
+                        _this.applicationData.benefits = element.learner_benefits_of_class;
+                        _this.applicationData.teach = element.how_will_you_teach;
+                        _this.applicationData.benefitsOfClass = element.learner_benefits_of_class;
+                        _this.applicationData.whatWillYouTeach = element.what_will_you_teach;
+                        _this.applicationData.link = element.websites_link;
+                        _this.applicationData.status = element.application_status;
+                        var videoUrl = _this.videoPath + element.video;
+                        console.log(videoUrl);
+                        _this.video = _this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
+                        // this.video=element.video;
+                    }
+                });
+            }
+        });
+    };
+    ViewTeacherApplicationComponent.prototype.onStatus = function (status) {
+        var _this = this;
+        console.log("status", status);
+        var obj = {
+            id: this.StudentId,
+            status: status,
+        };
+        console.log("status", obj);
+        this.service.applicationApproved(obj).subscribe(function (res) {
+            // console.log("res*****",res)
+            sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Success..!', 'Successfully Accepted!', 'success');
+            _this.router.navigate(['/teacherApplication']);
+        });
+    };
+    ViewTeacherApplicationComponent.prototype.rejectApplication = function () {
+        var dialogRefEdit = this.dialog.open(RejectApplicationDialog, {
+            // height: '350px',
+            width: '600px',
+            id: this.StudentId
+        });
+        dialogRefEdit.afterClosed().subscribe(function (result) {
+            console.log('The dialog was closed');
+            // this.reqData = {}
+            // this.reqData.offset = 0
+            // this.reqData.limit = 10
+            // this.dataSource = new MatTableDataSource(this.responseData);
+            // this.dataSource.paginator = this.paginator;
+            // this.dataSource.sort = this.sort;
+            // this.datamodel = {}
+            // this.getAllCategory()
+        });
+    };
+    ViewTeacherApplicationComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialog"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__["DomSanitizer"] }
+    ]; };
+    ViewTeacherApplicationComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
+            selector: 'app-view-teacher-application',
+            template: _raw_loader_view_teacher_application_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_view_teacher_application_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialog"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__["DomSanitizer"]])
+    ], ViewTeacherApplicationComponent);
+    return ViewTeacherApplicationComponent;
+}());
+
+////////Reject Application Dialog Box//////////////////////
+var RejectApplicationDialog = /** @class */ (function () {
+    function RejectApplicationDialog(dialogRef, service, route, router, fb) {
+        this.dialogRef = dialogRef;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.fb = fb;
+        this.rejectForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
+            message: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]),
+        });
+    }
+    RejectApplicationDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    RejectApplicationDialog.prototype.ngOnInit = function () {
+        this.StudentId = this.dialogRef.id;
+    };
+    RejectApplicationDialog.prototype.reject = function (status) {
+        var _this = this;
+        console.log("status", status);
+        var obj = {
+            id: this.StudentId,
+            status: status,
+        };
+        var rejectObj = {
+            user_id: this.StudentId,
+            message: this.message
+        };
+        console.log("Rejectstatus", rejectObj);
+        console.log("status", obj);
+        this.service.applicationApproved(obj).subscribe(function (res) {
+            console.log("res*****", res);
+            _this.service.applicationRejected(rejectObj).subscribe(function (res) {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire('Success..!', 'Application Rejected!', 'success');
+                _this.dialogRef.close();
+                _this.router.navigate(['/teacherApplication']);
+            });
+        });
+    };
+    RejectApplicationDialog.prototype.closeDialog = function () {
+        this.dialogRef.close();
+    };
+    RejectApplicationDialog.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogRef"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] }
+    ]; };
+    RejectApplicationDialog = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
+            selector: 'reject-application-dialog',
+            template: _raw_loader_reject_application_html__WEBPACK_IMPORTED_MODULE_3__["default"],
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogRef"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_7__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]])
+    ], RejectApplicationDialog);
+    return RejectApplicationDialog;
 }());
 
 
@@ -3776,6 +6391,45 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "jCzT":
+/*!******************************************************************************!*\
+  !*** ./src/app/section-second/create-engaging/create-engaging.component.css ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNyZWF0ZS1lbmdhZ2luZy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLFdBQVc7QUFDZjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGNBQWM7QUFDbEI7QUFDQTtRQUNRLGVBQWU7SUFDbkI7QUFFQTtRQUNJLFdBQVc7SUFDZjtBQUNBO1FBQ0ksWUFBWTtRQUNaLGFBQWE7UUFDYixtQkFBbUI7UUFDbkIscUJBQXFCO0lBQ3pCO0FBQ0E7UUFDSSxrQkFBa0I7UUFDbEIsVUFBVTtRQUNWLFlBQVk7UUFDWixXQUFXO1FBQ1gsWUFBWTtRQUNaLG1CQUFtQjtRQUNuQixnQkFBZ0I7UUFDaEIsbUJBQW1CO0lBQ3ZCO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsa0JBQWtCO1FBQ2xCLFFBQVE7UUFDUixXQUFXO1FBQ1gsZUFBZTtRQUNmLFVBQVU7UUFDVixlQUFlO0lBQ25CO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLFVBQVU7UUFDVixlQUFlO1FBQ2Ysa0JBQWtCO1FBQ2xCLFVBQVU7SUFDZDtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixvQkFBb0I7UUFDcEIsaUJBQWlCO0lBQ3JCO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsa0JBQWtCO1FBQ2xCLFNBQVM7UUFDVCxVQUFVO1FBQ1YsZUFBZTtRQUNmLFVBQVU7UUFDVixlQUFlO0lBQ25CO0FBQ0E7UUFDSSxlQUFlO0lBQ25CIiwiZmlsZSI6ImNyZWF0ZS1lbmdhZ2luZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQgLmNhcmQtaGVhZGVyIC5jYXJkLXRpdGxlIHtcbiAgICBtYXJnaW4tdG9wOjBweCFpbXBvcnRhbnQ7XG4gICAgY29sb3I6ICNmZmY7XG59XG4uYnRuLXN1Y2Nlc3Mge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM2YWE1MjQ7XG4gICAgY29sb3I6ICNGRkZGRkY7XG59XG4uZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9XG5cbiAgICBtYXQtZm9ybS1maWVsZHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxuICAgIHNwYW4ubWF0X2ltYWcge1xuICAgICAgICB3aWR0aDogMTUwcHg7XG4gICAgICAgIGhlaWdodDogMTUwcHg7XG4gICAgICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XG4gICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICB9XG4gICAgLmlucHRfaWNvbiB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAtMTJweDtcbiAgICAgICAgcmlnaHQ6IC0xM3B4O1xuICAgICAgICB3aWR0aDogNDBweDtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICBiYWNrZ3JvdW5kOiAjNmFhNTI0O1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYSB7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogOXB4O1xuICAgICAgICByaWdodDogMTJweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gaW5wdXQge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICBvcGFjaXR5OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgei1pbmRleDogMjtcbiAgICB9XG4gICAgLm1hdF9pbWFnIGltZyB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIC1vLW9iamVjdC1maXQ6IGNvdmVyO1xuICAgICAgICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEtZWRpdHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiAxMHB4O1xuICAgICAgICByaWdodDogOXB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfSJdfQ== */");
+
+/***/ }),
+
+/***/ "oIo8":
+/*!***********************************************************!*\
+  !*** ./src/app/create-banner/create-banner.component.css ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 150px;\n        height: 150px;\n        background: #fafafa;\n        display: inline-block;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n.load_er{\n        position: fixed;\n        z-index: 99;\n        left: 50%;\n        top: 50%;\n        }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNyZWF0ZS1iYW5uZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHdCQUF3QjtJQUN4QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixjQUFjO0FBQ2xCO0FBQ0E7UUFDUSxlQUFlO0lBQ25CO0FBRUE7UUFDSSxXQUFXO0lBQ2Y7QUFDQTtRQUNJLFlBQVk7UUFDWixhQUFhO1FBQ2IsbUJBQW1CO1FBQ25CLHFCQUFxQjtJQUN6QjtBQUNBO1FBQ0ksa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixZQUFZO1FBQ1osV0FBVztRQUNYLFlBQVk7UUFDWixtQkFBbUI7UUFDbkIsZ0JBQWdCO1FBQ2hCLG1CQUFtQjtJQUN2QjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsV0FBVztRQUNYLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksV0FBVztRQUNYLFlBQVk7UUFDWixVQUFVO1FBQ1YsZUFBZTtRQUNmLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osb0JBQW9CO1FBQ3BCLGlCQUFpQjtJQUNyQjtBQUNBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixTQUFTO1FBQ1QsVUFBVTtRQUNWLGVBQWU7UUFDZixVQUFVO1FBQ1YsZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtJQUNuQjtBQUNBO1FBQ0ksZUFBZTtRQUNmLFdBQVc7UUFDWCxTQUFTO1FBQ1QsUUFBUTtRQUNSIiwiZmlsZSI6ImNyZWF0ZS1iYW5uZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIC5jYXJkLWhlYWRlciAuY2FyZC10aXRsZSB7XG4gICAgbWFyZ2luLXRvcDowcHghaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufVxuLmJ0bi1zdWNjZXNzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmFhNTI0O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xufVxuLmZ0e1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgbWF0LWZvcm0tZmllbGR7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgICBzcGFuLm1hdF9pbWFnIHtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuICAgIC5pbnB0X2ljb24ge1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogLTEycHg7XG4gICAgICAgIHJpZ2h0OiAtMTNweDtcbiAgICAgICAgd2lkdGg6IDQwcHg7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgYmFja2dyb3VuZDogIzZhYTUyNDtcbiAgICB9XG4gICAgLmlucHRfaWNvbiAuZmEge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDlweDtcbiAgICAgICAgcmlnaHQ6IDEycHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIGlucHV0IHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IDI7XG4gICAgfVxuICAgIC5tYXRfaW1hZyBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAtby1vYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhLWVkaXR7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgcmlnaHQ6IDlweDtcbiAgICAgICAgZm9udC1zaXplOiAxN3B4O1xuICAgICAgICB6LWluZGV4OiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICAgIC5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cbiAgICAubG9hZF9lcntcbiAgICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgICB6LWluZGV4OiA5OTtcbiAgICAgICAgbGVmdDogNTAlO1xuICAgICAgICB0b3A6IDUwJTtcbiAgICAgICAgfSJdfQ== */");
+
+/***/ }),
+
+/***/ "oazE":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/testimonials-edit/testimonials-edit.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n    EDIT TESTIMONIALS</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n <form >\n    <div class=\"card\">\n        <div class=\"card-header card-header-danger\">\n            <h4 class=\"card-title\">Testimonials</h4>\n        </div>\n        <div class=\"card-body block-card\">\n            <div class=\"row\">\n\n\n                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                    <mat-form-field class=\"example-full-width text-center\">\n                        <label>Upload Image</label>\n                        <input matInput readonly />\n                        <span class=\"mat_imag position-relative\">\n                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                src=\"assets/img/img-place.jpg\" />\n                            \n                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                [src]=\"image\" />\n                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                            <span class=\"inpt_icon\">\n                                <input type=\"file\" #uploadFile value=\"bannerData.image\"\n                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                            </span>\n                        </span>\n                    </mat-form-field>\n                   \n                </div> \n                <!-- Author Name -->\n                <div class=\"col-md-12\">\n                    <mat-form-field class=\"example-full-width\">\n                        <input matInput placeholder=\"Author Name\" [(ngModel)]=\"testimonialsData.authorName\"\n                        [ngModelOptions]=\"{standalone: true}\">\n                    </mat-form-field>\n                </div>\n\n                <!-- Designation -->\n                <div class=\"col-md-12\">\n                    <mat-form-field class=\"example-full-width\">\n                        <input matInput placeholder=\"Designation\" [(ngModel)]=\"testimonialsData.designation\"\n                        [ngModelOptions]=\"{standalone: true}\">\n                    </mat-form-field>\n                </div>\n                \n                <!-- Image -->\n                <!-- <div class=\"col-md-12\">\n\n\n\n                    <mat-form-field class=\"example-full-width\">\n                        <label>Image</label>\n                        <input matInput readonly />\n                        <span class=\"mat_imag position-relative\">\n                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                src=\"assets/img/img-place.jpg\" />\n                            \n                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                [src]=\"image\" />\n                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                            <span class=\"inpt_icon\">\n                                <input type=\"file\" #uploadFile value=\"testimonialsData.image\"\n                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                            </span>\n                        </span>\n                    </mat-form-field>\n                   \n                </div> -->\n                \n                <!-- Description -->\n                <div class=\"col-md-12\">\n                    <mat-form-field class=\"example-full-width\">\n                        <input matInput placeholder=\"Description\" [(ngModel)]=\"testimonialsData.description\"\n                        [ngModelOptions]=\"{standalone: true}\">\n                    </mat-form-field>\n                </div>\n            </div>\n            <!-- <div class=\"text-center\">\n                <button mat-raised-button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!testimonialForm.valid\" (click)=\"saveTestimonials()\">Submit</button>\n            </div> -->\n            <div class=\"text-center\">\n                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"updateTestimonials()\">Submit</button>\n                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/testimonials\" class=\"btn theme-btn ft\">Back</button>\n            </div>\n          </div>\n         </div>\n       </form>\n     </div>\n   </div>\n  </div>\n</div>");
+
+/***/ }),
+
 /***/ "s1iN":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/general-faq/general-faq.component.html ***!
@@ -3850,6 +6504,139 @@ var ParentFaqComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "suf6":
+/*!**********************************************************!*\
+  !*** ./src/app/create-banner/create-banner.component.ts ***!
+  \**********************************************************/
+/*! exports provided: CreateBannerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateBannerComponent", function() { return CreateBannerComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_create_banner_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./create-banner.component.html */ "IWlm");
+/* harmony import */ var _create_banner_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create-banner.component.css */ "oIo8");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var CreateBannerComponent = /** @class */ (function () {
+    function CreateBannerComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.bannerData = {
+            title: "",
+            subtitle: "",
+            image: "",
+        };
+        this.bannerForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            title: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            subtitle: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]),
+            image: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    }
+    CreateBannerComponent.prototype.ngOnInit = function () {
+    };
+    CreateBannerComponent.prototype.onFileChange = function (event) {
+        var _this = this;
+        if (!event.target) {
+            return;
+        }
+        if (!event.target.files) {
+            return;
+        }
+        if (event.target.files.length !== 1) {
+            return;
+        }
+        var file = event.target.files[0];
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+            // this.toastr.warning('Please upload image file')
+            return;
+        }
+        console.log(event.target.files[0]);
+        this.bannerData.image = event.target.files[0];
+        var fr = new FileReader();
+        fr.onloadend = function (loadEvent) {
+            var mainImage = fr.result;
+            _this.image = mainImage;
+        };
+        fr.readAsDataURL(file);
+    };
+    CreateBannerComponent.prototype.addBanner = function () {
+        var _this = this;
+        var formData = new FormData();
+        // formData.append("author_name",this.bannerData.title);
+        // console.log("subtitle",this.bannerData.subtitle);
+        // console.log("image", this.bannerData.image)
+        // console.log("title", this.bannerData.title)
+        formData.append("heading", this.bannerData.title);
+        formData.append("sub_heading", this.bannerData.subtitle);
+        formData.append("banner_image", this.bannerData.image);
+        this.loader = true;
+        this.service.createBanner(formData).subscribe(function (data) {
+            console.log(" Successfully Created!");
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Created!', 'success');
+            _this.router.navigate(['/section_1']);
+            _this.loader = false;
+        }, function (err) {
+            if (err.status >= 400) {
+                console.log("Inavalid Credentials!");
+            }
+            else {
+                console.log("Internet Connection Error");
+            }
+        });
+    };
+    CreateBannerComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    CreateBannerComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-create-banner',
+            template: _raw_loader_create_banner_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+            styles: [_create_banner_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], CreateBannerComponent);
+    return CreateBannerComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "uN5D":
+/*!*********************************************************************!*\
+  !*** ./src/app/teacher-management/teacher-management.component.css ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0ZWFjaGVyLW1hbmFnZW1lbnQuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
 /***/ "uyra":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/teacher-faq/teacher-faq.component.html ***!
@@ -3876,6 +6663,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "w6ZX":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/user-list/view-student-details/view-student-details.component.html ***!
+  \**************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>view-student-details works!</p>\n");
+
+/***/ }),
+
+/***/ "w966":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category/add-category/add-category.component.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2>\n     ADD CATEGORY\n</h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"addCategoryForm\">\n                    <div class=\"card\">\n                        <!-- <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div> -->\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-6 offset-sm-3 text-center a-u\">\n                                    <mat-form-field class=\"example-full-width text-center\">\n                                        <label>Upload Image</label>\n                                        <input matInput readonly />\n                                        <span class=\"mat_imag position-relative\">\n                                            <img *ngIf=\"!image && !testi_image\" class=\"img-responsive\"\n                                                src=\"assets/img/img-place.jpg\" />\n                                            \n                                            <img *ngIf=\"image\" class=\"img-responsive\"\n                                                [src]=\"image\" />\n                                            <img *ngIf=\"!image && testi_image\" class=\"img-responsive\" src=\"{{imgUrl}}{{testi_image}}\" />\n                                            <span class=\"inpt_icon\">\n                                                <input type=\"file\" #uploadFile formControlName=\"image\"  value=\"bannerData.image\"\n                                                    (change)=\"onFileChange($event)\" accept=\"image/*\">\n                                                <i class=\"fa fa-upload\" *ngIf=\"!image\"></i>\n                                                <i class=\"fa fa-edit\" *ngIf=\"image\"></i>\n                                            </span>\n                                        </span>\n                                    </mat-form-field>\n                                   \n                                </div> \n                                <!-- Author Name -->\n                                <div class=\"col-md-12\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <!-- <label>Title</label> -->\n                                        <input  formControlName=\"category\" matInput placeholder=\"Category\" [(ngModel)]=\"categoryData.category\" >\n                                    </mat-form-field>\n                                    <div *ngIf=\"addCategoryForm.controls['category'].touched &&\n                                     addCategoryForm.controls['category'].invalid\"\n                                             class=\"text-danger\">\n                                     <div *ngIf=\"addCategoryForm.controls['category'].errors &&\n                                      addCategoryForm.controls['category'].errors.required\">\n                                         Category  is required.</div>\n                                 </div>\n                                </div>\n            \n                                <!-- Designation -->\n                              \n                                \n                                <!-- Image -->\n                                           \n                            </div>\n                            \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"  [disabled]=\"!addCategoryForm.valid\" (click)=\"addCategory()\">Add</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/category\" class=\"btn theme-btn ft\">Back</button>\n                                \n                                <!-- [disabled]=\"!addCategoryForm.valid\"  -->\n                            </div>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div> \n </div>");
+
+/***/ }),
+
 /***/ "wibN":
 /*!********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/contact-us/contact-us.component.html ***!
@@ -3898,7 +6711,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 >HOME PAGE SECOND SECTION</h2>\n </div>\n <div class=\"main-content\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          \n          <div class=\"card-body\">\n            <div class=\"text-right\" style=\"padding-right: 65px;\" >\n              <button mat-button class=\"theme-btn\" (click)=\"openEditDialog()\">Edit</button>\n            </div>\n       \n            <div class=\"card-body\">\n              <div class=\"table-responsive\">\n                  <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                      <!-- Position -->\n                     \n                      <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Image\n                          </th>\n                          <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n  \n                      </ng-container>     \n                      \n                      <ng-container matColumnDef=\"heading\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Heading\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>   \n                    \n                    \n                    <ng-container matColumnDef=\"description\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Description\n                        </th>\n                        <!-- <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td> -->\n\n                    </ng-container>   \n                      <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef > Action </th>\n                          <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                              <button  mat-icon-button (click)=\"viewDialog(element.id)\">\n                                  <mat-icon >edit</mat-icon>\n                              </button>\n                              <!-- <button  mat-icon-button (click)=\"deleteCategory(element.id)\">\n                                  <mat-icon >delete</mat-icon>\n                              </button> -->\n                          \n                        </td>\n                         \n                      </ng-container>\n  \n                      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                  </table>\n                  <div>\n                      <!-- <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                          (page)=\"paginationOptionChange($event)\">\n                      </mat-paginator> -->\n                  </div>\n              </div>\n          </div> \n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n    <h2 > ENGAGING & EFFICIENT MANAGEMENT</h2>\n </div>\n <div class=\"main-content\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"card\">\n          \n          <div class=\"card-body\">\n            <div class=\"text-right\" style=\"padding-right: 65px;\" >\n              <button mat-button class=\"theme-btn\" routerLink=\"/createEngaging\" >Add</button>\n            </div>\n            <mat-form-field>\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"\" #input>\n            </mat-form-field>\n            <div class=\"card-body\">\n              <div class=\"table-responsive\">\n                  <table mat-table [dataSource]=\"dataSource\" class=\"mat-table table mat-elevation-z1\">\n                      <!-- Position -->\n                    \n                      <ng-container matColumnDef=\"position\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >S.No\n                        </th>\n                        <td mat-cell *matCellDef=\"let element let i=index;\"> {{i+1}}</td>\n\n                    </ng-container>  \n\n                      <ng-container matColumnDef=\"image\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef >Image\n                          </th>\n                          <td mat-cell *matCellDef=\"let element\"> <img src=\"{{imagePath}}{{element.image}}\" class=\"img-fluid prfile_img\"> </td>\n  \n                      </ng-container>     \n                      \n                      <ng-container matColumnDef=\"heading\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Heading\n                        </th>\n                        <td mat-cell *matCellDef=\"let element\">{{element.heading}} </td>\n\n                    </ng-container>   \n                    \n                    \n                    <ng-container matColumnDef=\"description\" class=\"mat-row\">\n                        <th mat-header-cell *matHeaderCellDef >Description\n                        </th>\n                        <td class=\"ellipsis\" mat-cell *matCellDef=\"let element\">{{element.description}} </td>\n\n                    </ng-container>   \n                      <ng-container matColumnDef=\"Action\" class=\"mat-row\">\n                          <th mat-header-cell *matHeaderCellDef > Action </th>\n                          <td class=\"mat-cell act_td\" mat-cell *matCellDef=\"let element\">\n                              <button  mat-icon-button routerLink=\"/editEngaging/{{element.id}}\" >\n                                  <mat-icon >edit</mat-icon>\n                              </button>\n                              <button  mat-icon-button (click)=\"delete(element.id)\">\n                                  <mat-icon >delete</mat-icon>\n                              </button>\n                          \n                        </td>\n                         \n                      </ng-container>\n  \n                      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                  </table>\n                  <div>\n                      <mat-paginator [length]=\"length\" [pageSize]=\"10\" [pageSizeOptions]=\"getPageSizeOptions()\"\n                          (page)=\"paginationOptionChange($event)\">\n                      </mat-paginator>\n                  </div>\n              </div>\n          </div> \n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>");
 
 /***/ }),
 
@@ -3942,8 +6755,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ROUTES = [
-    { path: '/dashboard', title: 'Dashboard', icon: 'design_app', class: '', subcat: [] },
-    { path: '/category', title: 'Category', icon: 'location_map-big', class: '', subcat: [] },
+    { path: '/dashboard', title: 'Dashboard', icon: 'design_app', class: '' },
+    { path: '/category', title: 'Category', icon: 'location_map-big', class: '' },
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent(router) {
@@ -3955,12 +6768,12 @@ var SidebarComponent = /** @class */ (function () {
             jquery__WEBPACK_IMPORTED_MODULE_5___default()(".nav-link").click(function () {
                 //$(".sub-ul").hide();
                 // alert($(this).children(":nth-child(3)").attr('style'));
-                if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).children(":nth-child(3)").is(":visible")) {
-                    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).children(":nth-child(3)").hide();
+                if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).next().is(":visible")) {
+                    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).next().hide();
                 }
                 else {
                     jquery__WEBPACK_IMPORTED_MODULE_5___default()(".sub-ul").hide();
-                    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).children(":nth-child(3)").show();
+                    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).next().show();
                 }
                 // $(this).children(":nth-child(3)").toggle();
                 // $(this).find(".sub-ul").toggle();
@@ -4037,6 +6850,19 @@ if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].produc
 }
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"]);
 
+
+/***/ }),
+
+/***/ "zwek":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/teacher-applications/view-teacher-application/view-teacher-application.component.html ***!
+  \*********************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <p>add-testimonials works!</p> -->\n<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >\n   APPLICATION DETAILS </h2>\n </div>\n <div class=\"main-content\" style=\"position: relative;\">\n    <div class=\"\">\n        <div class=\"\">\n            <div class=\"\">\n                <form [formGroup]=\"applicationForm\">\n                    <div class=\"card\">\n                        <div class=\"card-header card-header-danger\">\n                            <h4 class=\"card-title\">Testimonials</h4>\n                        </div>\n                        <div class=\"card-body block-card\">\n                            <div class=\"row\">\n                                <div class=\"col-md-6 offset-sm-3\">\n                                    <div class=\"vid_wrap\">\n                                        <iframe class=\"embed-responsive-item\" [src]='video'></iframe>\n                                    </div>\n                                    \n                                </div>\n                \n                               \n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Name\" formControlName=\"name\" [(ngModel)]=\"applicationData.name\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n                \n                                <!-- Designation -->\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Email\" formControlName=\"email\" [(ngModel)]=\"applicationData.email\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n                                \n                               \n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Phone\" formControlName=\"phone\" [(ngModel)]=\"applicationData.phone\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Country\" formControlName=\"country\" [(ngModel)]=\"applicationData.country\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"State\" formControlName=\"state\" [(ngModel)]=\"applicationData.state\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"City\" formControlName=\"city\" [(ngModel)]=\"applicationData.city\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Address\" formControlName=\"address\" [(ngModel)]=\"applicationData.address\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Experiance\" formControlName=\"experiance\" [(ngModel)]=\"applicationData.experiance\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"How will you teach\" formControlName=\"teach\" [(ngModel)]=\"applicationData.teach\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Benefits of class\" formControlName=\"benefitsOfClass\" [(ngModel)]=\"applicationData.benefitsOfClass\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Website Link\" formControlName=\"link\" [(ngModel)]=\"applicationData.link\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"What will you teach\" formControlName=\"whatWillYouTeach\" [(ngModel)]=\"applicationData.whatWillYouTeach\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <mat-form-field class=\"example-full-width\">\n                                        <input matInput placeholder=\"Status\" formControlName=\"status\" [(ngModel)]=\"applicationData.status\"\n                                        >\n                                    </mat-form-field>\n                                </div>\n                            </div>\n                           \n                            <div class=\"text-center\">\n                                <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"onStatus('Approved')\">Accept</button>\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" class=\"btn btn-success ft\" (click)=\"rejectApplication()\" >Reject</button>\n                                <!-- (click)=\"onStatus('Decline')\" -->\n                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type=\"submit\" routerLink=\"/teacherApplication\" class=\"btn theme-btn ft\">Back</button>\n                            </div>\n                          </div>\n                         </div>\n               </form>\n            </div>\n        </div>\n    </div> \n </div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
