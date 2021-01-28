@@ -25,102 +25,180 @@
                 
                                
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Name" formControlName="name" [(ngModel)]="applicationData.name"
-                                        >
-                                    </mat-form-field>
+                                    <label>Name</label>
+                                    <p class="hd_p">
+                                        {{applicationData.name}}
+                                    </p>
+                                    
                                 </div>
                 
-                                <!-- Designation -->
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Email" formControlName="email" [(ngModel)]="applicationData.email"
-                                        >
-                                    </mat-form-field>
+                                    <label>Email</label>
+                                    <p class="hd_p">
+                                       {{applicationData.email}}
+                                    </p>
+                                    
                                 </div>
                                 
                                
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Phone" formControlName="phone" [(ngModel)]="applicationData.phone"
-                                        >
-                                    </mat-form-field>
+                                    <label>Phone Number</label>
+                                    <p class="hd_p">
+                                       {{applicationData.phone}}
+                                    </p>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Country" formControlName="country" [(ngModel)]="applicationData.country"
-                                        >
-                                    </mat-form-field>
+                                    <label>Country</label>
+                                    <p class="hd_p">
+                                        {{applicationData.country}} 
+                                    </p>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="State" formControlName="state" [(ngModel)]="applicationData.state"
-                                        >
-                                    </mat-form-field>
+                                    <label>State</label>
+                                    <p class="hd_p">
+                                        {{applicationData.state}} 
+                                    </p>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="City" formControlName="city" [(ngModel)]="applicationData.city"
-                                        >
-                                    </mat-form-field>
+                                    <label>City</label>
+                                    <p class="hd_p">
+                                        {{applicationData.city}} 
+                                    </p>
                                 </div>
 
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Address" formControlName="address" [(ngModel)]="applicationData.address"
-                                        >
-                                    </mat-form-field>
+                                <div class="col-md-12">
+                                   
+                                    <label>Address</label>
+                                    <p class="hd_p">
+                                        {{applicationData.address}} 
+                                    </p>
+                                </div>
+                                
+                                <div class="col-sm-12">
+                                    <label>Teaching Experience</label>
+                                    <p class="hd_p">
+                                        {{applicationData.experiance}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Websites Links That Show Teaching Experience</label>
+                                    <p class="hd_p">
+                                        {{applicationData.link}}
+                                    </p>
+                                </div>
+                                    
+                                
+                                <div class="col-sm-12">
+                                    <label>What will you teach?</label>
+                                    <p class="hd_p">
+                                        {{applicationData.whatWillYouTeach}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>How you will teach? Your Approach?</label>
+                                    <p class="hd_p">
+                                        {{applicationData.teach}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Requirements for the class?</label>
+                                    <p class="hd_p">
+                                        {{applicationData.requirement}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>How will learners benefit from this class?</label>
+                                    <p class="hd_p">
+                                        {{applicationData.benefitsOfClass}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Academic Qualification</label>
+                                    <table class="table table-bordered text-center">
+                                        <tbody>
+                                          <tr class="hddr">
+                                           <td><b>Sr.No.</b></td>
+                                           <td><b>Degree/Certificate</b></td>			
+                                            <td><b>Major</b></td>
+                                            <td><b>College/University</b></td>
+                                            <td><b>Year of Passing</b></td>
+                                          </tr>
+                                          <tr *ngFor="let qual of applicationData.academic_qualifications;let i = index;">
+                                              <td>{{i+1}}</td>
+                                              <td>{{qual.degree_certificates}}</td>
+                                              <td>{{qual.major}}</td>
+                                              <td>{{qual.college_university}}</td>
+                                              <td>{{qual.year_of_passing}}</td>
+                                          </tr>
+                                        </tbody>
+                                        
+                                    </table>
                                 </div>
 
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Experiance" formControlName="experiance" [(ngModel)]="applicationData.experiance"
-                                        >
-                                    </mat-form-field>
+                                <div class="col-sm-12">
+                                    <label>Professional Qualification</label>
+                                    <table class="table table-bordered text-center">
+                                        <tbody>
+                                          <tr class="hddr">
+                                           <td><b>Sr.No.</b></td>
+                                           <td><b>Employer</b></td>	
+                                           <td><b>Position</b></td>		
+                                            <td><b>From(month/year)</b></td>
+                                            <td><b>To(month/year)</b></td>
+                                          </tr>
+                                          <tr *ngFor="let prof of applicationData.professional_qualifications;let i = index;">
+                                              <td>{{i+1}}</td>
+                                              <td>{{prof.employer}}</td>
+                                              <td>{{prof.position}}</td>
+                                              <td>{{prof.from_month_year}}</td>
+                                              <td>{{prof.to_month_year}}</td>
+                                          </tr>
+                                        </tbody>
+                                        
+                                    </table>
                                 </div>
 
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="How will you teach" formControlName="teach" [(ngModel)]="applicationData.teach"
-                                        >
-                                    </mat-form-field>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Benefits of class" formControlName="benefitsOfClass" [(ngModel)]="applicationData.benefitsOfClass"
-                                        >
-                                    </mat-form-field>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Website Link" formControlName="link" [(ngModel)]="applicationData.link"
-                                        >
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="What will you teach" formControlName="whatWillYouTeach" [(ngModel)]="applicationData.whatWillYouTeach"
-                                        >
-                                    </mat-form-field>
+                                <div class="col-sm-12">
+                                    <label>Classes That You Want To Teach</label>
+                                    <table class="table table-bordered text-center">
+                                        <tbody>
+                                          <tr class="hddr">
+                                            <td><b>Sr.No.</b></td>   
+                                           <td><b>Topic</b></td>			
+                                            <td><b>Sub Topic</b></td>
+                                            <td><b>Years of teaching experience</b></td>
+                                            <td><b>Age Group</b></td>
+                                          </tr>
+                                          <tr *ngFor="let data of applicationData.classes_teach_data;let i = index;">
+                                              <td>{{i+1}}</td>
+                                              <td>{{data.topic}}</td>
+                                              <td>{{data.sub_topic}}</td>
+                                              <td>{{data.teaching_experience}}</td>
+                                              <td>{{data.fromAge + " " + "to" + " " + data.toAge }}</td>
+                                          </tr>
+                                        </tbody>
+                                        
+                                    </table>
                                 </div>
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Status" formControlName="status" [(ngModel)]="applicationData.status"
-                                        >
-                                    </mat-form-field>
+                                   <label>Status</label>
+                                    <p class="hd_p">
+                                       {{applicationData.status}}
+                                    </p>
                                 </div>
                             </div>
                            
-                            <div class="text-center">
-                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('Approved')">Accept</button>
+                            <div class="text-center" *ngIf="applicationData.status != 'Rejected'">
+                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus()">Accept</button>
                                 &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectApplication()" >Reject</button>
                                 <!-- (click)="onStatus('Decline')" -->
                                 &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/teacherApplication" class="btn theme-btn ft">Back</button>
+                            </div>
+                            <div class="text-center" *ngIf="applicationData.status == 'Rejected'">
+                                <button mat-raised-button type="submit" routerLink="/teacherApplication" class="btn theme-btn ft">Back</button>
                             </div>
                           </div>
                          </div>

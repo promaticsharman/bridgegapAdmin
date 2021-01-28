@@ -36,7 +36,7 @@ export class SectionFirstComponent implements OnInit {
   myFlagForSlideToggle : boolean = true;
   currentIndex=0
   currentPage=10
-
+  loader
   displayedColumns: string[] = ['position','title','subtitle','image', 'status','Action']
   // 'status',
   animal: string;
@@ -76,6 +76,7 @@ export class SectionFirstComponent implements OnInit {
       offset:this.reqData.offset,
       limit:this.reqData.limit
      }
+     this.loader=true;
     this.service.getAllBanner(list).subscribe(res=>{
       console.log("section one data",res)
       if(res){
@@ -84,6 +85,7 @@ export class SectionFirstComponent implements OnInit {
         this.dataSource=res.data.rows;
         this.dataSource.paginator = this.paginator;
         // console.log("datasource", this.dataSource)
+        this.loader=false;
     }
   },
   err => {

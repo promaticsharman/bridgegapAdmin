@@ -32,7 +32,7 @@ export class UserListComponent implements OnInit {
 	responseData = [] 
     dataSource: any
     currentIndex=0
-  displayedColumns: string[] = ['position','name','email','phone','action'];
+  displayedColumns: string[] = ['position','name','email','phone','status','action'];
   // 'position',
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 

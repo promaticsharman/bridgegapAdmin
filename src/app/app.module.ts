@@ -48,6 +48,10 @@ import { TeacherApplicationsComponent } from './teacher-applications/teacher-app
 import { ViewTeacherApplicationComponent,RejectApplicationDialog } from './teacher-applications/view-teacher-application/view-teacher-application.component';
 import { TeacherManagementComponent } from './teacher-management/teacher-management.component';
 import { ViewStudentDetailsComponent } from './user-list/view-student-details/view-student-details.component';
+import { CoursesManagementComponent } from './courses-management/courses-management.component';
+import { ViewCourseDetailsComponent } from './courses-management/view-course-details/view-course-details.component';
+import { ViewTeacherListComponent } from './teacher-management/view-teacher-list/view-teacher-list.component';
+import { SocialMediaLinksComponent } from './social-media-links/social-media-links.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -109,6 +113,10 @@ import { ViewStudentDetailsComponent } from './user-list/view-student-details/vi
     RejectApplicationDialog,
     TeacherManagementComponent,
     ViewStudentDetailsComponent,
+    CoursesManagementComponent,
+    ViewCourseDetailsComponent,
+    ViewTeacherListComponent,
+    SocialMediaLinksComponent,
 
 
     // SubCategoryComponent

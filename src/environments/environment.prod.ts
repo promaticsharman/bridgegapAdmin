@@ -15,6 +15,8 @@ export const environment = {
   engag_img:"https://production.promaticstechnologies.com/bridgegap_apis/public/",
   how_it_works_img:"https://production.promaticstechnologies.com/bridgegap_apis/public/how_its_works_images/",
   how_it_img:"https://production.promaticstechnologies.com/bridgegap_apis/public/",
-  application_image:"https://production.promaticstechnologies.com/bridgegap_apis/public/teacher_videos/"
+  application_image:"https://production.promaticstechnologies.com/bridgegap_apis/public/teacher_videos/",
+  courses_video:"https://production.promaticstechnologies.com/bridgegap_apis/public/courseImages/",
+  courses_images:"https://production.promaticstechnologies.com/bridgegap_apis/public/courseImages/"
 
 };

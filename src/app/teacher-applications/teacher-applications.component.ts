@@ -53,12 +53,13 @@ export class TeacherApplicationsComponent implements OnInit {
       offset:this.reqData.offset,
       limit:this.reqData.limit
     }
+    this.loader=true;
     this.service.showTeacherApplication(list).subscribe(res => {
       console.log('*****getTeacherData******',res.data);
       if(res){
         this.length = res.data.count;
         this.dataSource=res.data.rows;
-        
+        this.loader=false;
         console.log('responseData ***',this.dataSource)
       }
     },
@@ -116,49 +117,48 @@ export class TeacherApplicationsComponent implements OnInit {
     }else{
       this.ngOnInit();
     }
-    
-    }
-    getPageSizeOptions() {
+  }
+     getPageSizeOptions() {
       return [10, 20, 30];
       }
       paginationOptionChange(evt) {
 
-      //   this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
-      //   this.reqData.limit = evt.pageSize
+        this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
+        this.reqData.limit = evt.pageSize
   
       //   // let Cate=this.route.snapshot.params.id;
       //   // console.log('cate id',Cate);
       
-      //   this.currentPage=evt.pageSize
-      //   this.currentIndex=evt.pageIndex
-      //   console.log('checking  page Index', this.currentPage)
-      //   console.log('checking current page',evt.pageSize)
+        this.currentPage=evt.pageSize
+        this.currentIndex=evt.pageIndex
+        console.log('checking  page Index', this.currentPage)
+        console.log('checking current page',evt.pageSize)
   
        
-      //   var list={
+        var list={
          
-      //     offset:this.reqData.offset,
-      //     limit:this.reqData.limit
+          offset:this.reqData.offset,
+          limit:this.reqData.limit
           
-      //   }
+        }
       //   // console.log(this.reqData)
-      //   this.service.getallStudent(list).subscribe(res => {
-      //   // console.log('paginator limit',res)
-      //   if(res){
+        this.service.showTeacherApplication(list).subscribe(res => {
+        // console.log('paginator limit',res)
+        if(res){
             
-      //     this.length = res.data.count;
-      //     this.dataSource = res.data.rows;
-      //     // this.responseData=new MatTableDataSource(res.data);
-      //     // console.log('dataSource',this.dataSource);
-      //     }
-      //   },err => {
-      //     console.log(err);
-      //     if(err.status >= 400){
-      //       console.log('Invalid Credential!!!');
-      //     }else{
-      //       console.log('Internet Connection Error');
-      //     }
-      // })
+          this.length = res.data.count;
+          this.dataSource = res.data.rows;
+          // this.responseData=new MatTableDataSource(res.data);
+          // console.log('dataSource',this.dataSource);
+          }
+        },err => {
+          console.log(err);
+          if(err.status >= 400){
+            console.log('Invalid Credential!!!');
+          }else{
+            console.log('Internet Connection Error');
+          }
+      })
       }
 
 

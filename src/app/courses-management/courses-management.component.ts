@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -6,14 +6,12 @@ import { AdminService } from '../shared/admin.service';
 import { ActivatedRoute } from '@angular/router';
 import { CanActivate, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 @Component({
-  selector: 'app-teacher-management',
-  templateUrl: './teacher-management.component.html',
-  styleUrls: ['./teacher-management.component.css']
+  selector: 'app-courses-management',
+  templateUrl: './courses-management.component.html',
+  styleUrls: ['./courses-management.component.css']
 })
-export class TeacherManagementComponent implements OnInit {
+export class CoursesManagementComponent implements OnInit {
   currentPage=10
   checked = false;
 	indeterminate = false;
@@ -25,16 +23,17 @@ export class TeacherManagementComponent implements OnInit {
 	reqData
 	getData
 	datamodel
-	length
+  length
+  loader
 	timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 	filterValue
 	responseData = [] 
     dataSource: any
     currentIndex=0
-  displayedColumns: string[] = ['position','name','email','phone','status','action'];
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  displayedColumns: string[] = ['position','course_type','course_title','teacher_name','status','action'];
+  // 'courses_overview',
+  // ,'globally_price'
 
-	@ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(
     private dialog: MatDialog,
     private service: AdminService,
@@ -47,22 +46,24 @@ export class TeacherManagementComponent implements OnInit {
     this.reqData.limit = 10
     // this.currentPage=10
 		this.dataSource = new MatTableDataSource(this.responseData);
-		this.dataSource.paginator = this.paginator;
+		// this.dataSource.paginator = this.paginator;
     this.datamodel = {}
     this.length
-		this.getTeacherList()
+    this.getCourseList()
   }
-  getTeacherList(){
+
+  getCourseList(){
     var list={
-      offset:this.reqData.offset,
-      limit:this.reqData.limit
+      limit:this.reqData.limit,
+      offset:	this.reqData.offset
     }
-    this.service.getAllTeachers(list).subscribe(res => {
-      console.log('*****getTeachersData******',res.data);
+    // this.loader=true;
+    this.service.get_all_courses(list).subscribe(res => {
+      console.log('*****getCoursesrData******',res.data);
       if(res){
         this.length = res.data.count;
         this.dataSource=res.data.rows;
-        
+        // this.loader=false;
         console.log('responseData ***',this.dataSource)
       }
     },
@@ -76,6 +77,7 @@ export class TeacherManagementComponent implements OnInit {
         
   })
   }
+
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     this.filterValue = filterValue.trim().toLowerCase();
@@ -83,10 +85,10 @@ export class TeacherManagementComponent implements OnInit {
     search: filterValue
     }
     if(obj.search){
-      this.service.filterTeacherList(obj).subscribe(res => {
+      this.service.search_courses(obj).subscribe(res => {
         console.log('filterResponse',res)
         if (res) {
-        this.dataSource = res.data.rows
+        this.dataSource = res.data
         
         }
         }, err => {
@@ -104,9 +106,7 @@ export class TeacherManagementComponent implements OnInit {
       this.ngOnInit();
     }
   }
-
-
-   getPageSizeOptions() {
+  getPageSizeOptions() {
     return [10, 20, 30];
     }
     paginationOptionChange(evt) {
@@ -114,8 +114,8 @@ export class TeacherManagementComponent implements OnInit {
       this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
       this.reqData.limit = evt.pageSize
 
-      // let Cate=this.route.snapshot.params.id;
-      // console.log('cate id',Cate);
+    //   // let Cate=this.route.snapshot.params.id;
+    //   // console.log('cate id',Cate);
     
       this.currentPage=evt.pageSize
       this.currentIndex=evt.pageIndex
@@ -129,8 +129,8 @@ export class TeacherManagementComponent implements OnInit {
         limit:this.reqData.limit
         
       }
-      // console.log(this.reqData)
-      this.service.getAllTeachers(list).subscribe(res => {
+    //   // console.log(this.reqData)
+      this.service.get_all_courses(list).subscribe(res => {
       // console.log('paginator limit',res)
       if(res){
           

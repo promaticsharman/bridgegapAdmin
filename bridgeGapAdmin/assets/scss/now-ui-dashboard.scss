@@ -102,6 +102,7 @@
   z-index: 99;
   left: 50%;
   top: 50%;
+  color: #142C69!important
   }
 
 
@@ -111,7 +112,12 @@
     overflow: hidden;
     white-space: nowrap;
 }
-
+.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
+  background-image:none!important;
+  background-size: 4px 100%;
+  background-repeat: repeat-x;
+  // border-bottom: 1px dashed #000!important;
+}
 // .toast-container {
 //  width: unset!important;
 // }

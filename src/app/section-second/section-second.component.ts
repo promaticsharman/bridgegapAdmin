@@ -33,7 +33,7 @@ export class SectionSecondComponent implements OnInit {
   //  imagePath = environment.home_image;
   responseData = []
   
-
+ loader
   displayedColumns: string[] = ['position','image','heading','description','Action'] 
   
 
@@ -102,12 +102,14 @@ export class SectionSecondComponent implements OnInit {
       offset:this.reqData.offset,
       limit:this.reqData.limit
      }
+     this.loader=true;
     this.service.getAllEngagingAndEfficients(list).subscribe(res=>{
       console.log("section engagaing//////////// data",res)
       if(res){
         this.length = res.data.count;
         console.log("****length***",this.length);
         this.dataSource=res.data.rows;
+        this.loader=false;
         // this.dataSource.paginator = this.paginator;
         // console.log("datasource", this.dataSource)
     }

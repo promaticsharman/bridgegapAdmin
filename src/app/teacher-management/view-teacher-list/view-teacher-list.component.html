@@ -2,7 +2,7 @@
 </div>
 <div class="hdng">
   <h2 >
-    STUDENT DETAILS </h2>
+    TEACHER DETAILS </h2>
  </div>
  <div class="main-content" style="position: relative;">
     <div class="">
@@ -20,7 +20,7 @@
                                 <div class="col-md-6">
                                     <label>Name</label>
                                     <p class="hd_p">
-                                        {{studentData.name == "null" ? "N/A" : studentData.name}}
+                                        {{teacherData.name == "null" ? "N/A" : teacherData.name}}
                                     </p>
                                     
                                 </div>
@@ -28,7 +28,7 @@
                                 <div class="col-md-6">
                                     <label>Email</label>
                                     <p class="hd_p">
-                                       {{studentData.email == null ? "N/A" : studentData.email}}
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
                                     </p>
                                     
                                 </div>
@@ -37,49 +37,49 @@
                                 <div class="col-md-6">
                                     <label>Phone</label>
                                     <p class="hd_p">
-                                       {{studentData.phone == null ? "N/A" : studentData.phone }}
+                                       {{teacherData.phone == null ? "N/A" : teacherData.phone }}
                                     </p>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>Country</label>
                                     <p class="hd_p">
-                                       {{studentData.country ==null ? "N/A" : studentData.country}}
+                                       {{teacherData.country ==null ? "N/A" : teacherData.country}}
                                     </p>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>State</label>
                                     <p class="hd_p">
-                                       {{studentData.state == null ? "N/A" : studentData.state}}
+                                       {{teacherData.state == null ? "N/A" : teacherData.state}}
                                     </p>
                                 </div>
                                  
                                 <div class="col-md-6">
                                     <label>Date Of Birth</label>
                                     <p class="hd_p">
-                                        {{studentData.dob == null ? "N/A" : studentData.dob}} 
+                                        {{teacherData.dob == null ? "N/A" : teacherData.dob}} 
                                     </p>
                                 </div>
-
-                                <!-- <div class="col-md-6">
+<!-- 
+                                <div class="col-md-6">
                                     <label>Facebook Id</label>
                                     <p class="hd_p">
-                                        {{studentData.fb == null ? "N/A" : studentData.fb}} 
+                                        {{teacherData.fb == null ? "N/A" : teacherData.fb}} 
                                     </p>
-                                </div>
+                                </div> -->
 
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label>Google Id</label>
                                     <p class="hd_p">
-                                        {{studentData.google == null ? "N/A" : studentData.google}} 
+                                        {{teacherData.google == null ? "N/A" : teacherData.google}} 
                                     </p>
                                 </div> -->
 
                                 <div class="col-md-6">
-                                    <label>User Type </label>
+                                    <label>User Type</label>
                                     <p class="hd_p">
-                                        {{studentData.type == null ? "N/A" : studentData.type}} 
+                                        {{teacherData.type == null ? "N/A" : teacherData.type}} 
                                     </p>
                                 </div>
 
@@ -87,23 +87,23 @@
                                    
                                     <label>Status</label>
                                     <p class="hd_p">
-                                        {{studentData.status}} 
+                                        {{teacherData.status}} 
                                     </p>
                                 </div>
                                 
                                 
                             </div>
                            
-                            <div class="text-center" *ngIf="studentData.status == 'inactive'">
+                            <div class="text-center" *ngIf="teacherData.status == 'inactive'">
                                 <!--  -->
                                 <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('active')">Active</button>
                                 <!-- &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('inactive')" >Inactive</button> -->
                                 <!-- (click)="onStatus('Decline')" -->
-                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/student_list" class="btn theme-btn ft">Back</button>
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/teacher_list" class="btn theme-btn ft">Back</button>
                             </div>
-                            <div class="text-center" *ngIf="studentData.status == 'active'">
+                            <div class="text-center" *ngIf="teacherData.status == 'active'">
                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('inactive')" >Inactive</button>
-                                &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/student_list" class="btn theme-btn ft">Back</button>
+                                &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/teacher_list" class="btn theme-btn ft">Back</button>
                             </div>
                           </div>
                          </div>

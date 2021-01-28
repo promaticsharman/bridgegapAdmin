@@ -42,7 +42,7 @@
 
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Heading" [(ngModel)]="engagingData.heading"
+                                        <input matInput placeholder="Heading" maxlength="50" [(ngModel)]="engagingData.heading"
                                         [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
@@ -50,7 +50,7 @@
                                 <!-- Designation -->
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Description" [(ngModel)]="engagingData.description"
+                                        <input matInput placeholder="Description" maxlength="150" [(ngModel)]="engagingData.description"
                                         [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>

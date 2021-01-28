@@ -523,4 +523,70 @@ export class AdminService {
         }),
       )
   }
+  get_all_courses(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}get_all_courses`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  search_courses(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}search_courses`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+      )
+  }
+  change_status(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}change_status`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  change_user_status(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}change_user_status`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  getAllTeachers(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getAllTeachers`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  change_teacher_status(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}change_teacher_status`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  filterTeacherList(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}search_teachers`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+      )
+  }
 }

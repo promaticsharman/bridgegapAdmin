@@ -69,6 +69,13 @@
         height: 270px;
         margin-bottom: 30px;
     }
+    .vid_wrap img{
+        max-width: 100%;
+        border-radius: 0.1875rem;
+        height: 270px;
+        object-fit: cover;
+        border: 1px solid #e2e2e2;
+        }
     label{
         font-size: 18px;
         color:#000;

@@ -35,15 +35,7 @@
             </a>
             <ul class="sub-ul">
                 <li [ngClass]="router.url.includes('/student_list') ? 'active-1' : ''" ><a  [routerLink]="['/student_list']">Student Management</a></li>
-                <li [ngClass]="router.url.includes('/teacherApplication') ? 'active-1' : ''" ><a  [routerLink]="['/teacherApplication']">Teacher Management</a></li>
-                <!-- href="javascript:void(0)" -->
-                <!-- <li><a href="javascript:void(0)">Teacher Management</a></li> -->
-                <!-- <li><a href="javascript:void(0)">Subcategory-1</a></li>
-                <li><a href="javascript:void(0)">Subcategory-1</a></li>
-                <li><a href="javascript:void(0)">Subcategory-1</a></li>
-                <li><a href="javascript:void(0)">Subcategory-1</a></li> -->
-
-
+                <li [ngClass]="router.url.includes('/teacher_list') ? 'active-1' : ''" ><a  [routerLink]="['/teacher_list']">Teacher Management</a></li>
             </ul>
         </li>
         <li  routerLinkActive="active"  class="nav-item">
@@ -69,59 +61,45 @@
             </a>
             
         </li> -->
-        <!-- <li routerLinkActive="active"  class="nav-item">
+
+
+        <!-- <li  routerLinkActive="active"  class="nav-item">
+            <a href="javascript:void(0)" class="nav-link ">
+                <i class="material-icons">list</i>
+                <p>User Management</p>
+                
+            </a>
+            <ul class="sub-ul">
+                <li [ngClass]="router.url.includes('/student_list') ? 'active-1' : ''" ><a  [routerLink]="['/student_list']">Student Management</a></li>
+                <li [ngClass]="router.url.includes('/teacherApplication') ? 'active-1' : ''" ><a  [routerLink]="['/teacherApplication']">Teacher Management</a></li>
+              -->
+
+
+
+        <li routerLinkActive="active"  class="nav-item">
             <a href="javascript:void(0)" class="nav-link">
                 <i class="material-icons">settings</i>
                 <p>General Management</p>
-                  <ul class="sub-ul">
-
-                    <li><a [routerLink]="['/contact']">CONTACT US</a></li>
-                  </ul>
-
             </a>
-        </li> -->
-        <!-- <li  routerLinkActive="active"  class="nav-item">
+              <ul class="sub-ul">
+               <li  [ngClass]="router.url.includes('/contact') ? 'active-1' : ''"><a [routerLink]="['/contact']">CONTACT US</a></li>
+               <li  [ngClass]="router.url.includes('/sociaLinks') ? 'active-1' : ''"><a [routerLink]="['/sociaLinks']">SOCIAL MEDIA LINKS</a></li>
+             </ul>
+     
+        </li>
+        <li  routerLinkActive="active"  class="nav-item">
             <a href="javascript:void(0)" class="nav-link">
                 <i class="material-icons">info</i>
                 <p>Faq Management</p>
+            </a>    
                 <ul class="sub-ul">
-                    <li><a [routerLink]="['/generalFaq']">GENERAL FAQ</a></li>
-                    <li><a [routerLink]="['/teacherFaq']">TEACHER FAQ</a></li>
-                    <li><a [routerLink]="['/parentFaq']">PARENT FAQ</a></li>
+                    <li [ngClass]="router.url.includes('/generalFaq') ? 'active-1' : ''"><a [routerLink]="['/generalFaq']">GENERAL FAQ</a></li>
+                    <li [ngClass]="router.url.includes('/teacherFaq') ? 'active-1' : ''"><a [routerLink]="['/teacherFaq']">TEACHER FAQ</a></li>
+                    <li [ngClass]="router.url.includes('/parentFaq') ? 'active-1' : ''"><a [routerLink]="['/parentFaq']">PARENT FAQ</a></li>
                 </ul>
-            </a>
-        </li> -->
+           
+        </li>
 
-
-
-
-       <!-- <li>
-        <mat-accordion class="example-headers-align" multi>
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Personal data
-                </mat-panel-title>
-                <mat-panel-description>
-                  Type your name 
-                  <mat-icon>account_circle</mat-icon>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-          
-              <mat-form-field>
-                <mat-label>First name</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </mat-expansion-panel>       
-          </mat-accordion>
-       </li>
-        -->
- 
-
-
-        <!-- <li class="nav-item">
-            <a href=""
-        </li> -->
     </ul>
 </div>
 

@@ -60242,6 +60242,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../teacher-applications/teacher-applications.component */ "QqmM");
 /* harmony import */ var _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../teacher-applications/view-teacher-application/view-teacher-application.component */ "hr2U");
 /* harmony import */ var _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../teacher-management/teacher-management.component */ "ZD+H");
+/* harmony import */ var _courses_management_courses_management_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../courses-management/courses-management.component */ "9HS8");
+/* harmony import */ var _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../courses-management/view-course-details/view-course-details.component */ "qgk4");
+/* harmony import */ var _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../teacher-management/view-teacher-list/view-teacher-list.component */ "x9IN");
+/* harmony import */ var _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../social-media-links/social-media-links.component */ "XuI3");
+
+
+
+
 
 
 
@@ -60279,8 +60287,9 @@ var AdminLayoutRoutes = [
     { path: 'add_sub_category/:id', component: _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_19__["AddSubCategoryComponent"] },
     { path: 'sub_category/:catId/:subCatId', component: _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_20__["EditSubCategoryComponent"] },
     { path: 'student_list', component: _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_3__["UserListComponent"] },
-    { path: 'view_student_list', component: _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_4__["ViewStudentDetailsComponent"] },
+    { path: 'student_list/:stdId', component: _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_4__["ViewStudentDetailsComponent"] },
     { path: 'teacher_list', component: _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_27__["TeacherManagementComponent"] },
+    { path: 'view_teacher_list/:teacherId', component: _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_30__["ViewTeacherListComponent"] },
     { path: 'section_1', component: _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_5__["SectionFirstComponent"] },
     { path: 'createEngaging', component: _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_21__["CreateEngagingComponent"] },
     { path: 'editEngaging/:id', component: _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_22__["EditEngagingComponent"] },
@@ -60300,6 +60309,9 @@ var AdminLayoutRoutes = [
     { path: 'contact', component: _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_14__["ContactUsComponent"] },
     { path: 'teacherApplication', component: _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_25__["TeacherApplicationsComponent"] },
     { path: 'viewApplication/:id', component: _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_26__["ViewTeacherApplicationComponent"] },
+    { path: 'courses', component: _courses_management_courses_management_component__WEBPACK_IMPORTED_MODULE_28__["CoursesManagementComponent"] },
+    { path: 'viewCourse/:id', component: _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_29__["ViewCourseDetailsComponent"] },
+    { path: 'sociaLinks', component: _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_31__["SocialMediaLinksComponent"] },
 ];
 
 

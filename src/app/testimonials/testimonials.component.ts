@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./testimonials.component.css']
 })
 export class TestimonialsComponent implements OnInit {
+	loader
   checked = false;
 	indeterminate = false;
 	labelPosition: 'before' | 'after' = 'after';
@@ -51,6 +52,7 @@ export class TestimonialsComponent implements OnInit {
 		offset:this.reqData.offset,
 		limit:this.reqData.limit
 	  }
+	  this.loader=true;
 	  this.service. allTestimonial(list).subscribe(res => {
 		  console.log('testimonial data',res);
 		  if(res){
@@ -58,6 +60,7 @@ export class TestimonialsComponent implements OnInit {
 			    this.dataSource=res.data.rows;
 			    console.log("datasource", this.dataSource)
 		  }
+		  this.loader=false;
 		},
 		err => {
 	   console.log(err);

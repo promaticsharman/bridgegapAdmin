@@ -33,9 +33,11 @@ export class ViewTeacherApplicationComponent implements OnInit {
     benefitsOfClass:"",
     whatWillYouTeach:"",
     link:"",
-    status:""
-    
-   
+    status:"",
+    requirement:"",
+    classes_teach_data: [],
+    academic_qualifications: [],
+    professional_qualifications: []
   }
   video
    
@@ -105,7 +107,11 @@ export class ViewTeacherApplicationComponent implements OnInit {
             this.applicationData.benefitsOfClass=element.learner_benefits_of_class;
             this.applicationData.whatWillYouTeach=element.what_will_you_teach;
             this.applicationData.link=element.websites_link;
+            this.applicationData.requirement = element.requirement_for_class
             this.applicationData.status=element.application_status;
+            this.applicationData.classes_teach_data = element.classes_teach_data
+            this.applicationData.academic_qualifications = element.academic_qualifications
+            this.applicationData.professional_qualifications = element.professional_qualifications
             let videoUrl = this.videoPath + element.video
             console.log(videoUrl);
             this.video = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
@@ -119,11 +125,11 @@ export class ViewTeacherApplicationComponent implements OnInit {
   })
   }
 
-  onStatus(status){
+  onStatus(){
    console.log("status",status)
     var  obj={
       id:this.StudentId,
-      status:status,
+      // status:status,
     }
     console.log("status",obj)
     
@@ -208,8 +214,8 @@ export class ViewTeacherApplicationComponent implements OnInit {
   console.log("Rejectstatus",rejectObj)
   console.log("status",obj)
   
-  this.service.applicationApproved(obj).subscribe(res => {
-    console.log("res*****",res)
+  // this.service.applicationApproved(obj).subscribe(res => {
+    // console.log("res*****",res)
     this.service.applicationRejected(rejectObj).subscribe(res => { 
     Swal.fire('Success..!', 'Application Rejected!', 'success')
      this.dialogRef.close();
@@ -217,7 +223,7 @@ export class ViewTeacherApplicationComponent implements OnInit {
     })
    
     
-  })
+  // })
 
 }
 	

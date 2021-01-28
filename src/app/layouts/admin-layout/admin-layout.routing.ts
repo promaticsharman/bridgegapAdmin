@@ -36,6 +36,10 @@ import { EditHowItWorksComponent } from '../../section-three/edit-how-it-works/e
 import { TeacherApplicationsComponent } from '../../teacher-applications/teacher-applications.component';
 import { ViewTeacherApplicationComponent } from '../../teacher-applications/view-teacher-application/view-teacher-application.component';
 import { TeacherManagementComponent } from '../../teacher-management/teacher-management.component';
+import { CoursesManagementComponent } from '../../courses-management/courses-management.component';
+import { ViewCourseDetailsComponent } from '../../courses-management/view-course-details/view-course-details.component';
+import { ViewTeacherListComponent } from '../../teacher-management/view-teacher-list/view-teacher-list.component';
+import { SocialMediaLinksComponent } from '../../social-media-links/social-media-links.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'category',      component: CategoryComponent },
@@ -46,9 +50,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'sub_category/:catId/:subCatId',      component: EditSubCategoryComponent },
 
     { path: 'student_list',      component: UserListComponent },
-    { path: 'view_student_list',      component: ViewStudentDetailsComponent },
+    { path: 'student_list/:stdId',  component: ViewStudentDetailsComponent },
     
     { path: 'teacher_list',      component: TeacherManagementComponent},
+    { path: 'view_teacher_list/:teacherId',      component: ViewTeacherListComponent},
     { path: 'section_1',      component: SectionFirstComponent },
     { path: 'createEngaging',      component: CreateEngagingComponent },
     { path: 'editEngaging/:id',      component: EditEngagingComponent },
@@ -68,6 +73,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'contact',   component: ContactUsComponent },
     { path: 'teacherApplication',   component: TeacherApplicationsComponent },
     { path: 'viewApplication/:id',   component: ViewTeacherApplicationComponent },
+    { path: 'courses',   component: CoursesManagementComponent },
+    { path: 'viewCourse/:id',   component: ViewCourseDetailsComponent },
+    { path: 'sociaLinks',   component:SocialMediaLinksComponent },
+    
     // { path: 'user-profile',   component: UserProfileComponent },
     // { path: 'table-list',     component: TableListComponent },
     // { path: 'typography',     component: TypographyComponent },

@@ -14,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./section-three.component.css']
 })
 export class SectionThreeComponent implements OnInit {
-  
+  loader
   dataSource
   tableData 
   backUpTableData
@@ -60,12 +60,14 @@ export class SectionThreeComponent implements OnInit {
       offset:this.reqData.offset,
       limit:this.reqData.limit
      }
+     this.loader=true;
     this.service.getAllHowItsWorks(list).subscribe(res=>{
       console.log("section two data",res)
       if(res){
         this.length = res.data.count;
         console.log("****length***",this.length);
         this.dataSource=res.data.rows;
+        this.loader=false;
         // this.dataSource.paginator = this.paginator;
         // console.log("datasource", this.dataSource)
     }
@@ -100,7 +102,8 @@ export class SectionThreeComponent implements OnInit {
 			
 		}
 
-		console.log(this.reqData)
+    console.log(this.reqData)
+    
 		this.service.getAllHowItsWorks(list).subscribe(res => {
 		console.log('paginator limit',res)
 		if(res){

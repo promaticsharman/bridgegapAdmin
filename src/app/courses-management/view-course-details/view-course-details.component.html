@@ -1,0 +1,242 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+  <h2 >
+   COURSE DETAILS </h2>
+ </div>
+ <div class="main-content" style="position: relative;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <form >
+                    <!-- [formGroup]="applicationForm" -->
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title">Testimonials</h4>
+                        </div>
+                        <div class="card-body block-card">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="vid_wrap">
+                                        <label>Course Video</label>
+                                        <iframe class="embed-responsive-item" [src]='video'></iframe>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="vid_wrap">
+                                        <label>Cover Photo</label>
+                                        <img src="{{courseImg}}" class=""> 
+                                    </div>
+                                    
+                                </div>
+                
+                               
+                                <div class="col-md-6">
+                                    <label>Teacher Name</label>
+                                    <p class="hd_p">
+                                        {{courseData.fullname}}
+                                    </p>
+                                    
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <label>Course Type</label>
+                                    <p class="hd_p">
+                                       {{courseData.course_type}}
+                                    </p>
+                                    
+                                </div>
+                                
+                               
+                                <div class="col-md-6">
+                                    <label>Course Title</label>
+                                    <p class="hd_p">
+                                       {{courseData.course_title}}
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Category Name</label>
+                                    <p class="hd_p">
+                                       {{courseData.category_name}}
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Sub Category Name</label>
+                                    <p class="hd_p">
+                                       {{courseData.sub_category_name}}
+                                    </p>
+                                </div>
+                                 
+                                <div class="col-md-6">
+                                    <label>Number Of Weeks</label>
+                                    <p class="hd_p">
+                                        {{courseData.num_of_weeks}} 
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Number Of Sessions Weeks</label>
+                                    <p class="hd_p">
+                                        {{courseData.num_of_sessions_week}} 
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Number Of Minute Session</label>
+                                    <p class="hd_p">
+                                        {{courseData.num_of_minute_session}} 
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                   
+                                    <label>Minimum Age</label>
+                                    <p class="hd_p">
+                                        {{courseData.minimum_age}} 
+                                    </p>
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                    <label>Maximum Age</label>
+                                    <p class="hd_p">
+                                        {{courseData.maximum_age}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Maximum learners</label>
+                                    <p class="hd_p">
+                                        {{courseData.maximum_learners}}
+                                    </p>
+                                </div>
+                                    
+                                
+                                <div class="col-sm-6">
+                                    <label>Minimum learners</label>
+                                    <p class="hd_p">
+                                        {{courseData.minimum_learners}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Courses Overview</label>
+                                    <p class="hd_p">
+                                        {{courseData.courses_overview}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>learning Objectives</label>
+                                    <p class="hd_p">
+                                        {{courseData.learning_objectives}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Course Breakup</label>
+                                    <p class="hd_p">
+                                        {{courseData.course_breakup}}
+                                    </p>
+                                </div>
+                                <!-- <div class="col-sm-12">
+                                    <label>Course Breakup</label>
+                                    <p class="hd_p">
+                                        {{courseData.benefitsOfClass}}
+                                    </p>
+                                </div> -->
+                                <div class="col-sm-6">
+                                    <label>Assignment</label>
+                                    <p class="hd_p">
+                                        {{courseData.assignment}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Assessment</label>
+                                    <p class="hd_p">
+                                        {{courseData.assessment}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Requirements</label>
+                                    <p class="hd_p">
+                                        {{courseData.requirements}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Globally Price</label>
+                                    <p class="hd_p">
+                                        {{courseData.globally_price}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>local Price</label>
+                                    <p class="hd_p">
+                                        {{courseData.local_price}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Multiple Session Courses</label>
+                                    <p class="hd_p">
+                                        {{courseData.multiple_session_courses}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Save Type</label>
+                                    <p class="hd_p">
+                                        {{courseData.save_type}}
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Zoom Class link</label>
+                                    <p class="hd_p">
+                                        {{courseData.zoom_class_link}}
+                                    </p>
+                                </div>
+                        
+                                <div class="col-md-6">
+                                   <label>Status</label>
+                                    <p class="hd_p">
+                                       {{courseData.status}}
+                                    </p>
+                                </div>
+                            </div>
+                           
+                            <div class="text-center" *ngIf="courseData.status == 'inactive'">
+                                <!--  -->
+                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('active')">Active</button>
+                                <!-- &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('inactive')" >Inactive</button> -->
+                                <!-- (click)="onStatus('Decline')" -->
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
+                            </div>
+                            <div class="text-center" *ngIf="courseData.status == 'active'">
+                               <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('inactive')" >Inactive</button>
+                                &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
+                            </div>
+                          </div>
+                         </div>
+               </form>
+            </div>
+        </div>
+    </div> 
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

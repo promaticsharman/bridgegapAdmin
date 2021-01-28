@@ -14,7 +14,8 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
     { path: '/category', title: 'Category',  icon: 'location_map-big', class: ''  },
-    // { path: '/teacherApplication', title: 'Teacher Applications',  icon: 'location_map-big', class: ''  },
+    { path: '/courses', title: 'Courses Management',  icon: 'education_atom', class: ''  },
+    { path: '/teacherApplication', title: 'Teacher Applications',  icon: 'users_single-02', class: ''  },
     // { path: '/user_list', title: 'User Management',  icon: 'design_bullet-list-67', class: '' ,subcat:[]},
     // { path: '/section_1', title: 'Home Section 1',  icon: 'ui-1_bell-53', class: '' ,subcat:[]}
     // { path: '/sub_category', title: 'Sub Category',  icon: 'design_app', class: '' },

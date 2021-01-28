@@ -13604,12 +13604,18 @@ Created using IcoMoon - icomoon.io
   z-index: 99;
   left: 50%;
   top: 50%;
+  color: #142C69 !important;
 }
 .ellipsis {
   max-width: 40px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
+  background-image: none !important;
+  background-size: 4px 100%;
+  background-repeat: repeat-x;
 }
 /*!
 
