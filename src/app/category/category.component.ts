@@ -15,6 +15,7 @@ import {environment} from '../../environments/environment.prod';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
+	loader
   checked = false;
 	indeterminate = false;
 	labelPosition: 'before' | 'after' = 'after';
@@ -110,6 +111,7 @@ export class CategoryComponent implements OnInit {
 		  offset: this.reqData.offset,
 		  limit: this.reqData.limit
 	  }
+	  this.loader=true;
     this.service.allCategory(obj).subscribe(res => {
       // console.log('getTableData******',res.data);
       
@@ -119,7 +121,8 @@ export class CategoryComponent implements OnInit {
 		this.dataSource = res.data.rows;
 		this.length = res.data.count;
         // this.responseData=new MatTableDataSource(res.data);
-        console.log('dataSource',this.dataSource);
+		console.log('dataSource',this.dataSource);
+		this.loader=false;
       }
     },err => {
       console.log(err);

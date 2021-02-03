@@ -570,7 +570,7 @@ export class AdminService {
       )
   }
   change_teacher_status(data): Observable<any> {
-    let API_URL = `${this.apiUrl1}change_teacher_status`;
+    let API_URL = `${this.apiUrl1}change_user_Teacher_status`;
     return this.httpClient.post(API_URL, data,httpOptions )
       .pipe(
         map(res => {
@@ -587,6 +587,121 @@ export class AdminService {
         map(res => {
           return res
         }),
+      )
+  }
+  getMediaLinks(): Observable<any> {
+    let API_URL = `${this.apiUrl1}get_media_links`;
+    return this.httpClient.get(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updateLinks(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}social_media_links`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  getFaq(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}get_faq`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  addFaq(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}add_faq`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  deleteFaq(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}delete_faq`;
+    var obj = {
+      faq_id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        // catchError(this.error)
+      )
+  }
+  updateFaq(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}update_faq`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+
+  getAdminProfile(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getAdminProfile`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updateAdminProfile(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}editAdminProfile`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  deleteCourse(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteCourse`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        // catchError(this.error)
+      )
+  }
+  courseRejected(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}change_status`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  deleteTeacherApplication(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteTeacherApplication`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        // catchError(this.error)
       )
   }
 }

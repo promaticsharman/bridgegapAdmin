@@ -148,10 +148,10 @@
     &.bootstrap-datetimepicker-widget.top,
     &.bootstrap-datetimepicker-widget.bottom{
         @include transform-translate-y-dropdown(-20px);
-        visibility: hidden;
+        visibility:hidden;
         display: block;
         @include opacity(0);
-        top: 100% !important;
+        top:40px !important;
     }
 
     &.bootstrap-datetimepicker-widget.top,
@@ -198,9 +198,14 @@
         padding-top: $padding-base-vertical;
         padding-bottom: $padding-base-vertical;
         display: block;
+        opacity:1;
+        visibility: visible;
 
         &:after{
             display: none;
         }
     }
+}
+.dropdown-menu.show{
+    display: block!important;
 }

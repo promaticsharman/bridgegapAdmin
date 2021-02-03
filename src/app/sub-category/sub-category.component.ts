@@ -32,6 +32,7 @@ export class SubCategoryComponent implements OnInit {
 	responseData = [] 
     dataSource: any
 	CateID
+	loader
 	currentPage=10
 	currentIndex=0
   displayedColumns: string[] = ['position','category','image','action'];
@@ -65,11 +66,13 @@ export class SubCategoryComponent implements OnInit {
 		offset:this.reqData.offset,
 		limit:this.reqData.limit
 	}
+	this.loader=true;
 	this.service.getSubList(list).subscribe(res => {
 		// console.log('*****getSubCategoryData******',res.data);
 		if(res){
 		  this.length=res.data.count
 		  this.dataSource=res.data.rows
+		  this.loader=false;
 		  console.log('responseData ***',this.dataSource)
 		}
   },

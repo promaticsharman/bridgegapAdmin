@@ -30,7 +30,9 @@ export class CoursesManagementComponent implements OnInit {
 	responseData = [] 
     dataSource: any
     currentIndex=0
-  displayedColumns: string[] = ['position','course_type','course_title','teacher_name','status','action'];
+    limit=10
+    offset=0
+  displayedColumns: string[] = ['position','course_type','course_title','teacher_name','date','status','action'];
   // 'courses_overview',
   // ,'globally_price'
 
@@ -38,13 +40,15 @@ export class CoursesManagementComponent implements OnInit {
     private dialog: MatDialog,
     private service: AdminService,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.reqData = {} 
 		this.reqData.offset = 0
     this.reqData.limit = 10
-    // this.currentPage=10
+    this.currentPage=10
+    this.currentIndex=0
 		this.dataSource = new MatTableDataSource(this.responseData);
 		// this.dataSource.paginator = this.paginator;
     this.datamodel = {}
@@ -57,13 +61,13 @@ export class CoursesManagementComponent implements OnInit {
       limit:this.reqData.limit,
       offset:	this.reqData.offset
     }
-    // this.loader=true;
+    this.loader=true;
     this.service.get_all_courses(list).subscribe(res => {
       console.log('*****getCoursesrData******',res.data);
       if(res){
         this.length = res.data.count;
         this.dataSource=res.data.rows;
-        // this.loader=false;
+        this.loader=false;
         console.log('responseData ***',this.dataSource)
       }
     },
@@ -89,7 +93,7 @@ export class CoursesManagementComponent implements OnInit {
         console.log('filterResponse',res)
         if (res) {
         this.dataSource = res.data
-        
+        this.length = res.length;
         }
         }, err => {
         console.log(err)
@@ -103,14 +107,16 @@ export class CoursesManagementComponent implements OnInit {
         
         })
     }else{
+      
       this.ngOnInit();
+
     }
   }
   getPageSizeOptions() {
     return [10, 20, 30];
     }
     paginationOptionChange(evt) {
-
+        console.log("evthrm",evt)
       this.reqData.offset = (evt.pageIndex * evt.pageSize).toString()
       this.reqData.limit = evt.pageSize
 
@@ -131,7 +137,7 @@ export class CoursesManagementComponent implements OnInit {
       }
     //   // console.log(this.reqData)
       this.service.get_all_courses(list).subscribe(res => {
-      // console.log('paginator limit',res)
+      console.log('paginator limit',res)
       if(res){
           
         this.length = res.data.count;
@@ -147,5 +153,43 @@ export class CoursesManagementComponent implements OnInit {
           console.log('Internet Connection Error');
         }
     })
+    }
+    delete(id){
+      Swal.fire({
+        title: 'Are you sure want to remove?',
+        text: 'You will not be able to recover this Course!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {
+        if (result.value) {
+        this.service.deleteCourse(id).subscribe(data => {
+          // console.log(data);
+          Swal.fire(
+            'Deleted!',
+            'This Course has been deleted.',
+            'success'
+          )
+          // this.router.navigate(['/courses'])
+        //  this.ngOnInit();
+        
+          let currentUrl = this.router.url;
+
+          // console.log('currentUrl',currentUrl)
+          this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+              this.router.navigate([currentUrl]);
+          });
+     
+          
+      });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire(
+          'Cancelled',
+          'This Course is safe :)',
+          'error'
+        )
+        }
+      })
     }
 }

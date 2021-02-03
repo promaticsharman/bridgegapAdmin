@@ -20,7 +20,7 @@
           <!-- routerLink="/addcategory" -->
          
           <mat-form-field>
-            <mat-label>Filter</mat-label>
+            <mat-label>Search</mat-label>
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="" #input>
           </mat-form-field>
           <div class="card-body">
@@ -43,18 +43,18 @@
 
                     
                     <ng-container matColumnDef="email_id">
-                        <th mat-header-cell *matHeaderCellDef>Email</th>
-                        <td mat-cell *matCellDef="let element">{{element.email_id}}</td>
+                        <th width="200px" class="text-center" mat-header-cell *matHeaderCellDef>Email</th>
+                        <td width="200px" class="text-center" mat-cell *matCellDef="let element">{{element.email_id}}</td>
                     </ng-container>
                     
-                    <ng-container matColumnDef="mobile_number">
+                    <!-- <ng-container matColumnDef="mobile_number">
                         <th mat-header-cell *matHeaderCellDef>Phone</th>
                         <td mat-cell *matCellDef="let element">{{element.mobile_number}}</td>
-                    </ng-container>
+                    </ng-container> -->
 
-                    <ng-container matColumnDef="country">
-                        <th mat-header-cell *matHeaderCellDef>Country</th>
-                        <td mat-cell *matCellDef="let element">{{element.country_data.name}}</td>
+                    <ng-container matColumnDef="date">
+                        <th width="200px" class="text-center"  mat-header-cell *matHeaderCellDef>Appication Date</th>
+                        <td width="200px" class="text-center" mat-cell *matCellDef="let element">{{element.created_at | dateAgo}}</td>
                     </ng-container>
 
 
@@ -71,8 +71,11 @@
                     <td  width="150px" class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
                       <button  mat-icon-button routerLink="/viewApplication/{{element.id}}" >
                          <mat-icon >visibility</mat-icon>
+                      </button>
+                      <button  mat-icon-button (click)="delete(element.id)">
+                        <mat-icon >delete</mat-icon>
                      </button>
-<!--                         
+                     <!--                         
                              
                               <mat-form-field >
                                

@@ -11598,7 +11598,7 @@ a[data-toggle=collapse][aria-expanded=true] .caret,
   display: block;
   opacity: 0;
   filter: alpha(opacity=0);
-  top: 100% !important;
+  top: 40px !important;
 }
 .dropdown-menu.bootstrap-datetimepicker-widget.top, .dropdown-menu.bootstrap-datetimepicker-widget.bottom {
   transform: translate3d(0, -20px, 0) !important;
@@ -11631,9 +11631,14 @@ a[data-toggle=collapse][aria-expanded=true] .caret,
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .button-dropdown .dropdown-toggle:after {
   display: none;
+}
+.dropdown-menu.show {
+  display: block !important;
 }
 .alert {
   border: 0;
@@ -12408,7 +12413,7 @@ Created using IcoMoon - icomoon.io
 .off-canvas-sidebar .nav i {
   font-size: 20px;
   float: left;
-  margin-right: 12px;
+  margin-right: 5px;
   line-height: 30px;
   width: 34px;
   text-align: center;
@@ -12617,7 +12622,7 @@ Created using IcoMoon - icomoon.io
   color: #fff;
 }
 .sidebar .nav li > a, .off-canvas-sidebar .nav li > a {
-  margin: 10px 15px 0;
+  margin: 10px 5px 0 !important;
   border-radius: 5px;
   color: #FFFFFF;
   display: block;
@@ -13616,6 +13621,18 @@ Created using IcoMoon - icomoon.io
   background-image: none !important;
   background-size: 4px 100%;
   background-repeat: repeat-x;
+}
+.babu p {
+  width: 260px !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+.ellipsis1 {
+  max-width: 260px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /*!
 

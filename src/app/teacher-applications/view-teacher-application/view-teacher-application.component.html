@@ -69,7 +69,7 @@
                                     </p>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                    
                                     <label>Address</label>
                                     <p class="hd_p">
@@ -77,13 +77,13 @@
                                     </p>
                                 </div>
                                 
-                                <div class="col-sm-12">
+                                <div class="col-md-6">
                                     <label>Teaching Experience</label>
                                     <p class="hd_p">
                                         {{applicationData.experiance}}
                                     </p>
                                 </div>
-                                <div class="col-sm-12">
+                                <div class="col-md-6">
                                     <label>Websites Links That Show Teaching Experience</label>
                                     <p class="hd_p">
                                         {{applicationData.link}}
@@ -91,31 +91,31 @@
                                 </div>
                                     
                                 
-                                <div class="col-sm-12">
+                                <div class="col-md-6">
                                     <label>What will you teach?</label>
                                     <p class="hd_p">
                                         {{applicationData.whatWillYouTeach}}
                                     </p>
                                 </div>
-                                <div class="col-sm-12">
+                                <div class="col-md-6">
                                     <label>How you will teach? Your Approach?</label>
                                     <p class="hd_p">
                                         {{applicationData.teach}}
                                     </p>
                                 </div>
-                                <div class="col-sm-12">
+                                <div class="col-md-6">
                                     <label>Requirements for the class?</label>
                                     <p class="hd_p">
                                         {{applicationData.requirement}}
                                     </p>
                                 </div>
-                                <div class="col-sm-12">
+                                <div class="col-md-6">
                                     <label>How will learners benefit from this class?</label>
                                     <p class="hd_p">
                                         {{applicationData.benefitsOfClass}}
                                     </p>
                                 </div>
-                                <div class="col-sm-12">
+                                <div class="col-sm-12" *ngIf="applicationData.academic_qualifications.length >0">
                                     <label>Academic Qualification</label>
                                     <table class="table table-bordered text-center">
                                         <tbody>
@@ -138,7 +138,7 @@
                                     </table>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-12" *ngIf="applicationData.professional_qualifications.length >0">
                                     <label>Professional Qualification</label>
                                     <table class="table table-bordered text-center">
                                         <tbody>
@@ -161,10 +161,11 @@
                                     </table>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-12" *ngIf="applicationData.classes_teach_data.length >0">
                                     <label>Classes That You Want To Teach</label>
-                                    <table class="table table-bordered text-center">
+                                    <table class="table table-bordered text-center" >
                                         <tbody>
+                                           
                                           <tr class="hddr">
                                             <td><b>Sr.No.</b></td>   
                                            <td><b>Topic</b></td>			
@@ -173,25 +174,43 @@
                                             <td><b>Age Group</b></td>
                                           </tr>
                                           <tr *ngFor="let data of applicationData.classes_teach_data;let i = index;">
+                                           
+                                              <!-- <div *ngIf="applicationData.classes_teach_data.length > 0"> -->
                                               <td>{{i+1}}</td>
-                                              <td>{{data.topic}}</td>
+                                              <td>{{data.topic }}</td>
                                               <td>{{data.sub_topic}}</td>
-                                              <td>{{data.teaching_experience}}</td>
+                                              <td>{{data.teaching_experience }}</td>
                                               <td>{{data.fromAge + " " + "to" + " " + data.toAge }}</td>
+                                              <!-- </div> -->
+                                              
+                                              
                                           </tr>
                                         </tbody>
                                         
                                     </table>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <label>Application Date</label>
+                                     <p class="hd_p">
+                                        {{applicationData.date| dateAgo}}
+                                     </p>
+                                 </div>
+                                <div class="col-md-12">
                                    <label>Status</label>
                                     <p class="hd_p">
                                        {{applicationData.status}}
                                     </p>
                                 </div>
+                                
                             </div>
                            
-                            <div class="text-center" *ngIf="applicationData.status != 'Rejected'">
+                            <div class="text-center" *ngIf="applicationData.status == 'Approved'">
+                                <!-- <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus()">Accept</button> -->
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectApplication()" >Reject</button>
+                                <!-- (click)="onStatus('Decline')" -->
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/teacherApplication" class="btn theme-btn ft">Back</button>
+                            </div>
+                            <div class="text-center" *ngIf="applicationData.status == 'Pending'">
                                 <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus()">Accept</button>
                                 &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectApplication()" >Reject</button>
                                 <!-- (click)="onStatus('Decline')" -->

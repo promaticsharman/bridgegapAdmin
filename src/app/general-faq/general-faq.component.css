@@ -1,0 +1,6 @@
+.babu p{
+    width: 250px!important;
+    text-overflow: ellipsis!important;
+    overflow: hidden!important;
+    white-space: nowrap!important;
+}

@@ -1,0 +1,83 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+  <h2>
+     ADD GEN FAQ
+</h2>
+ </div>
+ <div class="main-content" style="position: relative;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <form [formGroup]="genFaqForm">
+                    <div class="card">
+                        <!-- <div class="card-header card-header-danger">
+                            <h4 class="card-title">Testimonials</h4>
+                        </div> -->
+                        <div class="card-body block-card">
+                            <div class="row">
+                                <div class="col-md-12" >
+                                    <mat-label>Enter Question</mat-label>
+                                    <mat-form-field class="example-full-width" >
+                                        <textarea matInput rows="2" formControlName="question"  [(ngModel)]="EnterQuestion"
+                                        ></textarea>
+    
+                                    </mat-form-field>
+                                    <div *ngIf="genFaqForm.controls['question'].touched &&
+                                     genFaqForm.controls['question'].invalid"
+                                     class="text-danger">
+                                   
+                                   <div *ngIf="genFaqForm.controls['question'].errors &&
+                                      genFaqForm.controls['question'].errors.required"> 
+                                      Question is required.</div>
+                                    </div>
+                                </div> 
+                                <!-- Author Name -->
+                                <div class="col-md-12">
+                                    <mat-label>Enter Answer</mat-label>
+                                    <editor
+                                    [init]="{
+                                        height: 350,
+                                        menubar: false,
+                                        plugins: [
+                                        'advlist autolink lists link image charmap print preview anchor',
+                                        'searchreplace visualblocks code fullscreen',
+                                        'insertdatetime media table paste code help wordcount'
+                                        ],
+                                        toolbar:
+                                        'undo redo | formatselect | bold italic backcolor | \
+                                        alignleft aligncenter alignright alignjustify | \
+                                        bullist numlist outdent indent | removeformat | help'
+                                    }" formControlName="answer"  [(ngModel)]="EnterAnswer"
+                                    ></editor>
+                                            <div *ngIf="genFaqForm.controls['answer'].touched &&
+                                        genFaqForm.controls['answer'].invalid"
+                                        class="text-danger">
+                                    
+                                    <div *ngIf="genFaqForm.controls['answer'].errors &&
+                                        genFaqForm.controls['answer'].errors.required"> 
+                                        Answer is required.</div>
+                                        </div>
+
+                                </div>
+            
+                                <!-- Designation -->
+                              
+                                
+                                <!-- Image -->
+                                           
+                            </div>
+                            <br>
+                            <div class="text-center">
+                                <button mat-raised-button type="submit" class="btn btn-success ft"  [disabled]="!genFaqForm.valid" (click)="addFaq()">Add</button>
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/generalFaq" class="btn theme-btn ft">Back</button>
+                                
+                                <!-- [disabled]="!addCategoryForm.valid"  -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+ </div>

@@ -30,11 +30,13 @@ export class TeacherApplicationsComponent implements OnInit {
 	responseData = [] 
     dataSource: any
     currentIndex=0
-  displayedColumns: string[] = ['position','teacher_name','email_id','mobile_number','country','application_status','action'];
+  displayedColumns: string[] = ['position','teacher_name','email_id','date','application_status','action'];
+  // 'mobile_number',
   constructor(
     private dialog: MatDialog,
     private service: AdminService,
     private route: ActivatedRoute,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -55,7 +57,7 @@ export class TeacherApplicationsComponent implements OnInit {
     }
     this.loader=true;
     this.service.showTeacherApplication(list).subscribe(res => {
-      console.log('*****getTeacherData******',res.data);
+      console.log('*****getTeacherData******2feb',res.data);
       if(res){
         this.length = res.data.count;
         this.dataSource=res.data.rows;
@@ -161,5 +163,41 @@ export class TeacherApplicationsComponent implements OnInit {
       })
       }
 
-
+      delete(id){
+        Swal.fire({
+          title: 'Are you sure want to remove?',
+          text: 'You will not be able to recover this Application!',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!',
+          cancelButtonText: 'No, keep it'
+        }).then((result) => {
+          if (result.value) {
+          this.service.deleteTeacherApplication(id).subscribe(data => {
+            // console.log(data);
+            Swal.fire(
+              'Deleted!',
+              'This Application has been deleted.',
+              'success'
+            )
+            // this.router.navigate(['/courses'])
+          //  this.ngOnInit();
+          
+            let currentUrl = this.router.url;
+            console.log('currentUrl',currentUrl)
+            this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+                this.router.navigate([currentUrl]);
+            });
+       
+            
+        });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire(
+            'Cancelled',
+            'This Application is safe :)',
+            'error'
+          )
+          }
+        })
+      }
 }

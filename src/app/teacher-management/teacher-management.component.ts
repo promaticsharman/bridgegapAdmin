@@ -25,7 +25,8 @@ export class TeacherManagementComponent implements OnInit {
 	reqData
 	getData
 	datamodel
-	length
+  length
+  loader
 	timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 	filterValue
 	responseData = [] 
@@ -57,12 +58,13 @@ export class TeacherManagementComponent implements OnInit {
       offset:this.reqData.offset,
       limit:this.reqData.limit
     }
+    this.loader=true;
     this.service.getAllTeachers(list).subscribe(res => {
       console.log('*****getTeachersData******',res.data);
       if(res){
         this.length = res.data.count;
         this.dataSource=res.data.rows;
-        
+        this.loader=false;
         console.log('responseData ***',this.dataSource)
       }
     },

@@ -39,7 +39,7 @@ export class ViewStudentDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
     this.reqData.offset = 0
-		this.reqData.limit = 30
+		this.reqData.limit = 3000
     this.getStudentList()
     this.StudentId=this.route.snapshot.params.stdId
    
@@ -68,7 +68,7 @@ export class ViewStudentDetailsComponent implements OnInit {
               this.studentData.google=element.google_id;
               this.studentData.type=element.user_type;
               this.studentData.status=element.status;
-
+              
 
             }
           });

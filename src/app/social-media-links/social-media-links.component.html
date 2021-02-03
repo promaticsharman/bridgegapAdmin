@@ -1,6 +1,76 @@
+<!-- <div *ngIf="loader" class="load_er">
+	<mat-progress-spinner
+	color="primary"
+	mode="indeterminate">
+	</mat-progress-spinner></div> -->
+
 <div class="panel-header panel-header-sm">
 </div>
 <div class="hdng">
-  <h2 >SOCIAL MEDIA LINKS </h2>
+    <h2 >SOCIAL MEDIA LINKS MANAGEMENT</h2>
  </div>
- 
+ <div class="main-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          
+          <div class="card-body">
+            
+       
+            <div class="card-body">
+              <div class="table-responsive">
+                  <table mat-table [dataSource]="dataSource" class="mat-table table mat-elevation-z1">
+                      <!-- Position -->
+                        
+                      <ng-container matColumnDef="position" class="mat-row">
+                        <th mat-header-cell *matHeaderCellDef >S.No
+                        </th>
+                        <td mat-cell *matCellDef="let element let i=index"> {{i+1}} </td>
+
+                      </ng-container>   
+
+      
+                      <ng-container matColumnDef="social_media_type" class="mat-row">
+                          <th class="text-center" mat-header-cell *matHeaderCellDef >Social Media
+                          </th>
+                          <td class="text-center" mat-cell *matCellDef="let element"> {{element.link_type}} </td>
+  
+                      </ng-container>      
+                      
+                      <ng-container matColumnDef="social_media_link" class="mat-row">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef >Link
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let element"> {{element.social_media_link}} </td>
+
+                    </ng-container>  
+                        
+                      <ng-container matColumnDef="Action" class="mat-row">
+                          <th mat-header-cell *matHeaderCellDef > Action </th>
+                          <td class="mat-cell act_td" mat-cell *matCellDef="let element">
+                              <button  mat-icon-button (click)="editLinkdialog(element.id)">
+                                  <mat-icon >edit</mat-icon>
+                              </button>
+                              <!-- <button  mat-icon-button (click)="delete(element.id)">
+                                  <mat-icon >delete</mat-icon>
+                              </button> -->
+                          
+                        </td>
+                         
+                      </ng-container>
+  
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                  <!-- <div>
+                      <mat-paginator [length]="length" [pageSize]="10" [pageSizeOptions]="getPageSizeOptions()"
+                          (page)="paginationOptionChange($event)">
+                      </mat-paginator>
+                  </div> -->
+              </div>
+          </div> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

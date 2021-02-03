@@ -1,3 +1,8 @@
+<div *ngIf="loader" class="load_er">
+	<mat-progress-spinner
+	color="primary"
+	mode="indeterminate">
+	</mat-progress-spinner></div>
 <div class="panel-header panel-header-sm">
 </div>
 <div class="hdng">
@@ -15,7 +20,7 @@
           <!-- routerLink="/addcategory" -->
          
           <mat-form-field>
-            <mat-label>Filter</mat-label>
+            <mat-label>Search</mat-label>
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="" #input>
           </mat-form-field>
           <div class="card-body">
@@ -60,6 +65,7 @@
                     </th>
                     <td class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
                             <button  mat-icon-button routerLink="/student_list/{{element.id}}">
+                              <!-- /{{}/{{}} -->
                               <!-- (click)="viewDialog(element.id)" -->
                                 <mat-icon >visibility</mat-icon>
                             </button>

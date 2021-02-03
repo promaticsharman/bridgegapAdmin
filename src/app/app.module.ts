@@ -1,5 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { EditorModule } from '@tinymce/tinymce-angular';
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,9 +31,9 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { AddTestimonialsComponent } from './add-testimonials/add-testimonials.component';
 import { SectionSecondComponent } from './section-second/section-second.component';
 import { SectionThreeComponent } from './section-three/section-three.component';
-import { GeneralFaqComponent } from './general-faq/general-faq.component';
-import { TeacherFaqComponent } from './teacher-faq/teacher-faq.component';
-import { ParentFaqComponent } from './parent-faq/parent-faq.component';
+import { GeneralFaqComponent,AddGenFaqDialog,EditGenFaqDialog } from './general-faq/general-faq.component';
+import { TeacherFaqComponent,AddTeacherFaqDialog ,EditTeacherFaqDialog} from './teacher-faq/teacher-faq.component';
+import { ParentFaqComponent,AddParentFaqDialog,EditParentFaqDialog } from './parent-faq/parent-faq.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SectionOneEditComponent } from './section-one-edit/section-one-edit.component';
 import { TestimonialsEditComponent } from './testimonials-edit/testimonials-edit.component';
@@ -49,9 +50,17 @@ import { ViewTeacherApplicationComponent,RejectApplicationDialog } from './teach
 import { TeacherManagementComponent } from './teacher-management/teacher-management.component';
 import { ViewStudentDetailsComponent } from './user-list/view-student-details/view-student-details.component';
 import { CoursesManagementComponent } from './courses-management/courses-management.component';
-import { ViewCourseDetailsComponent } from './courses-management/view-course-details/view-course-details.component';
+import { ViewCourseDetailsComponent,RejectCourseDialog } from './courses-management/view-course-details/view-course-details.component';
 import { ViewTeacherListComponent } from './teacher-management/view-teacher-list/view-teacher-list.component';
-import { SocialMediaLinksComponent } from './social-media-links/social-media-links.component';
+import { SocialMediaLinksComponent,EditLinkDialog } from './social-media-links/social-media-links.component';
+import { NewsletterManagementComponent } from './newsletter-management/newsletter-management.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { AddGenFaqComponent } from './general-faq/add-gen-faq/add-gen-faq.component';
+import { EditGenFaqComponent } from './general-faq/edit-gen-faq/edit-gen-faq.component';
+import { AddParentFaqComponent } from './parent-faq/add-parent-faq/add-parent-faq.component';
+import { EditParentFaqComponent } from './parent-faq/edit-parent-faq/edit-parent-faq.component';
+import { AddTeacherFaqComponent } from './teacher-faq/add-teacher-faq/add-teacher-faq.component';
+import { EditTeacherFaqComponent } from './teacher-faq/edit-teacher-faq/edit-teacher-faq.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -70,7 +79,8 @@ import { SocialMediaLinksComponent } from './social-media-links/social-media-lin
     ToastrModule.forRoot(),
     MatInputModule,
     MatFormFieldModule,
-    MatExpansionModule
+    MatExpansionModule,
+    EditorModule
     //
     // MatDialogModule
   ],
@@ -95,8 +105,14 @@ import { SocialMediaLinksComponent } from './social-media-links/social-media-lin
     SectionSecondComponent,
     SectionThreeComponent,
     GeneralFaqComponent,
+    AddGenFaqDialog,
+    EditGenFaqDialog,
     TeacherFaqComponent,
+    AddTeacherFaqDialog,
+    EditTeacherFaqDialog,
     ParentFaqComponent,
+    AddParentFaqDialog,
+    EditParentFaqDialog,
     ContactUsComponent,
     SectionOneEditComponent,
     TestimonialsEditComponent,
@@ -115,8 +131,18 @@ import { SocialMediaLinksComponent } from './social-media-links/social-media-lin
     ViewStudentDetailsComponent,
     CoursesManagementComponent,
     ViewCourseDetailsComponent,
+    RejectCourseDialog,
     ViewTeacherListComponent,
     SocialMediaLinksComponent,
+    EditLinkDialog,
+    NewsletterManagementComponent,
+    DateAgoPipe,
+    AddGenFaqComponent,
+    EditGenFaqComponent,
+    AddParentFaqComponent,
+    EditParentFaqComponent,
+    AddTeacherFaqComponent,
+    EditTeacherFaqComponent,
 
 
     // SubCategoryComponent

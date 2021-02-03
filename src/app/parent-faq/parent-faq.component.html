@@ -1,3 +1,8 @@
+<div *ngIf="loader" class="load_er">
+	<mat-progress-spinner
+	color="primary"
+	mode="indeterminate">
+	</mat-progress-spinner></div>
 <div class="panel-header panel-header-sm">
 </div>
 <div class="hdng">
@@ -10,33 +15,41 @@
         
         <div class="card-body">
           <div class="text-right" style="padding-right: 65px;" >
-            <button mat-button class="theme-btn" (click)="addTestimonial()">Add</button>
+            <button mat-button class="theme-btn" routerLink="/addParentFaq" >Add Parent Faq</button>
           </div>
           <!-- routerLink="/addcategory" -->
          
-          <mat-form-field>
+          <!-- <mat-form-field>
             <mat-label>Filter</mat-label>
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="" #input>
-          </mat-form-field>
+          </mat-form-field> -->
           <div class="card-body">
             <div class="table-responsive">
                 <table mat-table [dataSource]="dataSource" class="mat-table table mat-elevation-z1">
                     <!-- Position -->
                     <ng-container matColumnDef="position">
                         <th mat-header-cell *matHeaderCellDef>S.No.</th>
-                        <!-- <td mat-cell *matCellDef="let element; let i = index;">{{ i + 1 }}</td> -->
+                        <td mat-cell *matCellDef="let element; let i = index;">{{ i + 1 }}</td>
                     </ng-container>
 
                     <!-- Questions -->
                     <ng-container matColumnDef="question">
-                        <th mat-header-cell *matHeaderCellDef>Questions</th>
-                        <!-- <td mat-cell *matCellDef="let element">{{element.fullname}}</td> -->
+                        <th width="300px" class="text-center" mat-header-cell *matHeaderCellDef>Questions</th>
+                        <td width="300px" class="text-center  ellipsis " mat-cell *matCellDef="let element">
+                          <div class="babu text-center">
+                            <p>
+                              {{element.question}}
+                            </p>
+                          </div></td>
                     </ng-container>
 
                     
                     <ng-container matColumnDef="answer">
-                        <th mat-header-cell *matHeaderCellDef>Answers</th>
-                        <!-- <td mat-cell *matCellDef="let element">{{element.email}}</td> -->
+                        <th width="350px" class="text-center" mat-header-cell *matHeaderCellDef>Answers</th>
+                        <td width="350px" class="text-center" mat-cell *matCellDef="let element">
+                          <div class="babu text-center" [innerHtml]="element.answer">
+                            
+                          </div></td>
                     </ng-container>
                     
                    
@@ -44,16 +57,19 @@
                   
                     <!-- Action -->
                     <ng-container matColumnDef="action">
-                    <th mat-header-cell *matHeaderCellDef  class="mat-header-cell text-center">
+                    <th width="150px" mat-header-cell *matHeaderCellDef  class="mat-header-cell text-center">
                        Action
                     </th>
-                    <!-- <td class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
-                            <button  mat-icon-button (click)="viewDialog(element.id)">
-                                <mat-icon >view_list</mat-icon>
+                    <td width="150px" class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
+                            <button  mat-icon-button routerLink="/editParentFaq/{{element.id}}">
+                                <mat-icon >edit</mat-icon>
                             </button>
+                            <button  mat-icon-button (click)="delete(element.id)">
+                              <mat-icon >delete</mat-icon>
+                          </button>
                             
                         
-                    </td> -->
+                    </td>
                 </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

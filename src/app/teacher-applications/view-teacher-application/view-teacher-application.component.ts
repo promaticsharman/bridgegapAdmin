@@ -34,6 +34,7 @@ export class ViewTeacherApplicationComponent implements OnInit {
     whatWillYouTeach:"",
     link:"",
     status:"",
+    date:"",
     requirement:"",
     classes_teach_data: [],
     academic_qualifications: [],
@@ -76,7 +77,7 @@ export class ViewTeacherApplicationComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
     this.reqData.offset = 0
-		this.reqData.limit = 30
+		this.reqData.limit = 3000000
     this.getTeacherList()
     this.StudentId=this.route.snapshot.params.id
   }
@@ -109,9 +110,13 @@ export class ViewTeacherApplicationComponent implements OnInit {
             this.applicationData.link=element.websites_link;
             this.applicationData.requirement = element.requirement_for_class
             this.applicationData.status=element.application_status;
+            this.applicationData.date=element.created_at;
             this.applicationData.classes_teach_data = element.classes_teach_data
+            console.log(" this.applicationData.classes_teach_data", this.applicationData.classes_teach_data)
             this.applicationData.academic_qualifications = element.academic_qualifications
+            console.log(" this.applicationData.academic_qualifications", this.applicationData.academic_qualifications)
             this.applicationData.professional_qualifications = element.professional_qualifications
+            console.log(" this.applicationData.professional_qualifications", this.applicationData.professional_qualifications)
             let videoUrl = this.videoPath + element.video
             console.log(videoUrl);
             this.video = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);

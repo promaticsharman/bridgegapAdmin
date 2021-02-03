@@ -42,6 +42,7 @@ export class ViewCourseDetailsComponent implements OnInit {
     local_price:"",
     multiple_session_courses:"",
     status:"",
+    date:"",
     save_type:"",
     zoom_class_link:"",
 
@@ -61,10 +62,13 @@ export class ViewCourseDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
     this.reqData.offset = 0
-		this.reqData.limit = 10
+		this.reqData.limit = 100000
     this.getCourseList()
     this.courseId=this.route.snapshot.params.id
     console.log("courseiid",this.courseId)
+    // console.log("assignment",this.courseData.assignment)
+    // console.log("assesment",this.courseData.assessment)
+
   }
 
   getCourseList(){
@@ -99,13 +103,16 @@ export class ViewCourseDetailsComponent implements OnInit {
 
             this.courseData.course_breakup = element.course_breakup
             this.courseData.assignment=element.assignment;
+            console.log("assignment2feb",this.courseData.assignment)
             this.courseData.assessment = element.assessment
+            console.log("assesment2feb",this.courseData.assessment)
             this.courseData.requirements = element.requirements
             this.courseData.globally_price = element.globally_price
 
             this.courseData.local_price = element.local_price
             this.courseData.multiple_session_courses = element.multiple_session_courses
             this.courseData.status = element.status
+            this.courseData.date = element.created_at
             this.courseData.save_type = element.save_type
             this.courseData.zoom_class_link = element.zoom_class_link
             
@@ -139,5 +146,97 @@ export class ViewCourseDetailsComponent implements OnInit {
     })
 
   }
+ 
+  rejectCourse(){
+		const dialogRefEdit = this.dialog.open(RejectCourseDialog,{
+			// height: '350px',
+			width: '600px',
+			id: this.courseId
+		});
+		dialogRefEdit.afterClosed().subscribe(result => {
+			console.log('The dialog was closed');	
+			// this.reqData = {}
+		    // this.reqData.offset = 0
+		    // this.reqData.limit = 10
+		    // this.dataSource = new MatTableDataSource(this.responseData);
+		    // this.dataSource.paginator = this.paginator;
+		    // this.dataSource.sort = this.sort;
+		    // this.datamodel = {}
+			// this.getAllCategory()
+		});
+	}
+}
+
+
+
+////////Reject Course Dialog Box//////////////////////
+
+@Component({
+	selector: 'reject-course-dialog',
+	templateUrl: 'reject-course.html',
+  })
+  export class RejectCourseDialog {
+    reqData
+    limit
+    offset
+    email
+    courseId
+    Form
+    message
+    
+  rejectForm = new FormGroup({
+    message: new FormControl('', [Validators.required]),
+    })
+  
+
+  	constructor(
+      public dialogRef: MatDialogRef<RejectCourseDialog>,
+      private service: AdminService,
+      private route: ActivatedRoute,
+      private router: Router,
+      private fb: FormBuilder,
+	    ) {
+        
+      }
+
+      onNoClick(): void {
+        this.dialogRef.close();
+      }
+	
+        ngOnInit(): void {
+          this.courseId=this.dialogRef.id
+         
+        }
+        
+   reject(status){
+  console.log("status",status)
+  // var  obj={
+  //   id:this.StudentId,
+  //   status:status,
+  // }
+  var rejectObj={
+    course_id:this.courseId,
+    message:this.message,
+    status:status
+  }
+  console.log("Rejectstatus",rejectObj)
+  // console.log("status",obj)
+  
+  // this.service.applicationApproved(obj).subscribe(res => {
+    // console.log("res*****",res)
+    this.service.courseRejected(rejectObj).subscribe(res => { 
+    Swal.fire('Success..!', 'Course Rejected!', 'success')
+     this.dialogRef.close();
+     this.router.navigate(['/courses']);
+    })
+   
+    
+  // })
 
 }
+	
+
+    closeDialog(){
+  this.dialogRef.close();
+    }
+  }

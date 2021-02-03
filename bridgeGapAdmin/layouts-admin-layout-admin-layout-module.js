@@ -1093,23 +1093,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_user_profile_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./user-profile.component.html */ "RU0v");
 /* harmony import */ var _user_profile_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-profile.component.css */ "9WCt");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/admin.service */ "2esG");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
 
 
 
 
 var UserProfileComponent = /** @class */ (function () {
-    function UserProfileComponent() {
+    function UserProfileComponent(fb, service, route, router) {
+        this.fb = fb;
+        this.service = service;
+        this.route = route;
+        this.router = router;
+        this.myProfile = {
+            firstName: "",
+            lastName: "",
+            email: "",
+            username: ""
+        };
     }
     UserProfileComponent.prototype.ngOnInit = function () {
+        this.getAdminDetails();
     };
-    UserProfileComponent.ctorParameters = function () { return []; };
+    UserProfileComponent.prototype.getAdminDetails = function () {
+        var _this = this;
+        var id = {
+            id: 1
+        };
+        this.service.getAdminProfile(id).subscribe(function (res) {
+            console.log("res", res.data);
+            if (res) {
+                _this.myProfile.email = res.data.email;
+                _this.myProfile.username = res.data.username;
+                _this.myProfile.firstName = res.data.first_name;
+                _this.myProfile.lastName = res.data.last_name;
+            }
+        });
+    };
+    UserProfileComponent.prototype.Update = function () {
+        var _this = this;
+        var params = {
+            id: 1,
+            first_name: this.myProfile.firstName,
+            last_name: this.myProfile.lastName,
+            email: this.myProfile.email
+        };
+        this.service.updateAdminProfile(params).subscribe(function (res) {
+            console.log("response", res);
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire('Success..!', 'Successfully Updated!', 'success');
+            _this.ngOnInit();
+        });
+    };
+    UserProfileComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
     UserProfileComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
             selector: 'app-user-profile',
             template: _raw_loader_user_profile_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
             styles: [_user_profile_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _shared_admin_service__WEBPACK_IMPORTED_MODULE_6__["AdminService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], UserProfileComponent);
     return UserProfileComponent;
 }());
@@ -6805,7 +6862,7 @@ function createCurry(func, bitmask, arity) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ1c2VyLXByb2ZpbGUuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".card .card-header .card-title {\n    margin-top:0px!important;\n    color: #fff;\n}\n.btn-success {\n    background-color: #6aa524;\n    color: #FFFFFF;\n}\n.ft{\n        font-size: 16px;\n    }\nmat-form-field{\n        width: 100%;\n    }\nspan.mat_imag {\n        width: 200px;\n        height: 200px;\n        background: #fafafa;\n        display: block;\n        margin: 0 auto;\n    }\n.inpt_icon {\n        position: absolute;\n        top: -12px;\n        right: -13px;\n        width: 40px;\n        height: 40px;\n        border-radius: 100%;\n        overflow: hidden;\n        background: #6aa524;\n    }\n.inpt_icon .fa {\n        color: #fff;\n        position: absolute;\n        top: 9px;\n        right: 12px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.inpt_icon input {\n        width: 100%;\n        height: 100%;\n        opacity: 0;\n        cursor: pointer;\n        position: relative;\n        z-index: 2;\n    }\n.mat_imag img {\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n        object-fit: cover;\n    }\n.inpt_icon .fa-edit{\n        color: #fff;\n        position: absolute;\n        top: 10px;\n        right: 9px;\n        font-size: 17px;\n        z-index: 0;\n        cursor: pointer;\n    }\n.ft{\n        font-size: 16px;\n    }\n    \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVzZXItcHJvZmlsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLFdBQVc7QUFDZjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGNBQWM7QUFDbEI7QUFDQTtRQUNRLGVBQWU7SUFDbkI7QUFFQTtRQUNJLFdBQVc7SUFDZjtBQUNBO1FBQ0ksWUFBWTtRQUNaLGFBQWE7UUFDYixtQkFBbUI7UUFDbkIsY0FBYztRQUNkLGNBQWM7SUFDbEI7QUFDQTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO1FBQ1YsWUFBWTtRQUNaLFdBQVc7UUFDWCxZQUFZO1FBQ1osbUJBQW1CO1FBQ25CLGdCQUFnQjtRQUNoQixtQkFBbUI7SUFDdkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsUUFBUTtRQUNSLFdBQVc7UUFDWCxlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLFdBQVc7UUFDWCxZQUFZO1FBQ1osVUFBVTtRQUNWLGVBQWU7UUFDZixrQkFBa0I7UUFDbEIsVUFBVTtJQUNkO0FBQ0E7UUFDSSxXQUFXO1FBQ1gsWUFBWTtRQUNaLG9CQUFvQjtRQUNwQixpQkFBaUI7SUFDckI7QUFDQTtRQUNJLFdBQVc7UUFDWCxrQkFBa0I7UUFDbEIsU0FBUztRQUNULFVBQVU7UUFDVixlQUFlO1FBQ2YsVUFBVTtRQUNWLGVBQWU7SUFDbkI7QUFDQTtRQUNJLGVBQWU7SUFDbkIiLCJmaWxlIjoidXNlci1wcm9maWxlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCAuY2FyZC1oZWFkZXIgLmNhcmQtdGl0bGUge1xuICAgIG1hcmdpbi10b3A6MHB4IWltcG9ydGFudDtcbiAgICBjb2xvcjogI2ZmZjtcbn1cbi5idG4tc3VjY2VzcyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzZhYTUyNDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5mdHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cblxuICAgIG1hdC1mb3JtLWZpZWxke1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG4gICAgc3Bhbi5tYXRfaW1hZyB7XG4gICAgICAgIHdpZHRoOiAyMDBweDtcbiAgICAgICAgaGVpZ2h0OiAyMDBweDtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0xMnB4O1xuICAgICAgICByaWdodDogLTEzcHg7XG4gICAgICAgIHdpZHRoOiA0MHB4O1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIGJhY2tncm91bmQ6ICM2YWE1MjQ7XG4gICAgfVxuICAgIC5pbnB0X2ljb24gLmZhIHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA5cHg7XG4gICAgICAgIHJpZ2h0OiAxMnB4O1xuICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgIHotaW5kZXg6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB9XG4gICAgLmlucHRfaWNvbiBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgICAubWF0X2ltYWcgaW1nIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgLW8tb2JqZWN0LWZpdDogY292ZXI7XG4gICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIH1cbiAgICAuaW5wdF9pY29uIC5mYS1lZGl0e1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgIHJpZ2h0OiA5cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICAgICAgei1pbmRleDogMDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIH1cbiAgICAuZnR7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICB9XG4gICAgIl19 */");
 
 /***/ }),
 
@@ -38760,7 +38817,7 @@ function inRange(number, start, end) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <div class=\"card\">\n        <div class=\"card-header\">\n          <h5 class=\"title\">Edit Profile</h5>\n        </div>\n        <div class=\"card-body\">\n          <form>\n            <div class=\"row\">\n              <div class=\"col-md-5 pr-1\">\n                <div class=\"form-group\">\n                  <label>Company (disabled)</label>\n                  <input type=\"text\" class=\"form-control\" disabled=\"\" placeholder=\"Company\" value=\"Creative Code Inc.\">\n                </div>\n              </div>\n              <div class=\"col-md-3 px-1\">\n                <div class=\"form-group\">\n                  <label>Username</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"Username\" value=\"michael23\">\n                </div>\n              </div>\n              <div class=\"col-md-4 pl-1\">\n                <div class=\"form-group\">\n                  <label for=\"email\">Email address</label>\n                  <input name=\"email\" id=\"email\" type=\"email\" class=\"form-control\" placeholder=\"Email\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-6 pr-1\">\n                <div class=\"form-group\">\n                  <label>First Name</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"Company\" value=\"Mike\">\n                </div>\n              </div>\n              <div class=\"col-md-6 pl-1\">\n                <div class=\"form-group\">\n                  <label>Last Name</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"Last Name\" value=\"Andrew\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                  <label>Address</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"Home Address\" value=\"Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-4 pr-1\">\n                <div class=\"form-group\">\n                  <label>City</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"City\" value=\"Mike\">\n                </div>\n              </div>\n              <div class=\"col-md-4 px-1\">\n                <div class=\"form-group\">\n                  <label>Country</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"Country\" value=\"Andrew\">\n                </div>\n              </div>\n              <div class=\"col-md-4 pl-1\">\n                <div class=\"form-group\">\n                  <label>Postal Code</label>\n                  <input type=\"number\" class=\"form-control\" placeholder=\"ZIP Code\">\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                  <label>About Me</label>\n                  <textarea rows=\"4\" cols=\"80\" class=\"form-control\" placeholder=\"Here can be your description\" value=\"Mike\">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>\n                </div>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-4\">\n      <div class=\"card card-user\">\n        <div class=\"image\">\n          <img src=\"../assets/img/bg5.jpg\" alt=\"...\">\n        </div>\n        <div class=\"card-body\">\n          <div class=\"author\">\n            <a href=\"#\">\n              <img class=\"avatar border-gray\" src=\"../assets/img/mike.jpg\" alt=\"...\">\n              <h5 class=\"title\">Mike Andrew</h5>\n            </a>\n            <p class=\"description\">\n              michael24\n            </p>\n          </div>\n          <p class=\"description text-center\">\n            \"Lamborghini Mercy\n            <br> Your chick she so thirsty\n            <br> I'm in that two seat Lambo\"\n          </p>\n        </div>\n        <hr>\n        <div class=\"button-container\">\n          <button href=\"#\" class=\"btn btn-neutral btn-icon btn-round btn-lg\">\n            <i class=\"fab fa-facebook-f\"></i>\n          </button>\n          <button href=\"#\" class=\"btn btn-neutral btn-icon btn-round btn-lg\">\n            <i class=\"fab fa-twitter\"></i>\n          </button>\n          <button href=\"#\" class=\"btn btn-neutral btn-icon btn-round btn-lg\">\n            <i class=\"fab fa-google-plus-g\"></i>\n          </button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"hdng\">\n  <h2 >EDIT PROFILE</h2>\n </div>\n<div class=\"main-content\"  style=\"position: relative;\">\n  <div class=\"\">\n    <div class=\"\">\n      <!-- <form> -->\n      <div class=\"card\">\n       \n        <div class=\"card-body  block-card\">\n         \n            <div class=\"row\">\n             \n              <div class=\"col-md-12 \">\n                <div class=\"form-group\">\n                  <label>Username</label>\n                  <input type=\"text\" [(ngModel)]=\"myProfile.username\" class=\"form-control\" placeholder=\"Username\">\n                </div>\n              </div>\n             \n               <!-- </div> -->\n\n\n               <!-- <div class=\"row\"> -->\n              <div class=\"col-md-12 \">\n                <div class=\"form-group\">\n                  <label>First Name</label>\n                  <input type=\"text\" [(ngModel)]=\"myProfile.firstName\" [ngModelOptions]=\"{standalone: true}\" class=\"form-control\" placeholder=\"First Name\" >\n                </div>\n              </div>\n              <div class=\"col-md-12 \">\n                <div class=\"form-group\">\n                  <label>Last Name</label>\n                  <input type=\"text\" [(ngModel)]=\"myProfile.lastName\" [ngModelOptions]=\"{standalone: true}\" class=\"form-control\" placeholder=\"Last Name\" value=\"\">\n                </div>\n              </div>\n               <!-- </div> -->\n               <div class=\"col-md-12 \">\n                <div class=\"form-group\">\n                  <label for=\"email\">Email address</label>\n                  <input name=\"email\" [(ngModel)]=\"myProfile.email\" [ngModelOptions]=\"{standalone: true}\" class=\"form-control\" placeholder=\"Email\">\n                </div>\n              </div>\n            \n               <!-- <div class=\"row\"> -->\n            \n            </div>\n            <div class=\"text-center\">\n              <button mat-raised-button type=\"submit\" class=\"btn btn-success ft\"   (click)=\"Update()\">Update</button>\n             \n              \n              <!-- [disabled]=\"!addCategoryForm.valid\"  -->\n          </div>\n          \n        </div>\n      </div>\n    <!-- </form> -->\n    </div>\n\n    \n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -60215,37 +60272,53 @@ function pullAll(array, values) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLayoutRoutes", function() { return AdminLayoutRoutes; });
 /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../dashboard/dashboard.component */ "QX6l");
-/* harmony import */ var _category_category_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../category/category.component */ "clsX");
-/* harmony import */ var _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sub-category/sub-category.component */ "7dfY");
-/* harmony import */ var _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../user-list/user-list.component */ "UMdc");
-/* harmony import */ var _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../user-list/view-student-details/view-student-details.component */ "EMSy");
-/* harmony import */ var _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../section-first/section-first.component */ "DUgg");
-/* harmony import */ var _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../section-one-edit/section-one-edit.component */ "KL40");
-/* harmony import */ var _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../testimonials/testimonials.component */ "czZ8");
-/* harmony import */ var _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../add-testimonials/add-testimonials.component */ "UPXU");
-/* harmony import */ var _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../section-second/section-second.component */ "0I2P");
-/* harmony import */ var _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../section-three/section-three.component */ "/QHs");
-/* harmony import */ var _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../general-faq/general-faq.component */ "U5tD");
-/* harmony import */ var _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../teacher-faq/teacher-faq.component */ "4mNI");
-/* harmony import */ var _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../parent-faq/parent-faq.component */ "sC5k");
-/* harmony import */ var _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../contact-us/contact-us.component */ "NqkC");
-/* harmony import */ var _testimonials_edit_testimonials_edit_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../testimonials-edit/testimonials-edit.component */ "+zzn");
-/* harmony import */ var _create_banner_create_banner_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../create-banner/create-banner.component */ "suf6");
-/* harmony import */ var _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../category/add-category/add-category.component */ "NaMH");
-/* harmony import */ var _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../category/edit-category/edit-category.component */ "S51R");
-/* harmony import */ var _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../sub-category/add-sub-category/add-sub-category.component */ "OCGH");
-/* harmony import */ var _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../sub-category/edit-sub-category/edit-sub-category.component */ "4Y5O");
-/* harmony import */ var _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../section-second/create-engaging/create-engaging.component */ "2Uv9");
-/* harmony import */ var _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../section-second/edit-engaging/edit-engaging.component */ "hERL");
-/* harmony import */ var _section_three_create_how_it_works_create_how_it_works_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../section-three/create-how-it-works/create-how-it-works.component */ "E9OQ");
-/* harmony import */ var _section_three_edit_how_it_works_edit_how_it_works_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../section-three/edit-how-it-works/edit-how-it-works.component */ "awQQ");
-/* harmony import */ var _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../teacher-applications/teacher-applications.component */ "QqmM");
-/* harmony import */ var _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../teacher-applications/view-teacher-application/view-teacher-application.component */ "hr2U");
-/* harmony import */ var _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../teacher-management/teacher-management.component */ "ZD+H");
-/* harmony import */ var _courses_management_courses_management_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../courses-management/courses-management.component */ "9HS8");
-/* harmony import */ var _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../courses-management/view-course-details/view-course-details.component */ "qgk4");
-/* harmony import */ var _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../teacher-management/view-teacher-list/view-teacher-list.component */ "x9IN");
-/* harmony import */ var _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../social-media-links/social-media-links.component */ "XuI3");
+/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "/de2");
+/* harmony import */ var _category_category_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../category/category.component */ "clsX");
+/* harmony import */ var _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../sub-category/sub-category.component */ "7dfY");
+/* harmony import */ var _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../user-list/user-list.component */ "UMdc");
+/* harmony import */ var _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../user-list/view-student-details/view-student-details.component */ "EMSy");
+/* harmony import */ var _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../section-first/section-first.component */ "DUgg");
+/* harmony import */ var _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../section-one-edit/section-one-edit.component */ "KL40");
+/* harmony import */ var _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../testimonials/testimonials.component */ "czZ8");
+/* harmony import */ var _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../add-testimonials/add-testimonials.component */ "UPXU");
+/* harmony import */ var _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../section-second/section-second.component */ "0I2P");
+/* harmony import */ var _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../section-three/section-three.component */ "/QHs");
+/* harmony import */ var _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../general-faq/general-faq.component */ "U5tD");
+/* harmony import */ var _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../teacher-faq/teacher-faq.component */ "4mNI");
+/* harmony import */ var _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../parent-faq/parent-faq.component */ "sC5k");
+/* harmony import */ var _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../contact-us/contact-us.component */ "NqkC");
+/* harmony import */ var _testimonials_edit_testimonials_edit_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../testimonials-edit/testimonials-edit.component */ "+zzn");
+/* harmony import */ var _create_banner_create_banner_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../create-banner/create-banner.component */ "suf6");
+/* harmony import */ var _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../category/add-category/add-category.component */ "NaMH");
+/* harmony import */ var _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../category/edit-category/edit-category.component */ "S51R");
+/* harmony import */ var _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../sub-category/add-sub-category/add-sub-category.component */ "OCGH");
+/* harmony import */ var _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../sub-category/edit-sub-category/edit-sub-category.component */ "4Y5O");
+/* harmony import */ var _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../section-second/create-engaging/create-engaging.component */ "2Uv9");
+/* harmony import */ var _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../section-second/edit-engaging/edit-engaging.component */ "hERL");
+/* harmony import */ var _section_three_create_how_it_works_create_how_it_works_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../section-three/create-how-it-works/create-how-it-works.component */ "E9OQ");
+/* harmony import */ var _section_three_edit_how_it_works_edit_how_it_works_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../section-three/edit-how-it-works/edit-how-it-works.component */ "awQQ");
+/* harmony import */ var _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../teacher-applications/teacher-applications.component */ "QqmM");
+/* harmony import */ var _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../teacher-applications/view-teacher-application/view-teacher-application.component */ "hr2U");
+/* harmony import */ var _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../teacher-management/teacher-management.component */ "ZD+H");
+/* harmony import */ var _courses_management_courses_management_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../courses-management/courses-management.component */ "9HS8");
+/* harmony import */ var _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../courses-management/view-course-details/view-course-details.component */ "qgk4");
+/* harmony import */ var _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../teacher-management/view-teacher-list/view-teacher-list.component */ "x9IN");
+/* harmony import */ var _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../social-media-links/social-media-links.component */ "XuI3");
+/* harmony import */ var _newsletter_management_newsletter_management_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../newsletter-management/newsletter-management.component */ "f3C+");
+/* harmony import */ var _general_faq_add_gen_faq_add_gen_faq_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../../general-faq/add-gen-faq/add-gen-faq.component */ "AHzu");
+/* harmony import */ var _general_faq_edit_gen_faq_edit_gen_faq_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../../general-faq/edit-gen-faq/edit-gen-faq.component */ "Eyal");
+/* harmony import */ var _parent_faq_add_parent_faq_add_parent_faq_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../../parent-faq/add-parent-faq/add-parent-faq.component */ "j7xL");
+/* harmony import */ var _parent_faq_edit_parent_faq_edit_parent_faq_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../../parent-faq/edit-parent-faq/edit-parent-faq.component */ "QnXU");
+/* harmony import */ var _teacher_faq_add_teacher_faq_add_teacher_faq_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../../teacher-faq/add-teacher-faq/add-teacher-faq.component */ "co1N");
+/* harmony import */ var _teacher_faq_edit_teacher_faq_edit_teacher_faq_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../../teacher-faq/edit-teacher-faq/edit-teacher-faq.component */ "mroN");
+
+
+
+
+
+
+
+
 
 
 
@@ -60280,38 +60353,47 @@ __webpack_require__.r(__webpack_exports__);
 
 var AdminLayoutRoutes = [
     { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__["DashboardComponent"] },
-    { path: 'category', component: _category_category_component__WEBPACK_IMPORTED_MODULE_1__["CategoryComponent"] },
-    { path: 'addCategory', component: _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_17__["AddCategoryComponent"] },
-    { path: 'editCategory/:id', component: _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_18__["EditCategoryComponent"] },
-    { path: 'sub_category/:id', component: _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_2__["SubCategoryComponent"] },
-    { path: 'add_sub_category/:id', component: _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_19__["AddSubCategoryComponent"] },
-    { path: 'sub_category/:catId/:subCatId', component: _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_20__["EditSubCategoryComponent"] },
-    { path: 'student_list', component: _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_3__["UserListComponent"] },
-    { path: 'student_list/:stdId', component: _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_4__["ViewStudentDetailsComponent"] },
-    { path: 'teacher_list', component: _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_27__["TeacherManagementComponent"] },
-    { path: 'view_teacher_list/:teacherId', component: _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_30__["ViewTeacherListComponent"] },
-    { path: 'section_1', component: _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_5__["SectionFirstComponent"] },
-    { path: 'createEngaging', component: _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_21__["CreateEngagingComponent"] },
-    { path: 'editEngaging/:id', component: _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_22__["EditEngagingComponent"] },
-    { path: 'create_banner', component: _create_banner_create_banner_component__WEBPACK_IMPORTED_MODULE_16__["CreateBannerComponent"] },
-    { path: 'edit_section_one/:id', component: _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_6__["SectionOneEditComponent"] },
-    { path: 'section_2', component: _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_9__["SectionSecondComponent"] },
-    { path: 'section_3', component: _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_10__["SectionThreeComponent"] },
-    { path: 'create_', component: _section_three_create_how_it_works_create_how_it_works_component__WEBPACK_IMPORTED_MODULE_23__["CreateHowItWorksComponent"] },
-    { path: 'edit_/:id', component: _section_three_edit_how_it_works_edit_how_it_works_component__WEBPACK_IMPORTED_MODULE_24__["EditHowItWorksComponent"] },
+    { path: 'category', component: _category_category_component__WEBPACK_IMPORTED_MODULE_2__["CategoryComponent"] },
+    { path: 'addCategory', component: _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__["AddCategoryComponent"] },
+    { path: 'editCategory/:id', component: _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_19__["EditCategoryComponent"] },
+    { path: 'sub_category/:id', component: _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_3__["SubCategoryComponent"] },
+    { path: 'add_sub_category/:id', component: _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_20__["AddSubCategoryComponent"] },
+    { path: 'sub_category/:catId/:subCatId', component: _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_21__["EditSubCategoryComponent"] },
+    { path: 'student_list', component: _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_4__["UserListComponent"] },
+    { path: 'student_list/:stdId', component: _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_5__["ViewStudentDetailsComponent"] },
+    // /:lt/:ofst
+    { path: 'teacher_list', component: _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_28__["TeacherManagementComponent"] },
+    { path: 'view_teacher_list/:teacherId', component: _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_31__["ViewTeacherListComponent"] },
+    { path: 'section_1', component: _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_6__["SectionFirstComponent"] },
+    { path: 'createEngaging', component: _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_22__["CreateEngagingComponent"] },
+    { path: 'editEngaging/:id', component: _section_second_edit_engaging_edit_engaging_component__WEBPACK_IMPORTED_MODULE_23__["EditEngagingComponent"] },
+    { path: 'create_banner', component: _create_banner_create_banner_component__WEBPACK_IMPORTED_MODULE_17__["CreateBannerComponent"] },
+    { path: 'edit_section_one/:id', component: _section_one_edit_section_one_edit_component__WEBPACK_IMPORTED_MODULE_7__["SectionOneEditComponent"] },
+    { path: 'section_2', component: _section_second_section_second_component__WEBPACK_IMPORTED_MODULE_10__["SectionSecondComponent"] },
+    { path: 'section_3', component: _section_three_section_three_component__WEBPACK_IMPORTED_MODULE_11__["SectionThreeComponent"] },
+    { path: 'create_', component: _section_three_create_how_it_works_create_how_it_works_component__WEBPACK_IMPORTED_MODULE_24__["CreateHowItWorksComponent"] },
+    { path: 'edit_/:id', component: _section_three_edit_how_it_works_edit_how_it_works_component__WEBPACK_IMPORTED_MODULE_25__["EditHowItWorksComponent"] },
     // { path: 'addcategory',      component: AddCategoryComponent },
-    { path: 'testimonials', component: _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_7__["TestimonialsComponent"] },
-    { path: 'createTestimonials', component: _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_8__["AddTestimonialsComponent"] },
-    { path: 'editTestimonials/:testimonial_id', component: _testimonials_edit_testimonials_edit_component__WEBPACK_IMPORTED_MODULE_15__["TestimonialsEditComponent"] },
-    { path: 'generalFaq', component: _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_11__["GeneralFaqComponent"] },
-    { path: 'teacherFaq', component: _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_12__["TeacherFaqComponent"] },
-    { path: 'parentFaq', component: _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_13__["ParentFaqComponent"] },
-    { path: 'contact', component: _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_14__["ContactUsComponent"] },
-    { path: 'teacherApplication', component: _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_25__["TeacherApplicationsComponent"] },
-    { path: 'viewApplication/:id', component: _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_26__["ViewTeacherApplicationComponent"] },
-    { path: 'courses', component: _courses_management_courses_management_component__WEBPACK_IMPORTED_MODULE_28__["CoursesManagementComponent"] },
-    { path: 'viewCourse/:id', component: _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_29__["ViewCourseDetailsComponent"] },
-    { path: 'sociaLinks', component: _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_31__["SocialMediaLinksComponent"] },
+    { path: 'testimonials', component: _testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_8__["TestimonialsComponent"] },
+    { path: 'createTestimonials', component: _add_testimonials_add_testimonials_component__WEBPACK_IMPORTED_MODULE_9__["AddTestimonialsComponent"] },
+    { path: 'editTestimonials/:testimonial_id', component: _testimonials_edit_testimonials_edit_component__WEBPACK_IMPORTED_MODULE_16__["TestimonialsEditComponent"] },
+    { path: 'generalFaq', component: _general_faq_general_faq_component__WEBPACK_IMPORTED_MODULE_12__["GeneralFaqComponent"] },
+    { path: 'addGeneralFaq', component: _general_faq_add_gen_faq_add_gen_faq_component__WEBPACK_IMPORTED_MODULE_34__["AddGenFaqComponent"] },
+    { path: 'editGenFaq/:id', component: _general_faq_edit_gen_faq_edit_gen_faq_component__WEBPACK_IMPORTED_MODULE_35__["EditGenFaqComponent"] },
+    { path: 'teacherFaq', component: _teacher_faq_teacher_faq_component__WEBPACK_IMPORTED_MODULE_13__["TeacherFaqComponent"] },
+    { path: 'addTeacherFaq', component: _teacher_faq_add_teacher_faq_add_teacher_faq_component__WEBPACK_IMPORTED_MODULE_38__["AddTeacherFaqComponent"] },
+    { path: 'editTeacherFaq/:id', component: _teacher_faq_edit_teacher_faq_edit_teacher_faq_component__WEBPACK_IMPORTED_MODULE_39__["EditTeacherFaqComponent"] },
+    { path: 'parentFaq', component: _parent_faq_parent_faq_component__WEBPACK_IMPORTED_MODULE_14__["ParentFaqComponent"] },
+    { path: 'addParentFaq', component: _parent_faq_add_parent_faq_add_parent_faq_component__WEBPACK_IMPORTED_MODULE_36__["AddParentFaqComponent"] },
+    { path: 'editParentFaq/:id', component: _parent_faq_edit_parent_faq_edit_parent_faq_component__WEBPACK_IMPORTED_MODULE_37__["EditParentFaqComponent"] },
+    { path: 'contact', component: _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_15__["ContactUsComponent"] },
+    { path: 'teacherApplication', component: _teacher_applications_teacher_applications_component__WEBPACK_IMPORTED_MODULE_26__["TeacherApplicationsComponent"] },
+    { path: 'viewApplication/:id', component: _teacher_applications_view_teacher_application_view_teacher_application_component__WEBPACK_IMPORTED_MODULE_27__["ViewTeacherApplicationComponent"] },
+    { path: 'courses', component: _courses_management_courses_management_component__WEBPACK_IMPORTED_MODULE_29__["CoursesManagementComponent"] },
+    { path: 'viewCourse/:id', component: _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_30__["ViewCourseDetailsComponent"] },
+    { path: 'sociaLinks', component: _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_32__["SocialMediaLinksComponent"] },
+    { path: 'newsLetter', component: _newsletter_management_newsletter_management_component__WEBPACK_IMPORTED_MODULE_33__["NewsletterManagementComponent"] },
+    { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_1__["UserProfileComponent"] },
 ];
 
 

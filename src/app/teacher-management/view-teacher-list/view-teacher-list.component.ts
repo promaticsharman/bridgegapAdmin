@@ -38,9 +38,10 @@ export class ViewTeacherListComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
     this.reqData.offset = 0
-		this.reqData.limit = 30
+		this.reqData.limit = 3000
     this.getTeacherList()
     this.teacherId=this.route.snapshot.params.teacherId
+    console.log("teacherID", this.teacherId)
   }
   getTeacherList(){
     var list={

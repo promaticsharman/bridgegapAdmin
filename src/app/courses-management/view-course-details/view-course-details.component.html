@@ -11,9 +11,9 @@
                 <form >
                     <!-- [formGroup]="applicationForm" -->
                     <div class="card">
-                        <div class="card-header card-header-danger">
+                        <!-- <div class="card-header card-header-danger">
                             <h4 class="card-title">Testimonials</h4>
-                        </div>
+                        </div> -->
                         <div class="card-body block-card">
                             <div class="row">
                                 <div class="col-md-6 ">
@@ -147,13 +147,13 @@
                                 <div class="col-sm-6">
                                     <label>Assignment</label>
                                     <p class="hd_p">
-                                        {{courseData.assignment}}
+                                        {{courseData.assignment == 'undefined' ? 'N/A' : courseData.assignment }}
                                     </p>
                                 </div>
                                 <div class="col-sm-6">
                                     <label>Assessment</label>
                                     <p class="hd_p">
-                                        {{courseData.assessment}}
+                                        {{courseData.assessment == 'undefined'  ? 'N/A' : courseData.assessment}}
                                     </p>
                                 </div>
                                 <div class="col-sm-6">
@@ -177,41 +177,57 @@
                                 <div class="col-sm-6">
                                     <label>Multiple Session Courses</label>
                                     <p class="hd_p">
-                                        {{courseData.multiple_session_courses}}
+                                        {{courseData.multiple_session_courses == 'undefined' ? 'N/A' : courseData.multiple_session_courses }}
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <!-- <div class="col-sm-6">
                                     <label>Save Type</label>
                                     <p class="hd_p">
                                         {{courseData.save_type}}
                                     </p>
-                                </div>
-                                <div class="col-sm-6">
+                                </div> -->
+                                <!-- <div class="col-sm-6">
                                     <label>Zoom Class link</label>
                                     <p class="hd_p">
                                         {{courseData.zoom_class_link}}
                                     </p>
-                                </div>
+                                </div> -->
                         
-                                <div class="col-md-6">
-                                   <label>Status</label>
-                                    <p class="hd_p">
-                                       {{courseData.status}}
-                                    </p>
-                                </div>
+                               
+                                <div class="col-sm-6">
+                                    <label>Course Date </label>
+                                     <p class="hd_p">
+                                        {{courseData.date | dateAgo}}
+                                     </p>
+                                     <!-- speed >= 120 ? 'Too Fast' : (speed >= 80 ? 'Fast' : 'OK'); -->
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <label>Status</label>
+                                     <p class="hd_p">
+                                        {{courseData.status == 'approved' ? 'Approved' : (courseData.status == 'rejected' ? 'Rejected' : 'Pending')}}
+                                     </p>
+                                     <!-- speed >= 120 ? 'Too Fast' : (speed >= 80 ? 'Fast' : 'OK'); -->
+                                 </div>
                             </div>
                            
-                            <div class="text-center" *ngIf="courseData.status == 'inactive'">
+                            <div class="text-center" *ngIf="courseData.status == 'rejected'">
                                 <!--  -->
-                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('active')">Active</button>
+                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('approved')">Approve</button>
                                 <!-- &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('inactive')" >Inactive</button> -->
                                 <!-- (click)="onStatus('Decline')" -->
                                 &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
                             </div>
-                            <div class="text-center" *ngIf="courseData.status == 'active'">
-                               <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('inactive')" >Inactive</button>
+                            <div class="text-center" *ngIf="courseData.status == 'approved'">
+                               <button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectCourse()"  >Reject</button>
+                               <!-- (click)="onStatus('rejected')" -->
                                 &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
                             </div>
+                            <div class="text-center" *ngIf="courseData.status == 'pending'">
+                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('approved')">Approve</button>
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectCourse()"  >Reject</button>
+                                <!-- (click)="onStatus('rejected')" -->
+                                 &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
+                             </div>
                           </div>
                          </div>
                </form>

@@ -26,7 +26,8 @@ export class UserListComponent implements OnInit {
 	reqData
 	getData
 	datamodel
-	length
+  length
+  loader
 	timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 	filterValue
 	responseData = [] 
@@ -52,7 +53,8 @@ export class UserListComponent implements OnInit {
 		this.dataSource.paginator = this.paginator;
     this.datamodel = {}
     this.length
-		this.getStudentList()
+    this.getStudentList()
+  
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator
@@ -62,12 +64,13 @@ export class UserListComponent implements OnInit {
       offset:this.reqData.offset,
       limit:this.reqData.limit
     }
+    this.loader=true;
     this.service.getallStudent(list).subscribe(res => {
       // console.log('*****getStudentData******',res.data);
       if(res){
         this.length = res.data.count;
         this.dataSource=res.data.rows;
-        
+        this.loader=false;
         console.log('responseData ***',this.dataSource)
       }
     },

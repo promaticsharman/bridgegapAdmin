@@ -40,6 +40,13 @@ import { CoursesManagementComponent } from '../../courses-management/courses-man
 import { ViewCourseDetailsComponent } from '../../courses-management/view-course-details/view-course-details.component';
 import { ViewTeacherListComponent } from '../../teacher-management/view-teacher-list/view-teacher-list.component';
 import { SocialMediaLinksComponent } from '../../social-media-links/social-media-links.component';
+import { NewsletterManagementComponent } from '../../newsletter-management/newsletter-management.component';
+import { AddGenFaqComponent } from '../../general-faq/add-gen-faq/add-gen-faq.component';
+import { EditGenFaqComponent } from '../../general-faq/edit-gen-faq/edit-gen-faq.component';
+import { AddParentFaqComponent } from '../../parent-faq/add-parent-faq/add-parent-faq.component';
+import { EditParentFaqComponent } from '../../parent-faq/edit-parent-faq/edit-parent-faq.component';
+import { AddTeacherFaqComponent } from '../../teacher-faq/add-teacher-faq/add-teacher-faq.component';
+import { EditTeacherFaqComponent } from '../../teacher-faq/edit-teacher-faq/edit-teacher-faq.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'category',      component: CategoryComponent },
@@ -51,6 +58,7 @@ export const AdminLayoutRoutes: Routes = [
 
     { path: 'student_list',      component: UserListComponent },
     { path: 'student_list/:stdId',  component: ViewStudentDetailsComponent },
+    // /:lt/:ofst
     
     { path: 'teacher_list',      component: TeacherManagementComponent},
     { path: 'view_teacher_list/:teacherId',      component: ViewTeacherListComponent},
@@ -68,16 +76,23 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'createTestimonials',   component: AddTestimonialsComponent },
     { path: 'editTestimonials/:testimonial_id', component: TestimonialsEditComponent },
     { path: 'generalFaq',   component: GeneralFaqComponent },
+    { path: 'addGeneralFaq',   component: AddGenFaqComponent },
+    { path: 'editGenFaq/:id',   component: EditGenFaqComponent },
     { path: 'teacherFaq',   component: TeacherFaqComponent },
+    { path: 'addTeacherFaq',   component: AddTeacherFaqComponent },
+    { path: 'editTeacherFaq/:id',   component: EditTeacherFaqComponent },
     { path: 'parentFaq',   component: ParentFaqComponent },
+    { path: 'addParentFaq',   component: AddParentFaqComponent },
+    { path: 'editParentFaq/:id',   component: EditParentFaqComponent },
     { path: 'contact',   component: ContactUsComponent },
     { path: 'teacherApplication',   component: TeacherApplicationsComponent },
     { path: 'viewApplication/:id',   component: ViewTeacherApplicationComponent },
     { path: 'courses',   component: CoursesManagementComponent },
     { path: 'viewCourse/:id',   component: ViewCourseDetailsComponent },
     { path: 'sociaLinks',   component:SocialMediaLinksComponent },
+    { path: 'newsLetter',   component:NewsletterManagementComponent },
     
-    // { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'user-profile',   component: UserProfileComponent },
     // { path: 'table-list',     component: TableListComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
