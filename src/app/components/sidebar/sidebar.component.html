@@ -1,6 +1,6 @@
 
 <div class="logo">
-    <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+    <a href="javascript:void(0)" class="simple-text logo-mini">
       <div class="logo-img">
           <img src="assets/img/logow.png"/>
       </div>
@@ -84,6 +84,9 @@
               <ul class="sub-ul">
                <li  [ngClass]="router.url.includes('/contact') ? 'active-1' : ''"><a [routerLink]="['/contact']">CONTACT US</a></li>
                <li  [ngClass]="router.url.includes('/sociaLinks') ? 'active-1' : ''"><a [routerLink]="['/sociaLinks']">SOCIAL MEDIA LINKS</a></li>
+               <li  [ngClass]="router.url.includes('/terms') ? 'active-1' : ''"><a [routerLink]="['/terms']">TERMS</a></li>
+               <li  [ngClass]="router.url.includes('/privacy') ? 'active-1' : ''"><a [routerLink]="['/privacy']">PRIVACY POLICY</a></li>
+               <li  [ngClass]="router.url.includes('/cancellation') ? 'active-1' : ''"><a [routerLink]="['/cancellation']">CANCELLATION POLICY</a></li>
              </ul>
      
         </li>

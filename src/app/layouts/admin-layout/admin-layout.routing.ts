@@ -47,6 +47,9 @@ import { AddParentFaqComponent } from '../../parent-faq/add-parent-faq/add-paren
 import { EditParentFaqComponent } from '../../parent-faq/edit-parent-faq/edit-parent-faq.component';
 import { AddTeacherFaqComponent } from '../../teacher-faq/add-teacher-faq/add-teacher-faq.component';
 import { EditTeacherFaqComponent } from '../../teacher-faq/edit-teacher-faq/edit-teacher-faq.component';
+import { TermsComponent } from '../../general-management/terms/terms.component';
+import { PrivacyPolicyComponent } from '../../general-management/privacy-policy/privacy-policy.component';
+import { CancellationPolicyComponent } from '../../general-management/cancellation-policy/cancellation-policy.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'category',      component: CategoryComponent },
@@ -92,6 +95,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'sociaLinks',   component:SocialMediaLinksComponent },
     { path: 'newsLetter',   component:NewsletterManagementComponent },
     
+    { path: 'terms',   component: TermsComponent },
+    { path: 'privacy',   component: PrivacyPolicyComponent },
+    { path: 'cancellation',   component: CancellationPolicyComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     // { path: 'table-list',     component: TableListComponent },
     // { path: 'typography',     component: TypographyComponent },

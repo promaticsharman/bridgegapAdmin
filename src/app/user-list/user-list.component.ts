@@ -54,7 +54,8 @@ export class UserListComponent implements OnInit {
     this.datamodel = {}
     this.length
     this.getStudentList()
-  
+    // this.paginationOptionChange(event)
+    //  console.log("evt",event)
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator

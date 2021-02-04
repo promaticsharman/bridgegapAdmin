@@ -77,7 +77,7 @@ export class ViewTeacherApplicationComponent implements OnInit {
   ngOnInit(): void {
     this.reqData = {} 
     this.reqData.offset = 0
-		this.reqData.limit = 3000000
+		this.reqData.limit = 30000
     this.getTeacherList()
     this.StudentId=this.route.snapshot.params.id
   }

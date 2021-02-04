@@ -61,6 +61,9 @@ import { AddParentFaqComponent } from './parent-faq/add-parent-faq/add-parent-fa
 import { EditParentFaqComponent } from './parent-faq/edit-parent-faq/edit-parent-faq.component';
 import { AddTeacherFaqComponent } from './teacher-faq/add-teacher-faq/add-teacher-faq.component';
 import { EditTeacherFaqComponent } from './teacher-faq/edit-teacher-faq/edit-teacher-faq.component';
+import { TermsComponent } from './general-management/terms/terms.component';
+import { PrivacyPolicyComponent } from './general-management/privacy-policy/privacy-policy.component';
+import { CancellationPolicyComponent } from './general-management/cancellation-policy/cancellation-policy.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -143,6 +146,9 @@ import { EditTeacherFaqComponent } from './teacher-faq/edit-teacher-faq/edit-tea
     EditParentFaqComponent,
     AddTeacherFaqComponent,
     EditTeacherFaqComponent,
+    TermsComponent,
+    PrivacyPolicyComponent,
+    CancellationPolicyComponent,
 
 
     // SubCategoryComponent

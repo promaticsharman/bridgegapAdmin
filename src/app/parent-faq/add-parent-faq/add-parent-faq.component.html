@@ -42,14 +42,21 @@
                                         plugins: [
                                         'advlist autolink lists link image charmap print preview anchor',
                                         'searchreplace visualblocks code fullscreen',
-                                        'insertdatetime media table paste code help wordcount'
+                                        'insertdatetime media table paste code help wordcount',
+                                        'table'
                                         ],
+                                       
                                         toolbar:
-                                        'undo redo | formatselect | bold italic backcolor | \
+                                        'undo redo | formatselect | forecolor | table  |bold italic backcolor | \
                                         alignleft aligncenter alignright alignjustify | \
                                         bullist numlist outdent indent | removeformat | help'
                                     }" formControlName="answer"  [(ngModel)]="EnterAnswer"
                                     ></editor>
+                                    <!-- toolbar:
+                                    'undo redo | formatselect | forecolor | table |bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help' -->
+                                    <!-- table_toolbar: 'tableprops tabledelete | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol', -->
                                             <div *ngIf="parentFaqForm.controls['answer'].touched &&
                                         parentFaqForm.controls['answer'].invalid"
                                         class="text-danger">

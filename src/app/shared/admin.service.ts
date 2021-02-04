@@ -704,4 +704,85 @@ export class AdminService {
         // catchError(this.error)
       )
   }
+  createTermsandCondition(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createTermsConditions`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  getTermsandCondition(): Observable<any> {
+    let API_URL = `${this.apiUrl1}getTermsConditions`;
+    return this.httpClient.post(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updateTermsandCondition(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateTermsConditions`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  createPrivacyPolicy(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createPrivacyPolicy`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  getPrivacyPolicy(): Observable<any> {
+    let API_URL = `${this.apiUrl1}getPrivacyPolicy`;
+    return this.httpClient.post(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updatePrivacyPolicy(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updatePrivacyPolicy`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  createCancellationPolicy(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createCancellationPolicy`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  getCancellationPolicy(): Observable<any> {
+    let API_URL = `${this.apiUrl1}getCancellationPolicy`;
+    return this.httpClient.post(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  } 
+  updateCancellationPolicy(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateCancellationPolicy`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  } 
 }
