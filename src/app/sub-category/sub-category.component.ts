@@ -35,7 +35,7 @@ export class SubCategoryComponent implements OnInit {
 	loader
 	currentPage=10
 	currentIndex=0
-  displayedColumns: string[] = ['position','category','image','action'];
+  displayedColumns: string[] = ['position','category','image','sub_sub_category','action'];
   imagePath = environment.subCatImg;
   
 //   

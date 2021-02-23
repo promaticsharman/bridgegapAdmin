@@ -32,7 +32,7 @@ export class TeacherManagementComponent implements OnInit {
 	responseData = [] 
     dataSource: any
     currentIndex=0
-  displayedColumns: string[] = ['position','name','email','phone','status','action'];
+  displayedColumns: string[] = ['position','name','email','phone','signupdate','status','action'];
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
 	@ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -40,6 +40,7 @@ export class TeacherManagementComponent implements OnInit {
     private dialog: MatDialog,
     private service: AdminService,
     private route: ActivatedRoute,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -150,4 +151,76 @@ export class TeacherManagementComponent implements OnInit {
         }
     })
     }
+
+    // delete(id){
+    //   Swal.fire({
+    //     title: 'Are you sure want to remove?',
+    //     text: 'You will not be able to recover this User!',
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonText: 'Yes, delete it!',
+    //     cancelButtonText: 'No, keep it'
+    //   }).then((result) => {
+    //     if (result.value) {
+    //     this.service.deleteUser(id).subscribe(data => {
+    //       // console.log(data);
+    //       Swal.fire(
+    //         'Deleted!',
+    //         'This User has been deleted.',
+    //         'success'
+    //       )
+    //       // this.router.navigate(['/courses'])
+    //     //  this.ngOnInit();
+        
+    //       let currentUrl = this.router.url;
+    //       console.log('currentUrl',currentUrl)
+    //       this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+    //           this.router.navigate([currentUrl]);
+    //       });
+     
+          
+    //   });
+    //     } else if (result.dismiss === Swal.DismissReason.cancel) {
+    //     Swal.fire(
+    //       'Cancelled',
+    //       'This Application is safe :)',
+    //       'error'
+    //     )
+    //     }
+    //   })
+    // }
+
+
+    delete(id){
+     Swal.fire({
+       title: 'Are you sure want to remove?',
+       text: 'You will not be able to recover this User!',
+       icon: 'warning',
+       showCancelButton: true,
+       confirmButtonText: 'Yes, delete it!',
+       cancelButtonText: 'No, keep it'
+     }).then((result)=>{
+          if (result.value) {
+              this.service.deleteUser(id).subscribe(data => {
+                Swal.fire(
+                    'Deleted!',
+                    'This User has been deleted.',
+                    'success'
+                  )
+                  let currentUrl = this.router.url;
+                  this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+                  this.router.navigate([currentUrl]);
+                    });          
+              });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+              Swal.fire(
+              'Cancelled',
+              'This User is safe :)',
+              'error'
+            )
+         }
+      })
+        
+    }
+
 }

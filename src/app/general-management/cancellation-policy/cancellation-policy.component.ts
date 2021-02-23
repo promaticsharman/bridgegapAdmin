@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class CancellationPolicyComponent implements OnInit {
   cancellation
+  loader
   constructor(
     private router: Router,
     private service: AdminService,
@@ -20,18 +21,31 @@ export class CancellationPolicyComponent implements OnInit {
     this.getCancellationPolicy()
   }
   getCancellationPolicy(){
-  this.service.getCancellationPolicy().subscribe(res =>{
-    this.cancellation=res.data.content;
-  })
-  }
+    var params={
+      type:"ongoing"
+    }
+    this.loader=true;
+  this.service.getCancellationPolicy(params).subscribe(res =>{
+    let ongoingData=res.data.rows;
+    console.log('ongoingData',ongoingData)
+    ongoingData.forEach(element => {
+      this.cancellation=element.content
+    });
+    this.loader=false;
+   })
+ }
   updateCancellation(){
     var content={
       id:1,
-      content:this.cancellation
+      content:this.cancellation,
+      type:"ongoing"
     }
+    this.loader=true;
     this.service.updateCancellationPolicy(content).subscribe(res =>{
     // console.log('res',res)
+    this.loader=false;
     Swal.fire('Success..!', 'Successfully Updated!', 'success')
+   
     })
   }
 }

@@ -91,7 +91,10 @@ export class EditHowItWorksComponent implements OnInit {
     
      var formData = new FormData();
      formData.append('id', this.route.snapshot.params.id);
-     formData.append("image",this.workData.image);
+     if(this.workData.image){
+      formData.append("image",this.workData.image);
+     }
+
      formData.append("heading", this.workData.heading);
      formData.append("description", this.workData.description);
    

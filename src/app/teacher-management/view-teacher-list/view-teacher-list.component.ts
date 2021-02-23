@@ -23,10 +23,13 @@ export class ViewTeacherListComponent implements OnInit {
     dob: "",
     fb:"",
     google:"",
-    status:""
+    status:"",
+    signupdate:""
 
     // description : ""
   }
+  uploadTeacherImage
+  image
 
   constructor(
     private fb: FormBuilder,
@@ -66,6 +69,7 @@ export class ViewTeacherListComponent implements OnInit {
             this.teacherData.google=element.google_id;
             this.teacherData.type=element.user_type;
             this.teacherData.status=element.status;
+            this.teacherData.signupdate=element.created_at;
 
 
           }
@@ -90,5 +94,31 @@ export class ViewTeacherListComponent implements OnInit {
       // this.loader = false
     })
 
+  }
+
+  onFileChange(event) {
+
+    if (!event.target) {
+			return;
+		}
+		if (!event.target.files) {
+			return;
+		}
+		if (event.target.files.length !== 1) {
+			return;
+		}
+		const file = event.target.files[0];
+		if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+			// this.toastr.warning('Please upload image file')
+			return;
+		}
+		console.log(event.target.files[0])
+		this.uploadTeacherImage = event.target.files[0];
+		const fr = new FileReader();
+		fr.onloadend = (loadEvent) => {
+			let mainImage = fr.result;
+			this.image = mainImage;
+		};
+    fr.readAsDataURL(file);
   }
 }

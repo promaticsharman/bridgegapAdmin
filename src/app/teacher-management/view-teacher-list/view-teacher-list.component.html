@@ -16,7 +16,27 @@
                         </div> -->
                         <div class="card-body block-card" style="margin-top: 29px;">
                             <div class="row">
-                            
+                                <div class="col-md-12">
+                                    <!-- <div class="vid_wrap">
+                                        <label>Profile Picture</label>
+                                        <img src="image"/> -->
+                                        <!-- <span>
+                                            <img *ngIf="image" style="height: 250px;
+                                            width: 438px;" class=""
+                                            [src]="image" />
+                                            <img *ngIf="!image && courseImg" style="height: 250px;
+                                            width: 438px;" class="" src="{{courseImg}}" /> -->
+<!--                                            
+                                            <span class="wrap">
+                                                <input type="file" value="uploadCoverImage" (change)="onFileChange($event)" accept="image/*">
+                                                <i class="fa fa-edit " ></i>
+                                                *ngIf="courseImg"
+                                            </span> -->
+                                        <!-- </span> -->
+                                        
+                                    <!-- </div>    -->
+                                </div>
+
                                 <div class="col-md-6">
                                     <label>Name</label>
                                     <p class="hd_p">
@@ -26,7 +46,75 @@
                                 </div>
                 
                                 <div class="col-md-6">
-                                    <label>Email</label>
+                                    <label>Email ID</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label>Full name</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label>Nationality</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Country of Residence</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Address</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label>State</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>City</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label>Mobile Number(with Country Code)</label>
+                                    <p class="hd_p">
+                                       {{teacherData.email == null ? "N/A" : teacherData.email}}
+                                    </p>
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Pin/Zip Code</label>
                                     <p class="hd_p">
                                        {{teacherData.email == null ? "N/A" : teacherData.email}}
                                     </p>
@@ -34,12 +122,12 @@
                                 </div>
                                 
                                
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label>Phone</label>
                                     <p class="hd_p">
                                        {{teacherData.phone == null ? "N/A" : teacherData.phone }}
                                     </p>
-                                </div>
+                                </div> -->
 <!-- 
                                 <div class="col-md-6">
                                     <label>Country</label>
@@ -76,12 +164,20 @@
                                     </p>
                                 </div> -->
 
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label>User Type</label>
                                     <p class="hd_p">
                                         {{teacherData.type == null ? "N/A" : teacherData.type}} 
                                     </p>
-                                </div>
+                                </div> -->
+
+                                <!-- <div class="col-md-6">
+                                   
+                                    <label>Sign Up Date</label>
+                                    <p class="hd_p">
+                                        {{teacherData.signupdate | date:'mediumDate'}} 
+                                    </p>
+                                </div> -->
 
                                 <div class="col-md-6">
                                    

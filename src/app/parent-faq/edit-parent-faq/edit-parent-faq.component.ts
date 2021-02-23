@@ -63,6 +63,7 @@ export class EditParentFaqComponent implements OnInit {
     this.service.updateFaq(type).subscribe(res =>{
     console.log("res123",res)
     Swal.fire('Success..!', 'Updated Successfully!', 'success')
+    // this.router.navigate(['/generaFaq'])
     this.router.navigate(['/parentFaq']);
     // this.closeDialog();
     // this.ngOnInit()

@@ -61,7 +61,7 @@ export class EditGenFaqComponent implements OnInit {
     this.service.updateFaq(type).subscribe(res =>{
     console.log("res123",res)
     Swal.fire('Success..!', 'Updated Successfully!', 'success')
-    this.router.navigate(['/teacherFaq']);
+    this.router.navigate(['/generalFaq']);
     // this.closeDialog();
     // this.ngOnInit()
     })

@@ -3847,19 +3847,6 @@ function hashDelete(key) {
 
 /***/ }),
 
-/***/ "3Puv":
-/*!********************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/maps/maps.component.html ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel-header panel-header-sm\">\n</div>\n<div class=\"main-content\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"card \">\n        <div class=\"card-header \">\n          Google Maps\n        </div>\n        <div class=\"card-body \">\n          <div id=\"map\" class=\"map\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
-
-/***/ }),
-
 /***/ "3UD+":
 /*!*******************************************!*\
   !*** (webpack)/buildin/harmony-module.js ***!
@@ -14331,13 +14318,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../table-list/table-list.component */ "smLI");
 /* harmony import */ var _typography_typography_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../typography/typography.component */ "un8i");
 /* harmony import */ var _icons_icons_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../icons/icons.component */ "8+yc");
-/* harmony import */ var _maps_maps_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../maps/maps.component */ "urC5");
-/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../notifications/notifications.component */ "4G6T");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng2-charts */ "LPYB");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
-/* harmony import */ var _upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../upgrade/upgrade.component */ "Zfkz");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../login/login.component */ "vtpD");
+/* harmony import */ var _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../notifications/notifications.component */ "4G6T");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng2-charts */ "LPYB");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+/* harmony import */ var _upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../upgrade/upgrade.component */ "Zfkz");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../login/login.component */ "vtpD");
 
 
 
@@ -14349,7 +14335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+// import { MapsComponent } from '../../maps/maps.component';
 
 
 
@@ -14367,20 +14353,20 @@ var AdminLayoutModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(_admin_layout_routing__WEBPACK_IMPORTED_MODULE_5__["AdminLayoutRoutes"]),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-                ng2_charts__WEBPACK_IMPORTED_MODULE_13__["ChartsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_15__["ToastrModule"].forRoot(),
+                ng2_charts__WEBPACK_IMPORTED_MODULE_12__["ChartsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__["NgbModule"],
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_14__["ToastrModule"].forRoot(),
             ],
             declarations: [
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"],
                 _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_7__["UserProfileComponent"],
                 _table_list_table_list_component__WEBPACK_IMPORTED_MODULE_8__["TableListComponent"],
-                _upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_16__["UpgradeComponent"],
+                _upgrade_upgrade_component__WEBPACK_IMPORTED_MODULE_15__["UpgradeComponent"],
                 _typography_typography_component__WEBPACK_IMPORTED_MODULE_9__["TypographyComponent"],
                 _icons_icons_component__WEBPACK_IMPORTED_MODULE_10__["IconsComponent"],
-                _maps_maps_component__WEBPACK_IMPORTED_MODULE_11__["MapsComponent"],
-                _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_12__["NotificationsComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
+                // MapsComponent,
+                _notifications_notifications_component__WEBPACK_IMPORTED_MODULE_11__["NotificationsComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_16__["LoginComponent"],
             ]
         })
     ], AdminLayoutModule);
@@ -45960,19 +45946,6 @@ var isMaskable = _coreJsData_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _isFun
 
 /***/ }),
 
-/***/ "YpYv":
-/*!*****************************************!*\
-  !*** ./src/app/maps/maps.component.css ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtYXBzLmNvbXBvbmVudC5jc3MifQ== */");
-
-/***/ }),
-
 /***/ "YsUP":
 /*!*****************************************!*\
   !*** ./node_modules/lodash-es/isNaN.js ***!
@@ -60311,6 +60284,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parent_faq_edit_parent_faq_edit_parent_faq_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../../parent-faq/edit-parent-faq/edit-parent-faq.component */ "QnXU");
 /* harmony import */ var _teacher_faq_add_teacher_faq_add_teacher_faq_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../../teacher-faq/add-teacher-faq/add-teacher-faq.component */ "co1N");
 /* harmony import */ var _teacher_faq_edit_teacher_faq_edit_teacher_faq_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../../teacher-faq/edit-teacher-faq/edit-teacher-faq.component */ "mroN");
+/* harmony import */ var _general_management_terms_terms_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../../general-management/terms/terms.component */ "aFbC");
+/* harmony import */ var _general_management_privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../../general-management/privacy-policy/privacy-policy.component */ "oPbr");
+/* harmony import */ var _general_management_cancellation_policy_cancellation_policy_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../../general-management/cancellation-policy/cancellation-policy.component */ "qM3j");
+/* harmony import */ var _teach_with_us_banner_management_banner_management_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ../../teach-with-us/banner-management/banner-management.component */ "fZO6");
+/* harmony import */ var _teach_with_us_why_teach_with_bridgegap_why_teach_with_bridgegap_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ../../teach-with-us/why-teach-with-bridgegap/why-teach-with-bridgegap.component */ "WiPg");
+/* harmony import */ var _teach_with_us_how_it_works_teacher_how_it_works_teacher_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ../../teach-with-us/how-it-works-teacher/how-it-works-teacher.component */ "zLvK");
+/* harmony import */ var _teach_with_us_here_to_help_section_here_to_help_section_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ../../teach-with-us/here-to-help-section/here-to-help-section.component */ "axlv");
+/* harmony import */ var _teach_with_us_banner_management_edit_teacher_banner_edit_teacher_banner_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ../../teach-with-us/banner-management/edit-teacher-banner/edit-teacher-banner.component */ "2fEl");
+/* harmony import */ var _teach_with_us_why_teach_with_bridgegap_add_add_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ../../teach-with-us/why-teach-with-bridgegap/add/add.component */ "3+9Y");
+/* harmony import */ var _teach_with_us_why_teach_with_bridgegap_edit_why_teach_with_us_edit_why_teach_with_us_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ../../teach-with-us/why-teach-with-bridgegap/edit-why-teach-with-us/edit-why-teach-with-us.component */ "c2Sq");
+/* harmony import */ var _teach_with_us_how_it_works_teacher_edit_teacher_how_it_works_edit_teacher_how_it_works_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ../../teach-with-us/how-it-works-teacher/edit-teacher-how-it-works/edit-teacher-how-it-works.component */ "e7sR");
+/* harmony import */ var _teacher_management_edit_teacher_management_edit_teacher_management_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ../../teacher-management/edit-teacher-management/edit-teacher-management.component */ "i8/s");
+/* harmony import */ var _teach_with_us_here_to_help_section_edit_here_to_help_section_edit_here_to_help_section_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ../../teach-with-us/here-to-help-section/edit-here-to-help-section/edit-here-to-help-section.component */ "vHJu");
+/* harmony import */ var _sub_sub_category_sub_sub_category_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ../../sub-sub-category/sub-sub-category.component */ "m8KA");
+/* harmony import */ var _sub_sub_category_add_sub_sub_category_add_sub_sub_category_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ../../sub-sub-category/add-sub-sub-category/add-sub-sub-category.component */ "J6Mv");
+/* harmony import */ var _sub_sub_category_edit_sub_sub_category_edit_sub_sub_category_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ../../sub-sub-category/edit-sub-sub-category/edit-sub-sub-category.component */ "J5Lu");
+/* harmony import */ var _cancellation_policy_one_time_session_one_time_session_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ../../cancellation-policy/one-time-session/one-time-session.component */ "PwIm");
+/* harmony import */ var _cancellation_policy_multi_session_multi_session_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ../../cancellation-policy/multi-session/multi-session.component */ "GZuo");
+/* harmony import */ var _teacher_management_teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ../../teacher-management/teacher-profile/teacher-profile.component */ "rSPq");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60357,12 +60368,18 @@ var AdminLayoutRoutes = [
     { path: 'addCategory', component: _category_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_18__["AddCategoryComponent"] },
     { path: 'editCategory/:id', component: _category_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_19__["EditCategoryComponent"] },
     { path: 'sub_category/:id', component: _sub_category_sub_category_component__WEBPACK_IMPORTED_MODULE_3__["SubCategoryComponent"] },
+    { path: 'sub_sub_category/:catId/:subcatId', component: _sub_sub_category_sub_sub_category_component__WEBPACK_IMPORTED_MODULE_53__["SubSubCategoryComponent"] },
     { path: 'add_sub_category/:id', component: _sub_category_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_20__["AddSubCategoryComponent"] },
     { path: 'sub_category/:catId/:subCatId', component: _sub_category_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_21__["EditSubCategoryComponent"] },
+    { path: 'add_sub_sub_category/:catId/:subCatId', component: _sub_sub_category_add_sub_sub_category_add_sub_sub_category_component__WEBPACK_IMPORTED_MODULE_54__["AddSubSubCategoryComponent"] },
+    { path: 'edit_sub_sub_category/:catId/:subCatId/:id', component: _sub_sub_category_edit_sub_sub_category_edit_sub_sub_category_component__WEBPACK_IMPORTED_MODULE_55__["EditSubSubCategoryComponent"] },
+    { path: 'one_time_policy', component: _cancellation_policy_one_time_session_one_time_session_component__WEBPACK_IMPORTED_MODULE_56__["OneTimeSessionComponent"] },
+    { path: 'multi_session_policy', component: _cancellation_policy_multi_session_multi_session_component__WEBPACK_IMPORTED_MODULE_57__["MultiSessionComponent"] },
     { path: 'student_list', component: _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_4__["UserListComponent"] },
     { path: 'student_list/:stdId', component: _user_list_view_student_details_view_student_details_component__WEBPACK_IMPORTED_MODULE_5__["ViewStudentDetailsComponent"] },
     // /:lt/:ofst
     { path: 'teacher_list', component: _teacher_management_teacher_management_component__WEBPACK_IMPORTED_MODULE_28__["TeacherManagementComponent"] },
+    { path: 'edit_teacher_list/:id', component: _teacher_management_edit_teacher_management_edit_teacher_management_component__WEBPACK_IMPORTED_MODULE_51__["EditTeacherManagementComponent"] },
     { path: 'view_teacher_list/:teacherId', component: _teacher_management_view_teacher_list_view_teacher_list_component__WEBPACK_IMPORTED_MODULE_31__["ViewTeacherListComponent"] },
     { path: 'section_1', component: _section_first_section_first_component__WEBPACK_IMPORTED_MODULE_6__["SectionFirstComponent"] },
     { path: 'createEngaging', component: _section_second_create_engaging_create_engaging_component__WEBPACK_IMPORTED_MODULE_22__["CreateEngagingComponent"] },
@@ -60393,7 +60410,27 @@ var AdminLayoutRoutes = [
     { path: 'viewCourse/:id', component: _courses_management_view_course_details_view_course_details_component__WEBPACK_IMPORTED_MODULE_30__["ViewCourseDetailsComponent"] },
     { path: 'sociaLinks', component: _social_media_links_social_media_links_component__WEBPACK_IMPORTED_MODULE_32__["SocialMediaLinksComponent"] },
     { path: 'newsLetter', component: _newsletter_management_newsletter_management_component__WEBPACK_IMPORTED_MODULE_33__["NewsletterManagementComponent"] },
+    { path: 'terms', component: _general_management_terms_terms_component__WEBPACK_IMPORTED_MODULE_40__["TermsComponent"] },
+    { path: 'privacy', component: _general_management_privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_41__["PrivacyPolicyComponent"] },
+    { path: 'cancellation', component: _general_management_cancellation_policy_cancellation_policy_component__WEBPACK_IMPORTED_MODULE_42__["CancellationPolicyComponent"] },
     { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_1__["UserProfileComponent"] },
+    { path: 'teacher_banner', component: _teach_with_us_banner_management_banner_management_component__WEBPACK_IMPORTED_MODULE_43__["BannerManagementComponent"] },
+    { path: 'edit_teacher_banner/:id', component: _teach_with_us_banner_management_edit_teacher_banner_edit_teacher_banner_component__WEBPACK_IMPORTED_MODULE_47__["EditTeacherBannerComponent"] },
+    { path: 'teacher_teach_with', component: _teach_with_us_why_teach_with_bridgegap_why_teach_with_bridgegap_component__WEBPACK_IMPORTED_MODULE_44__["WhyTeachWithBridgegapComponent"] },
+    { path: 'add_teacher_teach_with', component: _teach_with_us_why_teach_with_bridgegap_add_add_component__WEBPACK_IMPORTED_MODULE_48__["AddComponent"] },
+    { path: 'edit_teacher_teach_with/:id', component: _teach_with_us_why_teach_with_bridgegap_edit_why_teach_with_us_edit_why_teach_with_us_component__WEBPACK_IMPORTED_MODULE_49__["EditWhyTeachWithUsComponent"] },
+    { path: 'teacher_how_it_works', component: _teach_with_us_how_it_works_teacher_how_it_works_teacher_component__WEBPACK_IMPORTED_MODULE_45__["HowItWorksTeacherComponent"] },
+    { path: 'edit_teacher_how_it_works/:id', component: _teach_with_us_how_it_works_teacher_edit_teacher_how_it_works_edit_teacher_how_it_works_component__WEBPACK_IMPORTED_MODULE_50__["EditTeacherHowItWorksComponent"] },
+    { path: 'teacher_here_to_help', component: _teach_with_us_here_to_help_section_here_to_help_section_component__WEBPACK_IMPORTED_MODULE_46__["HereToHelpSectionComponent"] },
+    { path: 'edit_here_to_help', component: _teach_with_us_here_to_help_section_edit_here_to_help_section_edit_here_to_help_section_component__WEBPACK_IMPORTED_MODULE_52__["EditHereToHelpSectionComponent"] },
+    { path: 'teacher_profile/:id', component: _teacher_management_teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_58__["TeacherProfileComponent"] }
+    // { path: 'terms',   component: TermsComponent },
+    // { path: 'table-list',     component: TableListComponent },
+    // { path: 'typography',     component: TypographyComponent },
+    // { path: 'icons',          component: IconsComponent },
+    // { path: 'maps',           component: MapsComponent },
+    // { path: 'notifications',  component: NotificationsComponent },
+    // { path: 'upgrade',        component: UpgradeComponent },
 ];
 
 
@@ -62950,143 +62987,6 @@ var TypographyComponent = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
     ], TypographyComponent);
     return TypographyComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "urC5":
-/*!****************************************!*\
-  !*** ./src/app/maps/maps.component.ts ***!
-  \****************************************/
-/*! exports provided: MapsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapsComponent", function() { return MapsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_maps_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./maps.component.html */ "3Puv");
-/* harmony import */ var _maps_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./maps.component.css */ "YpYv");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-var MapsComponent = /** @class */ (function () {
-    function MapsComponent() {
-    }
-    MapsComponent.prototype.ngOnInit = function () {
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-            zoom: 13,
-            center: myLatlng,
-            scrollwheel: false,
-            styles: [{
-                    "featureType": "water",
-                    "stylers": [{
-                            "saturation": 43
-                        }, {
-                            "lightness": -11
-                        }, {
-                            "hue": "#0088ff"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "hue": "#ff0000"
-                        }, {
-                            "saturation": -100
-                        }, {
-                            "lightness": 99
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                            "color": "#808080"
-                        }, {
-                            "lightness": 54
-                        }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "color": "#ece2d9"
-                        }]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "color": "#ccdca1"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                            "color": "#767676"
-                        }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                            "visibility": "off"
-                        }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                            "visibility": "on"
-                        }, {
-                            "color": "#b8cb93"
-                        }]
-                }, {
-                    "featureType": "poi.park",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.sports_complex",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.medical",
-                    "stylers": [{
-                            "visibility": "on"
-                        }]
-                }, {
-                    "featureType": "poi.business",
-                    "stylers": [{
-                            "visibility": "simplified"
-                        }]
-                }]
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title: "Hello World!"
-        });
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
-    };
-    MapsComponent.ctorParameters = function () { return []; };
-    MapsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-            selector: 'app-maps',
-            template: _raw_loader_maps_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_maps_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-    ], MapsComponent);
-    return MapsComponent;
 }());
 
 

@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class TermsComponent implements OnInit {
    terms
+   loader
   constructor(
     private router: Router,
     private service: AdminService,
@@ -34,8 +35,10 @@ export class TermsComponent implements OnInit {
       id:1,
       content:this.terms
     }
+    this.loader=true;
     this.service.updateTermsandCondition(content).subscribe(res =>{
       console.log("res",res);
+      this.loader=false;
       Swal.fire('Success..!', 'Successfully Updated!', 'success')
     })
   }

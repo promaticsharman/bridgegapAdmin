@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class PrivacyPolicyComponent implements OnInit {
  privacy
+ loader
   constructor(
     private router: Router,
     private service: AdminService,
@@ -30,8 +31,10 @@ export class PrivacyPolicyComponent implements OnInit {
       id:1,
       content:this.privacy
     }
+    this.loader=true;
     this.service.updatePrivacyPolicy(content).subscribe(res =>{
       console.log("res",res)
+      this.loader=false;
       Swal.fire('Success..!', 'Successfully Updated!', 'success')
     })
   }

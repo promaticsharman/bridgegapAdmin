@@ -47,12 +47,24 @@
 
                     </ng-container>  
 
+                    <ng-container matColumnDef="sub_sub_category">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Sub-Sub Category List</th>
+                      <td mat-cell *matCellDef="let element" class="text-center">
+                        <button mat-icon-button routerLink="/sub_sub_category/{{CateID}}/{{element.id}}">
+                          <!-- (click)="openSubCategoryDialog()" -->
+                          <mat-icon >view_list </mat-icon>
+                          <!-- Delete -->
+                       </button>
+                      </td>
+                        <!-- {{element.category_name}} -->
+                     </ng-container>
+
                     <!-- Action -->
                     <ng-container matColumnDef="action">
                     <th mat-header-cell *matHeaderCellDef  class="mat-header-cell text-center">
                         Action
                     </th>
-                    <td class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
+                     <td class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
                             <button  mat-icon-button routerLink="/sub_category/{{CateID}}/{{element.id}}" >
                                 <mat-icon >edit</mat-icon>
                             </button>
@@ -60,8 +72,8 @@
                                 <mat-icon >delete</mat-icon>
                             </button>
                         
-                    </td>
-                </ng-container>
+                     </td>
+                   </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

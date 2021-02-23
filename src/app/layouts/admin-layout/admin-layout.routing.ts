@@ -5,7 +5,7 @@ import { UserProfileComponent } from '../../user-profile/user-profile.component'
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
+// import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { LoginComponent } from '../../login/login.component';
@@ -50,20 +50,43 @@ import { EditTeacherFaqComponent } from '../../teacher-faq/edit-teacher-faq/edit
 import { TermsComponent } from '../../general-management/terms/terms.component';
 import { PrivacyPolicyComponent } from '../../general-management/privacy-policy/privacy-policy.component';
 import { CancellationPolicyComponent } from '../../general-management/cancellation-policy/cancellation-policy.component';
+import { BannerManagementComponent } from '../../teach-with-us/banner-management/banner-management.component';
+import { WhyTeachWithBridgegapComponent } from '../../teach-with-us/why-teach-with-bridgegap/why-teach-with-bridgegap.component';
+import { HowItWorksTeacherComponent } from '../../teach-with-us/how-it-works-teacher/how-it-works-teacher.component';
+import { HereToHelpSectionComponent } from '../../teach-with-us/here-to-help-section/here-to-help-section.component';
+import { TeacherTestimonialComponent } from '../../teach-with-us/teacher-testimonial/teacher-testimonial.component';
+import { FaqComponent } from '../../teach-with-us/faq/faq.component';
+import { EditTeacherBannerComponent } from '../../teach-with-us/banner-management/edit-teacher-banner/edit-teacher-banner.component';
+import { AddComponent } from '../../teach-with-us/why-teach-with-bridgegap/add/add.component';
+import { EditWhyTeachWithUsComponent } from '../../teach-with-us/why-teach-with-bridgegap/edit-why-teach-with-us/edit-why-teach-with-us.component';
+import { EditTeacherHowItWorksComponent } from '../../teach-with-us/how-it-works-teacher/edit-teacher-how-it-works/edit-teacher-how-it-works.component';
+import { EditTeacherManagementComponent } from '../../teacher-management/edit-teacher-management/edit-teacher-management.component';
+import { EditHereToHelpSectionComponent } from '../../teach-with-us/here-to-help-section/edit-here-to-help-section/edit-here-to-help-section.component';
+import { SubSubCategoryComponent } from '../../sub-sub-category/sub-sub-category.component';
+import { AddSubSubCategoryComponent } from '../../sub-sub-category/add-sub-sub-category/add-sub-sub-category.component';
+import { EditSubSubCategoryComponent } from '../../sub-sub-category/edit-sub-sub-category/edit-sub-sub-category.component';
+import { OneTimeSessionComponent } from '../../cancellation-policy/one-time-session/one-time-session.component';
+import { MultiSessionComponent } from '../../cancellation-policy/multi-session/multi-session.component';
+import { TeacherProfileComponent } from '../../teacher-management/teacher-profile/teacher-profile.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'category',      component: CategoryComponent },
     { path: 'addCategory',      component: AddCategoryComponent },
     { path: 'editCategory/:id',      component: EditCategoryComponent },
     { path: 'sub_category/:id',      component: SubCategoryComponent },
+    { path: 'sub_sub_category/:catId/:subcatId', component: SubSubCategoryComponent },
     { path: 'add_sub_category/:id',      component: AddSubCategoryComponent },
     { path: 'sub_category/:catId/:subCatId',      component: EditSubCategoryComponent },
-
+    { path: 'add_sub_sub_category/:catId/:subCatId',      component: AddSubSubCategoryComponent },
+    { path: 'edit_sub_sub_category/:catId/:subCatId/:id',      component: EditSubSubCategoryComponent },
+    { path: 'one_time_policy',      component: OneTimeSessionComponent },
+    { path: 'multi_session_policy',      component: MultiSessionComponent },
     { path: 'student_list',      component: UserListComponent },
     { path: 'student_list/:stdId',  component: ViewStudentDetailsComponent },
     // /:lt/:ofst
     
-    { path: 'teacher_list',      component: TeacherManagementComponent},
+    { path: 'teacher_list',    component: TeacherManagementComponent},
+    { path: 'edit_teacher_list/:id',      component: EditTeacherManagementComponent},
     { path: 'view_teacher_list/:teacherId',      component: ViewTeacherListComponent},
     { path: 'section_1',      component: SectionFirstComponent },
     { path: 'createEngaging',      component: CreateEngagingComponent },
@@ -99,6 +122,17 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'privacy',   component: PrivacyPolicyComponent },
     { path: 'cancellation',   component: CancellationPolicyComponent },
     { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'teacher_banner',   component: BannerManagementComponent },
+    { path: 'edit_teacher_banner/:id',   component: EditTeacherBannerComponent },
+    { path: 'teacher_teach_with',   component: WhyTeachWithBridgegapComponent },
+    { path: 'add_teacher_teach_with',   component: AddComponent },
+    { path: 'edit_teacher_teach_with/:id',   component: EditWhyTeachWithUsComponent },
+    { path: 'teacher_how_it_works',   component: HowItWorksTeacherComponent },
+    { path: 'edit_teacher_how_it_works/:id',   component: EditTeacherHowItWorksComponent },
+    { path: 'teacher_here_to_help',   component: HereToHelpSectionComponent },
+    { path: 'edit_here_to_help',   component: EditHereToHelpSectionComponent },
+    { path: 'teacher_profile/:id',   component: TeacherProfileComponent }
+    // { path: 'terms',   component: TermsComponent },
     // { path: 'table-list',     component: TableListComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },

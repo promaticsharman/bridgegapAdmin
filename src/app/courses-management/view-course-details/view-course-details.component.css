@@ -94,3 +94,69 @@
         background: #6aa524;
         color: #fff;
     }
+
+
+    span.mat_imag {
+        width: 200px;
+        height: 200px;
+        background: #fafafa;
+        display: block;
+        margin: 0 auto;
+    }
+    .mat_imag img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .inpt_icon .fa-edit{
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 9px;
+        font-size: 17px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    
+
+    .vid_wrap{
+        position: relative;
+
+    }
+    .vid_wrap span.wrap{
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        z-index: 99;
+        width: 40px;
+        height: 40px;
+        background: #69a323;
+        overflow: hidden;
+        color: #ffff;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 2.5;
+
+    }
+    .vid_wrap span.wrap input{
+        position: absolute;
+        z-index: 9;
+        left:0;
+        top:0;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        
+    }
+
+    .ifram{
+        position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    }

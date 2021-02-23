@@ -25,7 +25,8 @@ export class ViewStudentDetailsComponent implements OnInit {
     fb:"",
     google:"",
     status:"",
-    type:""
+    type:"",
+    signupdate:""
 
     // description : ""
   }
@@ -68,6 +69,7 @@ export class ViewStudentDetailsComponent implements OnInit {
               this.studentData.google=element.google_id;
               this.studentData.type=element.user_type;
               this.studentData.status=element.status;
+              this.studentData.signupdate=element.created_at;
               
 
             }

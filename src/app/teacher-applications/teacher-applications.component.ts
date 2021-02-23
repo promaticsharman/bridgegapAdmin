@@ -25,12 +25,13 @@ export class TeacherApplicationsComponent implements OnInit {
 	datamodel
   length
   loader
+  space=" "
 	timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 	filterValue
 	responseData = [] 
     dataSource: any
     currentIndex=0
-  displayedColumns: string[] = ['position','teacher_name','email_id','date','application_status','action'];
+  displayedColumns: string[] = ['position','teacher_name','email_id','date','applicationDate','application_status','action'];
   // 'mobile_number',
   constructor(
     private dialog: MatDialog,

@@ -53,10 +53,14 @@
                     </ng-container> -->
 
                     <ng-container matColumnDef="date">
-                        <th width="200px" class="text-center"  mat-header-cell *matHeaderCellDef>Appication Date</th>
-                        <td width="200px" class="text-center" mat-cell *matCellDef="let element">{{element.created_at | dateAgo}}</td>
+                        <th width="200px" class="text-center"  mat-header-cell *matHeaderCellDef>Application Time</th>
+                        <td width="230px" class="text-center" mat-cell *matCellDef="let element">{{element.updated_at | date :'shortTime'}}({{element.updated_at | dateAgo }}) </td>
                     </ng-container>
-
+ 
+                    <ng-container matColumnDef="applicationDate">
+                      <th width="200px" class="text-center"  mat-header-cell *matHeaderCellDef>Application Date</th>
+                      <td width="200px" class="text-center" mat-cell *matCellDef="let element">{{element.updated_at | date}}</td>
+                  </ng-container>
 
                     <ng-container matColumnDef="application_status">
                         <th mat-header-cell *matHeaderCellDef>Status</th>

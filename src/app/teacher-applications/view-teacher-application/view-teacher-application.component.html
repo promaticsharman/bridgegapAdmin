@@ -16,16 +16,18 @@
                         </div>
                         <div class="card-body block-card">
                             <div class="row">
-                                <div class="col-md-6 offset-sm-3">
+                                <!-- <div class="col-md-6 offset-sm-3">
                                     <div class="vid_wrap">
+                                        <label style="padding-left: 102px;
+                                        padding-bottom: 10px;" >Course Description Video</label>
                                         <iframe class="embed-responsive-item" [src]='video'></iframe>
                                     </div>
                                     
-                                </div>
+                                </div> -->
                 
                                
                                 <div class="col-md-6">
-                                    <label>Name</label>
+                                    <label>Teacher Name(that you want to show on the platform)</label>
                                     <p class="hd_p">
                                         {{applicationData.name}}
                                     </p>
@@ -33,7 +35,7 @@
                                 </div>
                 
                                 <div class="col-md-6">
-                                    <label>Email</label>
+                                    <label>Email ID</label>
                                     <p class="hd_p">
                                        {{applicationData.email}}
                                     </p>
@@ -42,14 +44,28 @@
                                 
                                
                                 <div class="col-md-6">
-                                    <label>Phone Number</label>
+                                    <label>Mobile Number</label>
                                     <p class="hd_p">
                                        {{applicationData.phone}}
                                     </p>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label>Country</label>
+                                    <label>Teacher Name (full name)</label>
+                                    <p class="hd_p">
+                                        {{applicationData.fullname}} 
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Nationality</label>
+                                    <p class="hd_p">
+                                        {{applicationData.nationality}} 
+                                    </p>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label>Country of Residence</label>
                                     <p class="hd_p">
                                         {{applicationData.country}} 
                                     </p>
@@ -69,6 +85,8 @@
                                     </p>
                                 </div>
 
+                                
+
                                 <div class="col-md-6">
                                    
                                     <label>Address</label>
@@ -78,128 +96,175 @@
                                 </div>
                                 
                                 <div class="col-md-6">
-                                    <label>Teaching Experience</label>
+                                   
+                                    <label>Pin/Zip Code</label>
                                     <p class="hd_p">
-                                        {{applicationData.experiance}}
+                                        {{applicationData.zipcode}} 
                                     </p>
                                 </div>
-                                <div class="col-md-6">
+                                
+                                <div class="col-md-12">
+                                    <label>Teaching Experience</label>
+                                    <p class="hd_p">
+                                        {{applicationData.experiance }}
+                                    </p>
+                                </div>
+    <!-- academic_qualifications                             -->
+
+                            <div class="col-md-12" *ngIf="applicationData.academic_qualifications.length >0">
+                                <label>Academic Qualification</label>
+                                <br>
+                                <table class="table table-bordered text-center">
+                                    <tbody>
+                                    <tr class="hddr">
+                                    <td><b>Sr.No.</b></td>
+                                    <td><b>Degree/Certificate</b></td>			
+                                        <td><b>Major</b></td>
+                                        <td><b>College/University</b></td>
+                                        <td><b>Year of Passing</b></td>
+                                    </tr>
+                                    <tr *ngFor="let qual of applicationData.academic_qualifications;let i = index;">
+                                        <td>{{i+1}}</td>
+                                        <td>{{qual.degree_certificates}}</td>
+                                        <td>{{qual.major}}</td>
+                                        <td>{{qual.college_university}}</td>
+                                        <td>{{qual.year_of_passing}}</td>
+                                    </tr>
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+
+     <!-- Professional qualification                        -->
+                        
+                        <div class="col-md-12" *ngIf="applicationData.professional_qualifications.length >0">
+                            <label>Professional Qualification</label>
+                            <br>
+                            <table class="table table-bordered text-center">
+                                <tbody>
+                                <tr class="hddr">
+                                <td><b>Sr.No.</b></td>
+                                <td><b>Employer</b></td>	
+                                <td><b>Position</b></td>		
+                                    <td><b>From(month/year)</b></td>
+                                    <td><b>To(month/year)</b></td>
+                                </tr>
+                                <tr *ngFor="let prof of applicationData.professional_qualifications;let i = index;">
+                                    <td>{{i+1}}</td>
+                                    <td>{{prof.employer}}</td>
+                                    <td>{{prof.position}}</td>
+                                    <td>{{getMonthYear(prof.from_month_year)}}</td>
+                                    <!-- {{prof.from_month_year}} -->
+                                    <td>{{getMonthYear(prof.to_month_year) }}</td>
+                                </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+
+                                <div class="col-md-12">
                                     <label>Websites Links That Show Teaching Experience</label>
                                     <p class="hd_p">
-                                        {{applicationData.link}}
+                                        {{applicationData.link == "" ? 'N/A' : applicationData.link }}
+                                        <!-- {{applicationData.link == 'null' ? 'N/A' : applicationData.link }} -->
                                     </p>
                                 </div>
                                     
+         <!-- Classes that you want to teach                        -->
                                 
-                                <div class="col-md-6">
+                    <div class="col-md-12" *ngIf="applicationData.classes_teach_data.length >0">
+                        <label>Classes That You Want To Teach</label>
+                        <br>
+                        <table class="table table-bordered text-center" >
+                            <tbody>
+                            
+                            <tr class="hddr">
+                                <td><b>Sr.No.</b></td>   
+                                <td><b>Topic</b></td>			
+                                <td><b>Sub Topic</b></td>
+                                <td><b>Years of teaching experience</b></td>
+                                <td><b>Age Group</b></td>
+                            </tr>
+                            <tr *ngFor="let data of applicationData.classes_teach_data;let i = index;">
+                            
+                                <!-- <div *ngIf="applicationData.classes_teach_data.length > 0"> -->
+                                <td>{{i+1}}</td>
+                                <td>{{data.topic_name.category_name }}</td>
+                                <td>{{data.sub_topic_name.sub_category_name}}</td>
+                                <td>{{data.teaching_experience }}</td>
+                                <td>{{data.fromAge + " " + "to" + " " + data.toAge }}</td>
+                                <!-- </div> -->
+                                
+                                
+                            </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label>Sample Course Description</label>
+                        <p class="hd_p">
+                            We would want you to design and show us a course that you would want to Teach on BridgeGap.
+                        </p>
+                    </div>
+
+                                <div class="col-md-12">
                                     <label>What will you teach?</label>
                                     <p class="hd_p">
                                         {{applicationData.whatWillYouTeach}}
                                     </p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label>How you will teach? Your Approach?</label>
                                     <p class="hd_p">
                                         {{applicationData.teach}}
                                     </p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label>Requirements for the class?</label>
                                     <p class="hd_p">
                                         {{applicationData.requirement}}
                                     </p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label>How will learners benefit from this class?</label>
                                     <p class="hd_p">
                                         {{applicationData.benefitsOfClass}}
                                     </p>
                                 </div>
-                                <div class="col-sm-12" *ngIf="applicationData.academic_qualifications.length >0">
-                                    <label>Academic Qualification</label>
-                                    <table class="table table-bordered text-center">
-                                        <tbody>
-                                          <tr class="hddr">
-                                           <td><b>Sr.No.</b></td>
-                                           <td><b>Degree/Certificate</b></td>			
-                                            <td><b>Major</b></td>
-                                            <td><b>College/University</b></td>
-                                            <td><b>Year of Passing</b></td>
-                                          </tr>
-                                          <tr *ngFor="let qual of applicationData.academic_qualifications;let i = index;">
-                                              <td>{{i+1}}</td>
-                                              <td>{{qual.degree_certificates}}</td>
-                                              <td>{{qual.major}}</td>
-                                              <td>{{qual.college_university}}</td>
-                                              <td>{{qual.year_of_passing}}</td>
-                                          </tr>
-                                        </tbody>
-                                        
-                                    </table>
-                                </div>
+                                
+                               
+                                
 
-                                <div class="col-sm-12" *ngIf="applicationData.professional_qualifications.length >0">
-                                    <label>Professional Qualification</label>
-                                    <table class="table table-bordered text-center">
-                                        <tbody>
-                                          <tr class="hddr">
-                                           <td><b>Sr.No.</b></td>
-                                           <td><b>Employer</b></td>	
-                                           <td><b>Position</b></td>		
-                                            <td><b>From(month/year)</b></td>
-                                            <td><b>To(month/year)</b></td>
-                                          </tr>
-                                          <tr *ngFor="let prof of applicationData.professional_qualifications;let i = index;">
-                                              <td>{{i+1}}</td>
-                                              <td>{{prof.employer}}</td>
-                                              <td>{{prof.position}}</td>
-                                              <td>{{prof.from_month_year}}</td>
-                                              <td>{{prof.to_month_year}}</td>
-                                          </tr>
-                                        </tbody>
-                                        
-                                    </table>
-                                </div>
-
-                                <div class="col-sm-12" *ngIf="applicationData.classes_teach_data.length >0">
-                                    <label>Classes That You Want To Teach</label>
-                                    <table class="table table-bordered text-center" >
-                                        <tbody>
-                                           
-                                          <tr class="hddr">
-                                            <td><b>Sr.No.</b></td>   
-                                           <td><b>Topic</b></td>			
-                                            <td><b>Sub Topic</b></td>
-                                            <td><b>Years of teaching experience</b></td>
-                                            <td><b>Age Group</b></td>
-                                          </tr>
-                                          <tr *ngFor="let data of applicationData.classes_teach_data;let i = index;">
-                                           
-                                              <!-- <div *ngIf="applicationData.classes_teach_data.length > 0"> -->
-                                              <td>{{i+1}}</td>
-                                              <td>{{data.topic }}</td>
-                                              <td>{{data.sub_topic}}</td>
-                                              <td>{{data.teaching_experience }}</td>
-                                              <td>{{data.fromAge + " " + "to" + " " + data.toAge }}</td>
-                                              <!-- </div> -->
-                                              
-                                              
-                                          </tr>
-                                        </tbody>
-                                        
-                                    </table>
-                                </div>
-                                <div class="col-md-12">
-                                    <label>Application Date</label>
+                                <div class="col-md-6">
+                                    <label>Application Time</label>
                                      <p class="hd_p">
-                                        {{applicationData.date| dateAgo}}
+                                        {{applicationData.date| date:'shortTime'}} ({{applicationData.date| dateAgo}})
                                      </p>
                                  </div>
-                                <div class="col-md-12">
+
+                                 <div class="col-md-6">
+                                    <label>Application Date</label>
+                                     <p class="hd_p">
+                                        {{applicationData.date| date}}
+                                     </p>
+                                 </div>
+                                <div class="col-md-6">
                                    <label>Status</label>
                                     <p class="hd_p">
                                        {{applicationData.status}}
                                     </p>
+                                </div>
+
+
+                                <div class="col-md-6 offset-sm-3">
+                                    <div class="vid_wrap">
+                                        <label style="padding-left: 102px;
+                                        padding-bottom: 10px;" >Course Description Video</label>
+                                        <iframe class="embed-responsive-item" [src]='video'></iframe>
+                                    </div>
+                                    
                                 </div>
                                 
                             </div>

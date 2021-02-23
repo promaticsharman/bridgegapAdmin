@@ -83,7 +83,7 @@ export class SectionOneEditComponent implements OnInit {
    
   }
 
-  updateTestimonials(){
+  updateBanner(){
     console.log('id***',this.route.snapshot.params.id);
     console.log('title/',this.bannerData.title);
     console.log('subtitle',this.bannerData.subtitle);
@@ -94,7 +94,10 @@ export class SectionOneEditComponent implements OnInit {
      formData.append('banner_id', this.route.snapshot.params.id);
      formData.append("heading",this.bannerData.title);
      formData.append("sub_heading", this.bannerData.subtitle);
-     formData.append("banner_image", this.bannerData.image);
+     if(this.bannerData.image){
+      formData.append("banner_image", this.bannerData.image);
+     }
+     
    
      this.service.updateBanner(formData).subscribe(data => {
        console.log(data," Successfully Updated!");

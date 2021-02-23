@@ -73,7 +73,10 @@ export class EditCategoryComponent implements OnInit {
 		var formData = new FormData();
 		
 		formData.append('category_name', this.categoryData.category);
-		formData.append('image', this.categoryData.image);
+		if(this.categoryData.image){
+			formData.append('image', this.categoryData.image);
+		}
+		
 		formData.append('category_id', this.Id);
 		
 		this.service.updateCategory(formData).subscribe(data => {

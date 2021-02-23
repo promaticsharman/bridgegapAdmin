@@ -87,3 +87,32 @@
         background: #6aa524;
         color: #fff;
     }
+    .vid_wrap{
+        position: relative;
+
+    }
+    .vid_wrap span.wrap{
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        z-index: 99;
+        width: 40px;
+        height: 40px;
+        background: #69a323;
+        overflow: hidden;
+        color: #ffff;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 2.5;
+
+    }
+    .vid_wrap span.wrap input{
+        position: absolute;
+        z-index: 9;
+        left:0;
+        top:0;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        
+    }

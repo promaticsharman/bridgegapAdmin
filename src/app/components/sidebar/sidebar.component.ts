@@ -17,6 +17,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/courses', title: 'Courses Management',  icon: 'education_atom', class: ''  },
     { path: '/teacherApplication', title: 'Teacher Applications',  icon: 'users_single-02', class: ''  },
     { path: '/newsLetter', title: 'Newsletter Management',  icon: 'objects_spaceship', class: ''  },
+   
     // { path: '/user_list', title: 'User Management',  icon: 'design_bullet-list-67', class: '' ,subcat:[]},
     // { path: '/section_1', title: 'Home Section 1',  icon: 'ui-1_bell-53', class: '' ,subcat:[]}
     // { path: '/sub_category', title: 'Sub Category',  icon: 'design_app', class: '' },
@@ -24,10 +25,7 @@ export const ROUTES: RouteInfo[] = [
     // { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
     // { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },
 
-    // { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
-    // { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },
-    // { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },
-    // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }
+    
 
 ];
 

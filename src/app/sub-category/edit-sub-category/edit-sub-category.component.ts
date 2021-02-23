@@ -33,12 +33,14 @@ export class EditSubCategoryComponent implements OnInit {
     console.log( 'iddddddd***',this.route.snapshot.params.subCatId)
     this.imgUrl = environment.subCategory_images + 'sub_category_images/'
     this.catId = this.route.snapshot.params.catId;
+    console.log('this.catId',this.catId)
     let id = this.route.snapshot.params.subCatId
+    console.log('this.subcatId',id)
     var obj = {
      sub_category_id: id
    }
    // console.log("Edit Id: ",)
-   this.service. getSubCategoryById(obj).subscribe(res =>{
+   this.service.getSubCategoryById(obj).subscribe(res =>{
      console.log("Data *************************: ",res);
      this.categoryData.category = res.data.sub_category_name
      this.categoryData.image=res.data.image
@@ -75,8 +77,11 @@ export class EditSubCategoryComponent implements OnInit {
     console.log("this", this.route.snapshot.params);
 		var formData = new FormData();
 		 this.catId = this.route.snapshot.params.catId;
-		formData.append('sub_category_name', this.categoryData.category);
-		formData.append('image', this.categoryData.image);
+    formData.append('sub_category_name', this.categoryData.category);
+    if(this.categoryData.image){
+      formData.append('image', this.categoryData.image);
+    }
+		
     formData.append('category_id', this.route.snapshot.params.catId);
     formData.append('sub_category_id', this.route.snapshot.params.subCatId);
 		

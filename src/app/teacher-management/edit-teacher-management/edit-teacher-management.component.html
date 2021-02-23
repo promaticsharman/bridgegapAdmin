@@ -1,0 +1,144 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+  <h2 >
+   EDIT TEACHER DETAILS </h2>
+ </div>
+ <div class="main-content" style="position: relative;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <form >
+                    <!-- [formGroup]="applicationForm" -->
+                    <div class="card">
+                        <!-- <div class="card-header card-header-danger">
+                            <h4 class="card-title">Testimonials</h4>
+                        </div> -->
+                        <div class="card-body block-card" style="margin-top: 29px;">
+                            <div class="row">
+
+                               <div class="col-md-6">
+                                <mat-form-field>
+                                    <label>Name</label>
+                                    <input  [(ngModel)]="teacherManagement.name" matInput [ngModelOptions]="{standalone: true}">
+                                  </mat-form-field>
+                               </div>
+                               <!-- <div class="col-md-6">
+                                   <div class="form-group"> 
+                                      <label>Name</label>
+                                      <input type="text">
+                                   </div>
+                              
+                               </div> -->
+
+                               <div class="col-md-6">
+                                <mat-form-field>
+                                    <label>Email</label>
+                                    <input [(ngModel)]="teacherManagement.email" [ngModelOptions]="{standalone: true}" matInput>
+                                  </mat-form-field>
+                               </div>
+
+                               <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>Phone</mat-label>
+                                    <input matInput  [ngModelOptions]="{standalone: true}" [(ngModel)]="teacherManagement.phone">
+                                  </mat-form-field>
+                               </div>
+
+                               <div class="col-md-6">
+                                  <mat-form-field>
+                                    <mat-label>Country</mat-label>
+                                    <input matInput>
+                                  </mat-form-field>
+                               </div>
+
+                               <div class="col-md-6">
+                                 <mat-form-field>
+                                   <mat-label>Teaching exp</mat-label>
+                                     <input matInput>
+                                 </mat-form-field>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Subjects Taught</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Categories</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Sub Categories</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Grades Taught</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Ages Taught</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Payment Details</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                      <mat-label>Signup Date</mat-label>
+                                        <input [(ngModel)]="teacherManagement.signupdate" [ngModelOptions]="{standalone: true}" matInput>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="text-center">
+                               <button mat-raised-button type="submit" class="btn btn-success ft" (click)="update()" >Update</button>
+                                &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/teacher_list" class="btn theme-btn ft">Back</button>
+                            </div>
+                          </div>
+                         </div>
+               </form>
+            </div>
+        </div>
+    </div> 
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -43,18 +43,34 @@
  
                     <ng-container matColumnDef="teacher_name">
                         <th mat-header-cell  class="text-center"  *matHeaderCellDef>Teacher Name</th>
-                        <td mat-cell  class="text-center"  *matCellDef="let element">{{element.teacher_data.fullname}}</td>
+                        <td mat-cell  class="text-center"  *matCellDef="let element">{{element.teacher_data == null ? 'N/A' : element.teacher_data.fullname}}</td>
                     </ng-container> 
 
                     <ng-container matColumnDef="course_title">
-                        <th mat-header-cell class="text-center" *matHeaderCellDef>Title</th>
-                        <td mat-cell  class="text-center"  *matCellDef="let element" class="text-center ellipsis">{{element.course_title}}</td>
+                        <th mat-header-cell   *matHeaderCellDef>
+                          <div style="width:100px" class="text-center">
+                          Title
+                         </div>
+                        </th>
+                        <td mat-cell    *matCellDef="let element"  class="text-center">
+                          <!-- {{element.course_title}} -->
+                          <div class="text-center" style="width:100px">
+                            <!-- {{element.course_title}} -->
+                           <a href="https://bridgegapwebnew.web.app/single-detail/{{element.id}}" target="_blank">{{element.course_title}}</a> 
+                           <!-- (click)="titlePage(element.id)" -->
+                          </div>
+                        </td>
                     </ng-container> 
 
                     <ng-container matColumnDef="date">
-                        <th mat-header-cell class="text-center" *matHeaderCellDef>Course Date</th>
-                        <td mat-cell class="text-center" *matCellDef="let element">{{element.created_at | dateAgo }}</td>
+                        <th mat-header-cell class="text-center" *matHeaderCellDef>Course Time</th>
+                        <td mat-cell class="text-center" *matCellDef="let element">{{element.updated_at | date :'shortTime'}}({{element.updated_at | dateAgo }}) </td>
                     </ng-container>
+
+                    <ng-container matColumnDef="courseDate">
+                      <th mat-header-cell class="text-center" *matHeaderCellDef>Course Date</th>
+                      <td mat-cell class="text-center" *matCellDef="let element">{{element.updated_at | date }}</td>
+                   </ng-container>
                
                     <ng-container matColumnDef="status">
                         <th mat-header-cell *matHeaderCellDef>Status</th>

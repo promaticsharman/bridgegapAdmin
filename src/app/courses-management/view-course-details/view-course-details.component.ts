@@ -25,6 +25,8 @@ export class ViewCourseDetailsComponent implements OnInit {
     course_title:"",
     category_name:"",
     sub_category_name:"",
+    topic:"",
+    total_number_of_session:"",
     num_of_weeks:"",
     num_of_sessions_week:"",
     num_of_minute_session:"",
@@ -45,11 +47,20 @@ export class ViewCourseDetailsComponent implements OnInit {
     date:"",
     save_type:"",
     zoom_class_link:"",
+    summary:""
 
   }
   video
   courseImg
-  
+  uploadCoverImage
+  uploadCoverVideo
+  coverVideo
+
+  video1
+  uploadVid
+  format
+  videourl
+  loader
   constructor(
     private dialog: MatDialog,
     private fb: FormBuilder,
@@ -85,6 +96,7 @@ export class ViewCourseDetailsComponent implements OnInit {
         let matchId=element.id
           if(matchId == this.courseId ){
             this.courseData.fullname=element.teacher_data.fullname;
+            console.log("this.courseData.fullname",this.courseData.fullname)
             this.courseData.course_type=element.course_type;
             this.courseData.course_title=element.course_title;
             console.log("element.category_data.category_name",element.category_data.category_name)
@@ -112,7 +124,8 @@ export class ViewCourseDetailsComponent implements OnInit {
             this.courseData.local_price = element.local_price
             this.courseData.multiple_session_courses = element.multiple_session_courses
             this.courseData.status = element.status
-            this.courseData.date = element.created_at
+            this.courseData.date = element.updated_at
+            this.courseData.summary = element.summary
             this.courseData.save_type = element.save_type
             this.courseData.zoom_class_link = element.zoom_class_link
             
@@ -120,6 +133,8 @@ export class ViewCourseDetailsComponent implements OnInit {
             console.log('urlllllllll',videoUrl);
             this.video = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
             this.courseImg=this.imagePath + element.cover_photo
+            this.courseData.topic=element.sub_sub_category_data.sub_sub_category_name
+            this.courseData.total_number_of_session=element.total_num_of_session
             // this.courseId=
             // this.video=element.video;
           }
@@ -164,7 +179,107 @@ export class ViewCourseDetailsComponent implements OnInit {
 		    // this.datamodel = {}
 			// this.getAllCategory()
 		});
-	}
+  }
+  
+  onFileChange(event) {
+
+    if (!event.target) {
+			return;
+		}
+		if (!event.target.files) {
+			return;
+		}
+		if (event.target.files.length !== 1) {
+			return;
+		}
+		const file = event.target.files[0];
+		if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+			// this.toastr.warning('Please upload image file')
+			return;
+		}
+		console.log(event.target.files[0])
+		this.uploadCoverImage = event.target.files[0];
+		const fr = new FileReader();
+		fr.onloadend = (loadEvent) => {
+			let mainImage = fr.result;
+			this.image = mainImage;
+		};
+    fr.readAsDataURL(file);
+  }
+  
+
+  onSelectFile(event) {
+    //console.log("Select File");
+    
+    const file = event.target.files && event.target.files[0];
+    this.uploadCoverVideo = file
+    this.uploadVid = true
+    // console.log(this.video1);
+    
+    if (file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    if (file.type.indexOf('video') > -1) {
+    this.format = 'video';
+    }
+    reader.onload = (event) => {
+      
+    this.videourl = (<FileReader>event.target).result;
+    // console.log('this.videourl ',this.videourl)
+    }
+    }
+    
+    }
+
+    updateCourse(){
+      
+      var formData = new FormData();
+      if(this.uploadCoverVideo){
+        formData.append('course_video', this.uploadCoverVideo);
+      }
+      if(this.uploadCoverImage){
+        formData.append('cover_photo', this.uploadCoverImage);
+      }
+      formData.append('course_id', this.courseId);
+      // console.log("uploadCoverVideo", this.uploadCoverVideo)
+      // console.log("uploadCoverImage",  this.uploadCoverImage)
+      // console.log("courseId",this.courseId)
+      this.loader=true;
+      this.service.updateCoursecoverVideo(formData).subscribe(res =>{
+        console.log("updateCoursecoverVideo",res)
+        this.loader=false;
+        Swal.fire('Success..!', 'Successfully Updated!', 'success')
+        this.router.navigate(['/courses'])
+      })
+    }
+
+  // onFileChangeVideo(event){
+  //   // console.log("eventeventvideo",event)
+  //   if (!event.target) {
+	// 		return;
+	// 	}
+	// 	if (!event.target.files) {
+	// 		return;
+	// 	}
+	// 	if (event.target.files.length !== 1) {
+	// 		return;
+	// 	}
+  //   const file = event.target.files[0];
+  //   console.log("eventeventvideo event.target.files[0]",file)
+	// 	// if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/jpg') {
+	// 	// 	// this.toastr.warning('Please upload image file')
+	// 	// 	return;
+	// 	// }
+	// 	console.log(event.target.files[0])
+	// 	this.uploadCoverVideo = event.target.files[0];
+	// 	const fr = new FileReader();
+	// 	fr.onloadend = (loadEvent) => {
+	// 		let mainVideo = fr.result;
+  //     this.coverVideo = mainVideo;
+  //     console.log("this.coverVideo",this.coverVideo)
+	// 	};
+  //   fr.readAsDataURL(file);
+  // }
 }
 
 
@@ -240,3 +355,6 @@ export class ViewCourseDetailsComponent implements OnInit {
   this.dialogRef.close();
     }
   }
+
+
+

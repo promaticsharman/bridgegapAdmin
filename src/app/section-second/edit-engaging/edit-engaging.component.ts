@@ -91,7 +91,10 @@ export class EditEngagingComponent implements OnInit {
     
      var formData = new FormData();
      formData.append('id', this.route.snapshot.params.id);
-     formData.append("image",this.engagingData.image);
+     if(this.engagingData.image){
+      formData.append("image",this.engagingData.image);
+     }
+     
      formData.append("heading", this.engagingData.heading);
      formData.append("description", this.engagingData.description);
    

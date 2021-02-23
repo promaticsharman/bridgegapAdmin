@@ -1,0 +1,62 @@
+<div *ngIf="loader" class="load_er">
+	<mat-progress-spinner
+	color="primary"
+	mode="indeterminate">
+	</mat-progress-spinner></div>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+  <h2>
+     MULTIPLE SESSION CANCELLATION POLICY
+  </h2>
+ </div>
+ <div class="main-content" style="position: relative;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <form >
+                    <div class="card">
+                        <!-- <div class="card-header card-header-danger">
+                            <h4 class="card-title">Testimonials</h4>
+                        </div> -->
+                        <div class="card-body block-card">
+                            <div class="row">
+                                 
+                                <!-- Author Name -->
+                                <div class="col-md-12">
+                                    <editor
+                                    [init]="{
+                                        height: 450,
+                                        menubar: false,
+                                        plugins: [
+                                        'advlist autolink lists link image charmap print preview anchor',
+                                        'searchreplace visualblocks code fullscreen',
+                                        'insertdatetime media table paste code help wordcount'
+                                        ],
+                                        toolbar:
+                                        'undo redo | formatselect   \ 
+                                        table |
+                                        bold italic backcolor | \
+                                        alignleft aligncenter alignright alignjustify | \
+                                        bullist numlist outdent indent | removeformat | help'
+                                    }"   [(ngModel)]="multiSessionCancellation" [ngModelOptions]="{standalone: true}" 
+                                    ></editor>
+                                          
+
+                                </div>
+                        
+                            </div>
+                            <br>
+                            <div class="text-center">
+                                <button mat-raised-button type="submit" class="btn btn-success ft"  (click)="updateCancellation()">Update</button>
+                                <!-- &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" routerLink="/teacherFaq" class="btn theme-btn ft">Back</button> -->
+                                
+                                <!-- [disabled]="!addCategoryForm.valid"  -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+ </div>

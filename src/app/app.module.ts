@@ -64,6 +64,25 @@ import { EditTeacherFaqComponent } from './teacher-faq/edit-teacher-faq/edit-tea
 import { TermsComponent } from './general-management/terms/terms.component';
 import { PrivacyPolicyComponent } from './general-management/privacy-policy/privacy-policy.component';
 import { CancellationPolicyComponent } from './general-management/cancellation-policy/cancellation-policy.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { BannerManagementComponent } from './teach-with-us/banner-management/banner-management.component';
+import { WhyTeachWithBridgegapComponent } from './teach-with-us/why-teach-with-bridgegap/why-teach-with-bridgegap.component';
+import { HowItWorksTeacherComponent } from './teach-with-us/how-it-works-teacher/how-it-works-teacher.component';
+import { HereToHelpSectionComponent } from './teach-with-us/here-to-help-section/here-to-help-section.component';
+import { TeacherTestimonialComponent } from './teach-with-us/teacher-testimonial/teacher-testimonial.component';
+import { FaqComponent } from './teach-with-us/faq/faq.component';
+import { EditTeacherBannerComponent } from './teach-with-us/banner-management/edit-teacher-banner/edit-teacher-banner.component';
+import { AddComponent } from './teach-with-us/why-teach-with-bridgegap/add/add.component';
+import { EditWhyTeachWithUsComponent } from './teach-with-us/why-teach-with-bridgegap/edit-why-teach-with-us/edit-why-teach-with-us.component';
+import { EditTeacherHowItWorksComponent } from './teach-with-us/how-it-works-teacher/edit-teacher-how-it-works/edit-teacher-how-it-works.component';
+import { EditTeacherManagementComponent } from './teacher-management/edit-teacher-management/edit-teacher-management.component';
+import { EditHereToHelpSectionComponent } from './teach-with-us/here-to-help-section/edit-here-to-help-section/edit-here-to-help-section.component';
+import { SubSubCategoryComponent } from './sub-sub-category/sub-sub-category.component';
+import { AddSubSubCategoryComponent } from './sub-sub-category/add-sub-sub-category/add-sub-sub-category.component';
+import { EditSubSubCategoryComponent } from './sub-sub-category/edit-sub-sub-category/edit-sub-sub-category.component';
+import { OneTimeSessionComponent } from './cancellation-policy/one-time-session/one-time-session.component';
+import { MultiSessionComponent } from './cancellation-policy/multi-session/multi-session.component';
+import { TeacherProfileComponent } from './teacher-management/teacher-profile/teacher-profile.component';
 
 // import { SubCategoryComponent } from './sub-category/sub-category.component';
 
@@ -71,7 +90,7 @@ import { CancellationPolicyComponent } from './general-management/cancellation-p
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    FormsModule,
+    FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
     ComponentsModule,
@@ -149,6 +168,25 @@ import { CancellationPolicyComponent } from './general-management/cancellation-p
     TermsComponent,
     PrivacyPolicyComponent,
     CancellationPolicyComponent,
+    ForgotPasswordComponent,
+    BannerManagementComponent,
+    WhyTeachWithBridgegapComponent,
+    HowItWorksTeacherComponent,
+    HereToHelpSectionComponent,
+    TeacherTestimonialComponent,
+    FaqComponent,
+    EditTeacherBannerComponent,
+    AddComponent,
+    EditWhyTeachWithUsComponent,
+    EditTeacherHowItWorksComponent,
+    EditTeacherManagementComponent,
+    EditHereToHelpSectionComponent,
+    SubSubCategoryComponent,
+    AddSubSubCategoryComponent,
+    EditSubSubCategoryComponent,
+    OneTimeSessionComponent,
+    MultiSessionComponent,
+    TeacherProfileComponent,
 
 
     // SubCategoryComponent

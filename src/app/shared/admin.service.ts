@@ -767,9 +767,9 @@ export class AdminService {
         })
       )
   }
-  getCancellationPolicy(): Observable<any> {
-    let API_URL = `${this.apiUrl1}getCancellationPolicy`;
-    return this.httpClient.post(API_URL, httpOptions )
+  getCancellationPolicy(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getCancellationPolicy_admin`;
+    return this.httpClient.post(API_URL,data ,httpOptions )
       .pipe(
         map(res => {
           return res
@@ -785,4 +785,191 @@ export class AdminService {
         })
       )
   } 
+  deleteUser(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteUser`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        // catchError(this.error)
+      )
+  }
+  updateCoursecoverVideo(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}update_course_photo_video`;
+    return this.httpClient.post(API_URL,data,httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  teach_with_us_banner(): Observable<any> {
+    let API_URL = `${this.apiUrl1}teach_with_us_banner`;
+    return this.httpClient.get(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  // update_banner_section
+  update_banner_section(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}update_banner_section`;
+    return this.httpClient.post(API_URL,data ,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  get_why_teach_with_us(): Observable<any> {
+    let API_URL = `${this.apiUrl1}get_why_teach_with_us`;
+    return this.httpClient.get(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  add_why_teach_with_us(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}add_why_teach_with_us`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  get_why_teach_with_us_by_id(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}get_why_teach_with_us_by_id`;
+    return this.httpClient.post(API_URL, data,httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  update_why_teach_with_bridgegap(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}update_why_teach_with_bridgegap`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  all_how_it_works_for_teachers(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}all_how_it_works_for_teachers`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  get_how_it_works_for_teachers_by_id(data): Observable<any>{
+    let API_URL = `${this.apiUrl1}get_how_it_works_for_teachers_by_id`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  update_how_it_works_for_teachers(data): Observable<any>{
+    let API_URL = `${this.apiUrl1}update_how_it_works_for_teachers`;
+    return this.httpClient.post(API_URL, data, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  get_here_to_help_section(): Observable<any> {
+    let API_URL = `${this.apiUrl1}get_teach_with_us_content`;
+    return this.httpClient.get(API_URL, httpOptions )
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  update_teach_with_us_content(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}update_teach_with_us_content`;
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+       
+      )
+  }
+  add_sub_sub_category(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}createSubSubCategory`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  get_sub_sub_category(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getAllSubSubCategory`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  get_sub_sub_category_by_id(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}getSubSubCategoryById`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  updateSubSubCategory(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}updateSubSubCategory`;
+    return this.httpClient.post(API_URL,data,httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        })
+      )
+  }
+  deleteSubSubCategory(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}deleteSubSubCategory`;
+    var obj = {
+      id: data
+    }
+    console.log(API_URL);
+    return this.httpClient.post(API_URL, obj, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        // catchError(this.error)
+      )
+  }
+  filterSubSubCategoryList(data): Observable<any> {
+    let API_URL = `${this.apiUrl1}subSubCategoryFilter`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, data, httpOptions)
+      .pipe(
+        map(res => {
+          return res
+        }),
+      )
+  }
 }

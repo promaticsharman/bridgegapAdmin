@@ -32,7 +32,7 @@ export class CoursesManagementComponent implements OnInit {
     currentIndex=0
     limit=10
     offset=0
-  displayedColumns: string[] = ['position','course_type','course_title','teacher_name','date','status','action'];
+  displayedColumns: string[] = ['position','course_type','course_title','teacher_name','date','courseDate','status','action'];
   // 'courses_overview',
   // ,'globally_price'
 
@@ -191,5 +191,12 @@ export class CoursesManagementComponent implements OnInit {
         )
         }
       })
+    }
+    titlePage(id){
+      let titleid=id
+     console.log('id',id)
+     let route=`/viewCourse/${titleid}`
+     this.router.navigate([route]);
+    //  this.router.navigate(['/viewCourse/'])
     }
 }

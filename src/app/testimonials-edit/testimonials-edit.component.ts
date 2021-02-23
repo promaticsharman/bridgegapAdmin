@@ -92,7 +92,10 @@ export class TestimonialsEditComponent implements OnInit {
      formData.append('id', this.route.snapshot.params.testimonial_id);
      formData.append("author_name",this.testimonialsData.authorName);
      formData.append("designation", this.testimonialsData.designation);
-     formData.append("image", this.testimonialsData.image);
+     if( this.testimonialsData.image){
+      formData.append("image", this.testimonialsData.image);
+     }
+     
      formData.append("description", this.testimonialsData.description);
      this.service.updateTestimonials(formData).subscribe(data => {
        console.log(data,"Testimonials Successfully Updated!");

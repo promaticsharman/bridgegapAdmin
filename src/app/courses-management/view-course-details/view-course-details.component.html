@@ -1,3 +1,8 @@
+<div *ngIf="loader" class="load_er">
+	<mat-progress-spinner
+	color="primary"
+	mode="indeterminate">
+	</mat-progress-spinner></div>
 <div class="panel-header panel-header-sm">
 </div>
 <div class="hdng">
@@ -19,76 +24,169 @@
                                 <div class="col-md-6 ">
                                     <div class="vid_wrap">
                                         <label>Course Video</label>
-                                        <iframe class="embed-responsive-item" [src]='video'></iframe>
+                                        <div  *ngIf="videourl">
+                                            <video controls style="height: 250px;
+                                            width: 438px;"  class="" 
+                                            [src]='videourl'></video>
+                                            <!-- height="250px" width="250px" -->
+                                        </div>
+                                          <div *ngIf="!videourl && video">
+                                            <video controls style="height: 250px;
+                                            width: 438px;" class=""  [src]='video'></video>
+                                          </div>  
+                                            
+                                          
+                                        <!-- </span> -->
+                                        <span class="wrap">
+                                            <input type="file" value="uploadCoverVideo"  (change)="onSelectFile($event)" accept="video/*">
+                                            <i class="fa fa-edit"></i>  
+                                        </span>
+                                       
                                     </div>
                                     
                                 </div>
 
-                                <div class="col-md-6">
+
+
+                                    <!-- <div class="col-md-6 ">
+                                        <div class="vid_wrap">
+                                            <label>Course Video</label>
+                                            <span>
+                                                <iframe class="embed-responsive-item " *ngIf="videourl" 
+                                                [src]='videourl'></iframe>
+                                                <iframe  class="embed-responsive-item " *ngIf="!videourl && video" [src]='video'></iframe>
+                                            
+                                            </span>
+                                            <span class="wrap">
+                                                <input type="file" value="uploadCoverVideo"  (change)="onSelectFile($event)" accept="video/*">
+                                                <i class="fa fa-edit"></i>  
+                                            </span>
+                                        
+                                        </div>
+                                        
+                                    </div> -->
+
+
+
+                               <div class="col-md-6">
                                     <div class="vid_wrap">
                                         <label>Cover Photo</label>
-                                        <img src="{{courseImg}}" class=""> 
+                                        <span>
+                                            <img *ngIf="image" style="height: 250px;
+                                            width: 438px;" class=""
+                                            [src]="image" />
+                                            <img *ngIf="!image && courseImg" style="height: 250px;
+                                            width: 438px;" class="" src="{{courseImg}}" />
+                                           
+                                            <span class="wrap">
+                                                <input type="file" value="uploadCoverImage" (change)="onFileChange($event)" accept="image/*">
+                                                <i class="fa fa-edit " *ngIf="courseImg"></i>
+                                            </span>
+                                        </span>
+                                        
                                     </div>
                                     
-                                </div>
-                
                                
-                                <div class="col-md-6">
+
+                                </div>
+                               
+                               
+                                <div class="col-md-12">
                                     <label>Teacher Name</label>
                                     <p class="hd_p">
                                         {{courseData.fullname}}
                                     </p>
                                     
                                 </div>
-                
-                                <div class="col-md-6">
-                                    <label>Course Type</label>
-                                    <p class="hd_p">
-                                       {{courseData.course_type}}
-                                    </p>
-                                    
-                                </div>
-                                
-                               
-                                <div class="col-md-6">
+
+                                <div class="col-md-12">
                                     <label>Course Title</label>
                                     <p class="hd_p">
                                        {{courseData.course_title}}
                                     </p>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <label>Category Name</label>
+                
+                                <div class="col-md-12">
+                                    <label>Category</label>
                                     <p class="hd_p">
                                        {{courseData.category_name}}
                                     </p>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label>Sub Category Name</label>
+                                    <label>Sub-Category</label>
                                     <p class="hd_p">
                                        {{courseData.sub_category_name}}
                                     </p>
                                 </div>
-                                 
+
                                 <div class="col-md-6">
-                                    <label>Number Of Weeks</label>
+                                    <label>Topic</label>
+                                    <p class="hd_p">
+                                      
+                                        {{courseData.topic}}
+                                    </p>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label>Summary</label>
+                                    <p class="hd_p">
+                                        {{courseData.summary}}
+                                    </p>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label>Course Type</label>
+                                    <p class="hd_p">
+                                       {{courseData.course_type}}
+                                    </p>
+                                    
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label>Course Duration</label>
+                                    <p class="hd_p">
+                                        How many times and for what duration will the sessions happen ?
+                                    </p>
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label>Total Number of sessions</label>
+                                    <p class="hd_p">
+                                       {{courseData.course_type == 'Ongoing'? 'Ongoing' : courseData.total_number_of_session }}  
+                                       <!-- {{courseData.total_number_of_session }} -->
+                                    </p>
+                                    
+                                </div>
+                              
+                                <div class="col-md-6">
+                                    <label>Total Number Of Weeks</label>
                                     <p class="hd_p">
                                         {{courseData.num_of_weeks}} 
                                     </p>
                                 </div>
-
+                             
                                 <div class="col-md-6">
-                                    <label>Number Of Sessions Weeks</label>
+                                    <label>Number Of Sessions/Week</label>
                                     <p class="hd_p">
-                                        {{courseData.num_of_sessions_week}} 
+                                        <!-- {{courseData.course_type == 'Ongoing'? 'Ongoing' : courseData.num_of_sessions_week}}  -->
+                                        {{courseData.num_of_sessions_week}}
                                     </p>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label>Number Of Minute Session</label>
+                                    <label>Number Of Minutes/Session</label>
                                     <p class="hd_p">
                                         {{courseData.num_of_minute_session}} 
+                                    </p>
+                                </div>
+
+                                <div class="col-md-12">
+                                   
+                                    <label>Age Range</label>
+                                    <p class="hd_p">
+                                        What age range of learners do you have in your mind for this course? It is recommended that age range not exceed 3 yrs for better peer learning experience <!-- {{courseData.minimum_age}}  -->
                                     </p>
                                 </div>
 
@@ -100,42 +198,52 @@
                                     </p>
                                 </div>
                                 
-                                <div class="col-sm-6">
+                                <div class="col-md-6">
                                     <label>Maximum Age</label>
                                     <p class="hd_p">
                                         {{courseData.maximum_age}}
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label>Maximum learners</label>
-                                    <p class="hd_p">
-                                        {{courseData.maximum_learners}}
-                                    </p>
-                                </div>
-                                    
                                 
-                                <div class="col-sm-6">
-                                    <label>Minimum learners</label>
+                                  
+                                <div class="col-md-12">
+                                    <label>Class Size</label>
+                                    <p class="hd_p">
+                                        How many learners do you want to have in one class ?
+                                        <!-- {{courseData.minimum_learners}} -->
+                                    </p>
+                                </div>    
+                                
+                                <div class="col-md-6">
+                                    <label>Minimum Learners</label>
                                     <p class="hd_p">
                                         {{courseData.minimum_learners}}
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+
+                                <div class="col-md-6">
+                                    <label>Maximum Learners</label>
+                                    <p class="hd_p">
+                                        {{courseData.maximum_learners}}
+                                    </p>
+                                </div>
+                                
+                                <div class="col-md-12">
                                     <label>Courses Overview</label>
-                                    <p class="hd_p">
-                                        {{courseData.courses_overview}}
+                                    <p class="hd_p" [innerHtml]="courseData.courses_overview">
+                                        <!-- {{courseData.courses_overview}} -->
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label>learning Objectives</label>
-                                    <p class="hd_p">
-                                        {{courseData.learning_objectives}}
+                                <div class="col-md-12">
+                                    <label>Learning Objectives</label>
+                                    <p class="hd_p" [innerHtml]="courseData.learning_objectives">
+                                        <!-- {{}} -->
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-md-12">
                                     <label>Course Breakup</label>
-                                    <p class="hd_p">
-                                        {{courseData.course_breakup}}
+                                    <p class="hd_p" [innerHtml]="courseData.course_breakup">
+                                        <!-- {{}} -->
                                     </p>
                                 </div>
                                 <!-- <div class="col-sm-12">
@@ -144,49 +252,49 @@
                                         {{courseData.benefitsOfClass}}
                                     </p>
                                 </div> -->
-                                <div class="col-sm-6">
-                                    <label>Assignment</label>
-                                    <p class="hd_p">
-                                        {{courseData.assignment == 'undefined' ? 'N/A' : courseData.assignment }}
+                                <div class="col-md-12">
+                                    <label>Assignments</label>
+                                    <p class="hd_p" [innerHtml]="courseData.assignment == 'undefined' ? 'N/A' : courseData.assignment">
+                                        <!-- {{ }} -->
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label>Assessment</label>
-                                    <p class="hd_p">
-                                        {{courseData.assessment == 'undefined'  ? 'N/A' : courseData.assessment}}
+                                <div class="col-md-12">
+                                    <label>Assessments</label>
+                                    <p class="hd_p" [innerHtml]="courseData.assessment == 'undefined'  ? 'N/A' : courseData.assessment">
+                                        <!-- {{}} -->
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-md-12">
                                     <label>Requirements</label>
-                                    <p class="hd_p">
-                                        {{courseData.requirements}}
+                                    <p class="hd_p" [innerHtml]="courseData.requirements">
+                                        <!-- {{courseData.requirements}} -->
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label>Globally Price</label>
+                                <div class="col-md-6">
+                                    <label>Price for International Students</label>
                                     <p class="hd_p">
-                                        {{courseData.globally_price}}
+                                        {{courseData.globally_price | currency:'INR'}}
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label>local Price</label>
+                                <div class="col-md-6">
+                                    <label>Price for Indian Student</label>
                                     <p class="hd_p">
-                                        {{courseData.local_price}}
+                                        {{courseData.local_price | currency:'INR'}}
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <!-- <div class="col-md-6">
                                     <label>Multiple Session Courses</label>
                                     <p class="hd_p">
                                         {{courseData.multiple_session_courses == 'undefined' ? 'N/A' : courseData.multiple_session_courses }}
                                     </p>
-                                </div>
-                                <!-- <div class="col-sm-6">
+                                </div> -->
+                                <!-- <div class="col-md-6">
                                     <label>Save Type</label>
                                     <p class="hd_p">
                                         {{courseData.save_type}}
                                     </p>
                                 </div> -->
-                                <!-- <div class="col-sm-6">
+                                <!-- <div class="col-md-6">
                                     <label>Zoom Class link</label>
                                     <p class="hd_p">
                                         {{courseData.zoom_class_link}}
@@ -194,20 +302,30 @@
                                 </div> -->
                         
                                
-                                <div class="col-sm-6">
-                                    <label>Course Date </label>
+                                <div class="col-md-6">
+                                    <label>Course Time </label>
                                      <p class="hd_p">
-                                        {{courseData.date | dateAgo}}
+                                        {{courseData.date| date:'shortTime'}} ({{courseData.date| dateAgo}})
+                                        <!-- {{courseData.date | dateAgo}} -->
                                      </p>
                                      <!-- speed >= 120 ? 'Too Fast' : (speed >= 80 ? 'Fast' : 'OK'); -->
-                                 </div>
-                                 <div class="col-sm-6">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label>Course Date </label>
+                                     <p class="hd_p">
+                                        {{courseData.date | date}}
+                                     </p>
+                                     <!-- speed >= 120 ? 'Too Fast' : (speed >= 80 ? 'Fast' : 'OK'); -->
+                                </div>
+                                 <div class="col-md-6">
                                     <label>Status</label>
                                      <p class="hd_p">
                                         {{courseData.status == 'approved' ? 'Approved' : (courseData.status == 'rejected' ? 'Rejected' : 'Pending')}}
                                      </p>
                                      <!-- speed >= 120 ? 'Too Fast' : (speed >= 80 ? 'Fast' : 'OK'); -->
                                  </div>
+                                 
                             </div>
                            
                             <div class="text-center" *ngIf="courseData.status == 'rejected'">
@@ -219,6 +337,7 @@
                             </div>
                             <div class="text-center" *ngIf="courseData.status == 'approved'">
                                <button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectCourse()"  >Reject</button>
+                               &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="updateCourse()"  >Update</button>
                                <!-- (click)="onStatus('rejected')" -->
                                 &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
                             </div>
@@ -226,8 +345,10 @@
                                 <button mat-raised-button type="submit" class="btn btn-success ft" (click)="onStatus('approved')">Approve</button>
                                 &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="rejectCourse()"  >Reject</button>
                                 <!-- (click)="onStatus('rejected')" -->
+                                &nbsp;&nbsp;&nbsp;<button mat-raised-button type="submit" class="btn btn-success ft" (click)="updateCourse()"  >Update</button>
+
                                  &nbsp;&nbsp;&nbsp; <button mat-raised-button type="submit" routerLink="/courses" class="btn theme-btn ft">Back</button>
-                             </div>
+                            </div>
                           </div>
                          </div>
                </form>

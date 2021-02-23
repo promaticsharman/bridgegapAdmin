@@ -121,12 +121,16 @@
 // .toast-container {
 //  width: unset!important;
 // }
-
+.babu{
+  height: 20px;
+    overflow: hidden;
+}
 .babu p  {
   width: 260px!important;
   text-overflow: ellipsis!important;
   overflow: hidden!important;
   white-space: nowrap!important;
+  margin:0 auto;
 }
 .ellipsis1 {
   max-width: 260px;

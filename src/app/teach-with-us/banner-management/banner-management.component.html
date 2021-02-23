@@ -1,0 +1,113 @@
+<div *ngIf="loader" class="load_er">
+	<mat-progress-spinner
+	color="primary"
+	mode="indeterminate">
+	</mat-progress-spinner></div>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="hdng">
+    <h2 >TEACHER BANNER MANAGEMENT</h2>
+   </div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        
+        <div class="card-body">
+          <!-- <div class="text-right" style="padding-right: 65px;" >
+            <button mat-button class="theme-btn" routerLink="/edit_teacher_banner/{{1234}}" >Add</button>         
+          </div> -->
+         
+     
+          <div class="card-body">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource" class="mat-table table mat-elevation-z1">
+                    <!-- Position -->
+                   
+                    <ng-container matColumnDef="position" class="mat-row">
+                        <th width="150px" class="text-center" mat-header-cell *matHeaderCellDef >S.No
+                        </th>
+                        <td width="150px" class="text-center" mat-cell *matCellDef="let element let i=index"> {{ i +1 }} </td>
+
+                    </ng-container>   
+
+                    <ng-container matColumnDef="title" class="mat-row">
+                        <th  width="200px" class="text-center"  mat-header-cell *matHeaderCellDef >Title
+                        </th>
+                        <td mat-cell width="200px" class="ellipsis" *matCellDef="let element"> {{element.heading}} </td>
+
+                    </ng-container>    
+                    
+                    <ng-container matColumnDef="subtitle" class="mat-row">
+                        <th  width="200px" class="text-center" mat-header-cell *matHeaderCellDef >Sub Title
+                        </th>
+                        <td  width="200px" class="text-center ellipsis" mat-cell *matCellDef="let element"> {{element.sub_heading}} </td>
+
+                    </ng-container>   
+                    
+                    <ng-container matColumnDef="image" class="mat-row">
+                        <th width="200px" class="text-center"  mat-header-cell *matHeaderCellDef >Image
+                        </th>
+                        <td width="200px"  class="text-center"  mat-cell *matCellDef="let element"> <img src="{{imagePath}}{{element.banner_image}}" class="img-fluid prfile_img"> </td>
+
+                    </ng-container>  
+                    
+                      
+                    <!-- <ng-container matColumnDef="status" class="mat-row">
+                        <th  width="150px" class="text-center" mat-header-cell *matHeaderCellDef >Status
+                        </th> 
+                        <td  width="150px" class="text-center" mat-cell *matCellDef="let element">
+                            <mat-slide-toggle (change)="onChange($event,element.id)" [checked]="element.status == 'active' ?  true : false">
+
+                            </mat-slide-toggle>
+                           
+                        </td>
+
+                    </ng-container> -->
+                    <ng-container matColumnDef="Action" class="mat-row">
+                        <th  width="150px" class="text-center" mat-header-cell *matHeaderCellDef > Action </th>
+                        <td  width="150px" class="mat-cell act_td text-center" mat-cell *matCellDef="let element">
+                            <button  mat-icon-button  routerLink="/edit_teacher_banner/{{element.id}}">
+                                <mat-icon >edit</mat-icon>
+                            </button>
+                            <!-- <button  mat-icon-button (click)="deletebanner(element.id)">
+                                <mat-icon >delete</mat-icon>
+                            </button> -->
+                        
+                        </td>
+                       
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <!-- <div>
+                    <mat-paginator [length]="length" [pageSize]="10" [pageSizeOptions]="getPageSizeOptions()"
+                        (page)="paginationOptionChange($event)">
+                    </mat-paginator>
+                </div> -->
+                
+            </div>
+        </div> 
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

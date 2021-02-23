@@ -1,4 +1,3 @@
-
 <div class="logo">
     <a href="javascript:void(0)" class="simple-text logo-mini">
       <div class="logo-img">
@@ -53,6 +52,23 @@
                 <li [ngClass]="router.url.includes('/testimonials') ? 'active-1' : ''"><a [routerLink]="['/testimonials']">Testimonials</a></li>
             </ul>
         </li>
+
+
+        <li  routerLinkActive="active"  class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">
+                <i class="material-icons">school</i>
+                <p>TEACH WITH US MANAGEMENT</p>
+                
+            </a>
+            <ul class="sub-ul">
+                <!-- [ngClass]="{'font-green':  percent > 50, 'font-orange': percent>40 && percent<=50,'font-red': percent<=40}" -->
+                <li  [ngClass]="router.url.includes('/teacher_banner') ? 'active-1' : ''"><a [routerLink]="['/teacher_banner']">TEACHER BANNER </a></li>
+                <!-- <li class="active-1"><a [routerLink]="['/section_1']">BANNER MANAGEMENT</a></li> -->
+                <li [ngClass]="router.url.includes('/teacher_teach_with') ? 'active-1' : ''"><a [routerLink]="['/teacher_teach_with']"> TEACH WITH BRIDGEGAP </a></li>
+                <li [ngClass]="router.url.includes('/teacher_how_it_works') ? 'active-1' : ''"><a [routerLink]="['/teacher_how_it_works']">HOW IT WORKS TEACHERS</a></li>
+                <li [ngClass]="router.url.includes('/teacher_here_to_help') ? 'active-1' : ''"><a [routerLink]="['/teacher_here_to_help']">HERE TO HELP YOU</a></li>
+            </ul>
+        </li>
         <!-- <li  routerLinkActive="active"  class="nav-item">
             <a [routerLink]="['/teacherApplication']">
                 <i class="material-icons">list</i>
@@ -84,9 +100,11 @@
               <ul class="sub-ul">
                <li  [ngClass]="router.url.includes('/contact') ? 'active-1' : ''"><a [routerLink]="['/contact']">CONTACT US</a></li>
                <li  [ngClass]="router.url.includes('/sociaLinks') ? 'active-1' : ''"><a [routerLink]="['/sociaLinks']">SOCIAL MEDIA LINKS</a></li>
-               <li  [ngClass]="router.url.includes('/terms') ? 'active-1' : ''"><a [routerLink]="['/terms']">TERMS</a></li>
+               <li  [ngClass]="router.url.includes('/terms') ? 'active-1' : ''"><a [routerLink]="['/terms']">TERMS OF USE</a></li>
                <li  [ngClass]="router.url.includes('/privacy') ? 'active-1' : ''"><a [routerLink]="['/privacy']">PRIVACY POLICY</a></li>
-               <li  [ngClass]="router.url.includes('/cancellation') ? 'active-1' : ''"><a [routerLink]="['/cancellation']">CANCELLATION POLICY</a></li>
+               <li  [ngClass]="router.url.includes('/cancellation') ? 'active-1' : ''"><a [routerLink]="['/cancellation']">ONGOING CANCELLATION POLICY</a></li>
+               <li  [ngClass]="router.url.includes('/one_time_policy') ? 'active-1' : ''"><a [routerLink]="['/one_time_policy']">ONE TIME SESSION CANCELLATION POLICY</a></li>
+               <li  [ngClass]="router.url.includes('/multi_session_policy') ? 'active-1' : ''"><a [routerLink]="['/multi_session_policy']">MULTI SESSION CLASSES CANCELLATION POLICY</a></li>
              </ul>
      
         </li>
